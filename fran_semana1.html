@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 1</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.8;font-size:16px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:10px}
+h2{color:#2a4365;margin-top:40px;border-bottom:2px solid #bee3f8;padding-bottom:8px}
+h3{color:#2c5282;margin-top:25px}
+h4{color:#ed8936;margin-top:18px}
+p{margin:8px 0}
+ul,ol{margin:10px 0 10px 22px}
+li{margin:5px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.nota{background:#f0fff4;padding:12px 16px;margin:12px 0;border-radius:6px;font-size:.9em;border:1px solid #c6f6d5}
+.desafio{background:#fff5f5;border-left:4px solid #e53e3e;padding:15px 20px;margin:15px 0;border-radius:0 8px 8px 0}
+hr{border:none;height:2px;background:#e2e8f0;margin:35px 0}
+footer{text-align:center;color:#a0aec0;margin-top:50px;font-size:.85em;border-top:1px solid #e2e8f0;padding-top:15px}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 1</h1>
+<p><em>3 dias | 2 bloques por dia | A tu ritmo.</em></p>
+
+<div class="nota">
+Esta semana estudias <strong>lunes, miercoles y viernes</strong>. Cada dia tiene dos bloques de unos 50-60 minutos con un descanso entre ellos. Si terminas antes, tu tiempo. Si algo te engancha y quieres seguir, tambien vale.
+</div>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Factorizacion</h3>
+
+<div class="mate">
+<h4>¿Que es factorizar?</h4>
+
+<p>Factorizar es desarmar una expresion algebraica en un producto de partes mas simples. Es como hacer ingenieria inversa: si alguien te da el resultado final, tu reconstruyes de que piezas estaba hecho.</p>
+
+<p>En numeros ya lo sabes hacer: 12 = 2 × 2 × 3 (los "factores primos"). En algebra es lo mismo pero con expresiones que tienen letras.</p>
+
+<p><strong>¿Para que sirve?</strong> Para resolver ecuaciones. Para simplificar. Para ver la estructura oculta de los problemas. Es como en un videojuego: a veces la solucion no esta en atacar directamente al boss, sino en entender de que partes esta hecho.</p>
+
+<h4>Tipo 1: Factor comun</h4>
+
+<p>Si todos los terminos comparten algo, lo "sacas afuera" del parentesis.</p>
+
+<p><strong>Ejemplo paso a paso:</strong> 6x² + 12x</p>
+<ul>
+<li>¿Que comparten 6x² y 12x?</li>
+<li>Numeros: 6 y 12 comparten el 6.</li>
+<li>Letras: ambos tienen al menos una x.</li>
+<li>Factor comun: 6x</li>
+<li>Resultado: 6x(x + 2)</li>
+<li>Verificacion: 6x · x + 6x · 2 = 6x² + 12x ✓</li>
+</ul>
+
+<p><strong>Otro ejemplo:</strong> 15a³b - 10a²b² + 5ab</p>
+<ul>
+<li>Numeros: 15, 10, 5 comparten el 5.</li>
+<li>Letras: todos tienen al menos 'a' y 'b' (una de cada una).</li>
+<li>Factor comun: 5ab</li>
+<li>Resultado: 5ab(3a² - 2ab + 1)</li>
+</ul>
+
+<h4>Tipo 2: Diferencia de cuadrados</h4>
+
+<p><strong>Formula:</strong> a² - b² = (a + b)(a - b)</p>
+
+<p>Funciona cuando tienes algo² menos algo². Siempre.</p>
+
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>x² - 49 = x² - 7² = (x + 7)(x - 7)</li>
+<li>4y² - 25 = (2y)² - 5² = (2y + 5)(2y - 5)</li>
+<li>9a² - 1 = (3a)² - 1² = (3a + 1)(3a - 1)</li>
+</ul>
+
+<p><strong>¿Por que funciona?</strong> Si multiplicas (a+b)(a-b) con distributiva te da: a² - ab + ab - b² = a² - b². Los terminos del medio siempre se cancelan.</p>
+
+<h4>Tipo 3: Trinomio cuadrado perfecto</h4>
+
+<p><strong>Formula:</strong> a² + 2ab + b² = (a + b)²</p>
+
+<p>¿Como reconocerlo? El primer termino es un cuadrado. El ultimo es un cuadrado. El del medio es 2 veces el producto de las raices de los otros dos.</p>
+
+<p><strong>Ejemplo:</strong> x² + 6x + 9</p>
+<ul>
+<li>x² es cuadrado de x. ✓</li>
+<li>9 es cuadrado de 3. ✓</li>
+<li>6x = 2 · x · 3? Si. ✓</li>
+<li>Resultado: (x + 3)²</li>
+</ul>
+
+<h4>Tipo 4: Trinomio x² + bx + c</h4>
+
+<p>Buscas dos numeros que <strong>multiplicados</strong> den 'c' y <strong>sumados</strong> den 'b'.</p>
+
+<p><strong>Ejemplo:</strong> x² + 7x + 12</p>
+<ul>
+<li>¿Que dos numeros multiplicados dan 12 y sumados dan 7?</li>
+<li>Pruebas: 3 × 4 = 12 ✓ y 3 + 4 = 7 ✓</li>
+<li>Resultado: (x + 3)(x + 4)</li>
+</ul>
+
+<p><strong>Ejemplo con negativos:</strong> x² - 5x + 6</p>
+<ul>
+<li>¿Que dos numeros multiplicados dan +6 y sumados dan -5?</li>
+<li>(-2) × (-3) = +6 ✓ y (-2) + (-3) = -5 ✓</li>
+<li>Resultado: (x - 2)(x - 3)</li>
+</ul>
+
+<p><strong>Ejemplo mixto:</strong> x² + 2x - 15</p>
+<ul>
+<li>Multiplicados dan -15 y sumados dan +2.</li>
+<li>5 × (-3) = -15 ✓ y 5 + (-3) = +2 ✓</li>
+<li>Resultado: (x + 5)(x - 3)</li>
+</ul>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Factorizacion</h4>
+<p><em>Identifica el tipo y factoriza. Muestra tu razonamiento.</em></p>
+
+<p><strong>Factor comun:</strong></p>
+<ol>
+<li>8x³ - 12x² =</li>
+<li>6a²b + 9ab² - 3ab =</li>
+<li>x(x+4) + 3(x+4) =</li>
+</ol>
+
+<p><strong>Diferencia de cuadrados:</strong></p>
+<ol start="4">
+<li>x² - 81 =</li>
+<li>4a² - 9b² =</li>
+<li>25x² - 1 =</li>
+</ol>
+
+<p><strong>Trinomios:</strong></p>
+<ol start="7">
+<li>x² + 8x + 16 =</li>
+<li>x² + 5x + 6 =</li>
+<li>x² - 7x + 12 =</li>
+<li>x² + 2x - 15 =</li>
+<li>x² - x - 20 =</li>
+</ol>
+
+<p><strong>Mixto (identifica que tipo es primero):</strong></p>
+<ol start="12">
+<li>3x² - 27 =</li>
+<li>2x² + 12x + 18 =</li>
+<li>x³ - 4x =</li>
+</ol>
+</div>
+
+<div class="desafio">
+<h4>Desafio (opcional)</h4>
+<p>Factoriza completamente: x⁴ - 5x² + 4</p>
+<p><em>Pista: piensa en x² como si fuera una sola variable (llamala "u" si quieres). Queda u² - 5u + 4. Factoriza eso primero, y luego reemplaza u = x² y factoriza de nuevo.</em></p>
+</div>
+
+<h3>Bloque 2: Lectura y reflexion</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1: "¿Que son las emociones?"</strong> del cuadernillo de lecturas de esta semana.</p>
+<p>Despues de leer, responde en tu cuaderno:</p>
+
+<ol>
+<li>El texto dice que las emociones son "herramientas de supervivencia" que evolucionaron hace miles de años. ¿Crees que todavia son utiles o ya son un estorbo en la vida moderna? Argumenta.</li>
+<li>Piensa en la ultima semana: ¿hubo algun momento donde actuaste por emocion y despues te arrepentiste? ¿Que habrias hecho diferente si hubieras tenido ese "espacio" entre el estimulo y la respuesta del que habla Viktor Frankl?</li>
+<li>"Entre el estimulo y la respuesta hay un espacio. En ese espacio esta nuestro poder de elegir." — ¿Esto aplica a los videojuegos tambien? ¿Y al basket? Explica con un ejemplo concreto.</li>
+</ol>
+
+<p><em>Extension: 1 pagina minimo. Se especifico — no escribas generalidades. Escribe sobre TU experiencia.</em></p>
+</div>
+
+<hr>
+
+<h2>DIA 2 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Ecuaciones cuadraticas</h3>
+
+<div class="mate">
+<h4>¿Que es una ecuacion cuadratica?</h4>
+
+<p>Es una ecuacion donde la variable aparece elevada al cuadrado: <strong>ax² + bx + c = 0</strong></p>
+
+<p>¿Donde aparecen? En todas partes:</p>
+<ul>
+<li>La trayectoria de un balon de basket es una parabola — la ecuacion que la describe es cuadratica.</li>
+<li>Si lanzas el balon con cierta velocidad y angulo, puedes calcular exactamente donde va a caer.</li>
+<li>En videojuegos, la fisica de saltos y proyectiles usa ecuaciones cuadraticas.</li>
+</ul>
+
+<h4>Metodo 1: Resolver por factorizacion</h4>
+
+<p>Si puedes factorizar la expresion (como aprendiste el lunes), usas este principio:</p>
+<p><strong>Si A × B = 0, entonces A = 0 o B = 0</strong> (si el producto es cero, al menos un factor es cero).</p>
+
+<p><strong>Ejemplo:</strong> x² + 5x + 6 = 0</p>
+<ul>
+<li>Factorizo: (x + 2)(x + 3) = 0</li>
+<li>Entonces: x + 2 = 0 → x = -2, o bien x + 3 = 0 → x = -3</li>
+<li>Soluciones: x = -2 y x = -3</li>
+</ul>
+
+<h4>Metodo 2: Formula general (siempre funciona)</h4>
+
+<p>Cuando no puedes factorizar facilmente, usas la formula:</p>
+<p><strong>x = (-b ± √(b² - 4ac)) / 2a</strong></p>
+
+<p><strong>Ejemplo:</strong> 2x² - 7x + 3 = 0</p>
+<ul>
+<li>Identifico: a = 2, b = -7, c = 3</li>
+<li>Calculo b² - 4ac = 49 - 24 = 25</li>
+<li>x = (7 ± √25) / 4 = (7 ± 5) / 4</li>
+<li>x₁ = (7+5)/4 = 12/4 = 3</li>
+<li>x₂ = (7-5)/4 = 2/4 = 1/2</li>
+</ul>
+
+<h4>El discriminante: tu detector de soluciones</h4>
+
+<p>El valor <strong>Δ = b² - 4ac</strong> (se llama discriminante) te dice cuantas soluciones tiene la ecuacion sin necesidad de resolverla completa:</p>
+<ul>
+<li><strong>Δ > 0:</strong> Dos soluciones reales diferentes (la parabola cruza el eje x en dos puntos).</li>
+<li><strong>Δ = 0:</strong> Una solucion (raiz doble — la parabola apenas toca el eje x).</li>
+<li><strong>Δ < 0:</strong> No hay soluciones reales (la parabola no llega al eje x).</li>
+</ul>
+
+<p><strong>Conexion con basket:</strong> imagina que la ecuacion describe el vuelo del balon y el eje x es la altura del aro. Si Δ > 0, el balon cruza la altura del aro en dos momentos (subiendo y bajando). Si Δ = 0, apenas roza el aro. Si Δ < 0... airball.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Ecuaciones cuadraticas</h4>
+
+<p><strong>Por factorizacion:</strong></p>
+<ol>
+<li>x² - 5x + 6 = 0</li>
+<li>x² + x - 12 = 0</li>
+<li>x² - 9 = 0</li>
+<li>x² - 8x + 16 = 0</li>
+<li>2x² + 6x = 0</li>
+</ol>
+
+<p><strong>Con formula general:</strong></p>
+<ol start="6">
+<li>x² - 3x - 10 = 0</li>
+<li>2x² + 5x - 3 = 0</li>
+<li>3x² - x - 2 = 0</li>
+<li>x² + 2x + 5 = 0 (calcula el discriminante: ¿tiene solucion?)</li>
+</ol>
+
+<p><strong>Problemas:</strong></p>
+<ol start="10">
+<li>Un balon se lanza hacia arriba. Su altura h (metros) despues de t segundos es: h = 20t - 5t². ¿En que momentos esta a 15 metros de altura?</li>
+<li>El area de un rectangulo es 40 cm². El largo mide 3 cm mas que el ancho. ¿Cuanto mide cada lado? (ancho = x, largo = x+3, entonces x(x+3) = 40)</li>
+</ol>
+</div>
+
+<div class="desafio">
+<h4>Desafio (opcional)</h4>
+<p>Sin resolver la ecuacion x² - 7x + k = 0, ¿que valores puede tener k para que la ecuacion tenga dos soluciones reales diferentes?</p>
+<p><em>Pista: usa el discriminante. ¿Que condicion debe cumplir Δ?</em></p>
+</div>
+
+<h3>Bloque 2: Lectura y reflexion</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2: "El enojo: ¿enemigo o mensajero?"</strong> del cuadernillo de lecturas.</p>
+<p>Despues de leer, responde:</p>
+
+<ol>
+<li>El texto compara el enojo con el fuego: puede destruir o puede cocinar. Da un ejemplo de tu vida donde el enojo te hizo actuar mal, y otro donde te ayudo a defender algo importante.</li>
+<li>¿Alguna vez sentiste enojo "desplazado"? (Estabas enojado por algo pero terminaste desquitandote con alguien que no tenia la culpa). ¿Que paso? ¿Como podrias haberlo manejado diferente?</li>
+<li>El texto menciona que el enojo colectivo ha generado cambios en la historia. ¿Conoces algun ejemplo? Si no se te ocurre uno historico, piensa en alguno cotidiano: ¿alguna vez un grupo se "enojo junto" para lograr un cambio?</li>
+</ol>
+
+<p><em>Extension: 1 pagina minimo.</em></p>
+</div>
+
+<hr>
+
+<h2>DIA 3 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Sistemas de ecuaciones</h3>
+
+<div class="mate">
+<h4>¿Que es un sistema de ecuaciones?</h4>
+
+<p>Son dos ecuaciones que deben cumplirse <em>al mismo tiempo</em> con las mismas incognitas. Es como un acertijo con dos pistas que juntas te dan la respuesta.</p>
+
+<p><strong>Ejemplo de la vida real:</strong> En un partido de basket, un equipo anoto 75 puntos entre triples (3 pts) y dobles (2 pts). Si hicieron 30 canastas en total, ¿cuantas fueron triples y cuantas dobles?</p>
+<ul>
+<li>Sea x = triples, y = dobles</li>
+<li>x + y = 30 (total de canastas)</li>
+<li>3x + 2y = 75 (total de puntos)</li>
+</ul>
+
+<h4>Metodo de eliminacion (suma/resta)</h4>
+
+<p>La idea: manipular las ecuaciones para que al sumarlas o restarlas, se elimine una variable.</p>
+
+<p><strong>Ejemplo con el problema del basket:</strong></p>
+<ul>
+<li>De la primera: y = 30 - x (despejo y)</li>
+<li>Sustituyo en la segunda: 3x + 2(30 - x) = 75</li>
+<li>3x + 60 - 2x = 75</li>
+<li>x = 15 triples</li>
+<li>y = 30 - 15 = 15 dobles</li>
+<li>Verifico: 3(15) + 2(15) = 45 + 30 = 75 ✓</li>
+</ul>
+
+<h4>Metodo de eliminacion directa</h4>
+
+<p><strong>Ejemplo:</strong> 2x + 3y = 12 y 4x - 3y = 6</p>
+<ul>
+<li>Si sumo ambas ecuaciones: los "+3y" y "-3y" se cancelan.</li>
+<li>6x = 18 → x = 3</li>
+<li>Sustituyo: 2(3) + 3y = 12 → 3y = 6 → y = 2</li>
+</ul>
+
+<p><strong>¿Y si no se cancelan solos?</strong> Multiplicas una ecuacion para que se cancelen.</p>
+<p>Ejemplo: x + y = 5 y 3x + 2y = 13</p>
+<ul>
+<li>Multiplico la primera por -2: -2x - 2y = -10</li>
+<li>Sumo con la segunda: 3x + 2y + (-2x - 2y) = 13 + (-10)</li>
+<li>x = 3, luego y = 2</li>
+</ul>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Sistemas de ecuaciones</h4>
+
+<p><strong>Resolver:</strong></p>
+<ol>
+<li>x + y = 12 y x - y = 4</li>
+<li>2x + y = 7 y x - y = 2</li>
+<li>3x + 2y = 12 y x + 2y = 8</li>
+<li>5x - 3y = 1 y 2x + 3y = 13</li>
+</ol>
+
+<p><strong>Problemas:</strong></p>
+<ol start="5">
+<li>La suma de dos numeros es 45 y uno es el triple del otro. ¿Cuales son?</li>
+<li>Un boleto de adulto cuesta el doble que uno de niño. Si 2 adultos y 3 niños pagan $63, ¿cuanto cuesta cada boleto?</li>
+<li>En un partido, un jugador anoto 28 puntos entre dobles (2 pts) y triples (3 pts). Hizo 12 canastas en total. ¿Cuantas de cada tipo?</li>
+<li>La edad de un padre es 4 veces la de su hijo. Dentro de 12 años sera solo el doble. ¿Que edad tiene cada uno?</li>
+</ol>
+</div>
+
+<div class="desafio">
+<h4>Desafio (opcional)</h4>
+<p>Resuelve: x/2 + y = 5 y x + y/3 = 5</p>
+<p><em>Pista: multiplica cada ecuacion por algo para eliminar las fracciones primero.</em></p>
+</div>
+
+<h3>Bloque 2: Escritura personal</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3: "Escribir para conocerte"</strong> del cuadernillo de lecturas.</p>
+<p>Luego escribe un texto libre respondiendo a esto:</p>
+
+<p><strong>¿Quien soy hoy y hacia donde voy?</strong></p>
+
+<p>Preguntas guia (elige las que quieras):</p>
+<ul>
+<li>¿Que te gusta hacer cuando no tienes obligaciones?</li>
+<li>¿Que se te da bien sin mucho esfuerzo?</li>
+<li>¿Que te aburre o te frustra ultimamente? ¿Por que crees que pasa?</li>
+<li>Si pudieras vivir de algo sin preocuparte por el dinero, ¿que harias?</li>
+<li>¿Que tipo de persona quieres ser a los 20? No que "profesion" — que tipo de persona.</li>
+<li>¿Hay algo que antes te motivaba y ya no? ¿Que cambio?</li>
+</ul>
+
+<p><em>Extension: al menos 1 pagina. Se real. Nadie te va a juzgar por lo que escribas. Este texto es solo para ti.</em></p>
+</div>
+
+<footer>
+Semana 1 de 20 | Fran<br>
+"No necesitas saber a donde vas para dar el primer paso."
+</footer>
+
+</body>
+</html>

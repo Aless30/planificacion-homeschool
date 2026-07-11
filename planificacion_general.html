@@ -479,17 +479,25 @@ Bloque 3: Ciencias o Proyecto creativo (alternando dias) (40-50 min)
 <h2>Estructura de archivos en el repositorio</h2>
 <table>
 <tr><th>Archivo</th><th>Contenido</th><th>Quien lo usa</th></tr>
-<tr><td><code>planificacion_general.html</code></td><td>Este documento. Mapa completo, respuestas, indicaciones.</td><td>Solo el tutor</td></tr>
+<tr><td><code>planificacion_general.html</code></td><td>Este documento. Mapa completo, respuestas, indicaciones de tutoria.</td><td>Solo el tutor</td></tr>
 <tr><td><code>index.html</code></td><td>Planificacion anterior (referencia)</td><td>Referencia</td></tr>
-<tr><td><code>gio_semana1.html</code></td><td>Cuadernillo de Gio — semana 1</td><td>Gio</td></tr>
-<tr><td><code>gio_semana2.html</code></td><td>Cuadernillo de Gio — semana 2</td><td>Gio</td></tr>
-<tr><td><code>fran_semana1.html</code></td><td>Cuadernillo de Fran — semana 1</td><td>Fran</td></tr>
-<tr><td><code>fran_semana2.html</code></td><td>Cuadernillo de Fran — semana 2</td><td>Fran</td></tr>
-<tr><td>...</td><td>Un archivo por estudiante por semana</td><td>...</td></tr>
+<tr><td><code>lecturas_semana1.html</code></td><td>Textos de lectura de la semana 1</td><td>Compartido (ambos)</td></tr>
+<tr><td><code>lecturas_semana2.html</code></td><td>Textos de lectura de la semana 2</td><td>Compartido (ambos)</td></tr>
+<tr><td><code>gio_semana1.html</code></td><td>Cuadernillo de Gio — semana 1 (mates + reflexiones + proyecto)</td><td>Solo Gio</td></tr>
+<tr><td><code>gio_semana2.html</code></td><td>Cuadernillo de Gio — semana 2</td><td>Solo Gio</td></tr>
+<tr><td><code>fran_semana1.html</code></td><td>Cuadernillo de Fran — semana 1 (mates + reflexiones + proyecto)</td><td>Solo Fran</td></tr>
+<tr><td><code>fran_semana2.html</code></td><td>Cuadernillo de Fran — semana 2</td><td>Solo Fran</td></tr>
+<tr><td>...</td><td>Patron: lecturas_semanaX + gio_semanaX + fran_semanaX</td><td>...</td></tr>
 </table>
 
 <div class="note">
-<strong>Sobre los cuadernillos:</strong> Cada cuadernillo contiene SOLO lo que el estudiante necesita ver: las lecturas, las explicaciones, los ejercicios. NO contiene las respuestas ni las indicaciones de tutoria. Es su material de trabajo personal.
+<strong>Logica de separacion:</strong>
+<ul>
+<li><strong>Lecturas (compartido):</strong> Los textos que se leen. Pueden leerlos juntos o por separado segun el dia. Un solo archivo por semana, sin duplicar.</li>
+<li><strong>Cuadernillos individuales:</strong> Matematicas (teoria + ejercicios), preguntas de reflexion sobre las lecturas (personalizadas), espacio de proyecto creativo. NO contienen el texto de la lectura en si — solo hacen referencia ("Lee el texto 1 y luego responde").</li>
+<li><strong>Actividades conjuntas:</strong> Marcadas como opcionales en la planificacion del tutor. Si coinciden en tiempo, se sugiere debate o actividad compartida.</li>
+<li><strong>Respuestas:</strong> Solo en este documento (planificacion_general). Los cuadernillos NO tienen respuestas.</li>
+</ul>
 </div>
 
 <hr>
