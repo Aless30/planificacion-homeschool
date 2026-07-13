@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 2</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.8;font-size:16px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:10px}
+h2{color:#2a4365;margin-top:40px;border-bottom:2px solid #bee3f8;padding-bottom:8px}
+h3{color:#2c5282;margin-top:25px}
+h4{color:#ed8936;margin-top:18px}
+p{margin:8px 0}
+ul,ol{margin:10px 0 10px 22px}
+li{margin:5px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.nota{background:#f0fff4;padding:12px 16px;margin:12px 0;border-radius:6px;font-size:.9em;border:1px solid #c6f6d5}
+.desafio{background:#fff5f5;border-left:4px solid #e53e3e;padding:15px 20px;margin:15px 0;border-radius:0 8px 8px 0}
+hr{border:none;height:2px;background:#e2e8f0;margin:35px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:40px}
+footer{text-align:center;color:#a0aec0;margin-top:50px;font-size:.85em;border-top:1px solid #e2e8f0;padding-top:15px}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 2</h1>
+<p><em>3 dias | 2 bloques por dia | Segundo paso.</em></p>
+
+<div class="nota">
+Misma estructura: <strong>lunes, miercoles y viernes</strong>. Si la semana pasada te parecio corta o quieres mas desafio, hay ejercicios opcionales al final de cada bloque de mates.
+</div>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Funciones (concepto)</h3>
+
+<div class="mate">
+<h4>¿Que es una funcion?</h4>
+
+<p>Una <strong>funcion</strong> es una relacion entre dos conjuntos donde a cada valor de entrada le corresponde exactamente un valor de salida. Es como una maquina: le metes algo, la maquina hace algo con eso, y te devuelve un resultado.</p>
+
+<p><strong>Ejemplo cotidiano:</strong> La maquina "duplicar" → le metes 3, te devuelve 6. Le metes 10, te devuelve 20. Le metes x, te devuelve 2x.</p>
+
+<p><strong>En basket:</strong> Si un jugador anota en promedio 2.5 puntos por minuto en cancha, la funcion seria: puntos = 2.5 × minutos. Si juega 20 minutos, se esperan 2.5 × 20 = 50 puntos.</p>
+
+<p><strong>En videojuegos:</strong> La dificultad de un nivel podria ser funcion del numero de nivel: dificultad = nivel² (cada nivel es exponencialmente mas dificil que el anterior).</p>
+
+<h4>Notacion</h4>
+
+<p>Usamos f(x) para nombrar funciones. La "x" es la entrada (variable independiente) y f(x) es la salida (variable dependiente).</p>
+
+<ul>
+<li>f(x) = 3x + 1 → si x = 2, entonces f(2) = 3(2) + 1 = 7</li>
+<li>f(x) = x² → si x = 4, entonces f(4) = 16</li>
+<li>f(x) = x² - 5x + 6 → si x = 3, entonces f(3) = 9 - 15 + 6 = 0</li>
+</ul>
+
+<h4>Dominio y rango</h4>
+
+<p><strong>Dominio:</strong> todos los valores que puedes meter a la funcion (las x validas).</p>
+<p><strong>Rango:</strong> todos los valores que la funcion puede devolver (las y posibles).</p>
+
+<p><strong>Ejemplo:</strong> f(x) = √x</p>
+<ul>
+<li>Dominio: x ≥ 0 (no puedes sacar raiz cuadrada de un negativo en numeros reales)</li>
+<li>Rango: f(x) ≥ 0 (la raiz cuadrada nunca es negativa)</li>
+</ul>
+
+<p><strong>Ejemplo:</strong> f(x) = 1/x</p>
+<ul>
+<li>Dominio: x ≠ 0 (no puedes dividir por cero)</li>
+<li>Rango: f(x) ≠ 0 (la funcion nunca vale exactamente cero)</li>
+</ul>
+
+<h4>Tipos de funciones (avance)</h4>
+<ul>
+<li><strong>Lineal:</strong> f(x) = mx + b (grafica: linea recta)</li>
+<li><strong>Cuadratica:</strong> f(x) = ax² + bx + c (grafica: parabola — como la trayectoria de un balon)</li>
+<li><strong>Exponencial:</strong> f(x) = aˣ (crece cada vez mas rapido — como un virus contagiandose)</li>
+</ul>
+
+<p>Esta semana veremos las lineales en detalle. Las otras las exploraremos en semanas siguientes.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Funciones (concepto)</h4>
+
+<p><strong>Evaluar funciones:</strong></p>
+<ol>
+<li>Si f(x) = 2x + 3, calcula: f(0), f(1), f(5), f(-2)</li>
+<li>Si g(x) = x² - 4, calcula: g(0), g(2), g(-3), g(1)</li>
+<li>Si h(x) = 3x² - x + 1, calcula h(2)</li>
+</ol>
+
+<p><strong>Dominio:</strong></p>
+<ol start="4">
+<li>¿Cual es el dominio de f(x) = 5/(x-3)? (¿que valor de x haria que dividas por cero?)</li>
+<li>¿Cual es el dominio de g(x) = √(x-2)? (¿que valores hacen que lo de adentro sea negativo?)</li>
+</ol>
+
+<p><strong>Problemas:</strong></p>
+<ol start="6">
+<li>Un jugador de basket tiene una funcion de puntos por partido: P(m) = 0.8m + 2, donde m son los minutos jugados. ¿Cuantos puntos se esperan si juega 25 minutos? ¿Y si juega 35?</li>
+<li>La altura de un balon lanzado hacia arriba es h(t) = -5t² + 20t (en metros, con t en segundos). ¿Cual es la altura a los 2 segundos? ¿Y a los 4?</li>
+<li>¿El balon del ejercicio anterior esta mas alto a los 1.5 segundos o a los 3 segundos? Calcula ambos.</li>
+</ol>
+</div>
+
+<div class="desafio">
+<h4>Desafio (opcional)</h4>
+<p>Si f(x) = 2x + 1 y g(x) = x², calcula f(g(3)) y g(f(3)). ¿Son iguales? (Pista: primero calcula lo de adentro, luego usa el resultado como entrada de la otra funcion.)</p>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1: "La atencion: el filtro invisible"</strong> del cuadernillo de lecturas de esta semana.</p>
+<p>Despues de leer, responde:</p>
+
+<ol>
+<li>El texto da una cifra especifica sobre la diferencia entre lo que los sentidos captan y lo que la mente consciente procesa. ¿Cuales son esos dos numeros y que porcentaje representan?</li>
+<li>Describe el experimento del gorila invisible: ¿que le pedian a la gente, que ocurria, y que porcentaje no veia al gorila?</li>
+<li>El texto dice que la atencion sostenida dura entre 10 y 20 minutos. ¿Que implicacion tiene esto para estudiar? Escribe una conclusion practica basandote en el texto.</li>
+<li>¿Que es lo que realmente hace el cerebro cuando crees que estas haciendo "multitarea"? ¿Cuanto tarda en recuperar la concentracion despues de una interrupcion?</li>
+<li>El estudio de la Universidad de Londres compara la caida de rendimiento por multitarea con algo especifico. ¿Con que lo compara?</li>
+</ol>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Funciones lineales</h3>
+
+<div class="mate">
+<h4>La funcion lineal: f(x) = mx + b</h4>
+
+<p>Una funcion lineal produce una linea recta al graficarla. Tiene dos componentes clave:</p>
+
+<ul>
+<li><strong>m (pendiente):</strong> que tan "empinada" es la recta. Es la tasa de cambio — cuanto sube (o baja) la y por cada unidad que avanza la x.</li>
+<li><strong>b (ordenada al origen):</strong> donde la recta cruza el eje y (cuando x = 0).</li>
+</ul>
+
+<h4>¿Que significa la pendiente?</h4>
+
+<p><strong>En basket:</strong> Si un jugador mejora su promedio en 1.5 puntos por temporada, la pendiente es 1.5. Si su promedio actual (temporada 0) es 12 puntos, la funcion seria: promedio(t) = 1.5t + 12, donde t = numero de temporadas.</p>
+
+<p><strong>Pendiente positiva (m > 0):</strong> la recta sube de izquierda a derecha (la y aumenta cuando x aumenta).</p>
+<p><strong>Pendiente negativa (m < 0):</strong> la recta baja (como la carga de bateria de tu celular con el tiempo).</p>
+<p><strong>Pendiente cero (m = 0):</strong> la recta es horizontal (nada cambia).</p>
+
+<h4>Calcular la pendiente entre dos puntos</h4>
+
+<p><strong>Formula:</strong> m = (y₂ - y₁) / (x₂ - x₁)</p>
+
+<p><strong>Ejemplo:</strong> Un jugador anoto 18 puntos en el partido 3 y 24 puntos en el partido 7.</p>
+<ul>
+<li>Puntos: (3, 18) y (7, 24)</li>
+<li>m = (24 - 18) / (7 - 3) = 6/4 = 1.5 puntos por partido de mejora</li>
+</ul>
+
+<h4>Encontrar la ecuacion de la recta</h4>
+
+<p>Si conoces la pendiente m y un punto (x₁, y₁):</p>
+<p><strong>y - y₁ = m(x - x₁)</strong></p>
+
+<p><strong>Ejemplo:</strong> Pendiente 1.5, pasa por (3, 18):</p>
+<ul>
+<li>y - 18 = 1.5(x - 3)</li>
+<li>y - 18 = 1.5x - 4.5</li>
+<li>y = 1.5x + 13.5</li>
+</ul>
+
+<h4>Graficar</h4>
+<p>Para graficar una funcion lineal solo necesitas 2 puntos (con 2 puntos trazas la recta). La forma mas rapida:</p>
+<ol>
+<li>Calcula f(0) = b → ese es el punto donde cruza el eje y.</li>
+<li>Calcula f(1) o cualquier otro valor facil → segundo punto.</li>
+<li>Conecta los puntos con una linea recta.</li>
+</ol>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Funciones lineales</h4>
+
+<p><strong>Identificar pendiente y ordenada:</strong></p>
+<ol>
+<li>f(x) = 3x - 2 → m = ___, b = ___</li>
+<li>f(x) = -x + 5 → m = ___, b = ___</li>
+<li>f(x) = 7 → m = ___, b = ___ (¿que tipo de recta es?)</li>
+</ol>
+
+<p><strong>Calcular pendiente entre dos puntos:</strong></p>
+<ol start="4">
+<li>(1, 3) y (4, 12)</li>
+<li>(2, 8) y (6, 8) (¿que significa esta pendiente?)</li>
+<li>(0, 5) y (3, -1)</li>
+</ol>
+
+<p><strong>Encontrar la ecuacion:</strong></p>
+<ol start="7">
+<li>Pendiente 2, pasa por (1, 5). Encuentra la ecuacion en forma y = mx + b.</li>
+<li>Pasa por (2, 3) y (4, 9). Encuentra la ecuacion.</li>
+</ol>
+
+<p><strong>Problemas:</strong></p>
+<ol start="9">
+<li>Un telefono tiene 100% de bateria y pierde 8% por hora. Escribe la funcion bateria(h) donde h = horas. ¿Cuando se queda sin bateria?</li>
+<li>Un jugador empezo la temporada con 10 puntos de promedio y cada mes mejora 2 puntos. Escribe la funcion y calcula su promedio en el mes 6.</li>
+<li>Dos jugadores: A mejora con funcion P_A(t) = 2t + 8 y B con P_B(t) = t + 14 (t en meses). ¿En que mes tienen el mismo promedio? ¿Despues de ese mes, quien es mejor?</li>
+</ol>
+</div>
+
+<div class="desafio">
+<h4>Desafio (opcional)</h4>
+<p>Un plan de celular cobra $15 fijos al mes mas $0.50 por cada GB de datos. Otro plan cobra $0 fijos pero $2.50 por GB. ¿A partir de cuantos GB conviene el primer plan? (Escribe ambas funciones y encuentra donde se cruzan.)</p>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2: "Percepcion: tu cerebro te miente (un poco)"</strong> del cuadernillo de lecturas.</p>
+<p>Despues de leer, responde:</p>
+
+<ol>
+<li>¿Que quiere decir el texto cuando afirma que "el color rojo no existe fuera de tu cabeza"? Explicalo con tus palabras.</li>
+<li>¿Que es el punto ciego del ojo y por que normalmente no lo notas?</li>
+<li>El texto describe 3 ilusiones opticas. Resume cada una en una oracion: que pasa y por que.</li>
+<li>El texto dice que la percepcion es una "construccion" del cerebro. ¿Que implicaciones practicas tiene esto? (El texto menciona 3 — escribelas.)</li>
+<li>Los bebes de 9 minutos de edad ya prefieren mirar patrones de caras. ¿Que nos dice esto sobre el "detector de caras" del cerebro?</li>
+</ol>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Funciones cuadraticas (graficas)</h3>
+
+<div class="mate">
+<h4>La funcion cuadratica: f(x) = ax² + bx + c</h4>
+
+<p>Ya sabes resolverlas (semana pasada). Ahora vamos a entender como se ven: su grafica es siempre una <strong>parabola</strong>.</p>
+
+<p><strong>En basket:</strong> Cuando lanzas un balon, su trayectoria en el aire forma una parabola. La funcion que describe su altura es cuadratica: h(t) = -5t² + v₀t + h₀ (donde v₀ es la velocidad inicial y h₀ la altura desde donde lo lanzas).</p>
+
+<h4>Elementos clave de la parabola</h4>
+
+<ul>
+<li><strong>Vertice:</strong> El punto mas alto (si a < 0) o mas bajo (si a > 0) de la parabola. Es el punto de giro.</li>
+<li><strong>Eje de simetria:</strong> La linea vertical que pasa por el vertice. La parabola es simetrica respecto a esta linea.</li>
+<li><strong>Raices/ceros:</strong> Los puntos donde la parabola cruza el eje x (son las soluciones de ax²+bx+c=0 que calculaste la semana pasada).</li>
+<li><strong>Concavidad:</strong> Si a > 0, la parabola abre hacia arriba (como un cuenco). Si a < 0, abre hacia abajo (como un arco de lanzamiento).</li>
+</ul>
+
+<h4>Encontrar el vertice</h4>
+
+<p><strong>Formula del x del vertice:</strong> x_v = -b / (2a)</p>
+<p><strong>Y del vertice:</strong> sustituyes x_v en la funcion.</p>
+
+<p><strong>Ejemplo:</strong> f(x) = -x² + 6x - 5</p>
+<ul>
+<li>a = -1, b = 6, c = -5</li>
+<li>x_v = -6 / (2×(-1)) = -6 / -2 = 3</li>
+<li>f(3) = -(3)² + 6(3) - 5 = -9 + 18 - 5 = 4</li>
+<li>Vertice: (3, 4) — es el punto mas alto porque a < 0.</li>
+</ul>
+
+<p><strong>Interpretacion en basket:</strong> Si esta funcion describe la altura de un balon, alcanza su punto maximo (4 metros) a los 3 segundos.</p>
+
+<h4>Graficar paso a paso</h4>
+<ol>
+<li>Encuentra el vertice.</li>
+<li>Encuentra las raices (si existen) resolviendo ax²+bx+c=0.</li>
+<li>Calcula f(0) para saber donde cruza el eje y.</li>
+<li>Calcula 1 o 2 puntos adicionales.</li>
+<li>Traza la curva simetrica respecto al eje de simetria.</li>
+</ol>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Funciones cuadraticas</h4>
+
+<p><strong>Encontrar vertice:</strong></p>
+<ol>
+<li>f(x) = x² - 4x + 3 → vertice = (__, __). ¿Abre hacia arriba o abajo?</li>
+<li>f(x) = -2x² + 8x - 6 → vertice = (__, __). ¿Punto maximo o minimo?</li>
+<li>f(x) = x² + 6x + 9 → vertice = (__, __). (¿Reconoces este trinomio?)</li>
+</ol>
+
+<p><strong>Analisis completo:</strong></p>
+<ol start="4">
+<li>Para f(x) = x² - 2x - 8, encuentra: vertice, raices (factorizando o con formula), punto donde cruza el eje y, y di si abre arriba o abajo.</li>
+<li>Para f(x) = -x² + 4x, encuentra: vertice, raices, eje y, concavidad.</li>
+</ol>
+
+<p><strong>Problemas:</strong></p>
+<ol start="6">
+<li>La altura de un balon es h(t) = -5t² + 15t + 2 (metros). ¿Cual es la altura maxima que alcanza? ¿En que momento?</li>
+<li>Un arquero lanza una flecha cuya trayectoria es y = -0.02x² + x + 1.5 (y = altura, x = distancia horizontal). ¿A que distancia cae al suelo? (Resuelve y = 0)</li>
+</ol>
+</div>
+
+<div class="desafio">
+<h4>Desafio (opcional)</h4>
+<p>En un tiro libre de basket, el balon sale a 2.5 metros de altura con una trayectoria h(x) = -0.1x² + 0.9x + 2.5 donde x es la distancia horizontal. El aro esta a 4.2 metros de distancia y a 3.05 metros de altura. ¿El balon entra? (Calcula h(4.2) y compara con 3.05.)</p>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3: "Mitos y verdades sobre el cerebro"</strong> del cuadernillo de lecturas.</p>
+<p>Despues de leer, responde:</p>
+
+<ol>
+<li>Haz una tabla con dos columnas: MITO y VERDAD. Escribe los 3 mitos y las 3 verdades con un resumen de una oracion cada uno.</li>
+<li>El mito del "10% del cerebro": ¿cual es el argumento del texto para demostrar que es falso?</li>
+<li>Sobre el cerebro adolescente: ¿que parte esta todavia en desarrollo, que funcion tiene, y a que edad termina de madurar? ¿Por que el texto lo compara con "un auto deportivo con frenos en instalacion"?</li>
+<li>¿Que beneficios del ejercicio fisico para el cerebro menciona el texto? ¿Cuanto tiempo de ejercicio ya muestra beneficios?</li>
+<li><strong>Dato favorito:</strong> De los 3 textos de esta semana, ¿cual dato te resulto mas interesante? Escribe cual y por que en 2-3 oraciones.</li>
+</ol>
+</div>
+
+<footer>
+Semana 2 de 20 | Fran<br>
+"Tu cerebro cambia con cada cosa que aprendes. Literalmente."
+</footer>
+
+</body>
+</html>
