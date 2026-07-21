@@ -16,110 +16,218 @@ li{margin:5px 0}
 .mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
 .escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
 .ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:18px 22px;margin:15px 0;border-radius:0 8px 8px 0}
 .nota{background:#f0fff4;padding:12px 16px;margin:12px 0;border-radius:6px;font-size:.9em;border:1px solid #c6f6d5}
 .desafio{background:#fff5f5;border-left:4px solid #e53e3e;padding:15px 20px;margin:15px 0;border-radius:0 8px 8px 0}
 hr{border:none;height:2px;background:#e2e8f0;margin:35px 0}
 .page-break{page-break-before:always;break-before:page;margin-top:40px}
 footer{text-align:center;color:#a0aec0;margin-top:50px;font-size:.85em;border-top:1px solid #e2e8f0;padding-top:15px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{padding:8px 10px;border:1px solid #e2e8f0;text-align:center}
+th{background:#2c5282;color:#fff}
+tr:nth-child(even){background:#f8fafc}
 </style>
 </head>
 <body>
 
 <h1>Fran — Semana 2</h1>
-<p><em>3 dias | 2 bloques por dia | Segundo paso.</em></p>
+<p><em>3 dias | 2 bloques por dia | Esta semana reforzamos lo de la semana pasada con mas calma.</em></p>
 
 <div class="nota">
-Misma estructura: <strong>lunes, miercoles y viernes</strong>. Si la semana pasada te parecio corta o quieres mas desafio, hay ejercicios opcionales al final de cada bloque de mates.
+Esta semana repasamos los mismos temas de matematicas de la semana 1, pero con mas explicaciones y ejemplos resueltos paso a paso. No es volver atras — es asentar bien las bases antes de seguir. Las lecturas si avanzan con contenido nuevo.
 </div>
 
 <hr>
 
 <h2>DIA 1 — LUNES</h2>
 
-<h3>Bloque 1: Matematicas — Funciones (concepto)</h3>
+<h3>Bloque 1: Matematicas — Factorizacion (refuerzo con paso a paso)</h3>
+
 
 <div class="mate">
-<h4>¿Que es una funcion?</h4>
+<h4>Repaso rapido: los 3 tipos de factorizacion</h4>
 
-<p>Una <strong>funcion</strong> es una relacion entre dos conjuntos donde a cada valor de entrada le corresponde exactamente un valor de salida. Es como una maquina: le metes algo, la maquina hace algo con eso, y te devuelve un resultado.</p>
+<p>La semana pasada vimos 4 tipos. Esta semana vamos a profundizar en los 3 mas importantes con ejercicios completamente resueltos para que veas el proceso de pensamiento completo.</p>
 
-<p><strong>Ejemplo cotidiano:</strong> La maquina "duplicar" → le metes 3, te devuelve 6. Le metes 10, te devuelve 20. Le metes x, te devuelve 2x.</p>
+<p><strong>Recuerda la idea general:</strong> Factorizar es tomar una expresion "armada" y descomponerla en partes mas simples multiplicadas entre si. Es como desarmar un mecanismo para ver sus piezas.</p>
+</div>
 
-<p><strong>En basket:</strong> Si un jugador anota en promedio 2.5 puntos por minuto en cancha, la funcion seria: puntos = 2.5 × minutos. Si juega 20 minutos, se esperan 2.5 × 20 = 50 puntos.</p>
+<div class="resuelto">
+<h4>TIPO 1: Factor comun — Ejercicio resuelto</h4>
 
-<p><strong>En videojuegos:</strong> La dificultad de un nivel podria ser funcion del numero de nivel: dificultad = nivel² (cada nivel es exponencialmente mas dificil que el anterior).</p>
+<p><strong>Factorizar: 8x³ - 12x²</strong></p>
 
-<h4>Notacion</h4>
-
-<p>Usamos f(x) para nombrar funciones. La "x" es la entrada (variable independiente) y f(x) es la salida (variable dependiente).</p>
-
+<p><strong>Paso 1 — Miro cada termino por separado:</strong></p>
 <ul>
-<li>f(x) = 3x + 1 → si x = 2, entonces f(2) = 3(2) + 1 = 7</li>
-<li>f(x) = x² → si x = 4, entonces f(4) = 16</li>
-<li>f(x) = x² - 5x + 6 → si x = 3, entonces f(3) = 9 - 15 + 6 = 0</li>
+<li>Primer termino: 8x³ → esta compuesto por 8 · x · x · x</li>
+<li>Segundo termino: 12x² → esta compuesto por 12 · x · x</li>
 </ul>
 
-<h4>Dominio y rango</h4>
+<p><strong>Paso 2 — Me pregunto: ¿que tienen en comun?</strong></p>
 
-<p><strong>Dominio:</strong> todos los valores que puedes meter a la funcion (las x validas).</p>
-<p><strong>Rango:</strong> todos los valores que la funcion puede devolver (las y posibles).</p>
-
-<p><strong>Ejemplo:</strong> f(x) = √x</p>
+<p>Miro los numeros:</p>
 <ul>
-<li>Dominio: x ≥ 0 (no puedes sacar raiz cuadrada de un negativo en numeros reales)</li>
-<li>Rango: f(x) ≥ 0 (la raiz cuadrada nunca es negativa)</li>
+<li>8 y 12. ¿Cual es el mayor numero que divide a ambos? Pruebo: ¿8? No, porque 12÷8 no es exacto. ¿4? Si: 8÷4=2 y 12÷4=3. El maximo comun divisor de los numeros es <strong>4</strong>.</li>
 </ul>
 
-<p><strong>Ejemplo:</strong> f(x) = 1/x</p>
+<p>Miro las letras:</p>
 <ul>
-<li>Dominio: x ≠ 0 (no puedes dividir por cero)</li>
-<li>Rango: f(x) ≠ 0 (la funcion nunca vale exactamente cero)</li>
+<li>El primer termino tiene x³ (tres equis multiplicadas: x · x · x)</li>
+<li>El segundo termino tiene x² (dos equis: x · x)</li>
+<li>¿Cuantas x comparten ambos? El minimo: <strong>x²</strong> (dos equis)</li>
 </ul>
 
-<h4>Tipos de funciones (avance)</h4>
+<p><strong>Paso 3 — Defino el factor comun:</strong></p>
+<p>Factor comun = 4x² (el 4 de los numeros y x² de las letras)</p>
+
+<p><strong>Paso 4 — Divido cada termino entre el factor comun:</strong></p>
 <ul>
-<li><strong>Lineal:</strong> f(x) = mx + b (grafica: linea recta)</li>
-<li><strong>Cuadratica:</strong> f(x) = ax² + bx + c (grafica: parabola — como la trayectoria de un balon)</li>
-<li><strong>Exponencial:</strong> f(x) = aˣ (crece cada vez mas rapido — como un virus contagiandose)</li>
+<li>8x³ ÷ 4x² = 2x (porque 8÷4=2 y x³÷x²=x)</li>
+<li>12x² ÷ 4x² = 3 (porque 12÷4=3 y x²÷x²=1)</li>
 </ul>
 
-<p>Esta semana veremos las lineales en detalle. Las otras las exploraremos en semanas siguientes.</p>
+<p><strong>Paso 5 — Escribo el resultado:</strong></p>
+<p>8x³ - 12x² = <strong>4x²(2x - 3)</strong></p>
+
+<p><strong>Paso 6 — Verifico (multiplico de vuelta):</strong></p>
+<ul>
+<li>4x² · 2x = 8x³ ✓</li>
+<li>4x² · (-3) = -12x² ✓</li>
+</ul>
+<p>Suma: 8x³ - 12x² ✓ Correcto.</p>
+</div>
+
+<div class="resuelto">
+<h4>TIPO 2: Diferencia de cuadrados — Ejercicio resuelto</h4>
+
+<p><strong>Factorizar: 4a² - 9b²</strong></p>
+
+<p><strong>Paso 1 — ¿Es una diferencia de cuadrados? Verifico 3 condiciones:</strong></p>
+<ul>
+<li>¿Son dos terminos? → Si: 4a² y 9b² ✓</li>
+<li>¿Estan restados? → Si: 4a² <strong>menos</strong> 9b² ✓</li>
+<li>¿Ambos son cuadrados perfectos? Necesito verificar:
+<ul>
+<li>4a² = ¿(algo)²? → 4 = 2² y a² = (a)². Entonces 4a² = (2a)² ✓</li>
+<li>9b² = ¿(algo)²? → 9 = 3² y b² = (b)². Entonces 9b² = (3b)² ✓</li>
+</ul>
+</li>
+</ul>
+<p>Si, es una diferencia de cuadrados.</p>
+
+<p><strong>Paso 2 — Identifico que esta elevado al cuadrado en cada termino:</strong></p>
+<ul>
+<li>En 4a², lo que esta al cuadrado es <strong>2a</strong> (porque (2a)² = 4a²)</li>
+<li>En 9b², lo que esta al cuadrado es <strong>3b</strong> (porque (3b)² = 9b²)</li>
+</ul>
+
+<p><strong>Paso 3 — Aplico la formula a² - b² = (a + b)(a - b):</strong></p>
+<p>4a² - 9b² = (2a)² - (3b)² = <strong>(2a + 3b)(2a - 3b)</strong></p>
+
+<p><strong>Paso 4 — Verifico multiplicando de vuelta:</strong></p>
+<ul>
+<li>2a · 2a = 4a²</li>
+<li>2a · (-3b) = -6ab</li>
+<li>3b · 2a = +6ab</li>
+<li>3b · (-3b) = -9b²</li>
+</ul>
+<p>Sumo: 4a² - 6ab + 6ab - 9b² = 4a² - 9b² ✓ (los -6ab y +6ab se cancelaron)</p>
+</div>
+
+
+<div class="resuelto">
+<h4>TIPO 3: Trinomio x² + bx + c — Ejercicio resuelto</h4>
+
+<p><strong>Factorizar: x² + 2x - 15</strong></p>
+
+<p><strong>Paso 1 — Identifico b y c:</strong></p>
+<ul>
+<li>La expresion es: x² + 2x - 15</li>
+<li>b = +2 (el numero que acompaña a x)</li>
+<li>c = -15 (el numero solo, sin x)</li>
+</ul>
+
+<p><strong>Paso 2 — Deduzco los signos de los numeros que busco:</strong></p>
+<ul>
+<li>c es <strong>negativo</strong> (-15) → los dos numeros tienen <strong>signos diferentes</strong> (uno positivo, uno negativo). Esto es porque positivo × negativo = negativo.</li>
+<li>b es <strong>positivo</strong> (+2) → al sumar los dos numeros, "gana" el positivo. Eso significa que el numero mas grande en valor absoluto es el positivo.</li>
+</ul>
+<p>Busco: un positivo grande y un negativo mas chico, que multiplicados den -15 y sumados den +2.</p>
+
+<p><strong>Paso 3 — Hago una lista organizada de posibilidades:</strong></p>
+<p>¿Que pares de numeros con signos diferentes me dan -15 al multiplicarse?</p>
+
+<table>
+<tr><th>Numero 1</th><th>Numero 2</th><th>¿Multiplican -15?</th><th>¿Suman +2?</th></tr>
+<tr><td>+1</td><td>-15</td><td>(+1)(-15) = -15 ✓</td><td>1 + (-15) = -14 ✗</td></tr>
+<tr><td>+15</td><td>-1</td><td>(+15)(-1) = -15 ✓</td><td>15 + (-1) = +14 ✗</td></tr>
+<tr><td>+3</td><td>-5</td><td>(+3)(-5) = -15 ✓</td><td>3 + (-5) = -2 ✗</td></tr>
+<tr><td><strong>+5</strong></td><td><strong>-3</strong></td><td><strong>(+5)(-3) = -15 ✓</strong></td><td><strong>5 + (-3) = +2 ✓</strong></td></tr>
+</table>
+
+<p>¡Los encontre! Los numeros son <strong>+5</strong> y <strong>-3</strong>.</p>
+
+<p><strong>Paso 4 — Escribo la factorizacion:</strong></p>
+<p>x² + 2x - 15 = <strong>(x + 5)(x - 3)</strong></p>
+
+<p><strong>Paso 5 — Verifico (multiplico de vuelta):</strong></p>
+<ul>
+<li>x · x = x²</li>
+<li>x · (-3) = -3x</li>
+<li>5 · x = +5x</li>
+<li>5 · (-3) = -15</li>
+</ul>
+<p>Sumo todo: x² - 3x + 5x - 15 = x² + 2x - 15 ✓ Correcto.</p>
+</div>
+
+<div class="mate">
+<h4>Tabla resumen: como deducir los signos antes de buscar</h4>
+
+<table>
+<tr><th>c (el producto)</th><th>b (la suma)</th><th>Los dos numeros son...</th></tr>
+<tr><td>c positivo</td><td>b positivo</td><td>Ambos positivos (+)(+)</td></tr>
+<tr><td>c positivo</td><td>b negativo</td><td>Ambos negativos (-)(-)  </td></tr>
+<tr><td>c negativo</td><td>b positivo</td><td>Uno + y uno -. El mas grande es el positivo</td></tr>
+<tr><td>c negativo</td><td>b negativo</td><td>Uno + y uno -. El mas grande es el negativo</td></tr>
+</table>
 </div>
 
 <div class="ejercicio">
-<h4>Ejercicios — Funciones (concepto)</h4>
+<h4>Ahora tu — Ejercicios de factorizacion</h4>
+<p><em>Usa el mismo proceso de los ejemplos. Muestra tus pasos.</em></p>
 
-<p><strong>Evaluar funciones:</strong></p>
+<p><strong>Factor comun:</strong></p>
 <ol>
-<li>Si f(x) = 2x + 3, calcula: f(0), f(1), f(5), f(-2)</li>
-<li>Si g(x) = x² - 4, calcula: g(0), g(2), g(-3), g(1)</li>
-<li>Si h(x) = 3x² - x + 1, calcula h(2)</li>
+<li>6a²b + 9ab² - 3ab =</li>
+<li>x(x+4) + 3(x+4) =</li>
 </ol>
 
-<p><strong>Dominio:</strong></p>
-<ol start="4">
-<li>¿Cual es el dominio de f(x) = 5/(x-3)? (¿que valor de x haria que dividas por cero?)</li>
-<li>¿Cual es el dominio de g(x) = √(x-2)? (¿que valores hacen que lo de adentro sea negativo?)</li>
+<p><strong>Diferencia de cuadrados:</strong></p>
+<ol start="3">
+<li>x² - 81 =</li>
+<li>25x² - 1 =</li>
 </ol>
 
-<p><strong>Problemas:</strong></p>
-<ol start="6">
-<li>Un jugador de basket tiene una funcion de puntos por partido: P(m) = 0.8m + 2, donde m son los minutos jugados. ¿Cuantos puntos se esperan si juega 25 minutos? ¿Y si juega 35?</li>
-<li>La altura de un balon lanzado hacia arriba es h(t) = -5t² + 20t (en metros, con t en segundos). ¿Cual es la altura a los 2 segundos? ¿Y a los 4?</li>
-<li>¿El balon del ejercicio anterior esta mas alto a los 1.5 segundos o a los 3 segundos? Calcula ambos.</li>
+<p><strong>Trinomios (usa la tabla para los signos):</strong></p>
+<ol start="5">
+<li>x² + 8x + 16 = (pista: ¿es cuadrado perfecto?)</li>
+<li>x² + 5x + 6 =</li>
+<li>x² - 7x + 12 =</li>
+<li>x² - x - 20 =</li>
 </ol>
-</div>
 
-<div class="desafio">
-<h4>Desafio (opcional)</h4>
-<p>Si f(x) = 2x + 1 y g(x) = x², calcula f(g(3)) y g(f(3)). ¿Son iguales? (Pista: primero calcula lo de adentro, luego usa el resultado como entrada de la otra funcion.)</p>
+<p><strong>Mixto (identifica primero que tipo es):</strong></p>
+<ol start="9">
+<li>3x² - 27 = (pista: ¿hay factor comun primero?)</li>
+<li>x³ - 4x =</li>
+</ol>
 </div>
 
 <h3>Bloque 2: Lectura y comprension</h3>
 
 <div class="escribe">
 <h4>Instrucciones:</h4>
-<p>Lee el <strong>Texto 1: "La atencion: el filtro invisible"</strong> del cuadernillo de lecturas de esta semana.</p>
+<p>Lee el <strong>Texto 1: "La atencion: el filtro invisible"</strong> del cuadernillo de lecturas de esta semana (semana 2).</p>
 <p>Despues de leer, responde:</p>
 
 <ol>
@@ -131,95 +239,121 @@ Misma estructura: <strong>lunes, miercoles y viernes</strong>. Si la semana pasa
 </ol>
 </div>
 
+
 <div class="page-break"></div>
 
 <h2>DIA 2 — MIERCOLES</h2>
 
-<h3>Bloque 1: Matematicas — Funciones lineales</h3>
+<h3>Bloque 1: Matematicas — Ecuaciones cuadraticas (refuerzo con paso a paso)</h3>
 
 <div class="mate">
-<h4>La funcion lineal: f(x) = mx + b</h4>
+<h4>Repaso: ¿que es una ecuacion cuadratica?</h4>
 
-<p>Una funcion lineal produce una linea recta al graficarla. Tiene dos componentes clave:</p>
+<p>Es una ecuacion donde la variable aparece elevada al cuadrado: <strong>ax² + bx + c = 0</strong></p>
 
+<p>Hay dos metodos para resolverla. Hoy vamos a ver un ejercicio completo de cada uno, paso a paso.</p>
+</div>
+
+<div class="resuelto">
+<h4>Metodo 1: Resolver por factorizacion — Ejercicio resuelto</h4>
+
+<p><strong>Resolver: x² + x - 12 = 0</strong></p>
+
+<p><strong>Paso 1 — Reconozco que puedo factorizar el lado izquierdo.</strong></p>
+<p>Es un trinomio de la forma x² + bx + c, con b = +1 y c = -12.</p>
+
+<p><strong>Paso 2 — Factorizo (usando el metodo del lunes):</strong></p>
 <ul>
-<li><strong>m (pendiente):</strong> que tan "empinada" es la recta. Es la tasa de cambio — cuanto sube (o baja) la y por cada unidad que avanza la x.</li>
-<li><strong>b (ordenada al origen):</strong> donde la recta cruza el eje y (cuando x = 0).</li>
+<li>c es negativo (-12) → signos diferentes</li>
+<li>b es positivo (+1) → el mas grande es el positivo</li>
+<li>Busco dos numeros que multiplicados den -12 y sumados den +1:</li>
 </ul>
 
-<h4>¿Que significa la pendiente?</h4>
+<table>
+<tr><th>Num 1</th><th>Num 2</th><th>¿Multiplican -12?</th><th>¿Suman +1?</th></tr>
+<tr><td>+2</td><td>-6</td><td>+2 × -6 = -12 ✓</td><td>2 + (-6) = -4 ✗</td></tr>
+<tr><td>+3</td><td>-4</td><td>+3 × -4 = -12 ✓</td><td>3 + (-4) = -1 ✗</td></tr>
+<tr><td><strong>+4</strong></td><td><strong>-3</strong></td><td><strong>+4 × -3 = -12 ✓</strong></td><td><strong>4 + (-3) = +1 ✓</strong></td></tr>
+</table>
 
-<p><strong>En basket:</strong> Si un jugador mejora su promedio en 1.5 puntos por temporada, la pendiente es 1.5. Si su promedio actual (temporada 0) es 12 puntos, la funcion seria: promedio(t) = 1.5t + 12, donde t = numero de temporadas.</p>
+<p>Factorizacion: x² + x - 12 = (x + 4)(x - 3)</p>
 
-<p><strong>Pendiente positiva (m > 0):</strong> la recta sube de izquierda a derecha (la y aumenta cuando x aumenta).</p>
-<p><strong>Pendiente negativa (m < 0):</strong> la recta baja (como la carga de bateria de tu celular con el tiempo).</p>
-<p><strong>Pendiente cero (m = 0):</strong> la recta es horizontal (nada cambia).</p>
-
-<h4>Calcular la pendiente entre dos puntos</h4>
-
-<p><strong>Formula:</strong> m = (y₂ - y₁) / (x₂ - x₁)</p>
-
-<p><strong>Ejemplo:</strong> Un jugador anoto 18 puntos en el partido 3 y 24 puntos en el partido 7.</p>
+<p><strong>Paso 3 — Aplico el principio del producto cero:</strong></p>
+<p>Si (x + 4)(x - 3) = 0, entonces uno de los dos factores debe ser cero:</p>
 <ul>
-<li>Puntos: (3, 18) y (7, 24)</li>
-<li>m = (24 - 18) / (7 - 3) = 6/4 = 1.5 puntos por partido de mejora</li>
+<li>x + 4 = 0 → <strong>x = -4</strong></li>
+<li>x - 3 = 0 → <strong>x = 3</strong></li>
 </ul>
 
-<h4>Encontrar la ecuacion de la recta</h4>
-
-<p>Si conoces la pendiente m y un punto (x₁, y₁):</p>
-<p><strong>y - y₁ = m(x - x₁)</strong></p>
-
-<p><strong>Ejemplo:</strong> Pendiente 1.5, pasa por (3, 18):</p>
+<p><strong>Paso 4 — Verifico ambas soluciones en la ecuacion original:</strong></p>
 <ul>
-<li>y - 18 = 1.5(x - 3)</li>
-<li>y - 18 = 1.5x - 4.5</li>
-<li>y = 1.5x + 13.5</li>
+<li>x = -4: (-4)² + (-4) - 12 = 16 - 4 - 12 = 0 ✓</li>
+<li>x = 3: (3)² + (3) - 12 = 9 + 3 - 12 = 0 ✓</li>
+</ul>
+<p>Ambas soluciones son correctas.</p>
+</div>
+
+<div class="resuelto">
+<h4>Metodo 2: Formula general — Ejercicio resuelto</h4>
+
+<p><strong>Resolver: 2x² + 5x - 3 = 0</strong></p>
+
+<p><strong>Paso 1 — Identifico a, b y c:</strong></p>
+<ul>
+<li>a = 2 (el numero que acompaña a x²)</li>
+<li>b = 5 (el numero que acompaña a x)</li>
+<li>c = -3 (el numero solo)</li>
 </ul>
 
-<h4>Graficar</h4>
-<p>Para graficar una funcion lineal solo necesitas 2 puntos (con 2 puntos trazas la recta). La forma mas rapida:</p>
-<ol>
-<li>Calcula f(0) = b → ese es el punto donde cruza el eje y.</li>
-<li>Calcula f(1) o cualquier otro valor facil → segundo punto.</li>
-<li>Conecta los puntos con una linea recta.</li>
-</ol>
+<p><strong>Paso 2 — Calculo el discriminante (Δ = b² - 4ac):</strong></p>
+<ul>
+<li>Δ = (5)² - 4(2)(-3)</li>
+<li>Δ = 25 - (-24)</li>
+<li>Δ = 25 + 24 = 49</li>
+</ul>
+<p>El discriminante es 49 (positivo), asi que hay dos soluciones reales diferentes.</p>
+
+<p><strong>Paso 3 — Aplico la formula x = (-b ± √Δ) / 2a:</strong></p>
+<ul>
+<li>x = (-5 ± √49) / (2 × 2)</li>
+<li>x = (-5 ± 7) / 4</li>
+</ul>
+
+<p><strong>Paso 4 — Calculo las dos soluciones:</strong></p>
+<ul>
+<li>x₁ = (-5 + 7) / 4 = 2/4 = <strong>1/2</strong></li>
+<li>x₂ = (-5 - 7) / 4 = -12/4 = <strong>-3</strong></li>
+</ul>
+
+<p><strong>Paso 5 — Verifico ambas:</strong></p>
+<ul>
+<li>x = 1/2: 2(1/2)² + 5(1/2) - 3 = 2(1/4) + 5/2 - 3 = 1/2 + 5/2 - 3 = 6/2 - 3 = 3 - 3 = 0 ✓</li>
+<li>x = -3: 2(-3)² + 5(-3) - 3 = 2(9) - 15 - 3 = 18 - 15 - 3 = 0 ✓</li>
+</ul>
 </div>
 
 <div class="ejercicio">
-<h4>Ejercicios — Funciones lineales</h4>
+<h4>Ahora tu — Ecuaciones cuadraticas</h4>
 
-<p><strong>Identificar pendiente y ordenada:</strong></p>
+<p><strong>Por factorizacion:</strong></p>
 <ol>
-<li>f(x) = 3x - 2 → m = ___, b = ___</li>
-<li>f(x) = -x + 5 → m = ___, b = ___</li>
-<li>f(x) = 7 → m = ___, b = ___ (¿que tipo de recta es?)</li>
+<li>x² - 5x + 6 = 0</li>
+<li>x² - 9 = 0 (pista: es diferencia de cuadrados)</li>
+<li>x² - 8x + 16 = 0 (pista: trinomio cuadrado perfecto)</li>
+<li>2x² + 6x = 0 (pista: hay factor comun)</li>
 </ol>
 
-<p><strong>Calcular pendiente entre dos puntos:</strong></p>
-<ol start="4">
-<li>(1, 3) y (4, 12)</li>
-<li>(2, 8) y (6, 8) (¿que significa esta pendiente?)</li>
-<li>(0, 5) y (3, -1)</li>
+<p><strong>Con formula general:</strong></p>
+<ol start="5">
+<li>x² - 3x - 10 = 0 (a=1, b=-3, c=-10)</li>
+<li>3x² - x - 2 = 0</li>
+<li>x² + 2x + 5 = 0 (calcula el discriminante primero: ¿tiene solucion real?)</li>
 </ol>
 
-<p><strong>Encontrar la ecuacion:</strong></p>
-<ol start="7">
-<li>Pendiente 2, pasa por (1, 5). Encuentra la ecuacion en forma y = mx + b.</li>
-<li>Pasa por (2, 3) y (4, 9). Encuentra la ecuacion.</li>
+<p><strong>Problema:</strong></p>
+<ol start="8">
+<li>Un balon se lanza hacia arriba. Su altura h (metros) despues de t segundos es: h = 20t - 5t². ¿En que momentos esta a 15 metros? (Plantea: 20t - 5t² = 15, reordena y resuelve.)</li>
 </ol>
-
-<p><strong>Problemas:</strong></p>
-<ol start="9">
-<li>Un telefono tiene 100% de bateria y pierde 8% por hora. Escribe la funcion bateria(h) donde h = horas. ¿Cuando se queda sin bateria?</li>
-<li>Un jugador empezo la temporada con 10 puntos de promedio y cada mes mejora 2 puntos. Escribe la funcion y calcula su promedio en el mes 6.</li>
-<li>Dos jugadores: A mejora con funcion P_A(t) = 2t + 8 y B con P_B(t) = t + 14 (t en meses). ¿En que mes tienen el mismo promedio? ¿Despues de ese mes, quien es mejor?</li>
-</ol>
-</div>
-
-<div class="desafio">
-<h4>Desafio (opcional)</h4>
-<p>Un plan de celular cobra $15 fijos al mes mas $0.50 por cada GB de datos. Otro plan cobra $0 fijos pero $2.50 por GB. ¿A partir de cuantos GB conviene el primer plan? (Escribe ambas funciones y encuentra donde se cruzan.)</p>
 </div>
 
 <h3>Bloque 2: Lectura y comprension</h3>
@@ -238,79 +372,91 @@ Misma estructura: <strong>lunes, miercoles y viernes</strong>. Si la semana pasa
 </ol>
 </div>
 
+
 <div class="page-break"></div>
 
 <h2>DIA 3 — VIERNES</h2>
 
-<h3>Bloque 1: Matematicas — Funciones cuadraticas (graficas)</h3>
+<h3>Bloque 1: Matematicas — Sistemas de ecuaciones (refuerzo con paso a paso)</h3>
 
 <div class="mate">
-<h4>La funcion cuadratica: f(x) = ax² + bx + c</h4>
+<h4>Repaso: ¿que es un sistema de ecuaciones?</h4>
+<p>Son dos ecuaciones que deben cumplirse al mismo tiempo con las mismas incognitas. Es como un acertijo con dos pistas que juntas te dan la respuesta.</p>
+</div>
 
-<p>Ya sabes resolverlas (semana pasada). Ahora vamos a entender como se ven: su grafica es siempre una <strong>parabola</strong>.</p>
+<div class="resuelto">
+<h4>Metodo de sustitucion — Ejercicio resuelto</h4>
 
-<p><strong>En basket:</strong> Cuando lanzas un balon, su trayectoria en el aire forma una parabola. La funcion que describe su altura es cuadratica: h(t) = -5t² + v₀t + h₀ (donde v₀ es la velocidad inicial y h₀ la altura desde donde lo lanzas).</p>
+<p><strong>Resolver: x + y = 10 y 3x + 2y = 26</strong></p>
 
-<h4>Elementos clave de la parabola</h4>
+<p><strong>Paso 1 — Elijo una ecuacion y despejo una variable:</strong></p>
+<p>De la primera ecuacion (es la mas simple), despejo x:</p>
+<p>x + y = 10 → x = 10 - y</p>
 
+<p><strong>Paso 2 — Sustituyo esa expresion en la OTRA ecuacion:</strong></p>
+<p>En la segunda ecuacion, donde dice "x", pongo "(10 - y)":</p>
+<p>3(10 - y) + 2y = 26</p>
+
+<p><strong>Paso 3 — Resuelvo la ecuacion resultante (solo tiene una variable):</strong></p>
 <ul>
-<li><strong>Vertice:</strong> El punto mas alto (si a < 0) o mas bajo (si a > 0) de la parabola. Es el punto de giro.</li>
-<li><strong>Eje de simetria:</strong> La linea vertical que pasa por el vertice. La parabola es simetrica respecto a esta linea.</li>
-<li><strong>Raices/ceros:</strong> Los puntos donde la parabola cruza el eje x (son las soluciones de ax²+bx+c=0 que calculaste la semana pasada).</li>
-<li><strong>Concavidad:</strong> Si a > 0, la parabola abre hacia arriba (como un cuenco). Si a < 0, abre hacia abajo (como un arco de lanzamiento).</li>
+<li>30 - 3y + 2y = 26 (distribuyo el 3)</li>
+<li>30 - y = 26 (simplifico: -3y + 2y = -y)</li>
+<li>-y = 26 - 30</li>
+<li>-y = -4</li>
+<li><strong>y = 4</strong></li>
 </ul>
 
-<h4>Encontrar el vertice</h4>
+<p><strong>Paso 4 — Encuentro la otra variable sustituyendo de vuelta:</strong></p>
+<p>x = 10 - y = 10 - 4 = <strong>6</strong></p>
 
-<p><strong>Formula del x del vertice:</strong> x_v = -b / (2a)</p>
-<p><strong>Y del vertice:</strong> sustituyes x_v en la funcion.</p>
-
-<p><strong>Ejemplo:</strong> f(x) = -x² + 6x - 5</p>
+<p><strong>Paso 5 — Verifico en AMBAS ecuaciones originales:</strong></p>
 <ul>
-<li>a = -1, b = 6, c = -5</li>
-<li>x_v = -6 / (2×(-1)) = -6 / -2 = 3</li>
-<li>f(3) = -(3)² + 6(3) - 5 = -9 + 18 - 5 = 4</li>
-<li>Vertice: (3, 4) — es el punto mas alto porque a < 0.</li>
+<li>Primera: x + y = 6 + 4 = 10 ✓</li>
+<li>Segunda: 3(6) + 2(4) = 18 + 8 = 26 ✓</li>
+</ul>
+<p>Solucion: x = 6, y = 4.</p>
+</div>
+
+<div class="resuelto">
+<h4>Metodo de eliminacion — Ejercicio resuelto</h4>
+
+<p><strong>Resolver: 5x - 3y = 1 y 2x + 3y = 13</strong></p>
+
+<p><strong>Paso 1 — Observo si alguna variable se puede eliminar directamente:</strong></p>
+<p>Miro los coeficientes de "y": en la primera es -3y y en la segunda es +3y. ¡Son opuestos! Si las sumo, se cancelan.</p>
+
+<p><strong>Paso 2 — Sumo ambas ecuaciones:</strong></p>
+<ul>
+<li>(5x - 3y) + (2x + 3y) = 1 + 13</li>
+<li>5x + 2x - 3y + 3y = 14</li>
+<li>7x = 14 (los -3y y +3y se cancelaron)</li>
+<li><strong>x = 2</strong></li>
 </ul>
 
-<p><strong>Interpretacion en basket:</strong> Si esta funcion describe la altura de un balon, alcanza su punto maximo (4 metros) a los 3 segundos.</p>
+<p><strong>Paso 3 — Sustituyo x en cualquiera de las ecuaciones originales:</strong></p>
+<p>Uso la segunda: 2(2) + 3y = 13 → 4 + 3y = 13 → 3y = 9 → <strong>y = 3</strong></p>
 
-<h4>Graficar paso a paso</h4>
-<ol>
-<li>Encuentra el vertice.</li>
-<li>Encuentra las raices (si existen) resolviendo ax²+bx+c=0.</li>
-<li>Calcula f(0) para saber donde cruza el eje y.</li>
-<li>Calcula 1 o 2 puntos adicionales.</li>
-<li>Traza la curva simetrica respecto al eje de simetria.</li>
-</ol>
+<p><strong>Paso 4 — Verifico en la OTRA ecuacion (la que no use en el paso 3):</strong></p>
+<p>Primera: 5(2) - 3(3) = 10 - 9 = 1 ✓</p>
+
+<p>Solucion: x = 2, y = 3.</p>
 </div>
 
 <div class="ejercicio">
-<h4>Ejercicios — Funciones cuadraticas</h4>
+<h4>Ahora tu — Sistemas de ecuaciones</h4>
 
-<p><strong>Encontrar vertice:</strong></p>
 <ol>
-<li>f(x) = x² - 4x + 3 → vertice = (__, __). ¿Abre hacia arriba o abajo?</li>
-<li>f(x) = -2x² + 8x - 6 → vertice = (__, __). ¿Punto maximo o minimo?</li>
-<li>f(x) = x² + 6x + 9 → vertice = (__, __). (¿Reconoces este trinomio?)</li>
-</ol>
-
-<p><strong>Analisis completo:</strong></p>
-<ol start="4">
-<li>Para f(x) = x² - 2x - 8, encuentra: vertice, raices (factorizando o con formula), punto donde cruza el eje y, y di si abre arriba o abajo.</li>
-<li>Para f(x) = -x² + 4x, encuentra: vertice, raices, eje y, concavidad.</li>
+<li>x + y = 12 y x - y = 4 (pista: si las sumas, se eliminan las y)</li>
+<li>2x + y = 7 y x - y = 2</li>
+<li>3x + 2y = 12 y x + 2y = 8 (pista: si las restas, se eliminan las 2y)</li>
 </ol>
 
 <p><strong>Problemas:</strong></p>
-<ol start="6">
-<li>La altura de un balon es h(t) = -5t² + 15t + 2 (metros). ¿Cual es la altura maxima que alcanza? ¿En que momento?</li>
-<li>Un arquero lanza una flecha cuya trayectoria es y = -0.02x² + x + 1.5 (y = altura, x = distancia horizontal). ¿A que distancia cae al suelo? (Resuelve y = 0)</li>
+<ol start="4">
+<li>La suma de dos numeros es 45 y uno es el triple del otro. ¿Cuales son? (Plantea: x + y = 45 y x = 3y)</li>
+<li>En un partido, un jugador anoto 28 puntos entre dobles (2 pts) y triples (3 pts). Hizo 12 canastas en total. ¿Cuantas de cada tipo?</li>
+<li>La edad de un padre es 4 veces la de su hijo. Dentro de 12 años sera solo el doble. ¿Que edad tiene cada uno?</li>
 </ol>
-</div>
-
-<div class="desafio">
-<h4>Desafio (opcional)</h4>
-<p>En un tiro libre de basket, el balon sale a 2.5 metros de altura con una trayectoria h(x) = -0.1x² + 0.9x + 2.5 donde x es la distancia horizontal. El aro esta a 4.2 metros de distancia y a 3.05 metros de altura. ¿El balon entra? (Calcula h(4.2) y compara con 3.05.)</p>
 </div>
 
 <h3>Bloque 2: Lectura y comprension</h3>
@@ -331,7 +477,7 @@ Misma estructura: <strong>lunes, miercoles y viernes</strong>. Si la semana pasa
 
 <footer>
 Semana 2 de 20 | Fran<br>
-"Tu cerebro cambia con cada cosa que aprendes. Literalmente."
+"La repeticion no es retroceso — es la base sobre la que se construye todo lo demas."
 </footer>
 
 </body>
