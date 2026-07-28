@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 3</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:6px;margin-bottom:10px}
+h2{color:#2a4365;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #bee3f8;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.nota{background:#f0fff4;padding:8px 12px;margin:8px 0;border-radius:6px;font-size:.85em;border:1px solid #c6f6d5}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9em}
+th,td{padding:5px 8px;border:1px solid #e2e8f0;text-align:center}
+th{background:#2c5282;color:#fff}
+tr:nth-child(even){background:#f8fafc}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.escribe,.ejercicio,.resuelto,.proyecto{padding:8px 12px;margin:6px 0}.nota{padding:6px 10px;margin:5px 0}hr{margin:12px 0}table{font-size:.8em}th,td{padding:3px 5px}}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 3</h1>
+<p><em>3 dias | 2 bloques + proyecto corto | Tema nuevo: estadistica.</em></p>
+
+<div class="nota">
+Esta semana cambiamos de tema en matematicas. Estadistica es diferente al algebra: aqui no buscas una "x" sino que analizas datos reales para encontrar patrones y sacar conclusiones. Es lo que usan los analistas deportivos para evaluar jugadores de basket.
+</div>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — ¿Que es la estadistica?</h3>
+
+<div class="mate">
+<h4>Estadistica: el arte de leer datos</h4>
+
+<p>La estadistica es la herramienta que usas para responder preguntas cuando tienes muchos datos. En vez de adivinar o "sentir", la estadistica te da numeros concretos.</p>
+
+<p><strong>En basket:</strong> ¿Quien es mejor tirador, el jugador A o el B? No basta con "me parece que A". La estadistica te dice: A encesta el 43% de sus triples y B el 38%. A es mejor. Sin opinion, con datos.</p>
+
+<p><strong>En videojuegos:</strong> Los desarrolladores usan estadisticas para saber que niveles son demasiado dificiles (donde la mayoria abandona), que objetos nadie usa, y como balancear el juego.</p>
+
+<h4>Conceptos basicos</h4>
+
+<ul>
+<li><strong>Poblacion:</strong> el grupo completo que te interesa estudiar (ej: todos los jugadores de la NBA).</li>
+<li><strong>Muestra:</strong> un subgrupo que seleccionas para analizar (ej: los 30 mejores anotadores de esta temporada). Estudiar toda la poblacion es a veces imposible, asi que usas muestras.</li>
+<li><strong>Variable:</strong> lo que estas midiendo (ej: puntos por partido, minutos jugados, edad).</li>
+<li><strong>Dato:</strong> cada medicion individual (ej: Stephen Curry anoto 28 puntos el martes).</li>
+</ul>
+
+<h4>Medidas de tendencia central: ¿cual es el "centro" de los datos?</h4>
+
+<p>Cuando tienes un monton de numeros, quieres saber: ¿cual es el valor "tipico"? Hay tres formas de responder eso:</p>
+
+<p><strong>1. Media (promedio):</strong> sumas todos los valores y divides entre cuantos son.</p>
+
+<p><strong>2. Mediana:</strong> el valor que queda en el medio cuando los ordenas de menor a mayor. Si hay un numero par de datos, es el promedio de los dos del medio.</p>
+
+<p><strong>3. Moda:</strong> el valor que mas se repite.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejercicio resuelto paso a paso</h4>
+
+<p><strong>Datos:</strong> Los puntos de un jugador en sus ultimos 9 partidos fueron: 22, 15, 28, 22, 31, 18, 22, 25, 19</p>
+
+<p><strong>Calcular la media:</strong></p>
+<ul>
+<li>Paso 1 — Sumo todos: 22+15+28+22+31+18+22+25+19 = 202</li>
+<li>Paso 2 — Cuento cuantos datos hay: 9</li>
+<li>Paso 3 — Divido: 202 ÷ 9 = <strong>22.4 puntos</strong> de promedio</li>
+</ul>
+
+<p><strong>Calcular la mediana:</strong></p>
+<ul>
+<li>Paso 1 — Ordeno de menor a mayor: 15, 18, 19, 22, 22, 22, 25, 28, 31</li>
+<li>Paso 2 — Busco el dato central. Hay 9 datos, el central es el 5°: <strong>22</strong></li>
+</ul>
+
+<p><strong>Calcular la moda:</strong></p>
+<ul>
+<li>¿Que numero se repite mas? El 22 aparece 3 veces. La moda es <strong>22</strong>.</li>
+</ul>
+
+<p><strong>¿Cual uso?</strong> Depende de la situacion:</p>
+<ul>
+<li>La <strong>media</strong> es util cuando los datos no tienen valores extremos muy raros.</li>
+<li>La <strong>mediana</strong> es mejor cuando hay valores extremos (si un partido anoto 2 puntos por lesion, la media baja mucho pero la mediana no).</li>
+<li>La <strong>moda</strong> te dice que es lo "mas comun" — util para cosas como la talla de zapato mas vendida.</li>
+</ul>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Media, mediana y moda</h4>
+
+<p>Datos: puntos de un jugador en 10 partidos: 18, 24, 20, 32, 20, 15, 26, 20, 28, 17</p>
+<ol>
+<li>Calcula la media.</li>
+<li>Ordena los datos de menor a mayor y calcula la mediana. (Con 10 datos, la mediana es el promedio del 5° y 6° dato.)</li>
+<li>¿Cual es la moda?</li>
+<li>Si en el siguiente partido anota 45 puntos (un juego excepcional), ¿como cambia la media? ¿Y la mediana? ¿Cual se "mueve" mas con un dato extremo?</li>
+</ol>
+
+<p>Datos: edades de los jugadores del equipo titular: 23, 27, 19, 31, 25</p>
+<ol start="5">
+<li>¿Cual es la edad promedio del equipo?</li>
+<li>¿Cual es la mediana?</li>
+<li>Si se incorpora un jugador de 38 años, ¿cuanto cambia el promedio?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1: "La celula: la unidad mas pequeña de la vida"</strong> del cuadernillo de lecturas.</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuantas celulas tiene el cuerpo humano? ¿Que tamaño tiene una celula tipica?</li>
+<li>Nombra 5 partes de la celula y la funcion de cada una.</li>
+<li>¿Por que los globulos rojos no tienen nucleo? ¿Cuanto viven? ¿Cuantos se producen por segundo?</li>
+<li>Explica la jerarquia: celula → tejido → organo → sistema → organismo. Da un ejemplo concreto de cada nivel.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Diseña un juego</h4>
+<p>A lo largo de las proximas semanas vas a diseñar un juego de mesa o de cartas que use conceptos matematicos.</p>
+<p><strong>Hoy:</strong> Piensa en la idea general. ¿De que trata? ¿Es de estrategia, de azar, de preguntas? ¿Para cuantos jugadores? Escribe la idea en 5-6 oraciones y haz un boceto rapido del tablero o las cartas.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Rango y dispersion</h3>
+
+<div class="mate">
+<h4>¿Que tan "desparramados" estan los datos?</h4>
+
+<p>La media te dice el centro, pero no te dice si los datos estan todos cerca del centro o muy dispersos. Ejemplo:</p>
+<ul>
+<li>Jugador A: anoto 20, 20, 21, 19, 20 (media = 20, muy consistente)</li>
+<li>Jugador B: anoto 5, 35, 10, 30, 20 (media = 20, muy irregular)</li>
+</ul>
+<p>Ambos tienen media 20, pero son jugadores muy diferentes. Necesitamos medir la <strong>dispersion</strong>.</p>
+
+<h4>Rango</h4>
+<p>La medida mas simple de dispersion: <strong>rango = valor maximo − valor minimo</strong></p>
+<ul>
+<li>Jugador A: rango = 21 − 19 = 2 (muy estable)</li>
+<li>Jugador B: rango = 35 − 5 = 30 (muy variable)</li>
+</ul>
+
+<h4>Desviacion respecto a la media</h4>
+<p>Para cada dato, puedes calcular que tan lejos esta del promedio:</p>
+<p>desviacion = dato − media</p>
+
+<p>Si la desviacion es positiva, el dato esta por encima del promedio. Si es negativa, esta por debajo.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejercicio resuelto: analisis de dispersion</h4>
+
+<p><strong>Datos:</strong> Puntos en 5 partidos: 18, 22, 25, 20, 15. Media = 20.</p>
+
+<table>
+<tr><th>Partido</th><th>Puntos</th><th>Desviacion (dato − media)</th><th>|Desviacion| (valor absoluto)</th></tr>
+<tr><td>1</td><td>18</td><td>18 − 20 = −2</td><td>2</td></tr>
+<tr><td>2</td><td>22</td><td>22 − 20 = +2</td><td>2</td></tr>
+<tr><td>3</td><td>25</td><td>25 − 20 = +5</td><td>5</td></tr>
+<tr><td>4</td><td>20</td><td>20 − 20 = 0</td><td>0</td></tr>
+<tr><td>5</td><td>15</td><td>15 − 20 = −5</td><td>5</td></tr>
+</table>
+
+<p><strong>Desviacion media absoluta:</strong> promedio de las desviaciones en valor absoluto:</p>
+<p>(2 + 2 + 5 + 0 + 5) ÷ 5 = 14 ÷ 5 = <strong>2.8</strong></p>
+<p>Esto significa que, en promedio, cada partido se desvia 2.8 puntos del promedio general.</p>
+
+<p><strong>Rango:</strong> 25 − 15 = 10</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Rango y dispersion</h4>
+
+<p>Datos: Asistencias por partido de un jugador en 8 juegos: 3, 7, 5, 2, 8, 4, 6, 5</p>
+<ol>
+<li>Calcula la media.</li>
+<li>Calcula el rango.</li>
+<li>Haz una tabla como la del ejemplo resuelto: dato, desviacion, |desviacion|.</li>
+<li>Calcula la desviacion media absoluta.</li>
+<li>¿Dirias que este jugador es consistente en sus asistencias o es muy variable? Justifica con los numeros.</li>
+</ol>
+
+<p>Compara estos dos jugadores:</p>
+<ul>
+<li>Jugador X: 12, 14, 13, 11, 15, 12, 14, 13 (rebotes)</li>
+<li>Jugador Y: 5, 20, 8, 18, 7, 22, 6, 14 (rebotes)</li>
+</ul>
+<ol start="6">
+<li>Calcula la media de cada uno.</li>
+<li>Calcula el rango de cada uno.</li>
+<li>Sin calcular la desviacion completa: ¿quien es mas consistente y quien es mas "explosivo"? ¿A cual elegirias como titular y por que?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2: "El sistema circulatorio: la red de distribucion"</strong> del cuadernillo de lecturas.</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuantas veces late el corazon por dia? ¿Cuantos litros bombea?</li>
+<li>Describe la diferencia entre arterias, venas y capilares.</li>
+<li>Nombra los 4 componentes de la sangre con su porcentaje y funcion.</li>
+<li>¿Que significan los dos numeros de la presion arterial?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Las reglas de tu juego</h4>
+<p><strong>Hoy:</strong> Escribe las reglas de tu juego. ¿Como se gana? ¿Que puede hacer cada jugador en su turno? ¿Hay algun elemento de azar (dados, cartas)? ¿Hay algun elemento de estrategia? Intenta que las reglas sean claras para alguien que nunca lo jugo.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Tablas de frecuencia y graficos</h3>
+
+<div class="mate">
+<h4>Organizar datos: tablas de frecuencia</h4>
+
+<p>Cuando tienes muchos datos, el primer paso es organizarlos. Una <strong>tabla de frecuencia</strong> cuenta cuantas veces aparece cada valor.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejercicio resuelto: tabla de frecuencia</h4>
+
+<p><strong>Datos:</strong> Puntos anotados en 20 partidos:</p>
+<p>18, 22, 20, 25, 22, 18, 30, 22, 20, 15, 22, 18, 25, 20, 22, 28, 18, 20, 22, 25</p>
+
+<p><strong>Paso 1 — Identifico los valores diferentes:</strong> 15, 18, 20, 22, 25, 28, 30</p>
+
+<p><strong>Paso 2 — Cuento cuantas veces aparece cada uno:</strong></p>
+<table>
+<tr><th>Puntos</th><th>Frecuencia (veces que aparece)</th><th>Frecuencia relativa (%)</th></tr>
+<tr><td>15</td><td>1</td><td>1/20 = 5%</td></tr>
+<tr><td>18</td><td>4</td><td>4/20 = 20%</td></tr>
+<tr><td>20</td><td>4</td><td>4/20 = 20%</td></tr>
+<tr><td>22</td><td>6</td><td>6/20 = 30%</td></tr>
+<tr><td>25</td><td>3</td><td>3/20 = 15%</td></tr>
+<tr><td>28</td><td>1</td><td>1/20 = 5%</td></tr>
+<tr><td>30</td><td>1</td><td>1/20 = 5%</td></tr>
+<tr><th>Total</th><th>20</th><th>100%</th></tr>
+</table>
+
+<p><strong>De la tabla puedo leer:</strong></p>
+<ul>
+<li>La moda es 22 (mayor frecuencia: 6 veces).</li>
+<li>El 30% de los partidos anoto exactamente 22 puntos.</li>
+<li>El 70% de las veces anoto entre 18 y 25 puntos (zona consistente).</li>
+</ul>
+
+<h4>Tipos de graficos</h4>
+<ul>
+<li><strong>Grafico de barras:</strong> una barra por cada valor, la altura es la frecuencia. Bueno para comparar categorias.</li>
+<li><strong>Histograma:</strong> similar a barras pero para datos continuos agrupados en intervalos.</li>
+<li><strong>Grafico de lineas:</strong> conecta puntos en orden (util para ver tendencia en el tiempo).</li>
+<li><strong>Grafico circular (torta):</strong> muestra proporciones del total. Bueno cuando suman 100%.</li>
+</ul>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Tablas y graficos</h4>
+
+<p>Datos: Numero de rebotes en 15 partidos de un jugador:</p>
+<p>5, 8, 7, 5, 10, 8, 6, 8, 5, 7, 8, 6, 5, 9, 7</p>
+<ol>
+<li>Construye una tabla de frecuencia (valor, frecuencia, frecuencia relativa en %).</li>
+<li>¿Cual es la moda?</li>
+<li>¿Que porcentaje de los partidos tuvo 7 o mas rebotes?</li>
+<li>Dibuja un grafico de barras con los datos de tu tabla (en tu cuaderno).</li>
+</ol>
+
+<p>Un jugador anoto estos puntos en 6 partidos consecutivos: 15, 18, 22, 20, 25, 28</p>
+<ol start="5">
+<li>Dibuja un grafico de lineas (eje x = partidos 1-6, eje y = puntos). ¿Que tendencia ves? ¿Mejora, empeora, o se mantiene?</li>
+<li>Calcula la media y la mediana de estos 6 datos.</li>
+<li>Si la tendencia continua igual, ¿cuantos puntos estimarias que anotara en el partido 7? (No hay formula — es tu estimacion basada en el patron.)</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3: "El sistema respiratorio: el intercambio invisible"</strong> del cuadernillo de lecturas.</p>
+<p>Responde:</p>
+<ol>
+<li>Describe el camino del aire desde la nariz hasta los alveolos (6 pasos).</li>
+<li>¿Que pasa en los alveolos? ¿Por que el intercambio es "automatico"?</li>
+<li>¿Que le ocurre a tu cuerpo cuando haces ejercicio intenso? (respiracion, corazon, musculos)</li>
+<li>El texto describe un ciclo de 6 pasos donde circulatorio y respiratorio cooperan. Escribelos.</li>
+<li><strong>Dato favorito:</strong> ¿Cual dato de los 3 textos de esta semana te sorprendio mas? (1-2 oraciones)</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Prototipo de tu juego</h4>
+<p><strong>Hoy:</strong> Haz una version basica de tu juego (puede ser con papel, cartulina, dados dibujados). Si tiene cartas, dibuja al menos 6. Si tiene tablero, dibujalo. La proxima semana podras probarlo con Gio.</p>
+</div>
+
+<footer>
+Semana 3 de 20 | Fran<br>
+"Los numeros cuentan historias — solo tienes que saber leerlos."
+</footer>
+
+</body>
+</html>

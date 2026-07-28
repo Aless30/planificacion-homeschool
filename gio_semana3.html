@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gio — Semana 3</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#553c9a;border-bottom:3px solid #9f7aea;padding-bottom:6px;margin-bottom:10px}
+h2{color:#553c9a;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #e9d8fd;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#faf5ff;border-left:4px solid #9f7aea;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.nota{background:#f0fff4;padding:8px 12px;margin:8px 0;border-radius:6px;font-size:.85em;border:1px solid #c6f6d5}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9em}
+th,td{padding:5px 8px;border:1px solid #e2e8f0;text-align:center}
+th{background:#553c9a;color:#fff}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.escribe,.ejercicio,.proyecto{padding:8px 12px;margin:6px 0}.nota{padding:6px 10px;margin:5px 0}hr{margin:12px 0}}
+</style>
+</head>
+<body>
+
+<h1>Gio — Semana 3</h1>
+<p><em>3 dias | 2 bloques + proyecto corto | Esta semana se agrega un tercer bloque creativo.</em></p>
+
+<div class="nota">
+<strong>Novedad:</strong> A partir de esta semana hay un tercer bloque corto (30 min) de proyecto creativo. No es una tarea — es un espacio para crear algo tuyo.
+</div>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Sistemas numericos: ¿como contamos?</h3>
+
+<div class="mate">
+<h4>El sistema que usas todos los dias (y no lo sabes)</h4>
+
+<p>Cuando escribes el numero 352, ¿que estas diciendo realmente? Estas diciendo:</p>
+<ul>
+<li>3 centenas (3 × 100)</li>
+<li>5 decenas (5 × 10)</li>
+<li>2 unidades (2 × 1)</li>
+</ul>
+<p>Total: 300 + 50 + 2 = 352</p>
+
+<p>Esto es el <strong>sistema decimal</strong> (base 10). Cada posicion vale 10 veces mas que la anterior. Usamos 10 digitos: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Cuando llegas a 9, "se llena" esa posicion y sumas 1 a la siguiente (9 → 10).</p>
+
+<p><strong>¿Por que base 10?</strong> Probablemente porque tenemos 10 dedos. Civilizaciones antiguas usaron otras bases: los babilonios usaban base 60 (por eso la hora tiene 60 minutos y el circulo 360 grados), y los mayas usaban base 20 (¿contaban con dedos de pies y manos?).</p>
+
+<h4>El sistema binario (base 2): el idioma de las computadoras</h4>
+
+<p>Las computadoras no tienen 10 dedos. Solo pueden distinguir dos estados: <strong>encendido</strong> (1) o <strong>apagado</strong> (0). Por eso usan el sistema binario: solo dos digitos (0 y 1).</p>
+
+<p>En binario, cada posicion vale el <strong>doble</strong> que la anterior (no 10 veces mas, sino 2 veces mas):</p>
+
+<table>
+<tr><th>Posicion</th><th>8va</th><th>7ma</th><th>6ta</th><th>5ta</th><th>4ta</th><th>3ra</th><th>2da</th><th>1ra</th></tr>
+<tr><td>Valor</td><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+</table>
+
+<p><strong>Ejemplo:</strong> el numero binario <strong>1011</strong> significa:</p>
+<ul>
+<li>1 × 8 = 8</li>
+<li>0 × 4 = 0</li>
+<li>1 × 2 = 2</li>
+<li>1 × 1 = 1</li>
+</ul>
+<p>Total: 8 + 0 + 2 + 1 = <strong>11</strong> en decimal</p>
+
+<p><strong>Otro ejemplo:</strong> 11001 en binario:</p>
+<ul>
+<li>1×16 + 1×8 + 0×4 + 0×2 + 1×1 = 16 + 8 + 0 + 0 + 1 = <strong>25</strong></li>
+</ul>
+
+<h4>¿Como convertir de decimal a binario?</h4>
+
+<p>Divide entre 2 sucesivamente y anota los restos. Luego lee los restos de abajo hacia arriba.</p>
+
+<p><strong>Ejemplo:</strong> convertir 13 a binario:</p>
+<ul>
+<li>13 ÷ 2 = 6, resto <strong>1</strong></li>
+<li>6 ÷ 2 = 3, resto <strong>0</strong></li>
+<li>3 ÷ 2 = 1, resto <strong>1</strong></li>
+<li>1 ÷ 2 = 0, resto <strong>1</strong></li>
+</ul>
+<p>Leo de abajo hacia arriba: 13 = <strong>1101</strong> en binario.</p>
+<p>Verifico: 1×8 + 1×4 + 0×2 + 1×1 = 8+4+0+1 = 13 ✓</p>
+
+<h4>¿Para que sirve saber esto?</h4>
+<ul>
+<li><strong>Colores digitales:</strong> Cada color en una pantalla se representa con numeros. El rojo puro es (255, 0, 0) — y 255 en binario es 11111111 (8 bits, todos encendidos).</li>
+<li><strong>Diseño digital:</strong> Si alguna vez diseñas ropa con software, los colores, medidas y patrones que ves en pantalla estan almacenados como numeros binarios.</li>
+<li><strong>Musica digital:</strong> Tu violin produce ondas analogicas, pero cuando grabas musica, se convierte en numeros binarios (samples).</li>
+</ul>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Binario</h4>
+<p><strong>Convertir de binario a decimal:</strong></p>
+<ol>
+<li>101 =</li>
+<li>1100 =</li>
+<li>10101 =</li>
+<li>1111 =</li>
+</ol>
+<p><strong>Convertir de decimal a binario:</strong></p>
+<ol start="5">
+<li>7 =</li>
+<li>12 =</li>
+<li>20 =</li>
+<li>31 =</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1: "La celula: la unidad mas pequeña de la vida"</strong> del cuadernillo de lecturas.</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuantas celulas tiene aproximadamente tu cuerpo? ¿De que tamaño es una celula tipica?</li>
+<li>Nombra las 5 partes principales de una celula y escribe la funcion de cada una en una palabra o frase corta.</li>
+<li>El texto menciona 4 tipos de celulas especializadas. Elige 2 y explica que tienen de especial.</li>
+<li>Explica con tus palabras la secuencia: celula → tejido → organo → sistema → organismo.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Diseña un personaje</h4>
+<p>Esta semana arrancas un proyecto que dura varias semanas: diseñar un personaje completo (con ropa, personalidad y mundo).</p>
+<p><strong>Hoy:</strong> Piensa en un personaje. ¿Quien es? ¿Como se viste? Haz un boceto rapido (no tiene que ser perfecto) y escribe 5 datos sobre el/ella: nombre, edad, personalidad, que le gusta, que le molesta.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Sistema octal y hexadecimal</h3>
+
+<div class="mate">
+<h4>Sistema octal (base 8)</h4>
+
+<p>Usa 8 digitos: 0, 1, 2, 3, 4, 5, 6, 7. Cada posicion vale 8 veces mas que la anterior.</p>
+
+<p><strong>Ejemplo:</strong> 35 en octal = 3×8 + 5×1 = 24 + 5 = <strong>29</strong> en decimal.</p>
+
+<p><strong>Otro:</strong> 127 en octal = 1×64 + 2×8 + 7×1 = 64 + 16 + 7 = <strong>87</strong> en decimal.</p>
+
+<p>El octal se uso mucho en computacion antigua porque cada digito octal representa exactamente 3 digitos binarios:</p>
+<ul>
+<li>0 = 000, 1 = 001, 2 = 010, 3 = 011</li>
+<li>4 = 100, 5 = 101, 6 = 110, 7 = 111</li>
+</ul>
+
+<h4>Sistema hexadecimal (base 16): los colores</h4>
+
+<p>Usa 16 digitos. Como solo tenemos simbolos del 0 al 9, para los valores 10-15 usamos letras:</p>
+
+<table>
+<tr><th>Decimal</th><th>0</th><th>1</th><th>2</th><th>...9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th></tr>
+<tr><td>Hexadecimal</td><td>0</td><td>1</td><td>2</td><td>...9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+</table>
+
+<p><strong>Ejemplo:</strong> 2F en hexadecimal = 2×16 + F×1 = 32 + 15 = <strong>47</strong></p>
+<p><strong>Ejemplo:</strong> A3 en hexadecimal = 10×16 + 3×1 = 160 + 3 = <strong>163</strong></p>
+
+<h4>¿Donde se usa el hexadecimal?</h4>
+
+<p><strong>¡En los colores!</strong> Cuando ves un codigo de color como <strong>#FF5733</strong>, eso es hexadecimal:</p>
+<ul>
+<li>FF = 255 en decimal (maximo rojo)</li>
+<li>57 = 87 en decimal (algo de verde)</li>
+<li>33 = 51 en decimal (poco azul)</li>
+</ul>
+<p>Resultado: un tono naranja-rojizo. Cada par de digitos hexadecimales representa un color (Rojo, Verde, Azul) con valores de 0 a 255.</p>
+
+<p><strong>Codigos de colores que tal vez conoces:</strong></p>
+<ul>
+<li>#000000 = negro (todo apagado)</li>
+<li>#FFFFFF = blanco (todo al maximo)</li>
+<li>#FF0000 = rojo puro</li>
+<li>#00FF00 = verde puro</li>
+<li>#0000FF = azul puro</li>
+</ul>
+
+<p><strong>Para diseño de moda esto es clave:</strong> si alguna vez trabajas con software de diseño, los colores se definen con estos codigos hexadecimales. Una marca de moda define su "paleta de colores" exacta con estos numeros.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Octal y hexadecimal</h4>
+<p><strong>Octal a decimal:</strong></p>
+<ol>
+<li>25 (octal) =</li>
+<li>74 (octal) =</li>
+</ol>
+<p><strong>Hexadecimal a decimal:</strong></p>
+<ol start="3">
+<li>1A =</li>
+<li>3C =</li>
+<li>FF =</li>
+</ol>
+<p><strong>Colores:</strong></p>
+<ol start="6">
+<li>El color #804000 tiene R=80hex, G=40hex, B=00hex. Convierte cada uno a decimal y describe si crees que es un color claro u oscuro. (Pista: 80hex = 8×16 + 0 = ?)</li>
+<li>Si quieres un gris medio, los tres valores (R, G, B) deben ser iguales y estar a la mitad del maximo (255). ¿Que valor decimal es? ¿Y en hexadecimal? ¿Como se escribiria el codigo del color?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2: "El sistema circulatorio: la red de distribucion"</strong> del cuadernillo de lecturas.</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuantas veces late el corazon por dia? ¿Cuantos litros de sangre bombea?</li>
+<li>Explica la diferencia entre arterias, venas y capilares (funcion y caracteristicas de cada una).</li>
+<li>La sangre tiene 4 componentes. Haz una lista con el nombre, porcentaje aproximado y funcion de cada uno.</li>
+<li>¿Que significan los dos numeros de la presion arterial?</li>
+<li>Si pusieras todos tus vasos sanguineos en linea recta, ¿cuanto medirian? ¿Que comparacion usa el texto?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Tu personaje necesita un estilo</h4>
+<p><strong>Hoy:</strong> Diseña el outfit principal de tu personaje. Piensa en: ¿que colores usa? ¿que tipo de telas? ¿que silueta tiene la ropa? Haz un boceto mas detallado que el del lunes. Si quieres, define 3 colores exactos en codigo hexadecimal para la paleta de tu personaje.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — ¿Para que sirven los sistemas numericos?</h3>
+
+<div class="mate">
+<h4>Sistemas numericos en la vida real</h4>
+
+<p>Hoy conectamos todo lo que aprendimos con usos concretos:</p>
+
+<p><strong>En musica digital:</strong> Cuando grabas tu violin, el sonido se convierte en numeros. El microfono capta la onda sonora y la mide 44,100 veces por segundo (frecuencia de muestreo). Cada medicion se guarda como un numero de 16 bits (binario). Un segundo de musica = 44,100 numeros × 16 bits = 705,600 ceros y unos por segundo.</p>
+
+<p><strong>En imagenes digitales:</strong> Una foto de 1920×1080 pixeles tiene 2,073,600 pixeles. Cada pixel almacena 3 numeros (R, G, B) de 0-255. Total: mas de 6 millones de numeros para una sola foto.</p>
+
+<p><strong>En diseño de moda (software):</strong></p>
+<ul>
+<li>Los colores de tu diseño: hexadecimal (#FF5733)</li>
+<li>Las medidas exactas: decimales (cintura: 68.5 cm)</li>
+<li>Los patrones repetitivos: se pueden describir con funciones matematicas</li>
+</ul>
+
+<h4>El sistema romano: un sistema sin posicion</h4>
+
+<p>Los romanos tenian otro enfoque: cada simbolo siempre vale lo mismo sin importar su posicion:</p>
+<ul>
+<li>I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000</li>
+<li>Se suman (VI = 5+1 = 6) excepto cuando uno menor esta antes de uno mayor (IV = 5-1 = 4)</li>
+</ul>
+
+<p><strong>Ejemplos:</strong> XIV = 10+4 = 14 | XLII = 40+2 = 42 | MCMXCIX = 1000+900+90+9 = 1999</p>
+
+<p><strong>Problema del sistema romano:</strong> intenta hacer 1999 + 1 (MCMXCIX + I = MM). Con nuestro sistema decimal es trivial. Con el romano requiere reescribir todo. Por eso no se usa para calcular — solo para decoracion y numeracion (relojes, capitulos, siglos).</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Repaso general de sistemas</h4>
+<ol>
+<li>Convierte 42 (decimal) a binario.</li>
+<li>Convierte 101010 (binario) a decimal.</li>
+<li>Convierte 5B (hexadecimal) a decimal.</li>
+<li>El color #33CC99 tiene R=33, G=CC, B=99 (hex). Convierte cada uno a decimal.</li>
+<li>Escribe en numeros romanos: 2026</li>
+<li>Convierte a decimal: XLVII</li>
+<li>Un archivo de musica de 3 minutos usa 44,100 muestras por segundo × 16 bits × 2 canales (estereo). ¿Cuantos bits tiene en total? Expresalo tambien en megabytes (1 byte = 8 bits, 1 MB = 1,000,000 bytes aproximadamente).</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Lectura y comprension</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3: "El sistema respiratorio: el intercambio invisible"</strong> del cuadernillo de lecturas.</p>
+<p>Responde:</p>
+<ol>
+<li>Describe el camino completo que sigue el aire desde que entra por la nariz hasta que llega a los alveolos (los 6 pasos).</li>
+<li>¿Que pasa exactamente en los alveolos? ¿Por que el intercambio de gases ocurre "automaticamente"?</li>
+<li>¿Que le pasa a tu respiracion y a tu corazon cuando haces ejercicio intenso? ¿Por que?</li>
+<li>El texto describe un ciclo de 6 pasos donde circulatorio y respiratorio trabajan juntos. Escribelos en orden.</li>
+<li><strong>Dato favorito:</strong> ¿Que dato de los 3 textos de esta semana te parecio mas sorprendente? (1-2 oraciones)</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: El mundo de tu personaje</h4>
+<p><strong>Hoy:</strong> ¿En que mundo o epoca vive tu personaje? ¿Es el mundo real actual, un futuro, una fantasia? Escribe un parrafo corto describiendo el contexto y haz un boceto de un lugar importante para tu personaje (su cuarto, su taller, la calle donde vive).</p>
+</div>
+
+<footer>
+Semana 3 de 20 | Gio<br>
+"Todo lo digital que ves — colores, musica, imagenes — son numeros disfrazados."
+</footer>
+
+</body>
+</html>
