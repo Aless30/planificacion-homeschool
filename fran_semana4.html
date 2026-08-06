@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 4</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:6px;margin-bottom:10px}
+h2{color:#2a4365;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #bee3f8;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.nota{background:#f0fff4;padding:8px 12px;margin:8px 0;border-radius:6px;font-size:.85em;border:1px solid #c6f6d5}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9em}
+th,td{padding:5px 8px;border:1px solid #e2e8f0;text-align:center}
+th{background:#2c5282;color:#fff}
+tr:nth-child(even){background:#f8fafc}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.escribe,.ejercicio,.resuelto,.proyecto,.lectura{padding:8px 12px;margin:6px 0}.dato,.nota{padding:6px 10px;margin:5px 0}hr{margin:12px 0}table{font-size:.8em}th,td{padding:3px 5px}}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 4</h1>
+<p><em>3 dias | 2 bloques + proyecto | La matematica del azar.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Probabilidad basica</h3>
+
+
+<div class="mate">
+<h4>¿Que es la probabilidad?</h4>
+
+<p>La probabilidad es una forma matematica de medir que tan posible es que algo ocurra. No predice el futuro — te dice que tan preparado debes estar para cada resultado posible.</p>
+
+<p><strong>En basquet:</strong> si un jugador mete 7 de cada 10 tiros libres, su probabilidad de anotar es 7/10 = 0.70 = 70%. No significa que siempre meta exactamente 7 de 10, pero si tira muchas veces, se acerca a ese numero.</p>
+
+<p><strong>En videojuegos:</strong> cuando un enemigo tiene un "5% de drop rate" para un item raro, significa que de cada 100 veces que lo derrotes, en promedio caera ese item 5 veces. Por eso a veces tienes que farmear tanto.</p>
+
+<h4>Espacio muestral</h4>
+
+<p>El <strong>espacio muestral</strong> es el conjunto de TODOS los resultados posibles de un evento.</p>
+<ul>
+<li>Lanzar un dado: {1, 2, 3, 4, 5, 6} → 6 resultados posibles</li>
+<li>Lanzar una moneda: {cara, sello} → 2 resultados posibles</li>
+<li>Tiro libre: {anota, falla} → 2 resultados posibles</li>
+</ul>
+
+<h4>La formula basica</h4>
+
+<p><strong>Probabilidad = casos favorables / casos totales</strong></p>
+
+<p>Es una fraccion. Siempre da un numero entre 0 y 1:</p>
+<ul>
+<li>Probabilidad = 0 → imposible (sacar un 7 en un dado normal)</li>
+<li>Probabilidad = 1 → seguro (sacar un numero menor a 7 en un dado normal)</li>
+<li>Entre 0 y 1 → puede pasar o no</li>
+</ul>
+
+<p>Se puede expresar como fraccion (3/6), decimal (0.5), o porcentaje (50%).</p>
+</div>
+
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: lanzar un dado</h4>
+
+<p><strong>Problema:</strong> Lanzas un dado normal de 6 caras. ¿Cual es la probabilidad de sacar un numero par?</p>
+
+<p><strong>Paso 1 — Identifico el espacio muestral:</strong></p>
+<p>Resultados posibles: {1, 2, 3, 4, 5, 6} → Total = 6</p>
+
+<p><strong>Paso 2 — Identifico los casos favorables:</strong></p>
+<p>Numeros pares: {2, 4, 6} → Favorables = 3</p>
+
+<p><strong>Paso 3 — Aplico la formula:</strong></p>
+<p>P(par) = casos favorables / casos totales = 3/6 = 1/2 = 0.5 = <strong>50%</strong></p>
+
+<p><strong>Interpretacion:</strong> Si lanzo el dado muchas veces, aproximadamente la mitad de las veces saldra par.</p>
+</div>
+
+
+<div class="ejercicio">
+<h4>Ejercicios — Probabilidad basica</h4>
+<ol>
+<li>Lanzas un dado de 6 caras. ¿Cual es la probabilidad de sacar un 5? Expresa como fraccion y porcentaje.</li>
+<li>Lanzas un dado. ¿Cual es la probabilidad de sacar un numero mayor que 4? (Identifica primero los casos favorables.)</li>
+<li>En una baraja española de 40 cartas (4 palos: oros, copas, espadas, bastos; numeros del 1 al 10 en cada palo), sacas una carta al azar. ¿Cual es la probabilidad de que sea un oro?</li>
+<li>De la misma baraja, ¿cual es la probabilidad de sacar un 7 (de cualquier palo)?</li>
+<li>Un jugador de basquet mete 8 de cada 10 tiros libres. ¿Cual es la probabilidad de que anote el proximo tiro? Expresa como fraccion, decimal y porcentaje.</li>
+<li>En un videojuego, un cofre tiene 20 items posibles. 3 son legendarios, 7 son raros, y 10 son comunes. ¿Cual es la probabilidad de sacar un item legendario?</li>
+<li>Lanzas un dado. ¿Cual es la probabilidad de sacar un numero menor que 5?</li>
+<li>En el mismo cofre del ejercicio 6, ¿que es mas probable: sacar un item raro o un item comun? Calcula ambas probabilidades y compara.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> que esta al final de este cuadernillo ("El sistema digestivo: de la comida a la energia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuanto mide aproximadamente el tubo digestivo completo de un adulto?</li>
+<li>Describe el camino de la comida en orden: ¿por donde pasa desde que la masticas hasta que el cuerpo absorbe los nutrientes? (Nombra al menos 5 etapas.)</li>
+<li>¿Que funcion tiene el acido del estomago? ¿Por que el estomago no se "digiere a si mismo"?</li>
+<li>¿Que son las vellosidades del intestino delgado y para que sirven?</li>
+<li>¿Cuanto tarda el proceso digestivo completo?</li>
+</ol>
+</div>
+
+
+<h3>Bloque 3: Proyecto — Analisis tecnico de un videojuego</h3>
+
+<div class="proyecto">
+<h4>Proyecto semana 4: Analisis tecnico de un videojuego que ya juegas</h4>
+
+<p>Esta semana vas a mirar un videojuego que ya conoces, pero no como jugador — como analista tecnico. La idea es entender como funciona "por dentro": que sistemas tiene, que decisiones toma el jugador, y donde aparecen las matematicas (incluida la probabilidad).</p>
+
+<h4>Hoy — Dia 1:</h4>
+<ol>
+<li><strong>Elige un videojuego</strong> que juegues actualmente o que conozcas muy bien. Escribe su nombre y genero (shooter, RPG, deportivo, estrategia, survival, etc.).</li>
+<li><strong>Describe en 1 parrafo</strong> (4-6 oraciones) que es lo que hace que este juego sea divertido o atractivo. ¿Que engancha? ¿Por que sigues jugando?</li>
+<li><strong>Lista 3 "sistemas" o "mecanicas"</strong> que el juego usa. Ejemplos de mecanicas: sistema de puntuacion, niveles/experiencia, combate, crafteo, economia interna, inventario, matchmaking, sistema de loot, habilidades con cooldown, etc. Para cada una, escribe 1 oracion explicando que hace.</li>
+</ol>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Eventos complementarios e independientes</h3>
+
+
+<div class="mate">
+<h4>Evento complementario: la probabilidad de que NO pase</h4>
+
+<p>Si sabes la probabilidad de que algo ocurra, automaticamente sabes la probabilidad de que NO ocurra:</p>
+
+<p><strong>P(no ocurra) = 1 - P(ocurra)</strong></p>
+
+<p><strong>Ejemplo:</strong> Un jugador tiene 80% de probabilidad de meter un tiro libre. ¿Cual es la probabilidad de que falle? → 1 - 0.80 = 0.20 = 20%.</p>
+
+<p>Esto es util porque a veces es mas facil calcular lo que NO quieres y restarlo. Si en un cofre el 90% de los items son basura, la probabilidad de sacar algo bueno es 1 - 0.90 = 0.10 = 10%.</p>
+
+<h4>Eventos independientes: cuando uno no afecta al otro</h4>
+
+<p>Dos eventos son <strong>independientes</strong> cuando el resultado de uno no cambia la probabilidad del otro.</p>
+
+<p><strong>Ejemplos de eventos independientes:</strong></p>
+<ul>
+<li>Lanzar un dado y luego lanzarlo otra vez — el segundo tiro no "recuerda" el primero.</li>
+<li>Cada tiro libre en basquet (si el jugador tiene consistencia).</li>
+<li>Cada apertura de cofre en un videojuego (el juego no recuerda que te salio antes).</li>
+</ul>
+
+<h4>Regla de multiplicacion para eventos independientes</h4>
+
+<p><strong>P(A Y B) = P(A) × P(B)</strong></p>
+
+<p>Si quieres que dos cosas independientes pasen AMBAS, multiplicas sus probabilidades.</p>
+
+<p><strong>Ejemplo intuitivo:</strong> Si tienes 50% de probabilidad de sacar cara en una moneda, la probabilidad de sacar cara DOS veces seguidas es: 0.5 × 0.5 = 0.25 = 25%. Tiene sentido: es mas dificil que pasen dos cosas que una sola.</p>
+</div>
+
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: tiros libres consecutivos</h4>
+
+<p><strong>Problema:</strong> Un jugador de basquet tiene una probabilidad de 0.75 (75%) de anotar cada tiro libre. Asumimos que cada tiro es independiente (un tiro no afecta al siguiente). ¿Cual es la probabilidad de que anote 3 tiros libres seguidos?</p>
+
+<p><strong>Paso 1 — Verifico independencia:</strong></p>
+<p>Cada tiro libre es un evento independiente (el resultado de uno no cambia la probabilidad del siguiente).</p>
+
+<p><strong>Paso 2 — Aplico la regla de multiplicacion:</strong></p>
+<p>P(anota los 3) = P(anota 1ro) × P(anota 2do) × P(anota 3ro)</p>
+<p>P(anota los 3) = 0.75 × 0.75 × 0.75 = 0.75³</p>
+
+<p><strong>Paso 3 — Calculo:</strong></p>
+<p>0.75 × 0.75 = 0.5625</p>
+<p>0.5625 × 0.75 = 0.421875 ≈ <strong>0.42 = 42%</strong></p>
+
+<p><strong>Interpretacion:</strong> Aunque el jugador mete el 75% de sus tiros, solo tiene un 42% de probabilidad de meter 3 seguidos. Cada tiro adicional hace que la probabilidad total baje.</p>
+</div>
+
+
+<div class="ejercicio">
+<h4>Ejercicios — Complementarios e independientes</h4>
+<ol>
+<li>Un jugador tiene 60% de probabilidad de anotar un tiro libre. ¿Cual es la probabilidad de que falle?</li>
+<li>En un videojuego, un cofre tiene 15% de probabilidad de dar un item legendario. ¿Cual es la probabilidad de que NO te de un legendario?</li>
+<li>Lanzas una moneda 2 veces. ¿Cual es la probabilidad de que salga cara las 2 veces?</li>
+<li>Un jugador con 80% de efectividad en tiros libres intenta 2 tiros seguidos. ¿Cual es la probabilidad de que anote ambos?</li>
+<li>Abres 2 cofres en un juego. Cada cofre tiene 10% de probabilidad de dar un item legendario (independientes). ¿Cual es la probabilidad de que AMBOS den legendario?</li>
+<li>Con el mismo jugador del ejercicio 4 (80% de efectividad), ¿cual es la probabilidad de que falle los 2 tiros seguidos? (Pista: la probabilidad de fallar un tiro es 1 - 0.80 = 0.20)</li>
+<li>Lanzas un dado 2 veces. ¿Cual es la probabilidad de sacar un 6 en AMBOS lanzamientos?</li>
+<li>En un juego, la probabilidad de encontrar un enemigo raro es 5% en cada zona. Visitas 2 zonas (independientes). ¿Cual es la probabilidad de encontrar el enemigo raro en ambas zonas?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final de este cuadernillo ("La nutricion: lo que tu cuerpo necesita de la comida").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuales son los 3 macronutrientes? Escribe el nombre y la funcion principal de cada uno.</li>
+<li>¿Que es una caloria? Explicalo con tus propias palabras.</li>
+<li>¿Que pasa si comes mas calorias de las que tu cuerpo usa? ¿Y si comes menos?</li>
+<li>El texto menciona vitaminas y minerales. Elige 2 y escribe para que sirven y en que alimentos se encuentran.</li>
+</ol>
+</div>
+
+
+<h3>Bloque 3: Proyecto — Analisis de una mecanica</h3>
+
+<div class="proyecto">
+<h4>Hoy — Dia 2: Analiza UNA mecanica de tu juego</h4>
+
+<p>Elige una de las 3 mecanicas que listaste el lunes. Vas a analizarla a fondo, pero no como jugador — como si fueras un programador o diseñador de juegos explicandole a otro programador como funciona.</p>
+
+<p><strong>Escribe media pagina (10-15 oraciones) respondiendo:</strong></p>
+<ol>
+<li>¿Como funciona esta mecanica? (Describe las reglas: que puede hacer el jugador, que pasa cuando lo hace, como se calcula el resultado.)</li>
+<li>¿Que decisiones toma el jugador dentro de esta mecanica? (¿Hay estrategia? ¿Hay que elegir entre opciones?)</li>
+<li>¿Hay aleatoriedad (randomness) involucrada? Si la hay: ¿que es aleatorio y que tan probable es cada resultado? Si no la hay: ¿el resultado depende 100% de la habilidad del jugador?</li>
+<li>¿Como "premia" el juego al jugador que domina esta mecanica? (¿Que gana si lo hace bien?)</li>
+</ol>
+
+<p><em>Recuerda: escribes como analista tecnico, no como jugador contando una partida.</em></p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Frecuencia y probabilidad experimental</h3>
+
+
+<div class="mate">
+<h4>Probabilidad teorica vs. probabilidad experimental</h4>
+
+<p>Hasta ahora calculamos la probabilidad "en teoria" — usando la formula de casos favorables / casos totales. Pero ¿que pasa cuando realmente haces el experimento?</p>
+
+<p><strong>Probabilidad teorica:</strong> lo que DEBERIA pasar segun las matematicas.</p>
+<p><strong>Probabilidad experimental:</strong> lo que REALMENTE pasa cuando haces el experimento muchas veces.</p>
+
+<p><strong>Ejemplo:</strong> la probabilidad teorica de sacar cara en una moneda es 1/2 = 50%. Pero si lanzas una moneda 10 veces, tal vez salga cara 7 veces y sello 3. Eso es 70% cara — diferente del 50% teorico. ¿Esta "mal"? No. Con pocas repeticiones, los resultados varian mucho.</p>
+
+<h4>La ley de los grandes numeros</h4>
+
+<p>Aqui viene lo interesante: entre MAS veces repitas un experimento, MAS se acerca el resultado experimental al teorico.</p>
+
+<ul>
+<li>10 lanzamientos → puede salir 70% cara (muy variable)</li>
+<li>100 lanzamientos → probablemente se acerque a 55% o 45%</li>
+<li>10,000 lanzamientos → casi seguro que este cerca del 50%</li>
+</ul>
+
+<p><strong>En basquet:</strong> Si un jugador mete el 80% de tiros libres, en un partido (10 tiros) puede meter 6 o 9 — hay mucha variacion. Pero si miras toda la temporada (500 tiros), va a estar muy cerca del 80%. Por eso las estadisticas de jugadores se calculan con muchos partidos, no con uno solo.</p>
+
+<p><strong>En videojuegos:</strong> Un drop rate de 5% no significa que si matas 20 enemigos te caera 1 item seguro. Puede que mates 50 y no caiga nada, o que caiga en el tercero. Pero si matas 10,000 enemigos, tendras aproximadamente 500 items (5% de 10,000).</p>
+
+<h4>Frecuencia relativa</h4>
+
+<p>La <strong>frecuencia relativa</strong> es la probabilidad experimental: cuantas veces ocurrio algo dividido entre cuantas veces lo intentaste.</p>
+
+<p><strong>Frecuencia relativa = veces que ocurrio / intentos totales</strong></p>
+</div>
+
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: frecuencia relativa</h4>
+
+<p><strong>Problema:</strong> Un jugador de basquet tiro 40 tiros libres en los ultimos 5 partidos y anoto 34. (a) ¿Cual es su frecuencia relativa (probabilidad experimental) de anotar? (b) Si su probabilidad teorica es 80%, ¿esta rindiendo mejor o peor de lo esperado?</p>
+
+<p><strong>Paso 1 — Calculo la frecuencia relativa:</strong></p>
+<p>Frecuencia relativa = veces que anoto / intentos totales = 34/40 = 0.85 = <strong>85%</strong></p>
+
+<p><strong>Paso 2 — Comparo con la probabilidad teorica:</strong></p>
+<p>Teorica = 80%. Experimental = 85%. Esta rindiendo un poco mejor de lo esperado en estos 5 partidos.</p>
+
+<p><strong>Paso 3 — Interpretacion:</strong></p>
+<p>Con solo 40 tiros (pocas repeticiones), es normal que haya diferencia. Si miramos 400 tiros, probablemente estaria mas cerca del 80%. La diferencia de 5% con tan pocos datos no necesariamente significa que "mejoro" — puede ser variacion natural.</p>
+</div>
+
+
+<div class="ejercicio">
+<h4>Ejercicios — Probabilidad experimental y frecuencia</h4>
+<ol>
+<li>Lanzas una moneda 10 veces y sale cara 6 veces. ¿Cual es la frecuencia relativa de cara? ¿Se acerca al 50% teorico?</li>
+<li>Un jugador de basquet tiro 25 tiros libres en un partido y anoto 18. ¿Cual es su probabilidad experimental? Si su promedio de temporada es 70%, ¿estuvo mejor o peor que su promedio?</li>
+<li>En un videojuego, abriste 30 cofres y obtuviste 2 items legendarios. ¿Cual es tu frecuencia relativa de legendarios? Si el juego dice que la probabilidad es 10%, ¿tuviste suerte o mala suerte?</li>
+<li><strong>Experimento real:</strong> Toma una moneda y lanzala 20 veces. Anota cada resultado (C = cara, S = sello). Cuenta cuantas caras salieron. Calcula la frecuencia relativa de cara. ¿Se acerco al 50%?</li>
+<li>Si un jugador tira 10 tiros libres y mete 9, su frecuencia relativa es 90%. Si tira 200 tiros y mete 160, su frecuencia relativa es 80%. ¿Cual de los dos numeros es mas confiable para predecir su rendimiento futuro? ¿Por que?</li>
+<li>En un dado, la probabilidad teorica de sacar un 6 es 1/6 ≈ 16.7%. Si lanzas el dado 30 veces y sale un 6 exactamente 4 veces, ¿cual es la frecuencia relativa? ¿Esta cerca del valor teorico?</li>
+<li>¿Por que los videojuegos usan miles de datos para calcular drop rates y no solo 10 o 20 intentos? Explica usando lo que aprendiste sobre la ley de los grandes numeros.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("El agua: mucho mas que sed").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que porcentaje de tu cuerpo es agua? ¿Donde esta la mayor parte?</li>
+<li>Nombra 4 funciones que cumple el agua en tu cuerpo.</li>
+<li>¿Que le pasa a tu cuerpo cuando no tomas suficiente agua? Menciona 3 efectos.</li>
+<li>¿Cuanta agua pierde tu cuerpo por dia y como la pierde?</li>
+<li><strong>Dato favorito</strong> de los 3 textos de esta semana: elige el dato que mas te sorprendio de cualquiera de los 3 textos y escribe por que te parecio interesante.</li>
+</ol>
+</div>
+
+
+<h3>Bloque 3: Proyecto — Diagrama de decisiones</h3>
+
+<div class="proyecto">
+<h4>Hoy — Dia 3: Diagrama de flujo / arbol de decisiones</h4>
+
+<p>Piensa en UN momento de tu videojuego donde el jugador tiene que tomar una decision. Puede ser:</p>
+<ul>
+<li>Elegir que habilidad usar en combate</li>
+<li>Decidir si atacar, defender o huir</li>
+<li>Elegir que ruta tomar en un mapa</li>
+<li>Decidir en que gastar recursos (mejorar arma vs. comprar items)</li>
+</ul>
+
+<p><strong>Dibuja un "arbol de decisiones" que muestre:</strong></p>
+<ol>
+<li>La situacion inicial (¿que esta pasando?)</li>
+<li>Las opciones que tiene el jugador (minimo 2, maximo 4)</li>
+<li>Para cada opcion: ¿que resultado tiene? (puede ser fijo o puede depender de probabilidad)</li>
+<li>Si hay probabilidad involucrada, escribe los porcentajes en las ramas</li>
+</ol>
+
+<p><strong>Debajo del diagrama, escribe:</strong></p>
+<ul>
+<li>¿Cual opcion es la "mejor" matematicamente? ¿Por que?</li>
+<li>¿Los jugadores siempre eligen la mejor opcion? ¿Que otros factores influyen en la decision?</li>
+</ul>
+
+<p><em>Tu diagrama puede ser dibujado a mano, en computadora, o descrito con texto e indentacion — lo importante es que sea claro.</em></p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+
+<div class="lectura">
+<h2>Texto 1 — El sistema digestivo: de la comida a la energia</h2>
+
+<p>Todo lo que comes hace un viaje de aproximadamente <strong>9 metros</strong> a traves de un tubo continuo que va desde tu boca hasta el final de tu intestino. Ese tubo, con todas sus curvas y secciones, es tu sistema digestivo. Su trabajo: descomponer la comida en moleculas lo suficientemente pequeñas para que tu sangre pueda absorberlas y llevarlas a las celulas que las necesitan.</p>
+
+<h3>El viaje de la comida</h3>
+
+<ol>
+<li><strong>Boca:</strong> Los dientes rompen la comida en pedazos mas pequeños (digestion mecanica). La saliva contiene una enzima que empieza a descomponer los almidones (por eso si masticas pan mucho rato, empieza a saber dulce — el almidon se esta convirtiendo en azucar). La lengua mezcla todo y forma un "bolo alimenticio" que puedes tragar.</li>
+<li><strong>Esofago:</strong> Un tubo de unos 25 cm que conecta la garganta con el estomago. No usa gravedad — tiene musculos que empujan la comida hacia abajo con movimientos en onda (peristalsis). Por eso puedes tragar aunque estes acostado o de cabeza.</li>
+<li><strong>Estomago:</strong> Una bolsa muscular que puede expandirse para almacenar hasta 1.5 litros de comida. Aqui se mezcla todo con acido clorhidrico (tan fuerte que podria disolver un clavo) y enzimas que rompen las proteinas. El estomago se revuelve unas 3 veces por minuto, como una lavadora. ¿Por que no se digiere a si mismo? Porque tiene una capa de moco que protege sus paredes, y renueva esa capa constantemente.</li>
+<li><strong>Intestino delgado:</strong> Un tubo de 6-7 metros de largo (si, cabe en tu abdomen porque esta enrollado). Aqui ocurre la mayor parte de la absorcion. Las paredes estan cubiertas de millones de "vellosidades" — proyecciones diminutas que aumentan la superficie de absorcion. Si desplegaras todas las vellosidades, cubrirían un area del tamaño de una cancha de tenis. Los nutrientes (azucares, aminoacidos, grasas, vitaminas) pasan a traves de estas vellosidades a la sangre.</li>
+<li><strong>Intestino grueso:</strong> Mas corto (1.5 m) pero mas ancho. Aqui se absorbe el agua que queda y se forman las heces con lo que el cuerpo no pudo usar. Miles de millones de bacterias viven aqui (tu "microbioma") y ayudan a procesar ciertas fibras y producen algunas vitaminas.</li>
+</ol>
+
+<p>El proceso completo tarda entre <strong>24 y 72 horas</strong> dependiendo de lo que comiste. Las frutas y verduras pasan mas rapido; la carne y las grasas tardan mas.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cuerpo produce aproximadamente 1.5 litros de saliva al dia, 2 litros de acido gastrico, y 7-8 litros de jugos digestivos en total. La mayor parte de ese liquido se reabsorbe en el intestino — si no, te deshidratarias rapidisimo.
+</div>
+</div>
+
+
+<div class="lectura">
+<h2>Texto 2 — La nutricion: lo que tu cuerpo necesita de la comida</h2>
+
+<p>Comer no es solo "llenar el estomago". La comida es, literalmente, el material de construccion y el combustible de tu cuerpo. Todo lo que eres fisicamente — tus musculos, tus huesos, tu piel, tu cerebro — fue construido con moleculas que alguna vez estuvieron en algo que comiste.</p>
+
+<h3>Los 3 macronutrientes</h3>
+
+<p><strong>1. Carbohidratos (la energia rapida):</strong></p>
+<p>Son la fuente principal de energia para tu cuerpo, especialmente para el cerebro (que solo usa glucosa como combustible). Estan en el pan, arroz, pasta, frutas, papas, cereales. Tu cuerpo los descompone en glucosa (azucar simple) que viaja por la sangre hasta las celulas. Si comes mas carbohidratos de los que usas, el exceso se almacena como grasa.</p>
+
+<p><strong>2. Proteinas (los ladrillos):</strong></p>
+<p>Son el material de construccion. Tus musculos, pelo, uñas, enzimas, anticuerpos — todo esta hecho de proteinas. Estan en la carne, pescado, huevos, leche, legumbres (frijoles, lentejas), frutos secos. Tu cuerpo las descompone en aminoacidos y usa esos aminoacidos para construir sus propias proteinas.</p>
+
+<p><strong>3. Grasas (la reserva y la proteccion):</strong></p>
+<p>Tienen mala fama pero son esenciales. Protegen tus organos, forman parte de las membranas celulares, ayudan a absorber ciertas vitaminas, y son una reserva de energia de larga duracion. Estan en aceites, mantequilla, nueces, aguacate, queso. El problema no es comer grasa — es comer demasiada, especialmente grasas procesadas (trans).</p>
+
+<h3>¿Que es una caloria?</h3>
+
+<p>Una caloria es una unidad de energia. Es la cantidad de energia que tu cuerpo obtiene al "quemar" la comida. Un adolescente activo necesita aproximadamente 2,000-2,500 calorias al dia. Si comes mas de lo que gastas, el exceso se almacena (engordas). Si comes menos, tu cuerpo usa sus reservas (adelgazas). Si comes lo justo, mantienes tu peso.</p>
+
+<h3>Micronutrientes: vitaminas y minerales</h3>
+
+<p>Ademas de los macro, necesitas pequeñas cantidades de vitaminas y minerales:</p>
+<ul>
+<li><strong>Vitamina C:</strong> repara tejidos, ayuda al sistema inmune. En citricos, tomates, pimientos.</li>
+<li><strong>Vitamina D:</strong> ayuda a absorber calcio (huesos fuertes). La produce tu piel con la luz solar.</li>
+<li><strong>Hierro:</strong> necesario para la hemoglobina (transporte de oxigeno). En carnes rojas, espinacas, legumbres.</li>
+<li><strong>Calcio:</strong> huesos y dientes. En lacteos, brocoli, almendras.</li>
+</ul>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cuerpo no puede producir la mayoria de las vitaminas por si mismo — necesita obtenerlas de la comida. Por eso una dieta variada es tan importante: no existe un solo alimento que tenga todo lo que necesitas.
+</div>
+</div>
+
+
+<div class="lectura">
+<h2>Texto 3 — El agua: mucho mas que sed</h2>
+
+<p>Tu cuerpo es aproximadamente <strong>60% agua</strong>. Si pesas 50 kg, unos 30 kg son agua. Esta en todas partes: dentro de las celulas (2/3 del agua corporal), en la sangre, en los espacios entre celulas, en el cerebro (que es 75% agua), en los pulmones (83% agua), incluso en los huesos (31% agua).</p>
+
+<h3>¿Para que sirve tanta agua?</h3>
+<ul>
+<li><strong>Transporte:</strong> La sangre (que es mayormente agua) lleva oxigeno y nutrientes a todas las celulas y recoge desechos.</li>
+<li><strong>Regulacion termica:</strong> Cuando tienes calor, sudas. El sudor se evapora y te enfria. Sin agua, no podrias regular tu temperatura.</li>
+<li><strong>Reacciones quimicas:</strong> Practicamente todas las reacciones que ocurren en tu cuerpo necesitan agua para funcionar.</li>
+<li><strong>Proteccion:</strong> El liquido que rodea tu cerebro y medula espinal actua como amortiguador. El liquido en tus articulaciones reduce la friccion.</li>
+<li><strong>Eliminacion de desechos:</strong> Tus riñones filtran la sangre y producen orina para eliminar toxinas. Sin suficiente agua, los riñones no pueden hacer bien su trabajo.</li>
+</ul>
+
+<h3>¿Que pasa cuando no tomas suficiente?</h3>
+<p>La deshidratacion, incluso leve (1-2% de perdida de agua corporal), ya produce efectos:</p>
+<ul>
+<li>Dolor de cabeza</li>
+<li>Dificultad para concentrarte</li>
+<li>Cansancio</li>
+<li>Orina oscura y en poca cantidad</li>
+<li>Boca seca, piel menos elastica</li>
+</ul>
+
+<p>Pierdes agua constantemente: al respirar (el aire que exhalas tiene vapor), al sudar, al orinar, y al ir al baño. En total, un adolescente pierde entre 1.5 y 2.5 litros de agua al dia en condiciones normales (mas si hace calor o ejercicio). Por eso necesitas reponer esa cantidad bebiendo agua y comiendo alimentos con alto contenido de agua (frutas, verduras, sopas).</p>
+
+<div class="dato">
+<strong>Dato:</strong> Puedes sobrevivir semanas sin comer (el cuerpo usa sus reservas de grasa), pero solo 3-5 dias sin beber agua. El agua es mas urgente que la comida para la supervivencia.
+</div>
+</div>
+
+<footer>
+Semana 4 de 20 | Fran<br>
+"La probabilidad no predice el futuro — te dice que tan preparado debes estar."
+</footer>
+
+</body>
+</html>
