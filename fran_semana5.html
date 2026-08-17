@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 5</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:6px;margin-bottom:10px}
+h2{color:#2a4365;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #bee3f8;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.nota{background:#f0fff4;padding:8px 12px;margin:8px 0;border-radius:6px;font-size:.85em;border:1px solid #c6f6d5}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.escribe,.ejercicio,.resuelto,.proyecto,.lectura{padding:8px 12px;margin:6px 0}.dato,.nota{padding:6px 10px;margin:5px 0}hr{margin:12px 0}}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 5</h1>
+<p><em>4 dias | 3 bloques por dia | Cuarto dia de estudio.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Eventos dependientes y probabilidad condicional</h3>
+
+<div class="mate">
+<h4>¿Que cambia cuando los eventos son dependientes?</h4>
+
+<p>La semana pasada vimos eventos independientes: lanzar un dado dos veces, tirar una moneda — cada evento no afecta al siguiente. Pero muchas situaciones reales son <strong>dependientes</strong>: el resultado del primer evento CAMBIA las probabilidades del segundo.</p>
+
+<p><strong>Ejemplo clasico:</strong> tienes un mazo de 52 cartas. Sacas una carta. La probabilidad de que sea un As es 4/52. Ahora, SIN devolver la carta al mazo, sacas otra. ¿Probabilidad de que la segunda sea un As?</p>
+
+<ul>
+<li>Si la primera fue un As: quedan 3 Ases de 51 cartas → P = 3/51</li>
+<li>Si la primera NO fue un As: quedan 4 Ases de 51 cartas → P = 4/51</li>
+</ul>
+
+<p>La probabilidad del segundo evento <strong>depende</strong> de lo que paso en el primero. Eso es un evento dependiente.</p>
+
+<h4>Probabilidad condicional</h4>
+
+<p>La <strong>probabilidad condicional</strong> se escribe P(B|A) y se lee "probabilidad de B dado que A ya ocurrio". Es la probabilidad de que pase B, sabiendo que A ya paso.</p>
+
+<p><strong>Formula para eventos dependientes:</strong></p>
+<p>P(A y B) = P(A) × P(B|A)</p>
+
+<p><strong>En gaming:</strong> imagina un juego donde hay un cofre con 10 items: 3 raros y 7 comunes. Sacas 2 items sin reposicion. ¿Cual es la probabilidad de que ambos sean raros?</p>
+<p>P(1ro raro) = 3/10. Despues de sacar uno raro, quedan 2 raros de 9 items.</p>
+<p>P(2do raro | 1ro raro) = 2/9.</p>
+<p>P(ambos raros) = 3/10 × 2/9 = 6/90 = 1/15 ≈ 6.67%</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: sacar cartas sin reposicion</h4>
+
+<p><strong>Problema:</strong> De un mazo de 52 cartas, sacas 2 cartas sin devolver la primera. ¿Cual es la probabilidad de sacar 2 corazones seguidos?</p>
+
+<p><strong>Paso 1 — Probabilidad de la primera carta:</strong></p>
+<p>Hay 13 corazones en 52 cartas. P(1er corazon) = 13/52 = 1/4</p>
+
+<p><strong>Paso 2 — Probabilidad de la segunda carta (dado que la primera fue corazon):</strong></p>
+<p>Ya sacaste 1 corazon. Quedan 12 corazones en 51 cartas. P(2do corazon | 1ro corazon) = 12/51 = 4/17</p>
+
+<p><strong>Paso 3 — Probabilidad conjunta:</strong></p>
+<p>P(ambos corazones) = 13/52 × 12/51 = 156/2652 = 1/17 ≈ 0.0588 ≈ <strong>5.88%</strong></p>
+
+<p><strong>Comparacion:</strong> Si fueran independientes (devolviendo la carta), seria 13/52 × 13/52 = 1/16 = 6.25%. La dependencia baja la probabilidad porque "gastaste" una carta favorable.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Eventos dependientes</h4>
+<ol>
+<li>Una bolsa tiene 5 canicas rojas y 3 azules. Sacas 2 sin devolver. ¿Cual es la probabilidad de que ambas sean rojas?</li>
+<li>De un mazo de 52 cartas, sacas 2 sin reposicion. ¿Probabilidad de que ambas sean Reyes?</li>
+<li>Un equipo de basquet tiene 12 jugadores: 5 titulares y 7 suplentes. El coach elige 2 al azar para un ejercicio. ¿Probabilidad de que ambos sean titulares?</li>
+<li>En un videojuego, un cofre tiene 8 items: 2 legendarios, 3 epicos y 3 comunes. Sacas 2 items (sin reposicion). ¿Probabilidad de sacar un legendario primero Y un epico segundo?</li>
+<li>Hay 10 preguntas en un examen: 6 faciles y 4 dificiles. Te asignan 2 al azar. ¿Probabilidad de que ambas sean faciles?</li>
+<li>Una baraja española tiene 40 cartas (4 palos de 10). Sacas 2 sin devolver. ¿Probabilidad de que ambas sean del mismo palo (oros)?</li>
+<li>En un sorteo hay 20 papelitos: 3 dicen "premio" y 17 dicen "gracias por participar". Sacas 2 papelitos sin devolver el primero. ¿Probabilidad de ganar en ambos intentos?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final de este cuadernillo ("¿Que son las emociones? Lo que dice la ciencia").</p>
+<p>Responde:</p>
+<ol>
+<li>Explica la funcion de la amigdala. ¿Por que es importante que procese informacion ANTES que la mente consciente?</li>
+<li>Describe la diferencia entre serotonina, dopamina y cortisol. ¿En que situaciones predomina cada uno?</li>
+<li>¿Que es la respuesta de "lucha o huida"? Describe paso a paso que le pasa al cuerpo cuando se activa.</li>
+<li>El texto dice que las emociones "existen porque nos ayudan a sobrevivir". Elige 3 emociones basicas y explica como contribuyen a la supervivencia.</li>
+<li>¿Cual es la diferencia entre una emocion y un sentimiento, segun el texto?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Arbol de decisiones de tu videojuego (repeticion semana 4)</h4>
+<p>Esta actividad no se completo la semana pasada. Hoy la empezamos de nuevo con instrucciones mas claras:</p>
+<p><strong>Actividad:</strong> Elige un momento de un videojuego que juegues donde el jugador toma una decision importante (puede ser en combate, en dialogo, en estrategia, en build de personaje).</p>
+<ul>
+<li>Dibuja un <strong>arbol de decisiones</strong>: un diagrama donde el punto inicial es la situacion, y cada rama es una opcion disponible</li>
+<li>Al final de cada rama, escribe el resultado (que pasa si eliges esa opcion)</li>
+<li>No necesitas que sea complejo — 2 o 3 opciones con sus resultados es suficiente</li>
+</ul>
+<p><em>Ejemplo: En un RPG, al encontrar un enemigo: Rama A = atacar (daño seguro pero recibes daño), Rama B = usar habilidad especial (mas daño pero puede fallar), Rama C = huir (no ganas experiencia pero conservas vida).</em></p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MARTES</h2>
+
+<h3>Bloque 1: Matematicas — Diagramas de arbol</h3>
+
+<div class="mate">
+<h4>Diagramas de arbol: ver todas las posibilidades</h4>
+
+<p>Un <strong>diagrama de arbol</strong> es una forma visual de representar TODOS los resultados posibles de una secuencia de eventos. Cada "rama" representa una opcion, y al final de cada camino completo tienes un resultado.</p>
+
+<p><strong>¿Por que son utiles?</strong></p>
+<ul>
+<li>Te aseguran de no olvidar ningun caso</li>
+<li>Puedes escribir las probabilidades en cada rama</li>
+<li>Para obtener la probabilidad de un camino completo, multiplicas las probabilidades de cada rama</li>
+</ul>
+
+<p><strong>Reglas del diagrama de arbol:</strong></p>
+<ol>
+<li>Empieza por la izquierda con el primer evento</li>
+<li>De cada nodo salen tantas ramas como opciones hay</li>
+<li>Escribe la probabilidad en cada rama</li>
+<li>Las ramas que salen de un mismo nodo deben sumar 1 (o 100%)</li>
+<li>Para calcular la probabilidad de un resultado final: multiplica las probabilidades de todo el camino</li>
+</ol>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: tiros libres consecutivos</h4>
+
+<p><strong>Problema:</strong> Un jugador de basquet tiene 70% de probabilidad de anotar un tiro libre. Tira 2 tiros libres. ¿Cuales son las probabilidades de cada resultado posible?</p>
+
+<p><strong>Diagrama de arbol:</strong></p>
+<pre>
+                    ┌─ Anota (0.7) → Anota-Anota: 0.7 × 0.7 = 0.49
+    ┌─ Anota (0.7) ─┤
+    │               └─ Falla (0.3) → Anota-Falla: 0.7 × 0.3 = 0.21
+Inicio
+    │               ┌─ Anota (0.7) → Falla-Anota: 0.3 × 0.7 = 0.21
+    └─ Falla (0.3) ─┤
+                    └─ Falla (0.3) → Falla-Falla: 0.3 × 0.3 = 0.09
+</pre>
+
+<p><strong>Resultados:</strong></p>
+<ul>
+<li>P(ambos anotados) = 0.49 = 49%</li>
+<li>P(exactamente 1 anotado) = 0.21 + 0.21 = 0.42 = 42%</li>
+<li>P(ninguno anotado) = 0.09 = 9%</li>
+</ul>
+<p><strong>Verificacion:</strong> 0.49 + 0.42 + 0.09 = 1.00 ✓ (todas las probabilidades suman 1)</p>
+
+<p><em>Nota: Aqui los eventos son independientes (cada tiro no afecta al siguiente). Pero el diagrama funciona igual para eventos dependientes — solo cambian los numeros en las ramas.</em></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Diagramas de arbol</h4>
+<ol>
+<li>Un arquero acierta el 60% de sus tiros. Dispara 2 flechas. Dibuja el arbol y calcula: P(ambas aciertan), P(exactamente 1 acierta), P(ninguna acierta).</li>
+<li>En un videojuego, un ataque tiene 80% de probabilidad de acertar. Si fallas, tienes 50% de esquivar el contraataque. Dibuja el arbol para un turno: ¿cual es la probabilidad de acertar tu ataque? ¿De fallar Y recibir contraataque?</li>
+<li>Una bolsa tiene 3 rojas y 2 azules. Sacas 2 sin devolver. Dibuja el arbol completo con las probabilidades condicionales. ¿P(ambas rojas)? ¿P(una de cada color)?</li>
+<li>Un jugador de basquet tiene 80% de exito en tiros libres. Le dan 3 tiros. Dibuja el arbol (solo el camino donde anota los 3). ¿Probabilidad de anotar los 3?</li>
+<li>Lanzas una moneda 3 veces. Dibuja el arbol completo. ¿Cuantos resultados posibles hay? ¿P(exactamente 2 caras)?</li>
+<li>En un juego de cartas, la probabilidad de robar una carta util es 40%. Robas 2 cartas. ¿P(al menos una util)? Usa el complemento: P(al menos 1) = 1 - P(ninguna).</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("El cerebro emocional vs. el cerebro racional").</p>
+<p>Responde:</p>
+<ol>
+<li>Compara la corteza prefrontal con la amigdala: ¿que hace cada una y como interactuan?</li>
+<li>El texto usa la analogia del "auto con motor potente y frenos nuevos". Explica que representa el motor y que representan los frenos. ¿Por que esa analogia describe bien al cerebro adolescente?</li>
+<li>Describe el mecanismo del secuestro amigdalar: ¿que son la "via rapida" y la "via lenta"? ¿Por que la via rapida puede causar problemas?</li>
+<li>¿Que efecto tiene la falta de sueño en la relacion entre la amigdala y la corteza prefrontal?</li>
+<li>El texto menciona que "nombrar la emocion" reduce su intensidad. ¿Como funciona esto a nivel cerebral?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Agrega probabilidades a tu arbol</h4>
+<p>Toma el arbol de decisiones que hiciste ayer y agrega probabilidades a cada rama:</p>
+<ul>
+<li>¿Que probabilidad tiene cada opcion de salir bien? (Estimala: alta, media, baja → luego ponle un numero)</li>
+<li>Asigna un "valor" a cada resultado final (puntos, daño, recompensa — lo que mida el juego)</li>
+<li>Calcula el <strong>valor esperado</strong> de cada decision: multiplica la probabilidad por el valor de cada resultado y suma</li>
+<li>¿Cual opcion tiene mejor valor esperado?</li>
+</ul>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Valor esperado</h3>
+
+<div class="mate">
+<h4>¿Que es el valor esperado?</h4>
+
+<p>El <strong>valor esperado</strong> es lo que "deberias" obtener EN PROMEDIO si repitieras una situacion muchas veces. No es lo que pasa una vez — es el promedio a largo plazo.</p>
+
+<p><strong>Formula:</strong></p>
+<p>Valor esperado = Σ (valor del resultado × probabilidad del resultado)</p>
+<p>Es decir: multiplicas cada resultado posible por su probabilidad, y sumas todo.</p>
+
+<p><strong>En basquet:</strong> si un jugador anota 2 puntos con 60% de probabilidad (y falla con 40%), su valor esperado por tiro es:</p>
+<p>VE = (2 × 0.60) + (0 × 0.40) = 1.2 + 0 = <strong>1.2 puntos por tiro</strong></p>
+<p>Esto NO significa que anota 1.2 puntos cada vez (eso es imposible — anota 2 o 0). Significa que si tira 100 veces, esperamos que anote aproximadamente 120 puntos (100 × 1.2).</p>
+
+<p><strong>En videojuegos:</strong> si un cofre tiene 10% de dar un item que vale 1000 monedas y 90% de dar uno de 50 monedas, el valor esperado del cofre es:</p>
+<p>VE = (1000 × 0.10) + (50 × 0.90) = 100 + 45 = <strong>145 monedas</strong></p>
+<p>Si el cofre cuesta 200 monedas abrirlo, matematicamente NO conviene comprarlo (pierdes 55 monedas en promedio).</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: ¿conviene tirar de 3 o de 2?</h4>
+
+<p><strong>Problema:</strong> Un jugador de basquet tiene 45% de efectividad en triples (3 puntos) y 55% en tiros de 2 puntos. ¿Que tipo de tiro le da mejor rendimiento esperado?</p>
+
+<p><strong>Paso 1 — Valor esperado del triple:</strong></p>
+<p>VE₃ = (3 × 0.45) + (0 × 0.55) = 1.35 + 0 = <strong>1.35 puntos/tiro</strong></p>
+
+<p><strong>Paso 2 — Valor esperado del tiro de 2:</strong></p>
+<p>VE₂ = (2 × 0.55) + (0 × 0.45) = 1.10 + 0 = <strong>1.10 puntos/tiro</strong></p>
+
+<p><strong>Conclusion:</strong> El triple tiene mejor valor esperado (1.35 > 1.10), asi que matematicamente le conviene tirar de 3 aunque falle mas seguido. Esta es exactamente la logica que usan los equipos de la NBA para decidir estrategia — por eso se tiran tantos triples ahora.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Valor esperado</h4>
+<ol>
+<li>Un jugador mete el 80% de sus tiros libres (1 punto cada uno). ¿Cual es su valor esperado por tiro libre?</li>
+<li>En un juego de mesa, lanzas un dado. Ganas $10 si sale 6, y pierdes $2 si sale cualquier otra cosa. ¿Cual es el valor esperado? ¿Te conviene jugar?</li>
+<li>Un cofre de videojuego cuesta 100 monedas. Tiene 5% de probabilidad de un item de 2000 monedas, 20% de uno de 300 monedas, y 75% de uno de 20 monedas. ¿Cual es el valor esperado? ¿Conviene comprarlo?</li>
+<li>Un equipo puede elegir: tirar un triple (3 pts, 40% de exito) o ir por la bandeja (2 pts, 75% de exito). ¿Cual tiene mejor valor esperado?</li>
+<li>En un videojuego, un ataque normal hace 50 de daño siempre. Un ataque critico hace 150 de daño pero solo acierta el 30% de las veces (0 daño si falla). ¿Cual tiene mejor valor esperado de daño?</li>
+<li>Lanzas una moneda: si sale cara ganas $5, si sale sello pierdes $3. ¿Valor esperado? Si juegas 100 veces, ¿cuanto esperas ganar o perder en total?</li>
+<li>Un arquero tiene: tiro preciso (20 daño, 90% acierto), tiro fuerte (40 daño, 50% acierto), tiro critico (80 daño, 20% acierto). Calcula el VE de los tres y decide cual es la mejor estrategia general.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("Motivacion, dopamina y habitos").</p>
+<p>Responde:</p>
+<ol>
+<li>El texto dice que la dopamina "no es exactamente la molecula del placer". ¿Que es en realidad? ¿Cuando se libera mas — antes o durante la recompensa?</li>
+<li>Explica el mecanismo de un "loop de dopamina" en redes sociales o videojuegos. ¿Cuales son los 3 elementos que lo hacen funcionar?</li>
+<li>Compara la motivacion intrinseca con la extrinseca. Da un ejemplo de cada una de tu vida.</li>
+<li>Describe el ciclo del habito (señal-rutina-recompensa). ¿Que parte hay que cambiar para modificar un habito y por que?</li>
+<li>El texto menciona que las recompensas impredecibles generan mas dopamina que las predecibles. ¿Como usan esto los videojuegos en sus sistemas de loot/gacha?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Analisis de balance</h4>
+<p>Usa tu arbol de decisiones con probabilidades y responde:</p>
+<ul>
+<li>¿Hay alguna opcion que sea claramente MEJOR que las otras en valor esperado?</li>
+<li>Si una opcion domina a las demas, eso es "mala diseño" en un juego — significa que no hay decision real (siempre conviene lo mismo)</li>
+<li>Si las opciones estan cerca en valor esperado pero con diferente riesgo, eso es "buen diseño" — el jugador debe elegir entre seguridad y recompensa alta</li>
+<li>Escribe tu conclusion: ¿esta bien balanceada esta decision en tu juego? ¿Que cambiarias para balancearla mejor?</li>
+</ul>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 4 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Repaso integral semanas 4-5</h3>
+
+<div class="mate">
+<h4>Todo junto: probabilidad basica a valor esperado</h4>
+
+<p>Hoy mezclamos todo lo que vimos en estas dos semanas. No hay conceptos nuevos — solo problemas que combinan las herramientas:</p>
+
+<ul>
+<li><strong>Probabilidad basica:</strong> P = casos favorables / casos totales</li>
+<li><strong>Complemento:</strong> P(no A) = 1 - P(A)</li>
+<li><strong>Eventos independientes:</strong> P(A y B) = P(A) × P(B)</li>
+<li><strong>Eventos dependientes:</strong> P(A y B) = P(A) × P(B|A)</li>
+<li><strong>Diagramas de arbol:</strong> visualizar secuencias, multiplicar por camino</li>
+<li><strong>Valor esperado:</strong> VE = Σ (valor × probabilidad)</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: problema completo</h4>
+
+<p><strong>Problema:</strong> En un videojuego, un jefe final tiene dos fases. En la fase 1, tu ataque tiene 70% de probabilidad de quitar la mitad de su vida. Si lo logras, en la fase 2 tu ataque especial tiene 50% de exito (y ganas). Si fallas en fase 1, en fase 2 solo tienes 20% de exito. Calcula la probabilidad de ganar la pelea completa.</p>
+
+<p><strong>Paso 1 — Diagrama de arbol:</strong></p>
+<pre>
+              ┌─ Ganas fase 2 (0.50) → VICTORIA: 0.70 × 0.50 = 0.35
+┌─ Exito F1 (0.70)─┤
+│             └─ Pierdes fase 2 (0.50) → DERROTA: 0.70 × 0.50 = 0.35
+│
+│             ┌─ Ganas fase 2 (0.20) → VICTORIA: 0.30 × 0.20 = 0.06
+└─ Falla F1 (0.30)─┤
+              └─ Pierdes fase 2 (0.80) → DERROTA: 0.30 × 0.80 = 0.24
+</pre>
+
+<p><strong>Paso 2 — Probabilidad total de ganar:</strong></p>
+<p>P(victoria) = 0.35 + 0.06 = <strong>0.41 = 41%</strong></p>
+
+<p><strong>Paso 3 — Verificacion:</strong> P(derrota) = 0.35 + 0.24 = 0.59. Total: 0.41 + 0.59 = 1.00 ✓</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Repaso mixto</h4>
+<ol>
+<li>Lanzas 2 dados. ¿Probabilidad de que la suma sea 7? (Pista: cuenta los pares que suman 7 de los 36 posibles.)</li>
+<li>En una bolsa hay 6 fichas: 2 rojas, 3 verdes, 1 azul. Sacas 2 sin devolver. ¿P(ambas verdes)?</li>
+<li>Un jugador de basquet intenta 3 tiros libres. Su efectividad es 75%. ¿P(anota los 3)? ¿P(anota al menos 1)? Usa P(al menos 1) = 1 - P(falla todos).</li>
+<li>Un cofre tiene: 5% de item legendario (valor 5000), 15% de item epico (valor 1000), 30% de item raro (valor 200), 50% de item comun (valor 30). Si el cofre cuesta 250 monedas, ¿conviene comprarlo? Calcula el VE.</li>
+<li>Tienes dos estrategias en un juego: A) ataque seguro (100 daño, 90% acierto) o B) combo arriesgado (300 daño, 35% acierto). ¿Cual tiene mejor VE? Si necesitas hacer 500 de daño total y tienes tiempo para 5 ataques, ¿cual estrategia te da mejor expectativa total?</li>
+<li>En un sorteo hay 3 premios entre 50 participantes. ¿Cual es tu probabilidad de ganar al menos un premio si participas? (Pista: calcula P(no ganar ninguno) con eventos dependientes y usa complemento.)</li>
+<li>Un equipo gana el 60% de sus partidos en casa y el 35% fuera. Juega 2 partidos: 1 en casa y 1 fuera. Dibuja el arbol y calcula P(ganar ambos), P(ganar exactamente 1), P(perder ambos).</li>
+<li>Diseña tu propio problema de valor esperado basado en un videojuego que juegas. Define las opciones, probabilidades y valores. Resuelvelo.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Revisa los 3 textos de esta semana y responde:</p>
+<ol>
+<li>El Texto 1 explica las emociones como mecanismo de supervivencia. Elige la respuesta de "lucha o huida" y explica por que fue util para nuestros ancestros pero puede ser problematica en la vida moderna.</li>
+<li>Conecta los Textos 1 y 2: ¿como se relaciona la amigdala con el concepto de "secuestro amigdalar"? ¿Que papel juega la corteza prefrontal en prevenirlo?</li>
+<li>El Texto 3 habla del sistema de recompensa y la dopamina. Usando lo que sabes de valor esperado (matematicas), ¿por que las cajas de loot son un "mal negocio" desde el punto de vista matematico pero siguen siendo atractivas desde el punto de vista de la dopamina?</li>
+<li>Si la falta de sueño debilita la corteza prefrontal (Texto 2) y la dopamina de los juegos te mantiene despierto (Texto 3), ¿que ciclo vicioso se puede formar?</li>
+<li><strong>¿Que dato te sorprendio mas de los textos de esta semana?</strong> Escribe 1-2 oraciones explicando cual y por que.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Entrega final — Analisis completo</h4>
+<p>Redacta un analisis de 1 pagina que incluya:</p>
+<ol>
+<li><strong>Tu arbol de decisiones</strong> (dibujado o descrito claramente)</li>
+<li><strong>Las probabilidades</strong> de cada rama (con justificacion: ¿por que estimaste esos numeros?)</li>
+<li><strong>Los valores esperados</strong> de cada opcion</li>
+<li><strong>Tu conclusion:</strong> ¿esta decision esta bien diseñada? ¿Hay una opcion dominante (mal balance) o las opciones son interesantes (buen balance)? ¿Que cambiarias?</li>
+</ol>
+<p>Piensa como un game designer: tu trabajo es que el jugador tenga que PENSAR, no que haya una respuesta obvia.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+<div class="lectura">
+<h2>Texto 1 — ¿Que son las emociones? Lo que dice la ciencia</h2>
+
+<p>Cuando sientes miedo al escuchar un ruido fuerte en la noche, o alegria al ver a alguien que quieres, o rabia cuando algo te parece injusto, estas experimentando una emocion. Pero ¿que es exactamente una emocion? ¿De donde viene? La neurociencia — la ciencia que estudia el cerebro y el sistema nervioso — tiene respuestas fascinantes.</p>
+
+<h3>El cerebro emocional: el sistema limbico</h3>
+
+<p>En el centro del cerebro existe un grupo de estructuras llamado <strong>sistema limbico</strong>. Es una de las partes mas antiguas del cerebro humano — ya existia en nuestros ancestros hace millones de años, mucho antes de que desarrollaramos el lenguaje o el pensamiento abstracto. El sistema limbico es el "centro de control emocional" y esta formado por varias estructuras que trabajan en equipo.</p>
+
+<p>La estrella del sistema limbico es la <strong>amigdala</strong> (en realidad son dos, una en cada hemisferio del cerebro). La amigdala es como un detector de amenazas: escanea constantemente lo que percibes — sonidos, imagenes, olores — y decide en milisegundos si algo es peligroso, placentero o irrelevante. Cuando detecta peligro, dispara una señal de alarma al cuerpo entero. Esto ocurre ANTES de que seas consciente de lo que pasa. Por eso a veces saltas de miedo antes de saber por que.</p>
+
+<p>El <strong>hipocampo</strong>, que esta justo al lado de la amigdala, se encarga de la memoria. Conecta las emociones con los recuerdos: por eso un olor puede transportarte instantaneamente a un momento de tu infancia, o una cancion puede hacerte sentir triste sin saber bien por que. El hipocampo le dice a la amigdala "esto ya lo vivimos antes y fue peligroso" o "tranquila, esto es seguro".</p>
+
+<p>El <strong>hipotalamo</strong> es el puente entre las emociones y el cuerpo fisico. Cuando la amigdala detecta algo importante, el hipotalamo activa respuestas corporales: acelera el corazon, libera hormonas, cambia la respiracion, dilata las pupilas. Es la razon por la que las emociones se "sienten" en el cuerpo.</p>
+
+<h3>Los mensajeros quimicos: neurotransmisores</h3>
+
+<p>Las neuronas (celulas del cerebro) se comunican entre si mediante sustancias quimicas llamadas <strong>neurotransmisores</strong>. Cada uno tiene un efecto diferente en como te sientes:</p>
+
+<p><strong>Serotonina:</strong> se la conoce como la molecula del bienestar. Regula el humor, el sueño y el apetito. Cuando tus niveles de serotonina son adecuados, te sientes estable, tranquilo, satisfecho. Niveles bajos se asocian con tristeza persistente, irritabilidad y problemas para dormir. La luz del sol, el ejercicio fisico y ciertos alimentos ayudan a producirla.</p>
+
+<p><strong>Dopamina:</strong> es la molecula de la recompensa y la motivacion. Se libera cuando logras algo, cuando anticipas algo placentero, o cuando experimentas algo nuevo y estimulante. Es la que te hace sentir "si, lo logre" o "quiero mas de eso". Tiene un papel clave en la motivacion, el aprendizaje y el placer.</p>
+
+<p><strong>Cortisol:</strong> es la hormona del estres. Se libera cuando el cerebro percibe una amenaza o presion. En dosis pequeñas es util — te ayuda a estar alerta para un examen o reaccionar rapido en una emergencia. Pero si se mantiene alta por mucho tiempo (estres cronico), daña el cuerpo: afecta la memoria, debilita el sistema inmune y causa problemas de sueño.</p>
+
+<p><strong>Noradrenalina:</strong> trabaja junto con el cortisol en situaciones de estres. Aumenta la atencion, la concentracion y la velocidad de reaccion. Es la que te mantiene "en alerta" cuando percibes que algo importante esta pasando.</p>
+
+<h3>La respuesta de lucha o huida</h3>
+
+<p>Imagina esto: estas caminando y de repente ves una sombra grande que se mueve rapido hacia ti. En menos de medio segundo, ANTES de que puedas pensar "¿que es eso?", tu cuerpo ya reacciono: el corazon se acelera, los musculos se tensan, la respiracion se hace rapida, las pupilas se dilatan, la sangre se concentra en brazos y piernas. Esto es la <strong>respuesta de lucha o huida</strong> (fight or flight).</p>
+
+<p>¿Que paso? La amigdala detecto una posible amenaza y envio una señal de emergencia al hipotalamo, que activo el sistema nervioso simpatico y las glandulas suprarrenales (encima de los riñones). Estas liberaron adrenalina y cortisol al torrente sanguineo. Todo el cuerpo se preparo para dos opciones: pelear contra la amenaza o salir corriendo.</p>
+
+<p>Este sistema fue crucial para la supervivencia de nuestros ancestros — los que reaccionaban rapido ante un depredador sobrevivian. El problema es que el mismo sistema se activa hoy ante amenazas modernas que no requieren correr ni pelear: un examen, una discusion, hablar en publico, una notificacion que te pone nervioso. Tu cuerpo responde como si hubiera un leon, aunque solo hay un mensaje de texto.</p>
+
+<h3>¿Para que sirven las emociones?</h3>
+
+<p>Desde la perspectiva evolutiva, las emociones existen porque <strong>nos ayudan a sobrevivir</strong>. Cada emocion basica tiene una funcion:</p>
+
+<ul>
+<li><strong>Miedo:</strong> te protege — te hace evitar situaciones peligrosas o reaccionar rapido</li>
+<li><strong>Asco:</strong> te aleja de cosas toxicas o contaminadas (comida podrida, sustancias dañinas)</li>
+<li><strong>Rabia:</strong> te da energia para defenderte cuando algo amenaza tus limites</li>
+<li><strong>Tristeza:</strong> señaliza una perdida y activa la busqueda de apoyo social</li>
+<li><strong>Alegria:</strong> refuerza comportamientos beneficiosos — repites lo que te hace sentir bien</li>
+<li><strong>Sorpresa:</strong> aumenta tu atencion ante lo inesperado para procesar nueva informacion</li>
+</ul>
+
+<p>Las emociones son rapidas, automaticas e involuntarias — no las eliges. Lo que si puedes elegir es como respondes a ellas. Un <strong>sentimiento</strong>, a diferencia de una emocion, es la interpretacion consciente de esa experiencia: la emocion dura segundos; el sentimiento puede durar horas o dias porque involucra tu pensamiento y tus recuerdos.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La amigdala puede procesar una señal de peligro en solo 12 milisegundos — mucho mas rapido que el pensamiento consciente, que tarda entre 300 y 500 milisegundos. Por eso reaccionas antes de "pensar".
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cuerpo no distingue entre un peligro real y uno imaginado. Si imaginas una situacion aterradora con suficiente detalle, la amigdala se activa igual y libera las mismas hormonas de estres que si estuviera pasando de verdad.
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — El cerebro emocional vs. el cerebro racional</h2>
+
+<p>Dentro de tu cabeza hay una especie de tira y afloja constante entre dos sistemas: uno rapido, emocional e impulsivo (el sistema limbico que ya conoces) y otro lento, racional y planificador (la corteza prefrontal). Entender como funcionan estos dos sistemas — y por que a veces uno domina al otro — es clave para entender el comportamiento humano, especialmente durante la adolescencia.</p>
+
+<h3>La corteza prefrontal: el director de orquesta</h3>
+
+<p>La <strong>corteza prefrontal</strong> es la parte del cerebro que esta justo detras de tu frente. Es la estructura mas evolucionada del cerebro humano — la que nos diferencia mas de otros animales. Funciona como un "director de orquesta" que coordina todo lo demas. Sus funciones incluyen:</p>
+
+<ul>
+<li><strong>Toma de decisiones:</strong> evaluar opciones, considerar consecuencias, elegir la mejor accion</li>
+<li><strong>Control de impulsos:</strong> la capacidad de decir "no" cuando algo te tienta pero sabes que no te conviene</li>
+<li><strong>Planificacion:</strong> pensar en el futuro, organizar pasos, establecer metas</li>
+<li><strong>Regulacion emocional:</strong> modular la intensidad de las emociones, calmarte cuando estas alterado</li>
+<li><strong>Empatia:</strong> imaginar lo que otra persona siente o piensa</li>
+</ul>
+
+<p>En resumen: si la amigdala es la "alarma" del cerebro, la corteza prefrontal es el "freno". La amigdala grita "¡PELIGRO!" y la corteza prefrontal evalua si realmente hay peligro o si fue una falsa alarma.</p>
+
+<h3>El cerebro adolescente: un auto con motor potente y frenos nuevos</h3>
+
+<p>Aqui viene la parte mas importante para vos: la corteza prefrontal <strong>no termina de desarrollarse hasta los 25 años aproximadamente</strong>. Es la ultima parte del cerebro en madurar. Mientras tanto, el sistema limbico (las emociones) ya esta completamente activo desde la pubertad.</p>
+
+<p>¿Que significa esto? Que durante la adolescencia tienes un sistema emocional a toda potencia con un sistema de control que todavia esta en construccion. Es como tener un auto deportivo con un motor potentisimo pero frenos que todavia se estan instalando. El motor funciona perfecto (sientes todo intensamente), pero el sistema de frenado aun no esta al 100%.</p>
+
+<p>Esto NO significa que los adolescentes sean "irracionales" o "inmaduros" de forma negativa. Significa que el cerebro esta en una etapa de desarrollo donde las emociones son mas intensas y el control sobre ellas esta madurando. Es biologia, no defecto de caracter. Con el tiempo — y con practica — los frenos se van afinando.</p>
+
+<h3>El secuestro amigdalar: cuando la emocion toma el control</h3>
+
+<p>El psicologo Daniel Goleman describio un fenomeno que llamo <strong>"secuestro amigdalar"</strong> (amygdala hijack). Ocurre cuando la amigdala responde tan rapido y tan fuerte ante un estimulo que "secuestra" el control del comportamiento, sin darle tiempo a la corteza prefrontal de intervenir.</p>
+
+<p>¿Como funciona? La informacion sensorial (lo que ves, oyes, etc.) llega primero a una estructura llamada <strong>talamo</strong>, que funciona como una central de distribucion. Desde ahi, la informacion toma dos caminos simultaneos:</p>
+
+<ol>
+<li><strong>El camino rapido (via baja):</strong> del talamo directo a la amigdala. Es impreciso pero ultrarapido — tarda 12 milisegundos. La amigdala decide en base a patrones generales: "¿esto se parece a algo peligroso? ¡Activar respuesta!"</li>
+<li><strong>El camino lento (via alta):</strong> del talamo a la corteza visual/auditiva, luego a la corteza prefrontal, y de ahi a la amigdala. Es preciso pero tarda 300-500 milisegundos. La corteza analiza: "Veamos... es una sombra... de un arbol... movida por el viento. No hay peligro."</li>
+</ol>
+
+<p>El secuestro amigdalar ocurre cuando la via rapida domina completamente y la persona actua impulsivamente ANTES de que la via lenta pueda intervenir. Resultado: dices algo hiriente, tiras un objeto, contestas agresivamente, o haces algo que dos minutos despues te arrepientes porque la corteza prefrontal finalmente "llego" y te dijo "eso no fue buena idea".</p>
+
+<h3>El espacio entre estimulo y respuesta</h3>
+
+<p>Una de las ideas mas poderosas de la psicologia moderna es esta: <strong>entre lo que te pasa (estimulo) y lo que haces (respuesta), hay un espacio</strong>. Ese espacio es donde vive tu libertad de elegir.</p>
+
+<p>Cuando algo te provoca una emocion fuerte — alguien te dice algo que te enoja, recibes una mala noticia, te sientes frustrado — la emocion es automatica e inevitable. Pero lo que haces DESPUES no tiene que ser automatico. Si logras hacer una pausa de incluso 6 segundos (el tiempo que tarda la cortisol en bajar un poco), le das tiempo a tu corteza prefrontal de "conectarse" y ofrecer una respuesta mas inteligente.</p>
+
+<p>Esto no es facil y no es perfecto. A veces el secuestro es tan rapido que no hay espacio. Pero con practica, ese espacio se puede ampliar. Algunas estrategias que la neurociencia ha demostrado que funcionan:</p>
+
+<ul>
+<li><strong>Respiracion lenta:</strong> activar la respiracion diafragmatica (lenta y profunda) activa el sistema nervioso parasimpatico, que es el "opuesto" del sistema de lucha o huida. Literalmente calma la quimica del cuerpo.</li>
+<li><strong>Nombrar la emocion:</strong> estudios de neuroimagen muestran que cuando pones nombre a lo que sientes ("esto que siento es frustracion"), la actividad de la amigdala disminuye. Ponerle nombre activa la corteza prefrontal.</li>
+<li><strong>Distancia temporal:</strong> preguntarte "¿me importara esto en una semana?" activa areas de planificacion que moderan la respuesta emocional inmediata.</li>
+</ul>
+
+<h3>El sueño y las emociones</h3>
+
+<p>Un dato crucial: la <strong>falta de sueño</strong> debilita dramaticamente la conexion entre la corteza prefrontal y la amigdala. Estudios muestran que despues de una noche sin dormir bien, la amigdala responde hasta un 60% mas intensamente a estimulos negativos, mientras la corteza prefrontal se vuelve menos activa. Literalmente, dormir poco te deja con mas motor emocional y menos frenos. Por eso cuando duermes mal, todo te molesta mas, eres menos paciente y es mas facil que te desbordes emocionalmente.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La corteza prefrontal se desarrolla de atras hacia adelante. Las areas de planificacion a largo plazo son las ultimas en madurar — por eso a los 15 puedes ser excelente en resolver problemas inmediatos pero te cuesta mas imaginar consecuencias a 5 años.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Nombrar una emocion reduce su intensidad en el cerebro. En estudios con resonancia magnetica, los participantes que describieron su emocion con palabras mostraron menor actividad en la amigdala que los que simplemente la sintieron sin nombrarla. Esto se llama "etiquetado afectivo".
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 3 — Motivacion, dopamina y habitos</h2>
+
+<p>¿Por que hay dias en que tienes ganas de hacer cosas y otros en que no quieres hacer nada? ¿Por que es tan facil pasar horas en el telefono pero tan dificil sentarte a estudiar? ¿Por que algunos habitos se forman solos (como revisar redes sociales) y otros cuestan tanto esfuerzo (como hacer ejercicio)? La respuesta esta en una molecula: la dopamina, y en como el cerebro aprende a repetir comportamientos.</p>
+
+<h3>El sistema de recompensa</h3>
+
+<p>Tu cerebro tiene un circuito llamado <strong>sistema de recompensa</strong> (o sistema mesolimbico). Es una red de neuronas que conecta una zona profunda del cerebro (el area tegmental ventral) con el nucleo accumbens y la corteza prefrontal. Su funcion es simple pero poderosisima: <strong>marca que comportamientos vale la pena repetir</strong>.</p>
+
+<p>Cuando haces algo que tu cerebro interpreta como beneficioso para la supervivencia — comer, conectarte socialmente, lograr una meta, aprender algo nuevo — este circuito libera <strong>dopamina</strong>. La dopamina NO es exactamente "la molecula del placer" (eso es un mito simplificado). Es mas bien la molecula de la <strong>anticipacion y la motivacion</strong>: se libera mas ANTES de obtener la recompensa que durante. Es la que te dice "eso que viene va a estar bueno, ve a buscarlo".</p>
+
+<h3>Dopamina y anticipacion</h3>
+
+<p>Un experimento clasico lo muestra perfecto: cuando un mono aprendia que una luz roja significaba que en 5 segundos recibiria jugo, la dopamina se disparaba al ver la luz — no al recibir el jugo. La anticipacion generaba mas dopamina que la recompensa misma.</p>
+
+<p>Esto explica fenomenos cotidianos: ¿por que la espera antes de un viaje es tan emocionante? ¿Por que abrir un sobre de cartas coleccionables es mas emocionante que tener las cartas? ¿Por que en videojuegos el momento antes de abrir un cofre epico es mas intenso que ver el item? Todo es dopamina de anticipacion.</p>
+
+<h3>Los loops de dopamina: la trampa de las redes y los juegos</h3>
+
+<p>Aqui es donde la cosa se pone seria. Las redes sociales y los videojuegos estan diseñados — intencionalmente, por equipos de psicologos y neurocientificos — para maximizar la liberacion de dopamina y crear loops (ciclos) que te mantienen enganchado.</p>
+
+<p>Un <strong>loop de dopamina</strong> funciona asi:</p>
+<ol>
+<li><strong>Señal variable:</strong> no sabes exactamente cuando vendran los likes, las notificaciones o los items raros. Esta incertidumbre AUMENTA la dopamina (el cerebro libera mas dopamina ante recompensas impredecibles que ante recompensas fijas).</li>
+<li><strong>Recompensa pequeña e intermitente:</strong> a veces hay likes, a veces no. A veces el cofre tiene algo bueno, a veces basura. Esto te mantiene "buscando" la proxima recompensa.</li>
+<li><strong>Facilidad de repeticion:</strong> scroll infinito, autoplay, un boton para "jugar otra partida". Cero friccion para volver a buscar dopamina.</li>
+</ol>
+
+<p>El resultado: tu cerebro entra en un ciclo de buscar-obtener-buscar-obtener que puede durar horas sin que seas consciente del tiempo que paso. No es falta de voluntad — es ingenieria de comportamiento aprovechando como funciona tu neurologia.</p>
+
+<h3>Motivacion intrinseca vs. extrinseca</h3>
+
+<p>La psicologia distingue dos tipos de motivacion:</p>
+
+<p><strong>Motivacion extrinseca:</strong> haces algo por una recompensa externa (dinero, nota, aprobacion, evitar un castigo). Funciona a corto plazo pero se agota facilmente. Si la recompensa desaparece, dejas de hacerlo.</p>
+
+<p><strong>Motivacion intrinseca:</strong> haces algo porque te interesa, porque te da satisfaccion, porque quieres mejorar o porque le encuentras sentido. Es mas duradera y genera bienestar real. Se conecta con tres necesidades basicas (segun la teoria de la autodeterminacion):</p>
+
+<ul>
+<li><strong>Autonomia:</strong> sentir que eliges lo que haces (no que te obligan)</li>
+<li><strong>Competencia:</strong> sentir que eres capaz y que mejoras</li>
+<li><strong>Conexion:</strong> sentir que lo que haces tiene sentido o conecta con otros</li>
+</ul>
+
+<p>Los videojuegos son maestros en generar motivacion intrinseca artificial: te dan autonomia (eliges tu camino), competencia (niveles progresivos, feedback inmediato) y conexion (comunidad, rankings). El desafio es encontrar esas mismas cualidades en actividades de la vida real.</p>
+
+<h3>Como se forman los habitos: el ciclo de tres pasos</h3>
+
+<p>Un habito es un comportamiento que el cerebro automatizo para ahorrar energia. Tu cerebro consciente (corteza prefrontal) consume mucha glucosa — es "caro" pensar. Asi que todo lo que puede, lo convierte en habito y lo manda a los <strong>ganglios basales</strong> (una estructura profunda que ejecuta secuencias automaticas sin esfuerzo consciente).</p>
+
+<p>Todo habito tiene tres componentes (el "loop del habito"):</p>
+
+<ol>
+<li><strong>Señal (cue):</strong> algo que dispara el comportamiento automaticamente. Puede ser un lugar, una hora del dia, una emocion, una accion previa, o la presencia de ciertas personas. Ejemplo: aburrimiento (señal) → agarras el telefono.</li>
+<li><strong>Rutina:</strong> el comportamiento en si. Ejemplo: scrollear redes sociales.</li>
+<li><strong>Recompensa:</strong> lo que el cerebro obtiene. Ejemplo: estimulacion, dopamina, distraccion del aburrimiento.</li>
+</ol>
+
+<p>Para cambiar un habito, la estrategia mas efectiva (segun las investigaciones) no es eliminar la señal ni la recompensa, sino <strong>cambiar la rutina</strong> manteniendo la misma señal y buscando una recompensa similar. Ejemplo: señal = aburrimiento → nueva rutina = hacer 10 tiros al aro en el patio → recompensa = estimulacion fisica y logro.</p>
+
+<p>Para CREAR un habito nuevo, necesitas: una señal consistente (siempre a la misma hora o despues de la misma accion), la rutina que quieres instalar, y una recompensa inmediata (aunque sea pequeña). Despues de 21 a 66 dias de repeticion (dependiendo de la complejidad), el comportamiento empieza a automatizarse.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Las recompensas impredecibles generan hasta 400% mas dopamina que las predecibles. Por eso las maquinas tragamonedas, las cajas de loot en videojuegos y el scroll de redes son tan adictivos — nunca sabes que viene, y esa incertidumbre es exactamente lo que engancha al cerebro.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cerebro necesita unos 23 minutos para recuperar la concentracion profunda despues de una interrupcion (como revisar el telefono). Si revisas el celular 10 veces en una hora de estudio, tecnicamente nunca estas concentrado de verdad.
+</div>
+</div>
+
+<footer>
+<p>Semana 5 de 20 | Fran</p>
+<p><em>"La probabilidad no predice lo que pasa una vez — te dice como apostar cuando juegas mil veces."</em></p>
+</footer>
+
+</body>
+</html>

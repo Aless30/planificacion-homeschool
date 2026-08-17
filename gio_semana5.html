@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gio — Semana 5</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#553c9a;border-bottom:3px solid #9f7aea;padding-bottom:6px;margin-bottom:10px}
+h2{color:#553c9a;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #e9d8fd;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#faf5ff;border-left:4px solid #9f7aea;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+.nota{background:#f0fff4;padding:8px 12px;margin:8px 0;border-radius:6px;font-size:.85em;border:1px solid #c6f6d5}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}.mate,.escribe,.ejercicio,.proyecto,.resuelto,.lectura{padding:8px 12px;margin:6px 0}.dato,.nota{padding:6px 10px;margin:5px 0}hr{margin:12px 0}}
+</style>
+</head>
+<body>
+
+<h1>Gio — Semana 5</h1>
+<p><em>4 dias | 3 bloques por dia | Esta semana sumamos un dia mas.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Repaso de porcentajes y descuentos encadenados</h3>
+
+<div class="mate">
+<h4>Repaso rapido: ¿que era un porcentaje?</h4>
+
+<p>Un porcentaje es "cuanto de cada 100". Si una tienda dice "30% de descuento", por cada $100 del precio te quitan $30. Simple.</p>
+
+<p><strong>La trampa de hoy: descuentos encadenados.</strong></p>
+
+<p>Imagina que una tienda de telas tiene una promo: "30% de descuento + 10% adicional". Muchas personas piensan que eso es 40% de descuento. Pero NO. ¿Por que?</p>
+
+<p>Porque el segundo descuento se aplica sobre el precio <strong>ya rebajado</strong>, no sobre el original. Es como cortar una tela: si cortas el 30%, te queda un pedazo. Luego del pedazo que queda, cortas otro 10%. Pero ese 10% es del pedazo chico, no de la tela entera.</p>
+
+<p><strong>Como calcularlo:</strong></p>
+<ol>
+<li>Aplica el primer descuento al precio original</li>
+<li>Al resultado, aplica el segundo descuento</li>
+</ol>
+
+<p><strong>Atajo con decimales:</strong> multiplica los "factores de pago". Si pagas el 70% (despues del 30% off) y luego el 90% (despues del 10% adicional): 0.70 × 0.90 = 0.63. Pagas el 63% del precio original. El descuento real es 37%, no 40%.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: descuento encadenado en una tienda de telas</h4>
+
+<p><strong>Problema:</strong> Una tela importada cuesta $200 el metro. La tienda tiene 30% de descuento por temporada + 10% adicional con tarjeta de cliente. ¿Cuanto pagas por metro?</p>
+
+<p><strong>Paso 1 —</strong> Primer descuento (30% off): 200 × 0.30 = $60 de descuento. Precio despues: 200 - 60 = $140</p>
+<p><strong>Paso 2 —</strong> Segundo descuento (10% sobre los $140): 140 × 0.10 = $14 de descuento. Precio final: 140 - 14 = <strong>$126</strong></p>
+<p><strong>Verificacion con atajo:</strong> 200 × 0.70 × 0.90 = 200 × 0.63 = $126 ✓</p>
+<p><strong>Ojo:</strong> Si fuera 40% directo seria 200 × 0.60 = $120. La diferencia son $6. Parece poco, pero si compras 10 metros, son $60 de diferencia.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Descuentos encadenados</h4>
+<ol>
+<li>Un vestido cuesta $350. Tiene 20% de descuento + 5% adicional por pago en efectivo. ¿Cuanto pagas? (Calcula paso a paso.)</li>
+<li>Unos zapatos de $180 tienen 25% off + 10% extra. ¿Es lo mismo que 35% de descuento directo? Calcula ambos y compara.</li>
+<li>Una tela de $90 el metro tiene triple descuento: 10% + 10% + 10%. ¿Cuanto pagas? ¿Es lo mismo que 30% directo?</li>
+<li>En una liquidacion, todo tiene 40% off. Ademas tienes un cupon de 15% adicional. ¿Que porcentaje del precio original terminas pagando? (Usa el atajo de multiplicar factores.)</li>
+<li>Compraste 3 metros de tela a $150/metro con 20% off + 5% adicional. ¿Cuanto pagaste en total por los 3 metros?</li>
+<li>Un rollo de cinta cuesta $45. Tiene 50% de descuento (es la ultima unidad) + 10% adicional con tarjeta. ¿Precio final?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final de este cuadernillo ("¿Que son las emociones? Lo que dice la ciencia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que es la amigdala y que funcion cumple segun el texto?</li>
+<li>Nombra tres neurotransmisores mencionados y explica para que sirve cada uno.</li>
+<li>¿Que es la respuesta de "lucha o huida"? ¿Que le pasa al cuerpo cuando se activa?</li>
+<li>Segun el texto, ¿por que existen las emociones desde el punto de vista evolutivo?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Segundo outfit para tu personaje</h4>
+<p>Tu personaje ya tiene un look. Hoy diseña un <strong>segundo outfit para una ocasion diferente</strong>. Elige una:</p>
+<ul>
+<li>Formal (una gala, un evento, una graduacion)</li>
+<li>Casual (dia de paseo, ir al cine, reunion con amigos)</li>
+<li>Deportivo (entreno, competencia, actividad al aire libre)</li>
+</ul>
+<p>Dibuja el outfit completo. Anota: que prendas lleva, que materiales usarias, y por que elegiste esas piezas para esa ocasion.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MARTES</h2>
+
+<h3>Bloque 1: Matematicas — Proporciones en recetas y escalas</h3>
+
+<div class="mate">
+<h4>Proporciones: cuando agrandas o achicas, todo cambia junto</h4>
+
+<p>Piensalo asi: si tienes un patron de costura para talla S y quieres hacerlo talla L, no puedes solo hacerlo "mas ancho". Necesitas agrandar TODO proporcionalmente — el largo de manga, el ancho de espalda, la caida del hombro. Si agrandas una cosa sin la otra, la prenda queda deforme.</p>
+
+<p>Es lo mismo en recetas de cocina. Si una receta para 4 personas dice "200g de harina y 2 huevos", y quieres cocinar para 6, no puedes solo agregar mas harina sin mas huevos. Todo sube junto.</p>
+
+<h4>La escala: la proporcion constante</h4>
+
+<p>Cuando un patron de costura dice "escala 1:2", significa que cada centimetro del papel representa 2 cm en la tela real. Si el patron marca 15 cm de cintura, en realidad son 30 cm.</p>
+
+<p><strong>Para convertir:</strong></p>
+<ul>
+<li>Del papel a la realidad: multiplicas por la escala</li>
+<li>De la realidad al papel: divides por la escala</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: escalar un patron de costura</h4>
+
+<p><strong>Problema:</strong> Tienes un patron a escala 1:4 (cada cm del papel = 4 cm reales). En el papel, la manga mide 8 cm de largo y 3 cm de ancho. ¿Cuales son las medidas reales para cortar la tela?</p>
+
+<p><strong>Paso 1 —</strong> Largo real: 8 × 4 = 32 cm</p>
+<p><strong>Paso 2 —</strong> Ancho real: 3 × 4 = 12 cm</p>
+<p><strong>Verificacion:</strong> La relacion largo/ancho en el papel es 8/3 ≈ 2.67. En la realidad: 32/12 ≈ 2.67 ✓ Las proporciones se mantienen.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Proporciones y escalas</h4>
+<ol>
+<li>Un patron a escala 1:3 muestra un bolsillo de 2 cm × 2.5 cm. ¿Cuales son las medidas reales?</li>
+<li>Una falda real mide 60 cm de largo. Si dibujas el patron a escala 1:5, ¿cuanto mide en el papel?</li>
+<li>Receta para 4 personas: 300g harina, 3 huevos, 150ml leche. ¿Cuanto necesitas para 10 personas?</li>
+<li>Tienes un boceto de tu personaje de 10 cm de alto. Las piernas miden 5 cm. Si redibujas a 25 cm de alto, ¿cuanto miden las piernas?</li>
+<li>Un patron marca la cintura como 9 cm (escala 1:4). ¿Cuantos cm de tela necesitas para la cintura real? Si la tela viene en rollos de 1 metro de ancho, ¿alcanza?</li>
+<li>Si en una receta la proporcion harina:azucar es 3:1 (tres partes de harina por una de azucar), y usas 450g de harina, ¿cuanto azucar necesitas?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("El cerebro emocional vs. el cerebro racional").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que es la corteza prefrontal y que funcion tiene?</li>
+<li>¿Por que los adolescentes suelen ser mas emocionales que los adultos, segun el texto?</li>
+<li>¿Que es el "secuestro amigdalar"? Describe que pasa en el cerebro cuando ocurre.</li>
+<li>¿Que es el "espacio" entre estimulo y respuesta que menciona el texto?</li>
+<li>¿A que edad termina de desarrollarse la corteza prefrontal?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Mood board de tu personaje</h4>
+<p>Un "mood board" es un tablero de inspiracion visual. Los diseñadores de moda lo usan para definir la "vibra" de una coleccion antes de diseñar. Hoy crea uno para tu personaje:</p>
+<ul>
+<li>Recorta o dibuja imagenes que representen el estilo de tu personaje</li>
+<li>Incluye: colores que lo representan, texturas que usaria, lugares donde estaria</li>
+<li>Agrega palabras clave (ej: "rebelde", "elegante", "comoda", "atrevida")</li>
+<li>Puede ser en papel (recortando revistas) o digital (armalo en un documento)</li>
+</ul>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Porcentajes de aumento (margen y precio con IVA)</h3>
+
+<div class="mate">
+<h4>Porcentaje de aumento: cuando el precio sube</h4>
+
+<p>Ya sabes calcular descuentos (el precio baja). Ahora al reves: a veces necesitas que el precio <strong>suba</strong> un porcentaje.</p>
+
+<p><strong>¿Cuando pasa esto?</strong></p>
+<ul>
+<li><strong>Margen de ganancia:</strong> si haces una prenda que te costo $100 en materiales y quieres ganar el 40%, vendes a $140.</li>
+<li><strong>IVA (impuesto):</strong> el precio en tienda no incluye impuesto. El IVA en muchos paises es 16% o 21%. Se suma al precio.</li>
+</ul>
+
+<p><strong>Como calcularlo:</strong></p>
+<p>Precio final = precio base × (1 + porcentaje/100)</p>
+<p>Si quieres agregar 40%: precio × 1.40</p>
+<p>Si quieres agregar 16% de IVA: precio × 1.16</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: calcular precio de venta con ganancia + IVA</h4>
+
+<p><strong>Problema:</strong> Hiciste un bolso que te costo $80 en materiales. Quieres ganar el 50% sobre tu costo. Ademas, debes agregar 16% de IVA. ¿A cuanto lo vendes?</p>
+
+<p><strong>Paso 1 — Agrego la ganancia (50% sobre el costo):</strong></p>
+<p>80 × 1.50 = $120 (este es tu precio sin impuesto)</p>
+
+<p><strong>Paso 2 — Agrego el IVA (16% sobre el precio de venta):</strong></p>
+<p>120 × 1.16 = $139.20 (este es el precio final que paga el cliente)</p>
+
+<p><strong>Resumen:</strong> Te costo $80 → vendes a $139.20. Tu ganancia neta es $40 (el IVA se lo das al gobierno, no es tuyo).</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Porcentajes de aumento</h4>
+<ol>
+<li>Una camiseta te costo $60 en materiales. Quieres ganar el 30%. ¿A cuanto la vendes (sin IVA)?</li>
+<li>Un pantalon tiene precio base $200. Agregale 16% de IVA. ¿Precio final?</li>
+<li>Compraste tela por $150. Quieres ganar 45% + agregar 16% de IVA. ¿Precio final?</li>
+<li>Un accesorio tiene costo de produccion de $25. Lo vendes con 100% de ganancia (duplicas). ¿Precio de venta sin IVA?</li>
+<li>El alquiler de un local sube 5% cada año. Si hoy pagas $800/mes, ¿cuanto pagaras el proximo año? ¿Y dentro de 2 años?</li>
+<li>Hiciste 5 pulseras. Cada una te costo $12 en materiales. Las vendes con 60% de ganancia cada una. ¿Cuanto ganas en total si vendes las 5?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("Motivacion, dopamina y habitos").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que es la dopamina y que papel juega en la motivacion?</li>
+<li>Explica que es un "loop de dopamina" y da un ejemplo del texto.</li>
+<li>¿Cual es la diferencia entre motivacion intrinseca y motivacion extrinseca?</li>
+<li>Segun el texto, ¿como se forma un habito? Nombra las tres partes del ciclo.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Escena con tu personaje</h4>
+<p>Escribe una escena corta (5-8 oraciones) donde tu personaje aparezca. Describe:</p>
+<ul>
+<li>¿Donde esta? (una calle, una tienda, un evento, un estudio)</li>
+<li>¿Que esta haciendo?</li>
+<li>¿Que lleva puesto? Describe la ropa con detalle — colores, materiales, como le queda</li>
+<li>¿Por que eligio ese outfit para ese momento?</li>
+</ul>
+<p>La idea es que el lector pueda "ver" al personaje. Usa adjetivos que describan texturas, colores y sensaciones.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 4 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Repaso integrador</h3>
+
+<div class="mate">
+<h4>Todo junto: medidas, proporciones y porcentajes</h4>
+
+<p>Hoy combinamos todo lo que vimos en las semanas 4 y 5. No hay teoria nueva — solo practica con problemas que mezclan los temas. Cada problema te dice lo que necesitas calcular.</p>
+
+<p><strong>Recuerda tus herramientas:</strong></p>
+<ul>
+<li>Conversiones: de cm a m (÷100), de m a cm (×100)</li>
+<li>Proporciones: regla de tres, escalas, multiplicar todo por el mismo factor</li>
+<li>Porcentajes: para descuento multiplica por (1 - %/100), para aumento multiplica por (1 + %/100)</li>
+<li>Descuentos encadenados: multiplica los factores uno por uno, no sumes los porcentajes</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: problema mixto</h4>
+
+<p><strong>Problema:</strong> Quieres hacer 3 faldas identicas. Cada falda necesita 1.2 metros de tela. La tela cuesta $180/metro, pero tiene 25% de descuento + 10% adicional. ¿Cuanto gastas en total?</p>
+
+<p><strong>Paso 1 — Tela total:</strong> 3 × 1.2 = 3.6 metros</p>
+<p><strong>Paso 2 — Precio sin descuento:</strong> 3.6 × $180 = $648</p>
+<p><strong>Paso 3 — Descuento encadenado:</strong> $648 × 0.75 × 0.90 = $648 × 0.675 = <strong>$437.40</strong></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Problemas mixtos</h4>
+<ol>
+<li>Un patron a escala 1:4 muestra una manga de 14 cm. ¿Cuanto mide la manga real en metros?</li>
+<li>Necesitas 2.5 metros de tela que cuesta $95/metro con 15% de descuento. ¿Cuanto pagas?</li>
+<li>Hiciste un vestido que te costo $220 en materiales (tela + accesorios). Quieres ganar 40% y agregar 16% de IVA. ¿Precio final?</li>
+<li>Para 2 camisas necesitas 3 metros de tela. ¿Cuantos metros necesitas para 7 camisas? (Usa proporcion.)</li>
+<li>Una tienda ofrece: opcion A = 40% de descuento directo; opcion B = 25% + 20% encadenado. ¿Cual te conviene mas? Demuestra con un precio de $100.</li>
+<li>Tu personaje mide 170 cm. El boceto lo dibujaste a 17 cm de alto. ¿Cual es la escala? Si el brazo en el boceto mide 2.8 cm, ¿cuanto mide el brazo real?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Revisa los 3 textos de esta semana y responde:</p>
+<ol>
+<li>¿Que diferencia hay entre una emocion y un sentimiento, segun lo que explica el Texto 1?</li>
+<li>El Texto 2 dice que la corteza prefrontal es como un "freno". Explica esta comparacion con tus palabras.</li>
+<li>Segun el Texto 3, ¿por que las redes sociales son adictivas? Explicalo usando el concepto de dopamina.</li>
+<li>Si la amigdala es la "alarma" y la corteza prefrontal es el "freno", ¿que pasa cuando la alarma se activa pero el freno todavia no funciona bien (como en los adolescentes)?</li>
+<li><strong>¿Que dato te sorprendio mas de los textos de esta semana?</strong> Escribe 1-2 oraciones explicando cual y por que.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Nombre y concepto de tu coleccion</h4>
+<p>Toda coleccion de moda tiene un nombre y un concepto que une todas las piezas. Piensa:</p>
+<ul>
+<li>¿Que tema conecta los outfits que diseñaste? (una epoca, una emocion, un lugar, un material)</li>
+<li>Elige un nombre para tu coleccion (puede ser una palabra, una frase, algo evocador)</li>
+<li>Escribe 3-4 oraciones explicando: ¿que quieres transmitir? ¿Para quien es? ¿Que la hace especial?</li>
+</ul>
+<p>Ejemplos de nombres reales: "Metamorfosis", "Concrete Jungle", "Entre hilos", "Volver al origen".</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+<div class="lectura">
+<h2>Texto 1 — ¿Que son las emociones? Lo que dice la ciencia</h2>
+
+<p>Cuando sientes miedo al escuchar un ruido fuerte en la noche, o alegria al ver a alguien que quieres, o rabia cuando algo te parece injusto, estas experimentando una emocion. Pero ¿que es exactamente una emocion? ¿De donde viene? La neurociencia — la ciencia que estudia el cerebro y el sistema nervioso — tiene respuestas fascinantes.</p>
+
+<h3>El cerebro emocional: el sistema limbico</h3>
+
+<p>En el centro del cerebro existe un grupo de estructuras llamado <strong>sistema limbico</strong>. Es una de las partes mas antiguas del cerebro humano — ya existia en nuestros ancestros hace millones de años, mucho antes de que desarrollaramos el lenguaje o el pensamiento abstracto. El sistema limbico es el "centro de control emocional" y esta formado por varias estructuras que trabajan en equipo.</p>
+
+<p>La estrella del sistema limbico es la <strong>amigdala</strong> (en realidad son dos, una en cada hemisferio del cerebro). La amigdala es como un detector de amenazas: escanea constantemente lo que percibes — sonidos, imagenes, olores — y decide en milisegundos si algo es peligroso, placentero o irrelevante. Cuando detecta peligro, dispara una señal de alarma al cuerpo entero. Esto ocurre ANTES de que seas consciente de lo que pasa. Por eso a veces saltas de miedo antes de saber por que.</p>
+
+<p>El <strong>hipocampo</strong>, que esta justo al lado de la amigdala, se encarga de la memoria. Conecta las emociones con los recuerdos: por eso un olor puede transportarte instantaneamente a un momento de tu infancia, o una cancion puede hacerte sentir triste sin saber bien por que. El hipocampo le dice a la amigdala "esto ya lo vivimos antes y fue peligroso" o "tranquila, esto es seguro".</p>
+
+<p>El <strong>hipotalamo</strong> es el puente entre las emociones y el cuerpo fisico. Cuando la amigdala detecta algo importante, el hipotalamo activa respuestas corporales: acelera el corazon, libera hormonas, cambia la respiracion, dilata las pupilas. Es la razon por la que las emociones se "sienten" en el cuerpo.</p>
+
+<h3>Los mensajeros quimicos: neurotransmisores</h3>
+
+<p>Las neuronas (celulas del cerebro) se comunican entre si mediante sustancias quimicas llamadas <strong>neurotransmisores</strong>. Cada uno tiene un efecto diferente en como te sientes:</p>
+
+<p><strong>Serotonina:</strong> se la conoce como la molecula del bienestar. Regula el humor, el sueño y el apetito. Cuando tus niveles de serotonina son adecuados, te sientes estable, tranquila, satisfecha. Niveles bajos se asocian con tristeza persistente, irritabilidad y problemas para dormir. La luz del sol, el ejercicio fisico y ciertos alimentos ayudan a producirla.</p>
+
+<p><strong>Dopamina:</strong> es la molecula de la recompensa y la motivacion. Se libera cuando logras algo, cuando anticipas algo placentero, o cuando experimentas algo nuevo y estimulante. Es la que te hace sentir "si, lo logre" o "quiero mas de eso". Tiene un papel clave en la motivacion, el aprendizaje y el placer.</p>
+
+<p><strong>Cortisol:</strong> es la hormona del estres. Se libera cuando el cerebro percibe una amenaza o presion. En dosis pequeñas es util — te ayuda a estar alerta para un examen o reaccionar rapido en una emergencia. Pero si se mantiene alta por mucho tiempo (estres cronico), daña el cuerpo: afecta la memoria, debilita el sistema inmune y causa problemas de sueño.</p>
+
+<p><strong>Noradrenalina:</strong> trabaja junto con el cortisol en situaciones de estres. Aumenta la atencion, la concentracion y la velocidad de reaccion. Es la que te mantiene "en alerta" cuando percibes que algo importante esta pasando.</p>
+
+<h3>La respuesta de lucha o huida</h3>
+
+<p>Imagina esto: estas caminando y de repente ves una sombra grande que se mueve rapido hacia ti. En menos de medio segundo, ANTES de que puedas pensar "¿que es eso?", tu cuerpo ya reacciono: el corazon se acelera, los musculos se tensan, la respiracion se hace rapida, las pupilas se dilatan, la sangre se concentra en brazos y piernas. Esto es la <strong>respuesta de lucha o huida</strong> (fight or flight).</p>
+
+<p>¿Que paso? La amigdala detecto una posible amenaza y envio una señal de emergencia al hipotalamo, que activo el sistema nervioso simpatico y las glandulas suprarrenales (encima de los riñones). Estas liberaron adrenalina y cortisol al torrente sanguineo. Todo el cuerpo se preparo para dos opciones: pelear contra la amenaza o salir corriendo.</p>
+
+<p>Este sistema fue crucial para la supervivencia de nuestros ancestros — los que reaccionaban rapido ante un depredador sobrevivian. El problema es que el mismo sistema se activa hoy ante amenazas modernas que no requieren correr ni pelear: un examen, una discusion, hablar en publico, una notificacion que te pone nerviosa. Tu cuerpo responde como si hubiera un leon, aunque solo hay un mensaje de texto.</p>
+
+<h3>¿Para que sirven las emociones?</h3>
+
+<p>Desde la perspectiva evolutiva, las emociones existen porque <strong>nos ayudan a sobrevivir</strong>. Cada emocion basica tiene una funcion:</p>
+
+<ul>
+<li><strong>Miedo:</strong> te protege — te hace evitar situaciones peligrosas o reaccionar rapido</li>
+<li><strong>Asco:</strong> te aleja de cosas toxicas o contaminadas (comida podrida, sustancias dañinas)</li>
+<li><strong>Rabia:</strong> te da energia para defenderte cuando algo amenaza tus limites</li>
+<li><strong>Tristeza:</strong> señaliza una perdida y activa la busqueda de apoyo social</li>
+<li><strong>Alegria:</strong> refuerza comportamientos beneficiosos — repites lo que te hace sentir bien</li>
+<li><strong>Sorpresa:</strong> aumenta tu atencion ante lo inesperado para procesar nueva informacion</li>
+</ul>
+
+<p>Las emociones son rapidas, automaticas e involuntarias — no las eliges. Lo que si puedes elegir es como respondes a ellas. Un <strong>sentimiento</strong>, a diferencia de una emocion, es la interpretacion consciente de esa experiencia: la emocion dura segundos; el sentimiento puede durar horas o dias porque involucra tu pensamiento y tus recuerdos.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La amigdala puede procesar una señal de peligro en solo 12 milisegundos — mucho mas rapido que el pensamiento consciente, que tarda entre 300 y 500 milisegundos. Por eso reaccionas antes de "pensar".
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cuerpo no distingue entre un peligro real y uno imaginado. Si imaginas una situacion aterradora con suficiente detalle, la amigdala se activa igual y libera las mismas hormonas de estres que si estuviera pasando de verdad.
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — El cerebro emocional vs. el cerebro racional</h2>
+
+<p>Dentro de tu cabeza hay una especie de tira y afloja constante entre dos sistemas: uno rapido, emocional e impulsivo (el sistema limbico que ya conoces) y otro lento, racional y planificador (la corteza prefrontal). Entender como funcionan estos dos sistemas — y por que a veces uno domina al otro — es clave para entender el comportamiento humano, especialmente durante la adolescencia.</p>
+
+<h3>La corteza prefrontal: el director de orquesta</h3>
+
+<p>La <strong>corteza prefrontal</strong> es la parte del cerebro que esta justo detras de tu frente. Es la estructura mas evolucionada del cerebro humano — la que nos diferencia mas de otros animales. Funciona como un "director de orquesta" que coordina todo lo demas. Sus funciones incluyen:</p>
+
+<ul>
+<li><strong>Toma de decisiones:</strong> evaluar opciones, considerar consecuencias, elegir la mejor accion</li>
+<li><strong>Control de impulsos:</strong> la capacidad de decir "no" cuando algo te tienta pero sabes que no te conviene</li>
+<li><strong>Planificacion:</strong> pensar en el futuro, organizar pasos, establecer metas</li>
+<li><strong>Regulacion emocional:</strong> modular la intensidad de las emociones, calmarte cuando estas alterada</li>
+<li><strong>Empatia:</strong> imaginar lo que otra persona siente o piensa</li>
+</ul>
+
+<p>En resumen: si la amigdala es la "alarma" del cerebro, la corteza prefrontal es el "freno". La amigdala grita "¡PELIGRO!" y la corteza prefrontal evalua si realmente hay peligro o si fue una falsa alarma.</p>
+
+<h3>El cerebro adolescente: un auto con motor potente y frenos nuevos</h3>
+
+<p>Aqui viene la parte mas importante para ti: la corteza prefrontal <strong>no termina de desarrollarse hasta los 25 años aproximadamente</strong>. Es la ultima parte del cerebro en madurar. Mientras tanto, el sistema limbico (las emociones) ya esta completamente activo desde la pubertad.</p>
+
+<p>¿Que significa esto? Que durante la adolescencia tienes un sistema emocional a toda potencia con un sistema de control que todavia esta en construccion. Es como tener un auto deportivo con un motor potentisimo pero frenos que todavia se estan instalando. El motor funciona perfecto (sientes todo intensamente), pero el sistema de frenado aun no esta al 100%.</p>
+
+<p>Esto NO significa que los adolescentes sean "irracionales" o "inmaduros" de forma negativa. Significa que el cerebro esta en una etapa de desarrollo donde las emociones son mas intensas y el control sobre ellas esta madurando. Es biologia, no defecto de caracter. Con el tiempo — y con practica — los frenos se van afinando.</p>
+
+<h3>El secuestro amigdalar: cuando la emocion toma el control</h3>
+
+<p>El psicologo Daniel Goleman describio un fenomeno que llamo <strong>"secuestro amigdalar"</strong> (amygdala hijack). Ocurre cuando la amigdala responde tan rapido y tan fuerte ante un estimulo que "secuestra" el control del comportamiento, sin darle tiempo a la corteza prefrontal de intervenir.</p>
+
+<p>¿Como funciona? La informacion sensorial (lo que ves, oyes, etc.) llega primero a una estructura llamada <strong>talamo</strong>, que funciona como una central de distribucion. Desde ahi, la informacion toma dos caminos simultaneos:</p>
+
+<ol>
+<li><strong>El camino rapido (via baja):</strong> del talamo directo a la amigdala. Es impreciso pero ultrarapido — tarda 12 milisegundos. La amigdala decide en base a patrones generales: "¿esto se parece a algo peligroso? ¡Activar respuesta!"</li>
+<li><strong>El camino lento (via alta):</strong> del talamo a la corteza visual/auditiva, luego a la corteza prefrontal, y de ahi a la amigdala. Es preciso pero tarda 300-500 milisegundos. La corteza analiza: "Veamos... es una sombra... de un arbol... movida por el viento. No hay peligro."</li>
+</ol>
+
+<p>El secuestro amigdalar ocurre cuando la via rapida domina completamente y la persona actua impulsivamente ANTES de que la via lenta pueda intervenir. Resultado: dices algo hiriente, tiras un objeto, contestas agresivamente, o haces algo que dos minutos despues te arrepientes porque la corteza prefrontal finalmente "llego" y te dijo "eso no fue buena idea".</p>
+
+<h3>El espacio entre estimulo y respuesta</h3>
+
+<p>Una de las ideas mas poderosas de la psicologia moderna es esta: <strong>entre lo que te pasa (estimulo) y lo que haces (respuesta), hay un espacio</strong>. Ese espacio es donde vive tu libertad de elegir.</p>
+
+<p>Cuando algo te provoca una emocion fuerte — alguien te dice algo que te enoja, recibes una mala noticia, te sientes frustrada — la emocion es automatica e inevitable. Pero lo que haces DESPUES no tiene que ser automatico. Si logras hacer una pausa de incluso 6 segundos (el tiempo que tarda la cortisol en bajar un poco), le das tiempo a tu corteza prefrontal de "conectarse" y ofrecer una respuesta mas inteligente.</p>
+
+<p>Esto no es facil y no es perfecto. A veces el secuestro es tan rapido que no hay espacio. Pero con practica, ese espacio se puede ampliar. Algunas estrategias que la neurociencia ha demostrado que funcionan:</p>
+
+<ul>
+<li><strong>Respiracion lenta:</strong> activar la respiracion diafragmatica (lenta y profunda) activa el sistema nervioso parasimpatico, que es el "opuesto" del sistema de lucha o huida. Literalmente calma la quimica del cuerpo.</li>
+<li><strong>Nombrar la emocion:</strong> estudios de neuroimagen muestran que cuando pones nombre a lo que sientes ("esto que siento es frustracion"), la actividad de la amigdala disminuye. Ponerle nombre activa la corteza prefrontal.</li>
+<li><strong>Distancia temporal:</strong> preguntarte "¿me importara esto en una semana?" activa areas de planificacion que moderan la respuesta emocional inmediata.</li>
+</ul>
+
+<h3>El sueño y las emociones</h3>
+
+<p>Un dato crucial: la <strong>falta de sueño</strong> debilita dramaticamente la conexion entre la corteza prefrontal y la amigdala. Estudios muestran que despues de una noche sin dormir bien, la amigdala responde hasta un 60% mas intensamente a estimulos negativos, mientras la corteza prefrontal se vuelve menos activa. Literalmente, dormir poco te deja con mas motor emocional y menos frenos. Por eso cuando duermes mal, todo te molesta mas, eres menos paciente y es mas facil que te desbordes emocionalmente.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La corteza prefrontal se desarrolla de atras hacia adelante. Las areas de planificacion a largo plazo son las ultimas en madurar — por eso a los 15 puedes ser excelente en resolver problemas inmediatos pero te cuesta mas imaginar consecuencias a 5 años.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Nombrar una emocion reduce su intensidad en el cerebro. En estudios con resonancia magnetica, los participantes que describieron su emocion con palabras mostraron menor actividad en la amigdala que los que simplemente la sintieron sin nombrarla. Esto se llama "etiquetado afectivo".
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 3 — Motivacion, dopamina y habitos</h2>
+
+<p>¿Por que hay dias en que tienes ganas de hacer cosas y otros en que no quieres hacer nada? ¿Por que es tan facil pasar horas en el telefono pero tan dificil sentarte a estudiar? ¿Por que algunos habitos se forman solos (como revisar redes sociales) y otros cuestan tanto esfuerzo (como hacer ejercicio)? La respuesta esta en una molecula: la dopamina, y en como el cerebro aprende a repetir comportamientos.</p>
+
+<h3>El sistema de recompensa</h3>
+
+<p>Tu cerebro tiene un circuito llamado <strong>sistema de recompensa</strong> (o sistema mesolimbico). Es una red de neuronas que conecta una zona profunda del cerebro (el area tegmental ventral) con el nucleo accumbens y la corteza prefrontal. Su funcion es simple pero poderosisima: <strong>marca que comportamientos vale la pena repetir</strong>.</p>
+
+<p>Cuando haces algo que tu cerebro interpreta como beneficioso para la supervivencia — comer, conectarte socialmente, lograr una meta, aprender algo nuevo — este circuito libera <strong>dopamina</strong>. La dopamina NO es exactamente "la molecula del placer" (eso es un mito simplificado). Es mas bien la molecula de la <strong>anticipacion y la motivacion</strong>: se libera mas ANTES de obtener la recompensa que durante. Es la que te dice "eso que viene va a estar bueno, ve a buscarlo".</p>
+
+<h3>Dopamina y anticipacion</h3>
+
+<p>Un experimento clasico lo muestra perfecto: cuando un mono aprendia que una luz roja significaba que en 5 segundos recibiria jugo, la dopamina se disparaba al ver la luz — no al recibir el jugo. La anticipacion generaba mas dopamina que la recompensa misma.</p>
+
+<p>Esto explica fenomenos cotidianos: ¿por que la espera antes de un viaje es tan emocionante? ¿Por que abrir un sobre de cartas coleccionables es mas emocionante que tener las cartas? ¿Por que en videojuegos el momento antes de abrir un cofre epico es mas intenso que ver el item? Todo es dopamina de anticipacion.</p>
+
+<h3>Los loops de dopamina: la trampa de las redes y los juegos</h3>
+
+<p>Aqui es donde la cosa se pone seria. Las redes sociales y los videojuegos estan diseñados — intencionalmente, por equipos de psicologos y neurocientificos — para maximizar la liberacion de dopamina y crear loops (ciclos) que te mantienen enganchado.</p>
+
+<p>Un <strong>loop de dopamina</strong> funciona asi:</p>
+<ol>
+<li><strong>Señal variable:</strong> no sabes exactamente cuando vendran los likes, las notificaciones o los items raros. Esta incertidumbre AUMENTA la dopamina (el cerebro libera mas dopamina ante recompensas impredecibles que ante recompensas fijas).</li>
+<li><strong>Recompensa pequeña e intermitente:</strong> a veces hay likes, a veces no. A veces el cofre tiene algo bueno, a veces basura. Esto te mantiene "buscando" la proxima recompensa.</li>
+<li><strong>Facilidad de repeticion:</strong> scroll infinito, autoplay, un boton para "jugar otra partida". Cero friccion para volver a buscar dopamina.</li>
+</ol>
+
+<p>El resultado: tu cerebro entra en un ciclo de buscar-obtener-buscar-obtener que puede durar horas sin que seas consciente del tiempo que paso. No es falta de voluntad — es ingenieria de comportamiento aprovechando como funciona tu neurologia.</p>
+
+<h3>Motivacion intrinseca vs. extrinseca</h3>
+
+<p>La psicologia distingue dos tipos de motivacion:</p>
+
+<p><strong>Motivacion extrinseca:</strong> haces algo por una recompensa externa (dinero, nota, aprobacion, evitar un castigo). Funciona a corto plazo pero se agota facilmente. Si la recompensa desaparece, dejas de hacerlo.</p>
+
+<p><strong>Motivacion intrinseca:</strong> haces algo porque te interesa, porque te da satisfaccion, porque quieres mejorar o porque le encuentras sentido. Es mas duradera y genera bienestar real. Se conecta con tres necesidades basicas (segun la teoria de la autodeterminacion):</p>
+
+<ul>
+<li><strong>Autonomia:</strong> sentir que eliges lo que haces (no que te obligan)</li>
+<li><strong>Competencia:</strong> sentir que eres capaz y que mejoras</li>
+<li><strong>Conexion:</strong> sentir que lo que haces tiene sentido o conecta con otros</li>
+</ul>
+
+<p>Los videojuegos son maestros en generar motivacion intrinseca artificial: te dan autonomia (eliges tu camino), competencia (niveles progresivos, feedback inmediato) y conexion (comunidad, rankings). El desafio es encontrar esas mismas cualidades en actividades de la vida real.</p>
+
+<h3>Como se forman los habitos: el ciclo de tres pasos</h3>
+
+<p>Un habito es un comportamiento que el cerebro automatizo para ahorrar energia. Tu cerebro consciente (corteza prefrontal) consume mucha glucosa — es "caro" pensar. Asi que todo lo que puede, lo convierte en habito y lo manda a los <strong>ganglios basales</strong> (una estructura profunda que ejecuta secuencias automaticas sin esfuerzo consciente).</p>
+
+<p>Todo habito tiene tres componentes (el "loop del habito"):</p>
+
+<ol>
+<li><strong>Señal (cue):</strong> algo que dispara el comportamiento automaticamente. Puede ser un lugar, una hora del dia, una emocion, una accion previa, o la presencia de ciertas personas. Ejemplo: aburrimiento (señal) → agarras el telefono.</li>
+<li><strong>Rutina:</strong> el comportamiento en si. Ejemplo: scrollear redes sociales.</li>
+<li><strong>Recompensa:</strong> lo que el cerebro obtiene. Ejemplo: estimulacion, dopamina, distraccion del aburrimiento.</li>
+</ol>
+
+<p>Para cambiar un habito, la estrategia mas efectiva (segun las investigaciones) no es eliminar la señal ni la recompensa, sino <strong>cambiar la rutina</strong> manteniendo la misma señal y buscando una recompensa similar. Ejemplo: señal = aburrimiento → nueva rutina = dibujar algo rapido en un cuaderno → recompensa = estimulacion creativa.</p>
+
+<p>Para CREAR un habito nuevo, necesitas: una señal consistente (siempre a la misma hora o despues de la misma accion), la rutina que quieres instalar, y una recompensa inmediata (aunque sea pequeña). Despues de 21 a 66 dias de repeticion (dependiendo de la complejidad), el comportamiento empieza a automatizarse.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Las recompensas impredecibles generan hasta 400% mas dopamina que las predecibles. Por eso las maquinas tragamonedas, las cajas de loot en videojuegos y el scroll de redes son tan adictivos — nunca sabes que viene, y esa incertidumbre es exactamente lo que engancha al cerebro.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cerebro necesita unos 23 minutos para recuperar la concentracion profunda despues de una interrupcion (como revisar el telefono). Si revisas el celular 10 veces en una hora de estudio, tecnicamente nunca estas concentrada de verdad.
+</div>
+</div>
+
+<footer>
+<p>Semana 5 de 20 | Gio</p>
+<p><em>"La proporcion es el alma del diseño — cuando todo esta en su medida exacta, la belleza aparece sola."</em></p>
+</footer>
+
+</body>
+</html>
