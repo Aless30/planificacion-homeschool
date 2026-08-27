@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 6 (mini)</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:6px;margin-bottom:10px}
+h2{color:#2a4365;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #bee3f8;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.fecha{background:#2a4365;color:#fff;display:inline-block;padding:4px 12px;border-radius:12px;font-size:.85em;font-weight:600;margin-bottom:8px}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9em}
+th,td{padding:5px 8px;border:1px solid #e2e8f0;text-align:center}
+th{background:#2c5282;color:#fff}
+tr:nth-child(even){background:#f8fafc}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.escribe,.ejercicio,.resuelto,.proyecto,.lectura{padding:8px 12px;margin:6px 0}.dato{padding:6px 10px;margin:5px 0}hr{margin:12px 0}table{font-size:.8em}th,td{padding:3px 5px}}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 6 (mini)</h1>
+<p><em>2 dias | Semana corta | Probabilidad aplicada al mundo real.</em></p>
+
+<hr>
+
+<span class="fecha">Jueves 27 de agosto de 2026</span>
+
+<h2>DIA 1 — JUEVES</h2>
+
+<h3>Bloque 1: Matematicas — Combinatoria: contar sin contar uno por uno</h3>
+
+<div class="mate">
+<h4>El problema de contar demasiadas cosas</h4>
+
+<p>La semana pasada trabajaste con probabilidad: siempre necesitabas los "casos favorables" y los "casos totales". Pero a veces contar los casos uno por uno es imposible. ¿Cuantas formas hay de ordenar a 5 jugadores? ¿Cuantas combinaciones de personaje puedes armar en un videojuego con decenas de opciones? Contarlas a mano tardaria horas. La <strong>combinatoria</strong> es la rama de las matematicas que nos enseña a contar posibilidades sin listarlas una por una.</p>
+
+<h4>1) Principio de multiplicacion (regla del producto)</h4>
+
+<p>Es la idea mas importante de toda la combinatoria, y es sorprendentemente simple:</p>
+
+<p><strong>Si una cosa se puede hacer de <em>m</em> maneras, y otra cosa (independiente) se puede hacer de <em>n</em> maneras, entonces las dos juntas se pueden hacer de <em>m × n</em> maneras.</strong></p>
+
+<p>Se extiende a cuantas etapas quieras: solo multiplicas las opciones de cada etapa.</p>
+
+<p><strong>Ejemplo con creacion de personaje:</strong> imagina que en un videojuego, al crear tu personaje, puedes elegir:</p>
+<ul>
+<li>3 tipos de cabeza</li>
+<li>4 tipos de cuerpo</li>
+<li>5 colores de armadura</li>
+</ul>
+<p>¿Cuantos personajes distintos puedes armar? En lugar de dibujarlos todos, multiplicas:</p>
+<p><strong>3 × 4 × 5 = 60 combinaciones posibles.</strong></p>
+<p>Por cada una de las 3 cabezas hay 4 cuerpos (ya van 12 combinaciones), y por cada una de esas 12 hay 5 colores (12 × 5 = 60). Ese es el poder de multiplicar: creces muy rapido sin contar a mano.</p>
+
+<h4>2) Permutaciones: cuando el ORDEN importa</h4>
+
+<p>Una <strong>permutacion</strong> es una forma de ORDENAR objetos. Aqui el orden SI importa: "Juan-Pedro-Luis" es distinto de "Luis-Pedro-Juan".</p>
+
+<p>Para contar de cuantas formas puedes ordenar <em>n</em> objetos usamos el <strong>factorial</strong>, que se escribe con un signo de admiracion: <strong>n!</strong></p>
+
+<p>El factorial significa: multiplica ese numero por todos los enteros menores que el, hasta llegar a 1.</p>
+<ul>
+<li>5! = 5 × 4 × 3 × 2 × 1 = 120</li>
+<li>4! = 4 × 3 × 2 × 1 = 24</li>
+<li>3! = 3 × 2 × 1 = 6</li>
+<li>Por convencion: 1! = 1 y 0! = 1</li>
+</ul>
+
+<p><strong>¿Por que funciona?</strong> Piensa en ordenar 5 jugadores para anunciarlos. Para el PRIMER lugar tienes 5 opciones. Una vez elegido, para el SEGUNDO quedan 4. Para el tercero quedan 3, luego 2, luego 1. Por el principio de multiplicacion: 5 × 4 × 3 × 2 × 1 = 120.</p>
+
+<p><strong>Ejemplo de basquet:</strong> tu equipo tiene 5 titulares. ¿De cuantas formas distintas los puede anunciar el locutor al inicio del partido? Como el orden en que los nombra importa (primero, segundo, tercero...), es una permutacion de 5 elementos:</p>
+<p><strong>5! = 120 formas distintas de anunciarlos.</strong></p>
+
+<h4>3) Combinaciones: cuando el orden NO importa</h4>
+
+<p>Una <strong>combinacion</strong> es elegir un grupo donde el orden NO importa. Si el coach elige a tres jugadores para un ejercicio, el grupo {Juan, Pedro, Luis} es EL MISMO que {Luis, Juan, Pedro} — son los mismos tres jugadores, sin importar en que orden los nombres.</p>
+
+<p>La formula de combinaciones (elegir <em>k</em> objetos de un total de <em>n</em>) es:</p>
+<p style="text-align:center;font-size:1.1em"><strong>C(n, k) = n! / [ k! × (n − k)! ]</strong></p>
+
+<p><strong>¿De donde sale?</strong> Primero cuentas todos los ordenes posibles (como en permutaciones), y luego DIVIDES entre los ordenes repetidos que no quieres contar dos veces (por eso aparece el k! dividiendo).</p>
+
+<p><strong>La diferencia clave, con un ejemplo:</strong> elegir a 2 jugadores de 3 (Ana, Beto, Caro).</p>
+<table>
+<tr><th>Permutaciones (orden importa)</th><th>Combinaciones (orden NO importa)</th></tr>
+<tr><td>Ana-Beto / Beto-Ana</td><td>{Ana, Beto}</td></tr>
+<tr><td>Ana-Caro / Caro-Ana</td><td>{Ana, Caro}</td></tr>
+<tr><td>Beto-Caro / Caro-Beto</td><td>{Beto, Caro}</td></tr>
+<tr><td><strong>6 resultados</strong></td><td><strong>3 resultados</strong></td></tr>
+</table>
+<p>Hay el doble de permutaciones porque cada pareja se cuenta en dos ordenes. Al dividir entre 2! (=2) pasamos de 6 a 3 combinaciones.</p>
+
+<div class="dato">
+<strong>Regla rapida para decidir:</strong> pregunta "¿si cambio el orden, es un resultado diferente?". Si SI → permutacion (ordenar, podios, contraseñas). Si NO → combinacion (equipos, grupos, manos de cartas).
+</div>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto 1 (PERMUTACION): el podio del torneo</h4>
+
+<p><strong>Problema:</strong> En un torneo de videojuegos hay 8 finalistas. Se reparten 3 premios: oro, plata y bronce. ¿De cuantas formas distintas se puede armar el podio?</p>
+
+<p><strong>Paso 1 — ¿Importa el orden?</strong> Si. Quedar primero (oro) no es lo mismo que quedar tercero (bronce). Es una permutacion.</p>
+
+<p><strong>Paso 2 — Cuento etapa por etapa (principio de multiplicacion):</strong></p>
+<ul>
+<li>Para el ORO tengo 8 finalistas posibles.</li>
+<li>Para la PLATA quedan 7 (ya se fue uno al oro).</li>
+<li>Para el BRONCE quedan 6.</li>
+</ul>
+
+<p><strong>Paso 3 — Multiplico:</strong></p>
+<p>8 × 7 × 6 = <strong>336 podios distintos.</strong></p>
+
+<p><em>Nota:</em> esto es una permutacion parcial. Con la formula seria P(8,3) = 8! / (8−3)! = 8! / 5! = (8×7×6×5!)/5! = 8×7×6 = 336. Da lo mismo: el 5! de arriba y el de abajo se cancelan.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto 2 (COMBINACION): elegir el quinteto para un ejercicio</h4>
+
+<p><strong>Problema:</strong> El coach tiene 12 jugadores en el plantel y quiere elegir a 3 para un ejercicio de rebotes. El orden no importa (es un grupo). ¿Cuantos grupos distintos de 3 puede formar?</p>
+
+<p><strong>Paso 1 — ¿Importa el orden?</strong> No. Un grupo de 3 jugadores es el mismo sin importar como los nombres. Es una combinacion: C(12, 3).</p>
+
+<p><strong>Paso 2 — Escribo la formula con n = 12 y k = 3:</strong></p>
+<p>C(12, 3) = 12! / [ 3! × (12 − 3)! ] = 12! / (3! × 9!)</p>
+
+<p><strong>Paso 3 — Simplifico (el 9! cancela casi todo el 12!):</strong></p>
+<p>12! / 9! = 12 × 11 × 10 = 1320</p>
+<p>Y 3! = 6, entonces:</p>
+<p>C(12, 3) = 1320 / 6 = <strong>220 grupos distintos.</strong></p>
+
+<p><strong>Comprobacion de sentido:</strong> si el orden SI importara serian 12 × 11 × 10 = 1320. Como no importa, dividimos entre los 3! = 6 ordenes repetidos de cada trio → 220. Menos que las permutaciones, como debe ser.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Combinatoria</h4>
+<ol>
+<li>En un videojuego creas tu personaje eligiendo entre 6 peinados, 5 caras y 8 trajes. ¿Cuantos personajes distintos puedes armar? (principio de multiplicacion)</li>
+<li>Un mando de consola te deja asignar una accion a 4 botones distintos, y tienes 4 acciones para repartir (una por boton). ¿De cuantas formas puedes asignarlas? (permutacion: es 4!)</li>
+<li>Tu equipo de basquet tiene 5 titulares. ¿De cuantas formas distintas pueden pararse en fila para la foto? (permutacion)</li>
+<li>Un torneo tiene 10 equipos y se premian los 3 primeros puestos (campeon, subcampeon, tercero). ¿Cuantos podios distintos son posibles? (permutacion parcial: 10 × 9 × 8)</li>
+<li>El coach elige a 5 jugadores de un plantel de 9 para empezar el partido. El orden no importa. ¿Cuantos quintetos distintos puede armar? (combinacion, C(9,5))</li>
+<li>En un juego de cartas tienes 7 cartas en la mano y debes descartar 2. ¿De cuantas formas puedes elegir cuales 2 descartar? (combinacion, C(7,2))</li>
+<li>Para una contraseña de un cofre usas 4 digitos del 0 al 9, y pueden repetirse. ¿Cuantas contraseñas distintas existen? (principio de multiplicacion: 10 × 10 × 10 × 10)</li>
+<li>Un equipo de 8 jugadores quiere elegir un capitan y un subcapitan (dos cargos distintos). ¿De cuantas formas puede hacerlo? Luego responde: ¿por que aqui es permutacion y no combinacion?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final de este cuadernillo ("Las emociones y las decisiones: por que sentimos antes de pensar").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que descubrio el neurologo Antonio Damasio al estudiar a personas con daño en la corteza prefrontal ventromedial? ¿Que conservaban y que habian perdido?</li>
+<li>¿Que son los "marcadores somaticos" segun el texto? Explica con tus palabras como funcionan cuando enfrentas una decision.</li>
+<li>Segun el texto, ¿por que una corazonada o intuicion "no es magia ni tonteria"? ¿En que se basa?</li>
+<li>¿Que es la "paralisis por analisis" y cuando ocurre segun el texto?</li>
+<li>¿Que es la "fatiga de decision"? Menciona el ejemplo que da el texto sobre personas famosas.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Calcula las combinaciones de tu videojuego</h4>
+<p>Elige un videojuego que tenga personalizacion de personaje o de equipamiento (loadout): skins, armas, colores, piezas de armadura, habilidades, etc.</p>
+<ul>
+<li>Haz una lista de cada categoria que puedes personalizar y cuantas opciones tiene cada una (por ejemplo: 12 armas × 8 skins × 5 mochilas × 4 emblemas).</li>
+<li>Usa el <strong>principio de multiplicacion</strong> para calcular cuantas configuraciones totales distintas son posibles.</li>
+<li>Documenta tu calculo paso a paso: escribe la multiplicacion completa y el resultado final.</li>
+<li>Reflexiona: ¿el numero te sorprendio? ¿Podrias probar todas esas combinaciones si dedicaras 1 minuto a cada una?</li>
+</ul>
+<p><em>Tip: si el numero es enorme, esa es justamente la idea — la combinatoria explica por que dos jugadores casi nunca tienen exactamente la misma configuracion.</em></p>
+</div>
+
+<div class="page-break"></div>
+
+<span class="fecha">Viernes 28 de agosto de 2026</span>
+
+<h2>DIA 2 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Probabilidad con combinatoria: juntando todo</h3>
+
+<div class="mate">
+<h4>Cuando probabilidad y combinatoria se dan la mano</h4>
+
+<p>Ya sabes que la probabilidad basica es:</p>
+<p style="text-align:center;font-size:1.1em"><strong>P = casos favorables / casos totales</strong></p>
+<p>El problema es que en situaciones reales esos "casos" son enormes: manos de cartas, selecciones de equipo, tiradas de gacha. Para contarlos usamos la combinatoria que aprendiste ayer. La combinatoria nos da el numerador Y el denominador; la probabilidad los divide.</p>
+
+<h4>Probabilidades con combinaciones</h4>
+
+<p><strong>Ejemplo de seleccion de equipo:</strong> hay 12 jugadores y el coach elige 5 al azar. Tu eres uno de los 12. ¿Cual es la probabilidad de que te elijan en el quinteto?</p>
+<ul>
+<li><strong>Casos totales:</strong> todas las formas de elegir 5 de 12 → C(12, 5) = 792.</li>
+<li><strong>Casos favorables:</strong> quintetos que TE incluyen. Si tu ya estas fijo, quedan 4 lugares para elegir entre los otros 11 → C(11, 4) = 330.</li>
+<li><strong>Probabilidad:</strong> 330 / 792 = 0.4167 = <strong>41.67%</strong>.</li>
+</ul>
+<p>Dato curioso: eso es exactamente 5/12. Tiene sentido: como se eligen 5 de 12 al azar, cada jugador tiene 5/12 de chance. La combinatoria confirma la intuicion.</p>
+
+<h4>El ejemplo de la loteria / gacha</h4>
+
+<p>¿Por que es tan dificil ganar la loteria? Porque hay demasiadas combinaciones posibles. Imagina una loteria simple donde eliges 6 numeros distintos del 1 al 40, sin importar el orden. La cantidad de billetes distintos es:</p>
+<p>C(40, 6) = 40! / (6! × 34!) = 3,838,380 combinaciones.</p>
+<p>Solo UNA gana. Tu probabilidad con un billete es 1 / 3,838,380 ≈ 0.000026%. Por eso comprar mas billetes casi no cambia nada: aunque compres 100, sigues teniendo 100 / 3,838,380, una chance minima. La combinatoria explica matematicamente por que "la loteria es un impuesto a quienes no saben probabilidad".</p>
+
+<h4>Repaso de valor esperado aplicado al gacha / loot box</h4>
+
+<p>Recuerda el <strong>valor esperado</strong> (semana 5): VE = Σ (valor × probabilidad). Sirve para juzgar si un sistema de recompensas "conviene". En un sistema gacha con varias rarezas, multiplicas el valor de cada rareza por su probabilidad y sumas todo. Si el VE de una tirada es menor que su costo, el sistema esta diseñado para que, en promedio, pierdas — asi ganan dinero los juegos free-to-play.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto 1: probabilidad de una mano de cartas</h4>
+
+<p><strong>Problema:</strong> De una baraja de 52 cartas repartes una mano de 5 cartas al azar. ¿Cual es la probabilidad de que las 5 sean corazones? (Hay 13 corazones.)</p>
+
+<p><strong>Paso 1 — Casos totales (todas las manos de 5 posibles):</strong></p>
+<p>C(52, 5) = 52! / (5! × 47!) = 2,598,960 manos distintas.</p>
+
+<p><strong>Paso 2 — Casos favorables (manos de 5 hechas SOLO de los 13 corazones):</strong></p>
+<p>C(13, 5) = 13! / (5! × 8!) = 1287 manos.</p>
+
+<p><strong>Paso 3 — Divido:</strong></p>
+<p>P(5 corazones) = 1287 / 2,598,960 ≈ 0.000495 ≈ <strong>0.05%</strong>.</p>
+
+<p><strong>Interpretacion:</strong> aproximadamente 1 de cada 2000 manos. Poco probable, pero la combinatoria nos deja calcularlo exacto sin repartir cartas millones de veces.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto 2: valor esperado de un loot box</h4>
+
+<p><strong>Problema:</strong> Un loot box de un videojuego cuesta 150 monedas y da UN item segun estas probabilidades:</p>
+<table>
+<tr><th>Rareza</th><th>Probabilidad</th><th>Valor (monedas)</th></tr>
+<tr><td>Legendario</td><td>2% (0.02)</td><td>3000</td></tr>
+<tr><td>Epico</td><td>8% (0.08)</td><td>600</td></tr>
+<tr><td>Raro</td><td>30% (0.30)</td><td>100</td></tr>
+<tr><td>Comun</td><td>60% (0.60)</td><td>20</td></tr>
+</table>
+<p>¿Conviene comprarlo matematicamente?</p>
+
+<p><strong>Paso 1 — Verifico que las probabilidades sumen 1:</strong></p>
+<p>0.02 + 0.08 + 0.30 + 0.60 = 1.00 ✓</p>
+
+<p><strong>Paso 2 — Calculo el valor esperado (valor × probabilidad, y sumo):</strong></p>
+<ul>
+<li>Legendario: 3000 × 0.02 = 60</li>
+<li>Epico: 600 × 0.08 = 48</li>
+<li>Raro: 100 × 0.30 = 30</li>
+<li>Comun: 20 × 0.60 = 12</li>
+</ul>
+<p>VE = 60 + 48 + 30 + 12 = <strong>150 monedas.</strong></p>
+
+<p><strong>Paso 3 — Comparo con el costo:</strong></p>
+<p>El VE (150) es IGUAL al costo (150). Matematicamente es un sistema "neutro" o justo: en promedio no ganas ni pierdes. Si el legendario valiera menos, o costara mas de 150, el sistema estaria diseñado para que pierdas. Este calculo es la herramienta para detectarlo.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Probabilidad con combinatoria</h4>
+<ol>
+<li>De una baraja de 52 cartas repartes 2 al azar (una mano de 2). ¿Cuantas manos de 2 son posibles? (C(52,2)) ¿Cual es la probabilidad de que las 2 sean Ases? (favorables = C(4,2))</li>
+<li>Hay 10 jugadores y el coach elige 5 al azar. ¿Cual es la probabilidad de que TU (uno de los 10) quedes seleccionado? (favorables = C(9,4), totales = C(10,5))</li>
+<li>Una loteria pide elegir 5 numeros distintos del 1 al 30. ¿Cuantas combinaciones existen? (C(30,5)) ¿Cual es la probabilidad de ganar con un billete?</li>
+<li>Un loot box cuesta 200 monedas: 5% da un item de 2000, 25% da uno de 300, 70% da uno de 30. Calcula el valor esperado. ¿Conviene comprarlo?</li>
+<li>En un gacha, la probabilidad de sacar un personaje legendario es 1% por tirada. ¿Cual es la probabilidad de NO sacarlo en una sola tirada? ¿Y de NO sacarlo en 3 tiradas seguidas? (usa el complemento y eventos independientes)</li>
+<li>De un cofre con 15 items (4 raros y 11 comunes) sacas 3 al azar (todos juntos). ¿Cual es la probabilidad de que los 3 sean raros? (favorables = C(4,3), totales = C(15,3))</li>
+<li><strong>Repaso semanas 4-6:</strong> Un jugador de basquet tiene 70% de acierto en tiros libres. (a) ¿Probabilidad de que anote 2 tiros seguidos? (independientes) (b) De un plantel de 8, el coach elige 3 al azar para tirar; ¿cuantos grupos posibles hay? (combinacion) (c) Cada tiro anotado vale 1 punto; ¿cual es el valor esperado de puntos en 2 tiros? Combina probabilidad, combinatoria y valor esperado en una sola respuesta.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("Como calmar una emocion intensa: lo que dice la ciencia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿En que consiste la "regla de los 90 segundos" descubierta por Jill Bolte Taylor? Segun el texto, ¿por que entonces seguimos enojados o ansiosos durante horas?</li>
+<li>¿Por que funciona respirar lento y profundo? ¿Que sistema del cuerpo se activa y que rol cumple?</li>
+<li>El texto menciona "nombrar la emocion" (etiquetado afectivo). ¿Que efecto tiene en el cerebro?</li>
+<li>Segun el texto, ¿cual es el verdadero objetivo de manejar las emociones? ¿Por que dice que "no se trata de no sentir"?</li>
+<li><strong>¿Cual fue tu dato favorito de este texto (contar hasta 10 o el ejercicio fisico)? Escribe 1-2 oraciones explicando por que te llamo la atencion.</strong></li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Analisis de un sistema gacha / loot</h4>
+<p>Elige un juego que tengas (o conozcas) con recompensas aleatorias: gacha, cajas de botin, sobres, ruleta, etc. Investiga o estima sus probabilidades (muchos juegos las publican) y analiza:</p>
+<ol>
+<li><strong>Probabilidad de un item raro:</strong> ¿que chance hay de obtener el item mas deseado en UNA tirada? Escribela como porcentaje.</li>
+<li><strong>Numero esperado de intentos:</strong> si la probabilidad de exito por intento es <em>p</em>, el numero promedio de intentos hasta el primer exito es aproximadamente <strong>1 / p</strong>. Calculalo. (Ejemplo: si p = 1% = 0.01, entonces 1/0.01 = 100 intentos en promedio.)</li>
+<li><strong>¿Es un sistema justo?</strong> Estima el valor de cada recompensa y calcula el valor esperado de una tirada. Comparalo con el costo. Si VE &lt; costo, el sistema favorece al juego; si VE ≈ costo, es neutro; si VE &gt; costo, te favorece a ti (rarisimo).</li>
+</ol>
+<p>Escribe una conclusion corta: ¿te parece justo el sistema? ¿Cuanto tendrias que gastar en promedio para conseguir el item raro?</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+<div class="lectura">
+<h2>Texto 1 — Las emociones y las decisiones: por que sentimos antes de pensar</h2>
+
+<p>Imagina que estas eligiendo entre dos jugadas al final de un partido. Una es "la correcta" segun la logica: la de menor riesgo, la que el entrenador practico mil veces. La otra simplemente sientes que va a funcionar — no sabes bien por que, pero algo dentro tuyo te lo dice. ¿Cual eliges? Y mas importante: ¿esta mal dejarse llevar por lo que sientes?</p>
+
+<p>Durante siglos se creyo que las emociones eran el enemigo de las buenas decisiones. Se pensaba que una persona "racional" era la que dejaba de lado sus sentimientos y decidia solo con la logica fria. Pero la neurociencia moderna descubrio algo sorprendente: <strong>sin emociones, no podriamos tomar decisiones en absoluto.</strong></p>
+
+<h3>El descubrimiento de Damasio</h3>
+
+<p>El neurologo Antonio Damasio estudio a personas con daño en la parte del cerebro que conecta las emociones con el razonamiento (la corteza prefrontal ventromedial). Estas personas conservaban toda su inteligencia: podian resolver problemas de logica, hacer calculos, recordar datos. Pero habian perdido la capacidad de sentir emociones al pensar en sus opciones.</p>
+
+<p>El resultado fue inesperado: <strong>estas personas se volvieron incapaces de tomar decisiones</strong>. Podian analizar todas las opciones durante horas — los pros, los contras, las consecuencias — pero no lograban decidir. Algo tan simple como elegir en que restaurante comer se volvia una tortura de analisis interminable. ¿Por que? Porque les faltaba la "señal emocional" que nos dice "esto se siente bien" o "esto se siente mal", y que nos permite elegir sin analizar infinitamente.</p>
+
+<h3>Las emociones como atajos inteligentes</h3>
+
+<p>Damasio propuso que las emociones funcionan como <strong>marcadores somaticos</strong> — señales corporales que tu cerebro asocia con experiencias pasadas. Cuando enfrentas una decision, tu cerebro consulta rapidamente esas señales: "la ultima vez que algo se sintio asi, salio mal" o "esto se parece a algo que me hizo feliz antes". Esa sensacion en el cuerpo (mariposas en el estomago, tension en los hombros, una sensacion de energia) es informacion valiosa acumulada de toda tu experiencia de vida.</p>
+
+<p>Por eso una "corazonada" o intuicion no es magia ni tonteria. Es tu cerebro procesando miles de datos de experiencias pasadas a una velocidad tan rapida que no alcanzas a ser consciente del razonamiento — solo sientes el resultado como una emocion. A veces esas corazonadas se equivocan (porque se basan en experiencias limitadas o prejuicios), pero muchas veces contienen sabiduria real. Un base de basquet que "ve" el pase antes de que exista esta usando esa intuicion entrenada por miles de horas de juego.</p>
+
+<h3>El equilibrio: ni pura emocion ni pura logica</h3>
+
+<p>La conclusion de la ciencia no es "sigue siempre tu corazon" ni "ignora tus emociones y usa solo la logica". Es que las <strong>mejores decisiones combinan ambas</strong>. Las emociones te dan una direccion rapida y una señal de lo que te importa; la razon te ayuda a examinar si esa direccion tiene sentido, a considerar consecuencias que la emocion no ve, y a no dejarte arrastrar por impulsos del momento.</p>
+
+<p>Un buen programador, por ejemplo, siente que una solucion "es elegante" (intuicion) pero tambien sabe por que funciona (logica, estructura, eficiencia). Un buen deportista siente el momento de tirar (intuicion entrenada) pero tambien conoce las probabilidades y el valor esperado de cada jugada (analisis). La maestria esta en que las dos partes del cerebro trabajen juntas, no en que una silencie a la otra.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Las personas suelen tardar mucho mas en decidir entre dos opciones que les gustan por igual que entre una que les gusta y otra que no. Esto se llama "paralisis por analisis" y ocurre justamente cuando las señales emocionales de ambas opciones son parecidas.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Estudios muestran que tomar decisiones agota mentalmente. A esto se le llama "fatiga de decision": despues de tomar muchas decisiones seguidas, la calidad de tus elecciones baja. Por eso algunas personas famosas usan siempre la misma ropa — para no gastar energia mental en decisiones pequeñas.
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — Como calmar una emocion intensa: lo que dice la ciencia</h2>
+
+<p>Todos hemos vivido ese momento: algo nos hace sentir una emocion tan fuerte — rabia, frustracion, ansiedad, verguenza — que sentimos que nos desborda. Piensa en cuando pierdes una partida importante por un error tonto, o cuando algo injusto pasa en un partido. En esos momentos, el cerebro emocional (la amigdala) esta al mando y el cerebro racional (la corteza prefrontal) esta como "desconectado". La buena noticia es que la ciencia ha estudiado exactamente que funciona para recuperar el control, y son cosas que cualquiera puede aprender.</p>
+
+<h3>La regla de los 90 segundos</h3>
+
+<p>La neurocientifica Jill Bolte Taylor descubrio algo fascinante: cuando una emocion se dispara, la reaccion quimica en tu cuerpo (las hormonas y neurotransmisores que se liberan) dura aproximadamente <strong>90 segundos</strong>. Despues de ese minuto y medio, esas sustancias quimicas se disuelven en la sangre y la reaccion fisica termina naturalmente.</p>
+
+<p>Entonces, ¿por que a veces seguimos enojados o ansiosos durante horas? Porque nosotros mismos "realimentamos" la emocion con nuestros pensamientos. Cada vez que recordamos lo que nos molesto, que le damos vueltas al asunto, que imaginamos lo que deberiamos haber dicho, volvemos a disparar la reaccion quimica. La emocion original dura 90 segundos; lo que la mantiene viva por horas es nuestra propia mente. Saber esto es poderoso: si logras "surfear" esos primeros 90 segundos sin actuar y sin alimentar el pensamiento, la intensidad baja sola.</p>
+
+<h3>Por que funciona respirar lento</h3>
+
+<p>Cuando respiras lento y profundo — especialmente si haces la exhalacion mas larga que la inhalacion — activas el <strong>sistema nervioso parasimpatico</strong>, que es el "freno" natural del cuerpo. Es el opuesto exacto del sistema de "lucha o huida". Literalmente le estas enviando una señal quimica a tu cuerpo de que no hay peligro, que puede calmarse.</p>
+
+<p>No es un truco psicologico vago: es fisiologia real. La respiracion es la unica funcion automatica del cuerpo (como los latidos o la digestion) que tambien puedes controlar voluntariamente. Por eso es la "puerta de entrada" para calmar el sistema nervioso. Una tecnica que funciona: inhalar contando hasta 4, sostener contando hasta 4, exhalar contando hasta 6. Repetir 4 o 5 veces.</p>
+
+<h3>Estrategias que la ciencia respalda</h3>
+
+<ul>
+<li><strong>Nombrar la emocion:</strong> decir (aunque sea mentalmente) "esto que siento es frustracion" reduce la actividad de la amigdala. Poner en palabras lo que sientes activa la parte racional del cerebro. Los cientificos lo llaman "etiquetado afectivo".</li>
+<li><strong>Respiracion lenta:</strong> como explicamos, activa el freno natural del cuerpo.</li>
+<li><strong>Cambiar de lugar o de actividad:</strong> moverte fisicamente interrumpe el circuito de pensamiento que alimenta la emocion. Salir a caminar, tomar agua, cambiar de habitacion.</li>
+<li><strong>La distancia temporal:</strong> preguntarte "¿esto me va a importar en una semana? ¿En un año?" activa areas del cerebro que ven el panorama completo y reducen la urgencia del momento.</li>
+<li><strong>Escribir lo que sientes:</strong> poner las emociones en papel ayuda a ordenarlas y a verlas desde afuera, como si fueran de otra persona.</li>
+</ul>
+
+<h3>No se trata de no sentir</h3>
+
+<p>Es importante entender algo: el objetivo NO es dejar de sentir emociones ni "controlarlas" en el sentido de reprimirlas. Las emociones son informacion valiosa y reprimirlas es dañino a largo plazo. El objetivo es no dejar que una emocion intensa te haga actuar de una forma de la que despues te arrepientas. Sentir la rabia esta bien; romper el mando o decir algo hiriente en medio de esa rabia es lo que queremos evitar. La emocion es valida; la accion impulsiva es lo que se puede manejar.</p>
+
+<p>Aprender a manejar las emociones intensas es como aprender cualquier habilidad — o como entrenar un tiro: requiere practica. Las primeras veces sera dificil recordar respirar o nombrar lo que sientes en pleno momento de furia. Pero cada vez que lo intentas, fortaleces las conexiones entre tu corteza prefrontal y tu amigdala — literalmente estas entrenando tu cerebro para tener mas control la proxima vez.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Contar hasta 10 antes de reaccionar — ese consejo que parece de abuela — tiene base cientifica real. Esos segundos le dan tiempo a la corteza prefrontal de "reconectarse" y evaluar la situacion antes de que actues por impulso.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> El ejercicio fisico es uno de los reguladores emocionales mas potentes que existen. Quema el exceso de hormonas de estres (cortisol y adrenalina) y libera endorfinas y serotonina. Por eso despues de correr o jugar un partido, los problemas se ven mas manejables.
+</div>
+</div>
+
+<footer>
+<p>Semana 6 (mini) de 20 | Fran</p>
+<p><em>"Contar bien las posibilidades es el primer paso para tomar buenas decisiones."</em></p>
+</footer>
+
+</body>
+</html>

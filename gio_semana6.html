@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gio — Semana 6</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#553c9a;border-bottom:3px solid #9f7aea;padding-bottom:6px;margin-bottom:10px}
+h2{color:#553c9a;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #e9d8fd;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.fecha{background:#553c9a;color:#fff;display:inline-block;padding:4px 12px;border-radius:12px;font-size:.85em;font-weight:600;margin-bottom:8px}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#faf5ff;border-left:4px solid #9f7aea;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ludica{background:#fef3f8;border-left:4px solid #d53f8c;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.sopa{font-family:'Courier New',monospace;font-size:1.1em;letter-spacing:6px;line-height:1.8;text-align:center;background:#fff;border:2px dashed #d53f8c;border-radius:8px;padding:16px;margin:10px 0}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}.mate,.escribe,.ejercicio,.proyecto,.ludica,.resuelto,.lectura{padding:8px 12px;margin:6px 0}.dato{padding:6px 10px;margin:5px 0}hr{margin:12px 0}}
+</style>
+</head>
+<body>
+
+<h1>Gio — Semana 6 (mini)</h1>
+<p><em>2 dias | Semana corta | Cerramos el bloque de proporciones y porcentajes.</em></p>
+
+<hr>
+
+<span class="fecha">Jueves 27 de agosto de 2026</span>
+
+<h2>DIA 1 — JUEVES</h2>
+
+<h3>Bloque 1: Matematicas — Repartos proporcionales</h3>
+
+<div class="mate">
+<h4>Repartir algo de forma justa (pero no siempre igual)</h4>
+
+<p>A veces necesitas repartir algo entre varias personas o partes, pero no en cantidades iguales, sino <strong>proporcionalmente</strong> — segun cuanto le corresponde a cada uno.</p>
+
+<p><strong>Ejemplo de la vida:</strong> tu y dos amigas hacen una coleccion de accesorios para vender. Tu pusiste $60 de materiales, una amiga puso $30 y la otra $10. Cuando venden todo y ganan $200, ¿como reparten? No seria justo dividir en tres partes iguales, porque cada una invirtio diferente. Hay que repartir <strong>proporcionalmente</strong> a lo que puso cada una.</p>
+
+<h4>Como se hace un reparto proporcional</h4>
+<ol>
+<li>Suma todas las partes para saber el total.</li>
+<li>Averigua que fraccion del total le corresponde a cada uno.</li>
+<li>Multiplica esa fraccion por la cantidad a repartir.</li>
+</ol>
+
+<p>Otra forma mas simple: calcula "cuanto vale cada parte" (el valor de una unidad) y multiplica por las partes de cada uno.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: repartir las ganancias</h4>
+
+<p><strong>Problema:</strong> Tu pusiste $60, una amiga $30 y la otra $10 en materiales. Ganaron $200 en total. ¿Cuanto le toca a cada una?</p>
+
+<p><strong>Paso 1 — Sumo lo que puso cada una (el total invertido):</strong></p>
+<p>60 + 30 + 10 = $100</p>
+
+<p><strong>Paso 2 — Calculo cuanto vale cada peso invertido en ganancia:</strong></p>
+<p>Se reparten $200 de ganancia por $100 invertidos → 200 ÷ 100 = $2 de ganancia por cada $1 que pusieron.</p>
+
+<p><strong>Paso 3 — Multiplico por lo que puso cada una:</strong></p>
+<ul>
+<li>Tu: 60 × 2 = $120</li>
+<li>Amiga 1: 30 × 2 = $60</li>
+<li>Amiga 2: 10 × 2 = $20</li>
+</ul>
+
+<p><strong>Paso 4 — Verifico que sumen el total:</strong></p>
+<p>120 + 60 + 20 = $200 ✓ Perfecto, se reparte todo.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Repartos proporcionales</h4>
+<ol>
+<li>Tres personas reparten $150 segun lo que trabajaron: una trabajo 2 horas, otra 3 horas y otra 5 horas. Reparte proporcionalmente. (Pista: total = 10 horas.)</li>
+<li>Dos amigas hacen pulseras. Una hizo 12 y la otra 8. Venden todo por $100. ¿Cuanto le toca a cada una segun lo que produjo?</li>
+<li>Repartes 60 metros de tela entre 3 proyectos, en proporcion 1:2:3 (el primero recibe 1 parte, el segundo 2, el tercero 3). ¿Cuantos metros para cada uno? (Pista: total de partes = 1+2+3 = 6.)</li>
+<li>Una herencia de $900 se reparte entre 2 hermanos en proporcion a su edad: uno tiene 10 años y el otro 20. ¿Cuanto recibe cada uno?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final de este cuadernillo ("Las emociones y las decisiones: por que sentimos antes de pensar").</p>
+<p>Responde:</p>
+<ol>
+<li>Segun el texto, ¿por que a veces tomamos decisiones "con el corazon" en vez de "con la cabeza"?</li>
+<li>¿Que es una "corazonada" o intuicion desde el punto de vista del cerebro?</li>
+<li>El texto dice que las emociones no son enemigas de las buenas decisiones. Explica por que.</li>
+<li>¿Que ejemplo da el texto sobre una persona que no podia sentir emociones? ¿Que le pasaba?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Actividad ludica — Sopa de letras</h3>
+
+<div class="ludica">
+<h4>Sopa de letras: Palabras de diseño y moda</h4>
+<p>Encuentra estas 10 palabras escondidas (horizontal y vertical): <strong>TELA, AGUJA, HILO, PATRON, COLOR, DISEÑO, COSTURA, MODA, BOCETO, ESTILO</strong></p>
+
+<div class="sopa">
+D I S E Ñ O X M B A<br>
+P A T R O N C O S T<br>
+T E L A H I L O D U<br>
+C O S T U R A D I R<br>
+B O C E T O E A S A<br>
+E S T I L O G C E X<br>
+C O L O R H U T Ñ M<br>
+M A G U J A J O O D<br>
+</div>
+
+<p><em>Marca cada palabra que encuentres. Cuando termines, elige tu palabra favorita de la lista y escribe una oracion usandola en el contexto de tu proyecto de personaje.</em></p>
+</div>
+
+<h3>Bloque 4: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Ficha de precios de tu coleccion</h4>
+<p>Ya diseñaste outfits para tu personaje y aprendiste a calcular precios con ganancia. Hoy junta ambas cosas:</p>
+<ul>
+<li>Elige 3 prendas o accesorios de tu coleccion</li>
+<li>Para cada uno, inventa un costo de materiales (ej: $40, $25, $60)</li>
+<li>Calcula el precio de venta agregando 50% de ganancia a cada uno</li>
+<li>Arma una pequeña "lista de precios" bonita, como si fuera el catalogo de tu marca</li>
+</ul>
+</div>
+
+<div class="page-break"></div>
+
+<span class="fecha">Viernes 28 de agosto de 2026</span>
+
+<h2>DIA 2 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Repaso y cierre del bloque</h3>
+
+<div class="mate">
+<h4>Todo lo que aprendiste sobre medidas, proporciones y porcentajes</h4>
+
+<p>Durante las ultimas semanas viste:</p>
+<ul>
+<li><strong>Medidas:</strong> convertir entre mm, cm, m (multiplicar o dividir por 10, 100, 1000)</li>
+<li><strong>Proporciones:</strong> cuando algo cambia de tamaño, todo cambia junto. Regla de tres y escalas.</li>
+<li><strong>Porcentajes:</strong> descuentos (el precio baja), aumentos (el precio sube), ganancia e IVA.</li>
+<li><strong>Descuentos encadenados:</strong> se aplican uno tras otro, no se suman.</li>
+<li><strong>Repartos proporcionales:</strong> repartir segun lo que corresponde a cada uno.</li>
+</ul>
+<p>Hoy no hay tema nuevo — solo un repaso con problemas que combinan todo. Toma tu tiempo. Si algo no recuerdas, revisa los cuadernillos anteriores.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: problema que combina todo</h4>
+
+<p><strong>Problema:</strong> Quieres hacer 4 bufandas iguales para vender. Cada bufanda necesita 0.8 metros de tela. La tela cuesta $50 el metro pero tiene 20% de descuento. Despues de hacerlas, quieres venderlas con 60% de ganancia sobre el costo de materiales. ¿A que precio vendes cada bufanda?</p>
+
+<p><strong>Paso 1 — Tela total necesaria:</strong> 4 × 0.8 = 3.2 metros</p>
+<p><strong>Paso 2 — Costo de la tela con descuento:</strong> 3.2 × $50 = $160 → con 20% off: 160 × 0.80 = $128</p>
+<p><strong>Paso 3 — Costo por bufanda:</strong> 128 ÷ 4 = $32 cada una</p>
+<p><strong>Paso 4 — Precio de venta con 60% de ganancia:</strong> 32 × 1.60 = <strong>$51.20 por bufanda</strong></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Repaso integrador</h4>
+<ol>
+<li>Un patron a escala 1:5 muestra una falda de 12 cm de largo. ¿Cuanto mide la falda real en cm? ¿Y en metros?</li>
+<li>Compras 3.5 metros de tela a $80/metro con 25% de descuento. ¿Cuanto pagas?</li>
+<li>Hiciste un vestido que te costo $180 en materiales. Lo vendes con 40% de ganancia. ¿Precio de venta?</li>
+<li>Una tienda ofrece 30% + 10% de descuento encadenado sobre una tela de $200. ¿Cuanto pagas al final?</li>
+<li>Repartes $240 entre 3 proyectos en proporcion 2:3:5. ¿Cuanto para cada uno?</li>
+<li>Para 5 cojines necesitas 4 metros de tela. ¿Cuantos metros necesitas para 8 cojines? (Usa proporcion.)</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Comprension lectora</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("Como calmar una emocion intensa: lo que dice la ciencia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Cuanto tiempo dura una emocion en el cuerpo, segun el texto, si no la "alimentamos" con pensamientos?</li>
+<li>El texto menciona la respiracion como herramienta. ¿Por que funciona respirar lento para calmarse?</li>
+<li>Nombra 3 estrategias que el texto propone para manejar una emocion intensa.</li>
+<li><strong>Dato favorito:</strong> de los textos de esta semana, ¿que dato te parecio mas interesante? Escribe 1-2 oraciones.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Proyecto creativo (30 min)</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Presenta tu marca</h4>
+<p>Cierre del proyecto de personaje y coleccion. Prepara una mini presentacion (puede ser en una hoja, un poster o un documento):</p>
+<ul>
+<li>Nombre de tu marca y su concepto (lo que definiste en la semana 5)</li>
+<li>Tu personaje modelo con su outfit principal</li>
+<li>Tu lista de precios (del dia de ayer)</li>
+<li>Una frase que resuma el "espiritu" de tu marca</li>
+</ul>
+<p>Si quieres, puedes mostrarsela a tu familia. Es tu creacion completa.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+<div class="lectura">
+<h2>Texto 1 — Las emociones y las decisiones: por que sentimos antes de pensar</h2>
+
+<p>Imagina que estas eligiendo entre dos vestidos. Uno es "el correcto" segun la logica: mas barato, mas practico, combina con mas cosas. El otro simplemente te encanta — no sabes bien por que, pero cuando lo ves sientes algo. ¿Cual eliges? Y mas importante: ¿esta mal dejarse llevar por lo que sientes?</p>
+
+<p>Durante siglos se creyo que las emociones eran el enemigo de las buenas decisiones. Se pensaba que una persona "racional" era la que dejaba de lado sus sentimientos y decidia solo con la logica fria. Pero la neurociencia moderna descubrio algo sorprendente: <strong>sin emociones, no podriamos tomar decisiones en absoluto.</strong></p>
+
+<h3>El caso de Phineas Gage y otros</h3>
+
+<p>El neurologo Antonio Damasio estudio a personas con daño en la parte del cerebro que conecta las emociones con el razonamiento (la corteza prefrontal ventromedial). Estas personas conservaban toda su inteligencia: podian resolver problemas de logica, hacer calculos, recordar datos. Pero habian perdido la capacidad de sentir emociones al pensar en sus opciones.</p>
+
+<p>El resultado fue inesperado: <strong>estas personas se volvieron incapaces de tomar decisiones</strong>. Podian analizar todas las opciones durante horas — los pros, los contras, las consecuencias — pero no lograban decidir. Algo tan simple como elegir en que restaurante comer se volvia una tortura de analisis interminable. ¿Por que? Porque les faltaba la "señal emocional" que nos dice "esto se siente bien" o "esto se siente mal", y que nos permite elegir sin analizar infinitamente.</p>
+
+<h3>Las emociones como atajos inteligentes</h3>
+
+<p>Damasio propuso que las emociones funcionan como <strong>marcadores somaticos</strong> — señales corporales que tu cerebro asocia con experiencias pasadas. Cuando enfrentas una decision, tu cerebro consulta rapidamente esas señales: "la ultima vez que algo se sintio asi, salio mal" o "esto se parece a algo que me hizo feliz antes". Esa sensacion en el cuerpo (mariposas en el estomago, tension en los hombros, una sensacion de calidez) es informacion valiosa acumulada de toda tu experiencia de vida.</p>
+
+<p>Por eso una "corazonada" o intuicion no es magia ni tonteria. Es tu cerebro procesando miles de datos de experiencias pasadas a una velocidad tan rapida que no alcanzas a ser consciente del razonamiento — solo sientes el resultado como una emocion. A veces esas corazonadas se equivocan (porque se basan en experiencias limitadas o prejuicios), pero muchas veces contienen sabiduria real.</p>
+
+<h3>El equilibrio: ni pura emocion ni pura logica</h3>
+
+<p>La conclusion de la ciencia no es "sigue siempre tu corazon" ni "ignora tus emociones y usa solo la logica". Es que las <strong>mejores decisiones combinan ambas</strong>. Las emociones te dan una direccion rapida y una señal de lo que te importa; la razon te ayuda a examinar si esa direccion tiene sentido, a considerar consecuencias que la emocion no ve, y a no dejarte arrastrar por impulsos del momento.</p>
+
+<p>Un buen diseñador, por ejemplo, siente que un color "funciona" (emocion/intuicion) pero tambien sabe por que funciona (teoria del color, contraste, armonia — razon). Un buen deportista siente el momento de tirar (intuicion entrenada) pero tambien conoce las probabilidades (analisis). La maestria esta en que las dos partes del cerebro trabajen juntas, no en que una silencie a la otra.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Las personas suelen tardar mucho mas en decidir entre dos opciones que les gustan por igual que entre una que les gusta y otra que no. Esto se llama "paralisis por analisis" y ocurre justamente cuando las señales emocionales de ambas opciones son parecidas.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> Estudios muestran que tomar decisiones agota mentalmente. A esto se le llama "fatiga de decision": despues de tomar muchas decisiones seguidas, la calidad de tus elecciones baja. Por eso algunas personas famosas usan siempre la misma ropa — para no gastar energia mental en decisiones pequeñas.
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — Como calmar una emocion intensa: lo que dice la ciencia</h2>
+
+<p>Todos hemos vivido ese momento: algo nos hace sentir una emocion tan fuerte — rabia, frustracion, ansiedad, verguenza — que sentimos que nos desborda. En esos momentos, el cerebro emocional (la amigdala, que ya conociste en las lecturas anteriores) esta al mando y el cerebro racional (la corteza prefrontal) esta como "desconectado". La buena noticia es que la ciencia ha estudiado exactamente que funciona para recuperar el control, y son cosas que cualquiera puede aprender.</p>
+
+<h3>La regla de los 90 segundos</h3>
+
+<p>La neurocientifica Jill Bolte Taylor descubrio algo fascinante: cuando una emocion se dispara, la reaccion quimica en tu cuerpo (las hormonas y neurotransmisores que se liberan) dura aproximadamente <strong>90 segundos</strong>. Despues de ese minuto y medio, esas sustancias quimicas se disuelven en la sangre y la reaccion fisica termina naturalmente.</p>
+
+<p>Entonces, ¿por que a veces seguimos enojados o ansiosos durante horas? Porque nosotros mismos "realimentamos" la emocion con nuestros pensamientos. Cada vez que recordamos lo que nos molesto, que le damos vueltas al asunto, que imaginamos lo que deberiamos haber dicho, volvemos a disparar la reaccion quimica. La emocion original dura 90 segundos; lo que la mantiene viva por horas es nuestra propia mente. Saber esto es poderoso: si logras "surfear" esos primeros 90 segundos sin actuar y sin alimentar el pensamiento, la intensidad baja sola.</p>
+
+<h3>Por que funciona respirar lento</h3>
+
+<p>Cuando respiras lento y profundo — especialmente si haces la exhalacion mas larga que la inhalacion — activas el <strong>sistema nervioso parasimpatico</strong>, que es el "freno" natural del cuerpo. Es el opuesto exacto del sistema de "lucha o huida". Literalmente le estas enviando una señal quimica a tu cuerpo de que no hay peligro, que puede calmarse.</p>
+
+<p>No es un truco psicologico vago: es fisiologia real. La respiracion es la unica funcion automatica del cuerpo (como los latidos o la digestion) que tambien puedes controlar voluntariamente. Por eso es la "puerta de entrada" para calmar el sistema nervioso. Una tecnica que funciona: inhalar contando hasta 4, sostener contando hasta 4, exhalar contando hasta 6. Repetir 4 o 5 veces.</p>
+
+<h3>Estrategias que la ciencia respalda</h3>
+
+<ul>
+<li><strong>Nombrar la emocion:</strong> decir (aunque sea mentalmente) "esto que siento es frustracion" reduce la actividad de la amigdala. Poner en palabras lo que sientes activa la parte racional del cerebro. Los cientificos lo llaman "etiquetado afectivo".</li>
+<li><strong>Respiracion lenta:</strong> como explicamos, activa el freno natural del cuerpo.</li>
+<li><strong>Cambiar de lugar o de actividad:</strong> moverte fisicamente interrumpe el circuito de pensamiento que alimenta la emocion. Salir a caminar, tomar agua, cambiar de habitacion.</li>
+<li><strong>La distancia temporal:</strong> preguntarte "¿esto me va a importar en una semana? ¿En un año?" activa areas del cerebro que ven el panorama completo y reducen la urgencia del momento.</li>
+<li><strong>Escribir lo que sientes:</strong> poner las emociones en papel ayuda a ordenarlas y a verlas desde afuera, como si fueran de otra persona.</li>
+</ul>
+
+<h3>No se trata de no sentir</h3>
+
+<p>Es importante entender algo: el objetivo NO es dejar de sentir emociones ni "controlarlas" en el sentido de reprimirlas. Las emociones son informacion valiosa y reprimirlas es dañino a largo plazo. El objetivo es no dejar que una emocion intensa te haga actuar de una forma de la que despues te arrepientas. Sentir la rabia esta bien; romper algo o decir algo hiriente en medio de esa rabia es lo que queremos evitar. La emocion es valida; la accion impulsiva es lo que se puede manejar.</p>
+
+<p>Aprender a manejar las emociones intensas es como aprender cualquier habilidad: requiere practica. Las primeras veces sera dificil recordar respirar o nombrar lo que sientes en pleno momento de furia. Pero cada vez que lo intentas, fortaleces las conexiones entre tu corteza prefrontal y tu amigdala — literalmente estas entrenando tu cerebro para tener mas control la proxima vez.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Contar hasta 10 antes de reaccionar — ese consejo que parece de abuela — tiene base cientifica real. Esos segundos le dan tiempo a la corteza prefrontal de "reconectarse" y evaluar la situacion antes de que actues por impulso.
+</div>
+
+<div class="dato">
+<strong>Dato:</strong> El ejercicio fisico es uno de los reguladores emocionales mas potentes que existen. Quema el exceso de hormonas de estres (cortisol y adrenalina) y libera endorfinas y serotonina. Por eso despues de correr o hacer deporte, los problemas se ven mas manejables.
+</div>
+</div>
+
+<footer>
+<p>Semana 6 (mini) de 20 | Gio</p>
+<p><em>"Las emociones no son el problema — lo que hacemos con ellas es lo que cuenta."</em></p>
+</footer>
+
+</body>
+</html>
