@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 8</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:6px;margin-bottom:10px}
+h2{color:#2a4365;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #bee3f8;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ciencia{background:#f0f9ff;border-left:4px solid #0891b2;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.cultura{background:#f5f3ff;border-left:4px solid #7c3aed;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9em}
+th,td{padding:5px 8px;border:1px solid #e2e8f0;text-align:center}
+th{background:#2c5282;color:#fff}
+tr:nth-child(even){background:#f8fafc}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.ciencia,.escribe,.ejercicio,.resuelto,.proyecto,.cultura,.lectura{padding:8px 12px;margin:6px 0}.dato{padding:6px 10px;margin:5px 0}hr{margin:12px 0}table{font-size:.8em}th,td{padding:3px 5px}}
+.fecha-real{border:1px dashed #a0aec0;border-radius:6px;padding:8px 14px;margin:8px 0 14px;font-size:.9em;color:#4a5568}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 8</h1>
+<p><em>4 dias | Continuamos con la fisica de la energia y las funciones.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — Repaso de funciones lineales y cuadraticas + pendiente aplicada</h3>
+
+<div class="mate">
+<h4>Juntamos lo que ya sabes: rectas y parabolas</h4>
+<p>La semana pasada trabajaste dos grandes familias de funciones. Hoy las repasamos juntas antes de dar un salto nuevo:</p>
+<ul>
+<li><strong>Funcion lineal:</strong> <strong>y = m·x + b</strong>. Grafica una <strong>recta</strong>. La x va "sola" (sin exponente).</li>
+<li><strong>Funcion cuadratica:</strong> <strong>y = a·x² + b·x + c</strong>. Grafica una <strong>parabola</strong> (curva en U). Aparece la x².</li>
+</ul>
+
+<h4>La pendiente aplicada: velocidad y ritmo de puntos</h4>
+<p>La <strong>pendiente</strong> (la m de una recta) mide <strong>cuanto cambia y por cada unidad que avanza x</strong>. Eso es una idea potentisima porque aparece en todos lados disfrazada:</p>
+<ul>
+<li>Si x es el <strong>tiempo</strong> e y es la <strong>distancia</strong>, la pendiente es la <strong>velocidad</strong> (metros por segundo).</li>
+<li>Si x son los <strong>minutos jugados</strong> e y son los <strong>puntos</strong>, la pendiente es tu <strong>ritmo de anotacion</strong> (puntos por minuto).</li>
+</ul>
+<p>La formula para calcular una pendiente entre dos puntos es: <strong>m = (cambio en y) / (cambio en x)</strong>. Es decir, cuanto subio y dividido cuanto avanzo x.</p>
+<div class="dato">
+Un base que corre a 6 m/s tiene una recta distancia-tiempo con pendiente 6. Un jugador que anota 24 puntos en 32 minutos tiene un ritmo (pendiente) de 24/32 = 0.75 puntos por minuto.
+</div>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: ritmo de anotacion como pendiente</h4>
+<p><strong>Problema:</strong> En el minuto 10 de un partido llevas 8 puntos, y en el minuto 30 llevas 23 puntos. ¿Cual es tu ritmo de anotacion (pendiente)?</p>
+<p><strong>Paso 1 —</strong> Identifico los dos puntos: (x=10, y=8) y (x=30, y=23).</p>
+<p><strong>Paso 2 —</strong> Cambio en y = 23 - 8 = 15 puntos. Cambio en x = 30 - 10 = 20 minutos.</p>
+<p><strong>Paso 3 —</strong> Pendiente m = 15 / 20 = <strong>0.75 puntos por minuto</strong>.</p>
+<p>Anotas a un ritmo de 0.75 puntos por minuto. Si el partido sigue igual, en 40 minutos harias 40·0.75 = 30 puntos.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Repaso y pendiente</h4>
+<ol>
+<li>Di si cada funcion es lineal o cuadratica: (a) y = 7x - 2, (b) y = x² + 5, (c) y = -3x, (d) y = 2x² - x.</li>
+<li>Si f(x) = 4x + 3 (lineal), calcula f(0), f(5) y f(10).</li>
+<li>Si g(x) = x² - 2 (cuadratica), calcula g(3) y g(6).</li>
+<li>Un jugador recorre 18 m en 3 segundos a ritmo constante. ¿Cual es su velocidad (pendiente de distancia-tiempo)?</li>
+<li>En el minuto 5 llevas 6 puntos y en el minuto 25 llevas 21. Calcula tu ritmo de anotacion (pendiente). </li>
+<li>Dos rectas de puntaje: y = 2x + 5 y y = 3x. ¿Cual tiene mayor pendiente y que significa eso en el ritmo de anotacion?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Potencia (nivel avanzado)</h3>
+
+<div class="ciencia">
+<h4>Potencia: no solo cuanta energia, sino QUE TAN RAPIDO</h4>
+<p>La semana pasada aprendiste que <strong>trabajo</strong> es aplicar una fuerza y mover algo (W = F × d), medido en Joules. Pero hay una pregunta que el trabajo no responde: <strong>¿que tan rapido se hace ese trabajo?</strong> Subir 10 escalones caminando o subirlos corriendo es el MISMO trabajo, pero corriendo lo haces mas rapido. Eso lo mide la <strong>potencia</strong>.</p>
+<p style="text-align:center"><strong>Potencia = trabajo / tiempo → P = W / t</strong></p>
+<p>Donde W = trabajo (Joules) y t = tiempo (segundos). La potencia se mide en <strong>Watts (W)</strong>. 1 Watt = 1 Joule por segundo. Cuidado con la letra: la W de "Watt" (unidad) y la W de "trabajo" (variable) se escriben igual pero son cosas distintas.</p>
+<p>Por eso dos jugadores pueden hacer el mismo trabajo (levantar la misma pesa a la misma altura), pero el que lo hace en menos tiempo desarrolla <strong>mas potencia</strong>. La explosividad en el basket es potencia pura: mucha energia liberada en muy poco tiempo.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: la potencia de un jugador</h4>
+<p><strong>Problema:</strong> Un jugador realiza un trabajo de 600 J al saltar para un rebote, y lo hace en 0.4 segundos. ¿Cuanta potencia desarrolla?</p>
+<p><strong>Paso 1 —</strong> Escribo la formula: P = W / t.</p>
+<p><strong>Paso 2 —</strong> Reemplazo: W = 600 J, t = 0.4 s.</p>
+<p><strong>Paso 3 —</strong> P = 600 / 0.4 = <strong>1500 Watts</strong>.</p>
+<p>Desarrolla 1500 W. Si hiciera el mismo trabajo (600 J) pero mas lento, en 1 segundo, su potencia seria solo 600 W. Mismo trabajo, menos potencia: la clave es el tiempo.</p>
+</div>
+
+<div class="ciencia">
+<h4>Ejercicios — Potencia</h4>
+<ol>
+<li>Un jugador hace 800 J de trabajo en 2 segundos. ¿Cual es su potencia? (P = W / t)</li>
+<li>Levantas una pesa haciendo 300 J de trabajo en 0.5 s. ¿Cuantos Watts desarrollas?</li>
+<li>Dos personas suben la misma escalera haciendo 1000 J cada una: una tarda 5 s y la otra 10 s. ¿Quien desarrolla mas potencia y por que?</li>
+<li>Un motor realiza 4500 J de trabajo en 3 segundos. Calcula su potencia en Watts.</li>
+<li>Con tus palabras: dos jugadores hacen el mismo trabajo, pero uno es "mas explosivo". ¿Que diferencia hay entre ellos en terminos de potencia?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: ZOOLOGIA</h4>
+<p><strong>La zoologia es la ciencia que estudia los animales:</strong> como viven, se comportan y como funciona su cuerpo.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> <em>Muchos animales usan la energia de formas asombrosas: la anguila electrica genera electricidad de verdad, y algunos peces de las profundidades producen luz (bioluminiscencia). Investiga un animal que use la energia de forma especial y explica, con lo que sabes de fisica, COMO lo hace: ¿que tipo de energia produce o transforma?</em></p>
+<p><em>Guarda tu respuesta — al final del bloque armaras tu "Enciclopedia de las Ciencias" con el formato que mas te guste (video, cuadernillo, diagramas, presentacion...).</em></p>
+</div>
+
+<h3>Bloque 4: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final ("La respiracion: el puente entre el cuerpo y la energia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que musculo es el verdadero "motor" de la respiracion y como hace entrar y salir el aire?</li>
+<li>Explica el intercambio de gases: ¿que entra al inhalar y que sale al exhalar, y para que usan las celulas ese oxigeno?</li>
+<li>El texto dice que la respiracion lenta activa el "modo de calma". ¿Que dos modos tiene el sistema nervioso y que hace cada uno?</li>
+<li>Como deportista: ¿en que momento de un partido (un tiro libre decisivo, por ejemplo) te serviria una respiracion profunda y por que?</li>
+<li><strong>Opinion:</strong> ¿crees que vale la pena entrenar la respiracion como se entrena el cuerpo? Explica en 1-2 lineas.</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 1 — Calcula la potencia de tu maquina</h4>
+<p>La semana pasada diseñaste tu Maquina de energia. <strong>Hoy la analizas como fisico:</strong> estima cuanta energia transforma tu maquina (en Joules) y en cuanto tiempo (en segundos), y calcula su <strong>potencia</strong> con P = W / t. Aunque sean numeros aproximados o inventados razonables, muestra el calculo. Anota el resultado en Watts.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MARTES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — Introduccion a la TRIGONOMETRIA</h3>
+
+<div class="mate">
+<h4>Una rama nueva: la trigonometria</h4>
+<p>Hoy empiezas algo nuevo y muy util: la <strong>trigonometria</strong>. La palabra significa literalmente "medida de los triangulos". Es la parte de las matematicas que estudia la <strong>relacion entre los angulos y los lados de un triangulo</strong>, sobre todo del triangulo mas importante de todos: el <strong>triangulo rectangulo</strong>.</p>
+
+<h4>El triangulo rectangulo: hipotenusa y catetos</h4>
+<p>Un <strong>triangulo rectangulo</strong> es el que tiene un angulo de <strong>90°</strong> (un angulo recto, como la esquina de una hoja). Sus lados tienen nombres especiales:</p>
+<ul>
+<li><strong>Hipotenusa:</strong> el lado mas largo, el que esta <em>enfrente</em> del angulo recto. Es como la "rampa" diagonal.</li>
+<li><strong>Catetos:</strong> los otros dos lados, los que <em>forman</em> el angulo recto. Uno suele ser el horizontal y otro el vertical.</li>
+</ul>
+
+<h4>¿Para que sirve?</h4>
+<p>La trigonometria es una maquina de <strong>calcular distancias y alturas que no puedes medir directamente</strong>. ¿Que tan alto es un edificio sin subirte a el? ¿A que distancia esta la canasta si conoces el angulo con que miras? ¿Que altura alcanza un balon? Con un angulo y un lado conocido, la trigonometria te da el resto. Se usa en navegacion, en videojuegos (para calcular hacia donde apunta un personaje), en arquitectura y en fisica.</p>
+<div class="dato">
+En los videojuegos, cada vez que un personaje apunta un arma o una camara gira, por dentro el motor esta resolviendo triangulos rectangulos con trigonometria para saber a donde va cada disparo o cada pixel.
+</div>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: identificar los lados</h4>
+<p><strong>Problema:</strong> Un triangulo rectangulo tiene lados de 3, 4 y 5. Sabemos que el angulo recto esta entre los lados de 3 y 4. ¿Cual lado es la hipotenusa y cuales son los catetos?</p>
+<p><strong>Paso 1 —</strong> La hipotenusa es el lado enfrente del angulo recto y es SIEMPRE el mas largo. El mas largo aqui es <strong>5</strong>.</p>
+<p><strong>Paso 2 —</strong> Los catetos son los que forman el angulo recto: los lados <strong>3 y 4</strong>.</p>
+<p><strong>Paso 3 —</strong> Comprobacion (teorema de Pitagoras): cateto² + cateto² = hipotenusa² → 3² + 4² = 9 + 16 = 25 = 5². ¡Cuadra! Este es el famoso triangulo "3-4-5".</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — El triangulo rectangulo</h4>
+<ol>
+<li>¿Que angulo debe tener un triangulo para ser "rectangulo"? ¿Cuantos grados mide?</li>
+<li>En un triangulo rectangulo, ¿como se llama el lado mas largo y donde esta ubicado respecto al angulo recto?</li>
+<li>Un triangulo rectangulo tiene catetos de 6 y 8. Usa Pitagoras (cateto² + cateto² = hipotenusa²) para hallar la hipotenusa.</li>
+<li>De los lados 5, 12 y 13, ¿cual es la hipotenusa? Comprueba con Pitagoras.</li>
+<li>Menciona 2 situaciones reales (una de basket o videojuegos) donde calcular una distancia o altura sin medirla directamente seria util.</li>
+<li>Dibuja un triangulo rectangulo y etiqueta: angulo recto, hipotenusa y los dos catetos.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Energia electrica (nivel avanzado)</h3>
+
+<div class="ciencia">
+<h4>Voltaje, corriente y la formula de la potencia electrica</h4>
+<p>La electricidad es energia en movimiento: cargas que se desplazan por un cable. Para entenderla hay dos ideas clave, y una buena forma de imaginarlas es pensar en agua por una manguera:</p>
+<ul>
+<li><strong>Voltaje (V):</strong> es el "empuje" o presion que impulsa las cargas. Se mide en <strong>voltios</strong>. Es como la presion del agua en la manguera.</li>
+<li><strong>Corriente (I):</strong> es la <em>cantidad</em> de carga que pasa por segundo. Se mide en <strong>amperios</strong>. Es como cuanta agua sale por la manguera.</li>
+</ul>
+<h4>La formula de la potencia electrica</h4>
+<p>Cuando multiplicas el empuje por la cantidad, obtienes la potencia electrica: cuanta energia consume o entrega un aparato por segundo.</p>
+<p style="text-align:center"><strong>P = V × I</strong> (potencia = voltaje × corriente)</p>
+<p>El resultado esta en <strong>Watts</strong>, la misma unidad de potencia que viste ayer. Un aparato de mas Watts consume mas energia por segundo.</p>
+<h4>El consumo: el kilowatt-hora (kWh)</h4>
+<p>La compañia de luz no te cobra por Watts, sino por la <strong>energia total consumida</strong>. La unidad es el <strong>kilowatt-hora (kWh)</strong>: la energia que gasta un aparato de 1000 W (1 kW) funcionando durante 1 hora. Cuanto mas potente el aparato y mas tiempo encendido, mas kWh y mas cara la factura.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: potencia y consumo de una consola</h4>
+<p><strong>Problema:</strong> Una consola de videojuegos funciona a 120 voltios y consume una corriente de 1.5 amperios. (a) ¿Cual es su potencia? (b) Si juegas 4 horas, ¿cuantos kWh consume?</p>
+<p><strong>Paso 1 —</strong> Potencia: P = V × I = 120 × 1.5 = <strong>180 Watts</strong>.</p>
+<p><strong>Paso 2 —</strong> Paso los Watts a kilowatts: 180 W = 0.18 kW.</p>
+<p><strong>Paso 3 —</strong> Energia = potencia × tiempo = 0.18 kW × 4 h = <strong>0.72 kWh</strong>.</p>
+<p>La consola consume 180 W y, tras 4 horas de juego, gasta 0.72 kWh de energia. Por eso una consola muy potente encendida muchas horas se nota en la factura de luz.</p>
+</div>
+
+<div class="ciencia">
+<h4>Ejercicios — Energia electrica</h4>
+<ol>
+<li>Un cargador funciona a 5 V y 2 A. ¿Cual es su potencia? (P = V × I)</li>
+<li>Un televisor trabaja a 120 V y consume 0.8 A. Calcula su potencia en Watts.</li>
+<li>Un aparato tiene una potencia de 100 W. Si lo dejas encendido 5 horas, ¿cuantos kWh consume? (Pista: pasa 100 W a 0.1 kW.)</li>
+<li>De dos consolas, una es de 150 W y otra de 250 W, encendidas el mismo tiempo. ¿Cual consume mas energia y cual encarece mas la factura?</li>
+<li>Con tus palabras y usando la analogia del agua: ¿que diferencia hay entre voltaje y corriente?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: ARQUITECTURA</h4>
+<p><strong>La arquitectura es el arte y la ciencia de diseñar y construir edificios:</strong> casas, puentes, estadios y ciudades.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> <em>Los edificios modernos buscan ser "eficientes energeticamente". Investiga que es un edificio sustentable o ecologico y menciona 2 formas concretas en que ahorran energia (por ejemplo, aprovechar la luz del sol, buen aislamiento, paneles solares...). Explica por que eso reduce el consumo.</em></p>
+</div>
+
+<h3>Bloque 4: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("Meditacion y atencion plena: entrenar la mente").</p>
+<p>Responde:</p>
+<ol>
+<li>Segun el texto, ¿en que consiste basicamente meditar? Explicalo en una frase.</li>
+<li>Nombra 2 efectos de la meditacion que la ciencia SI ha comprobado con instrumentos.</li>
+<li>El texto separa "hechos comprobados" de "creencias". Da un ejemplo de cada uno sobre la meditacion.</li>
+<li>El texto habla de "estar en la zona" o "fluir". ¿Alguna vez lo sentiste jugando basket o un videojuego? Describelo.</li>
+<li><strong>Opinion:</strong> ¿te parece util distinguir un hecho de una creencia? ¿Por que crees que a veces se confunden?</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 2 — Analiza la eficiencia</h4>
+<p><strong>Hoy piensa como ingeniero:</strong> de toda la energia que entra a tu maquina, ¿cuanta se aprovecha (energia util) y cuanta se pierde como calor u otro desperdicio? Estima un porcentaje de <strong>eficiencia</strong> (recuerda: eficiencia = energia util / energia total × 100) y señala EN QUE PARTE de tu maquina se escapa energia. Ninguna maquina es 100% eficiente.</p>
+</div>
+
+<div class="page-break"></div>
+
+
+<h2>DIA 3 — MIERCOLES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — Razones trigonometricas: seno, coseno y tangente</h3>
+
+<div class="mate">
+<h4>Las tres estrellas de la trigonometria</h4>
+<p>Ayer viste el triangulo rectangulo con su hipotenusa y sus catetos. Hoy aparecen las <strong>razones trigonometricas</strong>: tres divisiones sencillas entre los lados que dependen de uno de los angulos (que no sea el recto). Primero, respecto a un angulo elegido, un cateto es el <strong>opuesto</strong> (el que esta enfrente del angulo) y otro el <strong>adyacente</strong> (el que esta pegado al angulo).</p>
+<p>Con eso, las tres razones son simplemente:</p>
+<ul>
+<li><strong>Seno del angulo:</strong> cateto opuesto / hipotenusa → <strong>sen = opuesto / hipotenusa</strong></li>
+<li><strong>Coseno del angulo:</strong> cateto adyacente / hipotenusa → <strong>cos = adyacente / hipotenusa</strong></li>
+<li><strong>Tangente del angulo:</strong> cateto opuesto / cateto adyacente → <strong>tan = opuesto / adyacente</strong></li>
+</ul>
+<p>Un truco clasico para recordarlas es <strong>SOH-CAH-TOA</strong>: <strong>S</strong>eno = <strong>O</strong>puesto/<strong>H</strong>ipotenusa, <strong>C</strong>oseno = <strong>A</strong>dyacente/<strong>H</strong>ipotenusa, <strong>T</strong>angente = <strong>O</strong>puesto/<strong>A</strong>dyacente.</p>
+<h4>El angulo de un tiro de basket</h4>
+<p>Cuando lanzas a la canasta, el balon sale con cierto <strong>angulo</strong> respecto al suelo. Ese angulo, junto con la trigonometria, decide que tan alto sube y que tan lejos llega el balon. Los entrenadores hablan de "arco" del tiro: un buen arco ronda los 45-52°. La trigonometria es la matematica escondida detras de ese arco.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: calcular las razones</h4>
+<p><strong>Problema:</strong> En un triangulo rectangulo, respecto a un angulo, el cateto opuesto mide 3, el adyacente mide 4 y la hipotenusa mide 5. Calcula el seno, el coseno y la tangente de ese angulo.</p>
+<p><strong>Paso 1 —</strong> Seno = opuesto / hipotenusa = 3 / 5 = <strong>0.6</strong>.</p>
+<p><strong>Paso 2 —</strong> Coseno = adyacente / hipotenusa = 4 / 5 = <strong>0.8</strong>.</p>
+<p><strong>Paso 3 —</strong> Tangente = opuesto / adyacente = 3 / 4 = <strong>0.75</strong>.</p>
+<p>Listo: para ese angulo, sen = 0.6, cos = 0.8 y tan = 0.75. Fijate que solo dividiste lados; la trigonometria basica es eso.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Seno, coseno y tangente</h4>
+<ol>
+<li>Escribe con tus palabras la definicion de seno, coseno y tangente (usa "opuesto", "adyacente", "hipotenusa").</li>
+<li>Un triangulo rectangulo tiene opuesto = 6, adyacente = 8, hipotenusa = 10. Calcula seno, coseno y tangente.</li>
+<li>Con opuesto = 5, adyacente = 12, hipotenusa = 13, calcula las tres razones.</li>
+<li>Si el seno de un angulo es opuesto/hipotenusa = 4/5, ¿cuanto vale el seno en decimal?</li>
+<li>La tangente de un angulo es opuesto/adyacente. Si el opuesto es 9 y el adyacente es 3, ¿cuanto vale la tangente?</li>
+<li>Un balon sale con un angulo cuyo cateto opuesto (altura) es 3 y adyacente (avance) es 4. ¿Cual es la tangente de ese angulo del tiro?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Energia y calor especifico</h3>
+
+<div class="ciencia">
+<h4>¿Cuanta energia cuesta calentar algo?</h4>
+<p>Ya sabes que el calor es energia que se transfiere de lo caliente a lo frio. Ahora, una pregunta fina: para subir la temperatura de dos cosas distintas los <strong>mismos</strong> grados, ¿hace falta la misma energia? La respuesta es <strong>no</strong>, y eso lo explica el <strong>calor especifico</strong>.</p>
+<p>El <strong>calor especifico</strong> es la cantidad de energia que necesita un material para que 1 kilo de el suba 1 grado de temperatura. Cada material tiene el suyo:</p>
+<ul>
+<li>El <strong>agua</strong> tiene un calor especifico <em>muy alto</em>: cuesta mucha energia calentarla (y por eso tambien tarda en enfriarse).</li>
+<li>Los <strong>metales</strong> tienen calor especifico <em>bajo</em>: con poca energia se calientan rapidisimo (por eso una cuchara de metal en una sopa quema enseguida).</li>
+</ul>
+<p>La formula es <strong>Q = m · c · ΔT</strong>: energia (Q) = masa (m) × calor especifico (c) × cambio de temperatura (ΔT, cuantos grados sube). No hace falta que la memorices; lo importante es la <strong>idea</strong>: mas masa, mas grados y mayor calor especifico → mas energia necesaria.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: agua vs. metal</h4>
+<p><strong>Problema:</strong> Compara: para subir 10 grados la temperatura de 1 kg de agua se necesitan unos 42000 J, pero para subir esos mismos 10 grados 1 kg de hierro solo hacen falta unos 4500 J. ¿Que material se calienta con menos energia y por que?</p>
+<p><strong>Paso 1 —</strong> Comparo los dos numeros: el agua pide 42000 J y el hierro solo 4500 J para el mismo cambio de temperatura.</p>
+<p><strong>Paso 2 —</strong> El hierro necesita casi 10 veces menos energia. Se calienta mucho mas facil.</p>
+<p><strong>Paso 3 —</strong> Interpreto: el hierro tiene un <strong>calor especifico bajo</strong> y el agua uno <strong>alto</strong>. Por eso la sarten de metal se calienta al instante, pero el agua adentro tarda en hervir.</p>
+</div>
+
+<div class="ciencia">
+<h4>Ejercicios — Calor especifico</h4>
+<ol>
+<li>Explica con tus palabras que es el calor especifico.</li>
+<li>¿Que se calienta mas rapido con la misma energia: el agua o un metal? ¿Por que?</li>
+<li>En un dia de sol, la arena de la playa quema pero el agua del mar sigue fresca. Explica esto usando la idea de calor especifico.</li>
+<li>Si necesitas calentar MAS masa de un mismo material los mismos grados, ¿hara falta mas o menos energia? Explica.</li>
+<li>Da un ejemplo cotidiano donde te convenga que algo tenga calor especifico alto (que tarde en calentarse o enfriarse).</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: MUSICOLOGIA</h4>
+<p><strong>La musicologia es la ciencia que estudia la musica:</strong> su historia, su teoria y como funciona fisicamente el sonido.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> <em>El sonido es energia que viaja en forma de ondas. Investiga muy basicamente que es una onda de sonido (que la produce y como se propaga por el aire) y como llega la musica desde un altavoz hasta tus oidos. Explicalo con tus palabras conectandolo con la idea de energia que viaja.</em></p>
+</div>
+
+<h3>Bloque 4: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("El sol: la fuente de casi toda la energia").</p>
+<p>Responde:</p>
+<ol>
+<li>Segun el texto, ¿por que se dice que casi toda la energia de la Tierra viene del sol? Explica la cadena (sol → plantas → ...).</li>
+<li>¿Que es la fotosintesis y por que el texto la llama uno de los procesos mas importantes del planeta?</li>
+<li>El texto dice que hasta la gasolina y el viento "vienen del sol". Explica uno de los dos casos.</li>
+<li>¿Por que la energia solar se considera renovable y limpia?</li>
+<li><strong>Dato favorito:</strong> ¿que idea del texto te sorprendio mas y por que? (1-2 oraciones)</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 3 — Mejora tu diseño</h4>
+<p><strong>Hoy eres inventor:</strong> mirando donde tu maquina pierde energia (lo que analizaste ayer), propon al menos <strong>2 mejoras</strong> para hacerla mas eficiente: menos rozamiento, mejor aislamiento del calor, mejores materiales, aprovechar la energia que se desperdicia... Explica por que cada mejora subiria la eficiencia.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 4 — VIERNES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — Aplicaciones de trigonometria (repaso)</h3>
+
+<div class="mate">
+<h4>Trigonometria en accion: alturas y distancias</h4>
+<p>Esta semana viste que es la trigonometria, el triangulo rectangulo (hipotenusa y catetos) y las tres razones (seno, coseno, tangente). Hoy la aplicamos a lo que mejor hace: <strong>calcular alturas y distancias sin medirlas directamente</strong>.</p>
+<p>La idea es sencilla: si formas un triangulo rectangulo con la situacion real (por ejemplo, tu, el suelo y la punta de un edificio), conoces un angulo y un lado, puedes usar una razon trigonometrica para despejar el lado que no conoces.</p>
+<p>La razon estrella para alturas es la <strong>tangente</strong>, porque relaciona el lado de arriba (opuesto = altura) con el lado horizontal (adyacente = distancia): <strong>tan(angulo) = altura / distancia</strong>. Si despejas: <strong>altura = distancia × tan(angulo)</strong>.</p>
+<div class="dato">
+En un videojuego, para saber a que altura impacta un disparo lanzado con cierto angulo desde cierta distancia, el motor calcula exactamente altura = distancia × tan(angulo). Trigonometria pura corriendo a 60 cuadros por segundo.
+</div>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: altura de una canasta... o de un arbol</h4>
+<p><strong>Problema:</strong> Estas a 10 metros de un poste. Miras hacia su punta con un angulo cuya tangente vale 0.7. ¿Que altura tiene el poste (aprox.), suponiendo que miras desde el nivel del suelo?</p>
+<p><strong>Paso 1 —</strong> Uso la relacion: tan(angulo) = altura / distancia.</p>
+<p><strong>Paso 2 —</strong> Despejo la altura: altura = distancia × tan(angulo) = 10 × 0.7.</p>
+<p><strong>Paso 3 —</strong> Calculo: 10 × 0.7 = <strong>7 metros</strong>.</p>
+<p>El poste mide unos 7 metros de alto, ¡y no tuviste que treparte a el! Solo necesitaste una distancia y un angulo.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Aplicaciones de trigonometria</h4>
+<ol>
+<li>Estas a 8 m de un arbol y la tangente del angulo hacia su copa es 0.5. ¿Que altura tiene el arbol? (altura = distancia × tan)</li>
+<li>Desde 20 m de un edificio, la tangente del angulo a su punta es 1.2. ¿Que altura tiene?</li>
+<li>Un triangulo rectangulo tiene opuesto = 6 y adyacente = 8. Calcula la tangente de ese angulo.</li>
+<li>Escribe la definicion de seno, coseno y tangente (repaso rapido).</li>
+<li>De los lados 8, 15 y 17, ¿cual es la hipotenusa? Comprueba con Pitagoras.</li>
+<li>Con tus palabras: ¿por que la trigonometria nos deja calcular una altura sin subir a medirla?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Repaso integrador de la fisica de la energia (semanas 7-8)</h3>
+
+<div class="ciencia">
+<h4>Todo lo que aprendiste sobre la energia, junto</h4>
+<p>Cierre del bloque de fisica. Repasemos las grandes ideas de estas dos semanas con sus formulas:</p>
+<ul>
+<li><strong>Trabajo:</strong> aplicar fuerza y mover algo. <strong>W = F × d</strong> (en Joules).</li>
+<li><strong>Energia cinetica:</strong> la del movimiento. <strong>Ec = ½·m·v²</strong> (la velocidad va al cuadrado, ¡pesa mucho!).</li>
+<li><strong>Energia potencial:</strong> la guardada por la altura. <strong>Ep = m·g·h</strong>.</li>
+<li><strong>Conservacion:</strong> la energia no se crea ni se destruye, solo se transforma (Ec + Ep se mantiene).</li>
+<li><strong>Potencia:</strong> que tan rapido se hace el trabajo. <strong>P = W / t</strong> (en Watts).</li>
+<li><strong>Potencia electrica:</strong> <strong>P = V × I</strong> (voltaje por corriente).</li>
+<li><strong>Calor y termodinamica:</strong> el calor fluye de lo caliente a lo frio; ninguna maquina es 100% eficiente; distintos materiales necesitan distinta energia para calentarse (calor especifico).</li>
+<li><strong>Renovables:</strong> solar, eolica, y el futuro (hidrogeno, fusion). Y la gran union: <strong>E = m·c²</strong>, materia y energia son lo mismo.</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: un problema que junta todo</h4>
+<p><strong>Problema:</strong> Un balon de 0.5 kg cae desde 4 m de altura (g = 9.8 m/s²). (a) ¿Cuanta energia potencial tenia arriba? (b) Por conservacion, ¿cuanta energia cinetica aprox. tendra al llegar al suelo? (c) Si un motor entregara esa misma energia en 0.5 s, ¿que potencia seria?</p>
+<p><strong>Paso 1 —</strong> Energia potencial: Ep = m·g·h = 0.5 × 9.8 × 4 = <strong>19.6 J</strong>.</p>
+<p><strong>Paso 2 —</strong> Por conservacion, abajo (altura 0) toda esa energia es cinetica: <strong>Ec ≈ 19.6 J</strong>.</p>
+<p><strong>Paso 3 —</strong> Potencia: P = W / t = 19.6 / 0.5 = <strong>39.2 Watts</strong>.</p>
+<p>Un solo problema uso energia potencial, conservacion y potencia: asi se conecta todo el bloque.</p>
+</div>
+
+<div class="ciencia">
+<h4>Preguntas para responder — Repaso integrador</h4>
+<ol>
+<li>Empujas una caja con 25 N a lo largo de 4 m. ¿Cuanto trabajo hiciste? (W = F × d)</li>
+<li>Un balon de 0.6 kg va a 5 m/s. Calcula su energia cinetica (Ec = ½·m·v²).</li>
+<li>Un jugador hace 900 J de trabajo en 1.5 s. ¿Cual es su potencia? (P = W / t)</li>
+<li>Una consola trabaja a 120 V y 1.2 A. ¿Cual es su potencia electrica? (P = V × I)</li>
+<li>Explica con tus palabras por que ninguna maquina es 100% eficiente (2a ley) y a donde va la energia perdida.</li>
+<li>Nombra dos fuentes de energia renovable y di que transformacion de energia hace cada una.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: CROMATOLOGIA (teoria del color)</h4>
+<p><strong>La cromatologia estudia el color:</strong> que es, como lo percibimos y como se relaciona con la luz.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> <em>La luz es energia, y los colores son en realidad diferentes tipos de luz. Investiga por que vemos colores y que es el espectro de la luz (el arcoiris). ¿Por que un objeto rojo se ve rojo? Explicalo con lo que sabes de energia y luz.</em></p>
+<p><em>Con esta ya completas 4 ciencias nuevas esta semana (zoologia, arquitectura, musicologia y cromatologia). Sumalas a tu Enciclopedia de las Ciencias.</em></p>
+</div>
+
+<h3>Bloque 4: Lectura y cierre</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Repasa los 3 textos de esta semana (la respiracion, la meditacion y el sol) y responde:</p>
+<ol>
+<li>Los tres textos hablan de energia desde distintos angulos (el cuerpo, la mente y el sol). ¿Que idea en comun encuentras entre ellos?</li>
+<li><strong>Dato favorito:</strong> ¿que dato o idea de los tres textos te sorprendio mas? (1-2 oraciones)</li>
+<li><strong>Opinion:</strong> los textos separan lo comprobado por la ciencia de lo que es creencia. ¿Por que crees que es importante saber distinguir eso?</li>
+<li><strong>Enciclopedia de las Ciencias:</strong> ya tienes 8 ciencias con sus preguntas (geologia, astronomia, filologia, botanica, zoologia, arquitectura, musicologia y cromatologia). Revisa tu plan de presentacion y anota como vas a organizar todo el material del bloque.</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 4 — Version final mejorada</h4>
+<p><strong>Hoy cierras el proyecto:</strong> presenta la <strong>version final mejorada</strong> de tu Maquina de energia. Incluye: la cadena de transformacion de energia, su <strong>potencia</strong> (Watts), su <strong>eficiencia</strong> (porcentaje) y las <strong>mejoras</strong> que aplicaste. Preparala en el formato que mas te guste (diagrama, maqueta, video corto) y sumala a tu <strong>Enciclopedia de las Ciencias</strong>.</p>
+</div>
+
+<div class="page-break"></div>
+
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+
+<div class="lectura">
+<h2>Texto 1 — La respiracion: el puente entre el cuerpo y la energia</h2>
+
+<p>Respiras unas 20,000 veces al dia sin darte cuenta de casi ninguna de ellas. Ahora mismo, mientras lees, tu cuerpo esta tomando aire y soltandolo una y otra vez sin que tengas que ordenarlo. Es el gesto mas repetido de tu vida: empezaste a hacerlo en el segundo que naciste y no vas a parar hasta el ultimo. Y sin embargo, aunque sea tan automatico, la respiracion es tambien una de las poquisimas funciones del cuerpo que puedes controlar a voluntad cuando quieres: puedes respirar mas rapido, mas lento, retener el aire, soltarlo de a poco. Esa doble naturaleza — automatica pero controlable — la convierte en algo unico y en un verdadero puente entre el cuerpo y lo que sentimos. Por eso, sin ponernos de acuerdo, casi todas las culturas del mundo pusieron la respiracion en el centro de sus practicas de bienestar. Vamos a entender por que.</p>
+
+<h3>Que pasa por dentro cuando respiras</h3>
+
+<p>Empecemos por la ciencia, que es fascinante. Cuando inhalas (tomas aire), entra por tu nariz o tu boca, baja por la traquea y llega a los <strong>pulmones</strong>, dos organos esponjosos que se llenan como globos. Pero los pulmones no se inflan solos: debajo de ellos hay un musculo grande, con forma de cupula, llamado <strong>diafragma</strong>. Cuando el diafragma se contrae, baja y se aplana, y eso hace mas espacio en el pecho, de modo que los pulmones se expanden y el aire entra. Cuando el diafragma se relaja, sube de nuevo, empuja los pulmones y el aire sale. Es decir: el diafragma es la "bomba" invisible que hace entrar y salir el aire, subiendo y bajando sin descanso.</p>
+
+<p>¿Y para que sirve todo ese aire? Aqui esta lo importante. El aire que respiras contiene <strong>oxigeno</strong>, un gas que tus celulas necesitan para funcionar. Dentro de los pulmones, el oxigeno pasa a la sangre, y la sangre lo reparte por todo el cuerpo, celula por celula. Las celulas usan ese oxigeno para "quemar" el alimento y sacar de ahi la energia que te mantiene viva y en movimiento (¿te acuerdas de la energia quimica de la que hablamos en semanas pasadas? Aqui esta en accion). En ese proceso las celulas producen un gas de desecho, el <strong>dioxido de carbono</strong> (CO2), que la sangre lleva de vuelta a los pulmones para que lo expulses al exhalar. Por eso el trato es siempre el mismo: <strong>al inhalar entra oxigeno, al exhalar sale dioxido de carbono</strong>. Es un intercambio perfecto que se repite miles de veces al dia y que literalmente te mantiene con vida.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Aunque sientas que respirar es cosa de los pulmones, el verdadero motor es el diafragma. Los cantantes de opera, los actores y los musicos de instrumentos de viento entrenan durante años este musculo para controlar el aire con precision. Un buen manejo del diafragma es lo que permite sostener una nota larga sin quedarse sin aire.
+</div>
+
+<h3>Por que casi todas las tradiciones hablan de la respiracion</h3>
+
+<p>Mucho antes de que se supiera nada sobre el oxigeno o el CO2, las grandes tradiciones de casi todo el mundo notaron algo que cualquiera puede comprobar: la forma en que respiras esta ligada a como te sientes. Cuando te asustas o te enojas, tu respiracion se vuelve rapida y corta. Cuando estas en paz o a punto de dormirte, se vuelve lenta y profunda. Y aqui esta el descubrimiento que hicieron esas culturas: la relacion tambien funciona al reves. Si respiras a proposito de forma lenta y profunda, empiezas a sentirte mas calmado, aunque estuvieras nervioso. La respiracion no solo refleja tu estado interior: tambien lo puede cambiar.</p>
+
+<p>En la <strong>India</strong>, esa idea dio origen al <em>pranayama</em>, todo un arte de tecnicas de respiracion controlada que forma parte del yoga. En la tradicion <strong>Zen</strong> de Japon y en el budismo en general, la atencion a la respiracion es la puerta de entrada a la meditacion: los practicantes se sientan y simplemente observan como el aire entra y sale, una y otra vez. En muchas <strong>artes marciales</strong> se enseña a coordinar el movimiento y el golpe con la exhalacion. Incluso en el <strong>canto</strong> y la musica de casi todas las culturas, aprender a respirar bien es la primera leccion. Culturas que no se conocian entre si llegaron todas a la misma conclusion: quien domina su respiracion, domina en buena parte su estado interior.</p>
+
+<h3>Lo que la ciencia moderna confirmo</h3>
+
+<p>Durante mucho tiempo, esto quedaba en el terreno de la sabiduria tradicional. Pero en las ultimas decadas la ciencia lo estudio con instrumentos y confirmo que es completamente real, y ademas explico por que funciona. La clave esta en tu <strong>sistema nervioso</strong>, que tiene dos "modos" principales de operar:</p>
+<ul>
+<li>El <strong>modo de alerta</strong> (llamado sistema nervioso simpatico): es el que se enciende cuando hay peligro, estres o emocion fuerte. Acelera el corazon, tensa los musculos, apura la respiracion. Es el modo "acelerador", pensado para reaccionar rapido.</li>
+<li>El <strong>modo de calma</strong> (llamado sistema nervioso parasimpatico): es el que se enciende cuando estas seguro y relajado. Baja el ritmo del corazon, afloja los musculos, hace mas lenta la respiracion y ayuda a la digestion y al descanso. Es el modo "freno", pensado para recuperarse.</li>
+</ul>
+
+<p>Lo asombroso es esto: <strong>la respiracion lenta y profunda activa directamente el modo de calma</strong>. Cuando alargas tus exhalaciones y respiras despacio, le mandas a tu cerebro una señal clara de "todo esta bien, puedes relajarte", y el cuerpo baja las revoluciones: el corazon se aquieta, la presion baja un poco, la tension muscular cede. No es magia ni imaginacion: es un mecanismo fisico medible. Aquello que las tradiciones intuyeron durante siglos, la ciencia lo comprobo y hasta le puso nombre. Por eso hoy la respiracion lenta se usa en hospitales, en terapias contra la ansiedad, en preparacion de deportistas y hasta en programas escolares.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Una tecnica muy sencilla y estudiada es la "respiracion en cuadrado": inhalas contando hasta 4, retienes el aire contando hasta 4, exhalas contando hasta 4 y esperas contando hasta 4 antes de volver a empezar. Repetido unas cuantas veces, este ejercicio ayuda a calmar los nervios en minutos. Lo usan pilotos, deportistas y hasta soldados antes de situaciones de mucha presion.
+</div>
+
+<h3>Tecnicas practicas que puedes probar</h3>
+
+<p>Lo mejor de la respiracion es que no necesitas nada: ni ropa especial, ni equipo, ni un lugar particular. Aqui van algunas tecnicas sencillas:</p>
+<ul>
+<li><strong>Respiracion profunda con el vientre:</strong> pon una mano en tu barriga. Inhala despacio por la nariz y siente como se infla la barriga (no el pecho). Exhala lento por la boca y siente como baja. Eso es usar bien el diafragma.</li>
+<li><strong>Exhalacion larga:</strong> haz que tu exhalacion dure mas que tu inhalacion (por ejemplo, inhala en 4 tiempos y exhala en 6). Alargar la salida del aire es lo que mas activa el modo de calma.</li>
+<li><strong>Tres respiraciones antes de algo importante:</strong> antes de un examen, una presentacion o un concierto, detente y haz tres respiraciones lentas y conscientes. Es un truco simple y efectivo para bajar los nervios.</li>
+</ul>
+
+<h3>La respiracion en la musica, el canto y el deporte</h3>
+
+<p>Como tocas violin, seguramente ya sabes algo de esto sin haberlo pensado: la respiracion tiene un papel enorme en la musica. Un cantante que no controla su aire no puede sostener una frase larga ni afinar bien; por eso lo primero que se enseña en canto es a respirar desde el diafragma. Los que tocan instrumentos de viento (flauta, saxofon, trompeta) dependen por completo del control del aire. Y aunque el violin no se toca con el aliento, los buenos interpretes respiran con la musica: toman aire en las pausas, sueltan la tension al exhalar y usan la respiracion para marcar el fraseo, casi como si el instrumento respirara con ellos.</p>
+
+<p>En el deporte pasa lo mismo. Los corredores regulan su respiracion para aguantar mas; los que hacen pesas exhalan en el momento del esfuerzo; los nadadores organizan toda su tecnica alrededor de cuando y como respirar. Y en cualquier situacion de nervios — un penal, un saque decisivo, el instante antes de salir al escenario — una respiracion profunda es la herramienta mas rapida y confiable para recuperar la calma y el control.</p>
+
+<p>Al final, la respiracion es exactamente eso: un puente. Une lo automatico con lo voluntario, el cuerpo con las emociones, la ciencia con las tradiciones. Es gratis, la llevas siempre contigo y esta disponible en cualquier momento. Aprender a usarla bien es una de las herramientas mas simples y poderosas que puedes tener para el resto de tu vida.</p>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — Meditacion y atencion plena: entrenar la mente</h2>
+
+<p>Imagina que pudieras entrenar tu mente igual que entrenas un musculo o practicas el violin: con ejercicios repetidos, poco a poco, hasta que se vuelva mas fuerte, mas estable y mas obediente. Suena raro, porque estamos acostumbrados a pensar que la mente "es como es" y que no se puede cambiar. Pero resulta que si se puede, y la practica que se usa para eso tiene miles de años de historia y hoy es estudiada seriamente por la ciencia. Se llama <strong>meditacion</strong>, y su version mas conocida en el mundo moderno se llama <strong>atencion plena</strong> o <em>mindfulness</em>. Vamos a entender que es, que parte de todo esto esta comprobado y que parte sigue siendo creencia, porque distinguir esas dos cosas es justo lo que te vuelve una persona que piensa con claridad.</p>
+
+<h3>Que es la meditacion</h3>
+
+<p>En pocas palabras, meditar es <strong>entrenar la atencion</strong>. En lugar de dejar que la mente salte de un pensamiento a otro sin control (que es lo que hace casi todo el tiempo), eliges algo en que concentrarte — normalmente la respiracion — y practicas volver a ello una y otra vez cada vez que te distraes. Eso es, en esencia, casi toda la meditacion: notar que te fuiste con un pensamiento, y volver con suavidad a lo que estabas observando. Parece simple, y lo es, pero no es facil: la mente se escapa constantemente. Por eso se le llama "practica".</p>
+
+<p>La meditacion aparece en muchisimas culturas, cada una a su manera:</p>
+<ul>
+<li>En el <strong>budismo</strong> (nacido en la India y extendido por toda Asia) la meditacion es central; hay tradiciones enteras, como el Zen japones, dedicadas casi por completo a sentarse a meditar.</li>
+<li>En el <strong>hinduismo</strong> la meditacion se practica desde hace milenios, muchas veces junto con el yoga, repitiendo sonidos o palabras (mantras) o concentrandose en la respiracion.</li>
+<li>En muchas tradiciones <strong>cristianas, judias y musulmanas</strong> existen formas de oracion contemplativa y silenciosa que se parecen mucho a la meditacion.</li>
+<li>En el mundo <strong>moderno y laico</strong> (es decir, sin religion), la atencion plena o <em>mindfulness</em> tomo el corazon de estas practicas — concentrarse en el presente sin juzgar — y lo separo de lo religioso para usarlo como una herramienta de salud mental. Hoy se enseña en hospitales, empresas, equipos deportivos y escuelas de todo el mundo.</li>
+</ul>
+
+<div class="dato">
+<strong>Dato:</strong> La palabra <em>mindfulness</em> se traduce como "atencion plena" o "conciencia plena": estar plenamente presente en lo que haces ahora, sin que la mente se escape al pasado (recuerdos, arrepentimientos) ni al futuro (preocupaciones, planes). Suena obvio, pero pasamos gran parte del dia con la mente en cualquier lado menos en lo que estamos haciendo.
+</div>
+
+<h3>Lo que la ciencia SI ha comprobado</h3>
+
+<p>Aqui es donde la cosa se pone interesante de verdad, porque la meditacion es una de esas practicas tradicionales que la ciencia moderna decidio estudiar con seriedad, usando escaneos del cerebro y experimentos controlados. Y encontro efectos reales y medibles. Estos son algunos de los mejor confirmados:</p>
+<ul>
+<li><strong>Reduce el estres y la ansiedad.</strong> Es el efecto mas estudiado. Las personas que meditan con regularidad muestran niveles mas bajos de las hormonas del estres y dicen sentirse mas tranquilas. Esto se mide, no solo se cree.</li>
+<li><strong>Mejora la atencion y la concentracion.</strong> Tiene todo el sentido: si pasas tiempo practicando volver la atencion a un punto, tu capacidad de concentrarte mejora, igual que un musculo que ejercitas.</li>
+<li><strong>Cambia el cerebro.</strong> Este es quiza el hallazgo mas asombroso. Con aparatos que fotografian el cerebro, los cientificos vieron que en las personas que meditan durante mucho tiempo cambian fisicamente algunas zonas del cerebro: se refuerzan las areas ligadas a la atencion y la calma. El cerebro es "moldeable" (los cientificos lo llaman plasticidad), y la meditacion lo moldea, tal como el ejercicio moldea el cuerpo.</li>
+<li><strong>Ayuda a manejar las emociones.</strong> Quienes meditan suelen reaccionar de forma menos impulsiva y recuperan la calma mas rapido despues de un disgusto.</li>
+</ul>
+
+<p>Todo esto esta comprobado con evidencia solida. No es opinion ni moda: es ciencia.</p>
+
+<div class="dato">
+<strong>Dato:</strong> En estudios con monjes budistas que llevaban decenas de miles de horas de meditacion, los cientificos encontraron patrones de actividad cerebral muy poco comunes, especialmente relacionados con la calma y la compasion. Esto sugiere que la mente, entrenada durante años, puede alcanzar estados que en la mayoria de las personas casi no aparecen.
+</div>
+
+<h3>Lo que sigue siendo creencia (y no hecho comprobado)</h3>
+
+<p>Ahora viene la parte donde hay que ser honestos, porque no todo lo que se dice sobre la meditacion esta demostrado. Alrededor de estas practicas hay tambien <strong>afirmaciones espirituales</strong> que la ciencia no ha comprobado y probablemente no pueda comprobar. Por ejemplo: que meditando se accede a "otros planos de conciencia", que se conecta con una energia universal, que se puede alcanzar la "iluminacion", o que la mente puede afectar el mundo fisico a distancia. Estas ideas pertenecen al terreno de las creencias religiosas o filosoficas de cada tradicion. Pueden ser valiosas o inspiradoras para quien las adopta, pero <strong>no son hechos demostrados</strong>, y es importante no confundirlas con los beneficios medibles.</p>
+
+<p>La distincion es sencilla y muy util: <em>"la meditacion reduce el estres"</em> es un hecho comprobado, se puede medir en un laboratorio. <em>"La meditacion conecta tu alma con el universo"</em> es una creencia espiritual, que cada quien puede sostener o no, pero que no se puede probar ni medir. Las dos cosas pueden coexistir sin problema; lo unico que no hay que hacer es presentarlas como si tuvieran el mismo tipo de respaldo. Una persona que piensa bien puede aprovechar perfectamente los beneficios comprobados de la meditacion sin necesidad de creer en la parte espiritual, y otra persona puede vivir la parte espiritual con total respeto sabiendo que es su creencia. Lo importante es tener claro que es que.</p>
+
+<h3>Como empezar, de forma simple</h3>
+
+<p>Lo bueno es que no necesitas creer en nada ni pertenecer a ninguna tradicion para probar los beneficios reales. Empezar es facilisimo:</p>
+<ol>
+<li>Sientate comodo, con la espalda derecha pero sin tension. Puedes cerrar los ojos o dejarlos entreabiertos.</li>
+<li>Lleva tu atencion a la respiracion. No la cambies, solo observala: siente como el aire entra y como sale.</li>
+<li>En algun momento (muy pronto) tu mente se ira a otro lado: un recuerdo, una idea, una preocupacion. Eso es normal y le pasa a todo el mundo, siempre.</li>
+<li>Cuando te des cuenta de que te distrajiste, no te enojes contigo. Simplemente vuelve, con suavidad, a la respiracion. Ese "darte cuenta y volver" es el ejercicio completo.</li>
+<li>Empieza con poco: uno o dos minutos al dia ya es suficiente al principio. Como con el violin, lo que importa es la constancia, no la cantidad.</li>
+</ol>
+
+<p>Notaras que meditar se parece muchisimo a practicar un instrumento. Al principio cuesta, te frustras, sientes que no avanzas. Pero con la practica constante la mente se va volviendo mas estable, igual que los dedos se vuelven mas agiles con el violin. En ambos casos no se trata de "lograrlo perfecto", sino de entrenar dia a dia. Y en ambos casos, el esfuerzo repetido termina cambiando de verdad lo que eres capaz de hacer.</p>
+
+<h3>La atencion plena en las cosas de todos los dias</h3>
+
+<p>Un error muy comun es pensar que la atencion plena solo sirve mientras estas sentada con los ojos cerrados. En realidad, la parte mas util llega cuando llevas esa forma de prestar atencion a las actividades normales del dia. Puedes comer con atencion plena, saboreando de verdad la comida en lugar de tragarla mirando una pantalla. Puedes caminar prestando atencion a tus pasos y a lo que te rodea, en vez de ir con la cabeza perdida en preocupaciones. Y puedes, sobre todo, tocar el violin con atencion plena: escuchando cada nota, sintiendo el arco y las cuerdas, presente por completo en la musica en lugar de pensar en el error que cometiste hace un minuto o en la parte dificil que viene despues. Los grandes musicos, los deportistas de elite y los artistas describen muchas veces un estado especial al que llaman "estar en la zona" o "fluir": momentos en los que la mente esta totalmente concentrada en lo que hace y el tiempo parece desaparecer. Ese estado se parece mucho a la atencion plena, y se puede cultivar.</p>
+
+<p>Por eso cada vez mas escuelas, orquestas y equipos deportivos enseñan pequeños ejercicios de atencion plena a niños y jovenes: unos minutos de respiracion consciente antes de un examen, de un concierto o de un partido ayudan a calmar los nervios y a concentrarse mejor. No es una creencia magica; es un entrenamiento practico de una habilidad que sirve para toda la vida. Aprender a dirigir tu propia atencion — a elegir en que te concentras y a volver cuando te distraes — es, quiza, uno de los aprendizajes mas utiles que existen, porque esa mente entrenada te acompaña en absolutamente todo lo demas que haces.</p>
+</div>
+
+<div class="lectura">
+<h2>Texto 3 — El sol: la fuente de casi toda la energia</h2>
+
+<p>Sal un dia despejado, cierra los ojos y siente el sol en la cara. Ese calor que notas viajo 150 millones de kilometros por el espacio vacio para llegar hasta tu piel, y tardo un poco mas de ocho minutos en el camino. Es una idea que da vertigo: la luz que te calienta ahora salio del sol hace ocho minutos. Pero lo mas asombroso no es la distancia ni la velocidad. Lo verdaderamente asombroso es esto: <strong>casi toda la energia que existe y se usa en la Tierra viene, de una forma u otra, de esa estrella</strong>. Tu desayuno, el viento, la gasolina de los autos, la electricidad de tu casa, el crecimiento de las plantas, tu propio cuerpo en movimiento... casi todo se remonta al sol. Vamos a seguir esa pista, porque es una de las historias mas hermosas que cuenta la ciencia.</p>
+
+<h3>El sol como origen de casi todo</h3>
+
+<p>El sol es una gigantesca esfera de gas ardiente que produce cantidades inimaginables de energia en su nucleo. Esa energia sale al espacio en forma de luz y calor, y una pequeñisima parte llega a la Tierra. Pero esa pequeña parte alcanza para poner en marcha casi todo lo que ocurre en nuestro planeta. Sigamos la cadena paso a paso:</p>
+
+<p><strong>Todo empieza con las plantas.</strong> Las plantas hacen algo que ningun animal sabe hacer: capturan la luz del sol y la transforman en alimento. Ese proceso se llama <strong>fotosintesis</strong>, y es, sin exagerar, uno de los procesos mas importantes del planeta. Con la energia de la luz, agua y el dioxido de carbono del aire, las plantas fabrican su propio alimento (azucares) y, de paso, liberan el oxigeno que todos los animales respiramos. Es decir: las plantas convierten la luz del sol en energia quimica guardada en forma de comida. Son como pequeñas fabricas que funcionan con energia solar.</p>
+
+<p><strong>Despues viene la cadena alimentaria.</strong> Los animales que comen plantas (una vaca, un conejo, tu cuando comes una ensalada) obtienen esa energia solar guardada en los vegetales. Y los animales que comen a otros animales obtienen esa misma energia de segunda mano. Asi que cuando corres, saltas o tocas el violin, estas usando energia que originalmente vino del sol, paso a una planta por fotosintesis, y llego hasta ti a traves de lo que comes. Eres, literalmente, energia solar en movimiento.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La fotosintesis es tan importante que, sin ella, no existiria practicamente ninguna forma de vida animal en la Tierra: ni el oxigeno que respiramos ni la comida de la que dependemos. Cada bocado que comes y cada respiro que tomas es, en el fondo, un regalo del trabajo silencioso de las plantas convirtiendo luz en vida.
+</div>
+
+<p><strong>Y sigue: hasta los combustibles vienen del sol.</strong> El petroleo, el carbon y el gas natural (los llamados combustibles fosiles que mueven autos, aviones y fabricas) son los restos, transformados durante millones de años, de plantas y animales antiguos. Y esas plantas y animales, cuando vivian, obtenian su energia... del sol, otra vez. Asi que cuando un auto quema gasolina, esta liberando energia solar que quedo guardada hace millones de años. Incluso el <strong>viento</strong> nace del sol: el sol calienta el aire de forma despareja en distintas partes del planeta, el aire caliente sube, el frio ocupa su lugar, y ese movimiento del aire es el viento (que hoy usamos para generar electricidad con molinos). Y el <strong>agua de los rios</strong>, que mueve las represas, subio como vapor a las nubes gracias al calor del sol. Mires donde mires, el rastro lleva a la misma estrella.</p>
+
+<h3>Por que tantas culturas veneraron al sol</h3>
+
+<p>Si la ciencia moderna acaba de descubrir hasta que punto dependemos del sol, no sorprende que las culturas antiguas, que dependian de el todavia mas directamente para sus cosechas, lo consideraran algo enorme, poderoso y muchas veces sagrado. Sin instrumentos ni telescopios, pero con mucha observacion, se dieron cuenta de que sin sol no habia cosechas, no habia luz, no habia calor, no habia vida. Y le rindieron homenaje a su manera. Es importante entender que lo que sigue son <strong>creencias y mitologias de cada cultura</strong>, no verdades cientificas; las contamos para conocer como pensaba la humanidad, no como hechos comprobados:</p>
+<ul>
+<li>En el <strong>antiguo Egipto</strong>, uno de los dioses mas importantes era <strong>Ra</strong>, el dios del sol, que segun sus creencias cruzaba el cielo cada dia en una barca y viajaba por el inframundo cada noche. Para los egipcios, el sol era fuente de vida y de orden.</li>
+<li>Los <strong>incas</strong>, en Sudamerica, veneraban a <strong>Inti</strong>, el dios sol, considerado antepasado de sus gobernantes. Le dedicaban templos y grandes festivales, como el Inti Raymi, que aun hoy se recuerda.</li>
+<li>Muchas otras culturas tuvieron dioses solares: los aztecas, los griegos (con Helios y luego Apolo), los japoneses (con la diosa Amaterasu), y numerosos pueblos originarios de todo el mundo. En casi todos los rincones del planeta, el sol ocupo un lugar central en la forma de entender la vida.</li>
+</ul>
+
+<p>Que tantas culturas distintas, sin conocerse, hayan puesto al sol en el centro de sus creencias no es casualidad: todas dependian de el para vivir, y todas lo veian salir cada mañana trayendo la luz y el calor. Hoy sabemos, gracias a la ciencia, que aquella intuicion de que el sol era la fuente de la vida era, en el fondo, bastante acertada, aunque las explicaciones que dieron fueran mitos y no ciencia.</p>
+
+<p>Esa mezcla de asombro y agradecimiento por el sol dejo huellas por todas partes que todavia puedes ver hoy. Muchas construcciones antiguas fueron levantadas mirando al sol: hay templos y monumentos alineados con exactitud para que la luz entre en un punto justo el dia mas largo o mas corto del año. Los calendarios de casi todos los pueblos se armaron observando el recorrido del sol, que marca los dias, las estaciones y los tiempos de sembrar y cosechar. Y hasta el arte y los simbolos de innumerables culturas — desde figuras doradas hasta soles pintados en banderas, escudos y vestidos — muestran hasta que punto esa estrella marco la imaginacion humana. Para una diseñadora, ademas, el sol es una fuente inagotable de inspiracion visual: sus rayos, sus colores al amanecer y al atardecer, el oro, el naranja y el rojo encendido han vestido a la humanidad en su arte durante milenios.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La energia que el sol envia a la Tierra en una sola hora seria suficiente, en teoria, para cubrir el consumo de energia de toda la humanidad durante un año entero. El problema nunca fue la falta de energia solar; el desafio ha sido aprender a capturarla y guardarla de forma eficiente.
+</div>
+
+<h3>La energia solar moderna</h3>
+
+<p>Hoy, en lugar de venerar al sol, aprendemos a aprovecharlo directamente con tecnologia. La <strong>energia solar</strong> moderna convierte la luz del sol en electricidad usando <strong>paneles solares</strong>: placas hechas de materiales especiales que, al recibir la luz, generan corriente electrica. Ya los ves en los techos de muchas casas, en calculadoras, en satelites del espacio y en enormes "granjas solares" que abastecen ciudades enteras.</p>
+
+<p>Lo mejor de la energia solar es que es <strong>renovable</strong> (el sol seguira saliendo durante miles de millones de años, no se agota como el petroleo) y <strong>limpia</strong> (no contamina el aire mientras genera electricidad). Por eso es una de las grandes esperanzas para el futuro del planeta: en lugar de quemar combustibles fosiles, que contaminan y se acaban, podriamos usar cada vez mas esta fuente inagotable que nos regala el cielo todos los dias. En cierto modo, la humanidad esta cerrando un circulo: despues de milenios de mirar al sol con asombro y darle nombre de dios, ahora aprendemos a recoger su energia directamente, con ciencia en lugar de mitos.</p>
+
+<p>Asi que la proxima vez que sientas el sol en la cara, recuerda todo lo que sostiene: tu comida, el aire que respiras, el viento, la lluvia, la electricidad del futuro y, en el fondo, tu propia energia para vivir y crear. Es la misma estrella que hizo crecer las plantas, que inspiro a los egipcios y a los incas, y que hoy carga los paneles solares. Todo, absolutamente casi todo, empieza en el sol.</p>
+</div>
+
+<footer>
+<p>Semana 8 de 20 | Fran</p>
+<p><em>"La energia ni se crea ni se destruye: aprender fisica es aprender a seguirle el rastro mientras cambia de forma."</em></p>
+</footer>
+
+</body>
+</html>

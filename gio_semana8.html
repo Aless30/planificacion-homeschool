@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gio — Semana 8</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#553c9a;border-bottom:3px solid #9f7aea;padding-bottom:6px;margin-bottom:10px}
+h2{color:#553c9a;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #e9d8fd;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#faf5ff;border-left:4px solid #9f7aea;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.cultura{background:#fef3f8;border-left:4px solid #d53f8c;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}.mate,.escribe,.ejercicio,.proyecto,.cultura,.resuelto,.lectura{padding:8px 12px;margin:6px 0}.dato{padding:6px 10px;margin:5px 0}hr{margin:12px 0}}
+.fecha-real{border:1px dashed #a0aec0;border-radius:6px;padding:8px 14px;margin:8px 0 14px;font-size:.9em;color:#4a5568}
+</style>
+</head>
+<body>
+
+<h1>Gio — Semana 8</h1>
+<p><em>4 dias | Continuamos con geometria y energia.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — El area: cuanta superficie ocupa algo</h3>
+
+<div class="mate">
+<h4>¿Que es el area?</h4>
+
+<p>La semana pasada aprendiste el <strong>perimetro</strong> (el contorno, el borde de una figura). Hoy vamos por su compañera: el <strong>area</strong>.</p>
+
+<p>El <strong>area</strong> es la <strong>superficie</strong> que ocupa una figura, es decir, todo el espacio de adentro. La forma mas facil de entenderlo con tu mente de diseñadora es esta pregunta: <em>"¿cuanta tela necesito para cubrir toda esta figura?"</em> Esa cantidad de tela es el area.</p>
+
+<p>Fijate en la diferencia, porque es la clave de todo:</p>
+<ul>
+<li><strong>Perimetro</strong> = la cinta que le pones al borde (el contorno). Se mide en centimetros, metros...</li>
+<li><strong>Area</strong> = la tela que cubre toda la superficie (lo de adentro). Se mide en centimetros cuadrados (cm²), metros cuadrados (m²)...</li>
+</ul>
+
+<p>¿Por que "cuadrados"? Porque para medir una superficie imaginamos que la cubrimos con cuadraditos de 1 cm de lado y contamos cuantos caben. Si caben 12 cuadraditos, el area es 12 cm² (12 centimetros cuadrados). El pequeño 2 arriba significa "cuadrado".</p>
+
+<h4>Area del cuadrado</h4>
+<p>Un cuadrado tiene todos sus lados iguales. Su area es:</p>
+<p style="text-align:center"><strong>Area = lado × lado</strong></p>
+<p>Ejemplo: un retazo de tela cuadrado de 5 cm de lado tiene un area de 5 × 5 = 25 cm².</p>
+
+<h4>Area del rectangulo</h4>
+<p>Un rectangulo tiene un largo y un ancho. Su area es:</p>
+<p style="text-align:center"><strong>Area = largo × ancho</strong></p>
+<p>Ejemplo: un mantel de 8 cm de largo por 3 cm de ancho tiene un area de 8 × 3 = 24 cm².</p>
+
+<p><strong>Truco para no confundirte:</strong> el area siempre se calcula <em>multiplicando</em> (largo por ancho). El perimetro siempre se calcula <em>sumando</em> los lados. Multiplicar = area. Sumar = perimetro.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: cuanta tela necesito</h4>
+
+<p><strong>Problema:</strong> Quieres forrar un cojin cuadrado de tu cuarto que mide 40 cm de lado. ¿Cuanta tela (area) necesitas para cubrir una cara del cojin?</p>
+
+<p><strong>Paso 1 —</strong> Es un cuadrado, asi que uso: Area = lado × lado.</p>
+<p><strong>Paso 2 —</strong> Reemplazo: Area = 40 × 40.</p>
+<p><strong>Paso 3 —</strong> Multiplico: 40 × 40 = <strong>1,600 cm²</strong>.</p>
+<p>Necesitas 1,600 centimetros cuadrados de tela para cubrir una cara.</p>
+<p><em>Dato de diseño: si quisieras forrar las dos caras del cojin, necesitarias el doble: 1,600 × 2 = 3,200 cm². Por eso siempre conviene calcular bien antes de cortar la tela.</em></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Area del cuadrado y del rectangulo</h4>
+<ol>
+<li>Un retazo de tela cuadrado mide 6 cm de lado. ¿Cual es su area?</li>
+<li>Un rectangulo mide 10 cm de largo y 4 cm de ancho. ¿Cual es su area?</li>
+<li>Un pañuelo cuadrado mide 30 cm de lado. ¿Cuanta tela (area) ocupa?</li>
+<li>Un mantel rectangular mide 120 cm de largo por 90 cm de ancho. ¿Cual es su area?</li>
+<li>Tienes dos retazos: uno cuadrado de 7 cm de lado y otro rectangular de 9 cm × 5 cm. ¿Cual tiene MAYOR area? Calcula ambos y compara.</li>
+<li>Con tus palabras: explica la diferencia entre el perimetro y el area de un mismo cuadrado.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general — Una ciencia por dia</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: ZOOLOGIA</h4>
+<p><strong>La zoologia es la ciencia que estudia los animales:</strong> como son, como viven, como se alimentan, como se reproducen y como se relacionan con su entorno. Es una rama de la biologia dedicada por completo al reino animal, desde los insectos mas diminutos hasta las ballenas.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Los animales tienen patrones increibles que la moda copia todo el tiempo: las rayas del tigre, las plumas del pavo real, las escamas de un pez, las manchas del leopardo, el caparazon de una tortuga. <em>¿Que animal te inspiraria para crear un estampado, y como lo usarias en una prenda?</em> Elige un animal, observa bien sus colores, texturas y patrones, y describe (o dibuja) una prenda o coleccion inspirada en el.</p>
+<p><em>Guarda tu respuesta — se suma a tu "Enciclopedia de las Ciencias".</em></p>
+</div>
+
+<h3>Bloque 3: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final ("La respiracion: el puente entre el cuerpo y la energia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que hace el diafragma cuando respiras? Explicalo con tus palabras.</li>
+<li>¿Que gas entra a tu cuerpo cuando inhalas y cual sale cuando exhalas?</li>
+<li>Segun el texto, ¿que le pasa a tu sistema nervioso cuando respiras lento y profundo?</li>
+<li>Tu tocas violin. ¿Como crees que la respiracion ayuda a un musico (o a un cantante o un deportista)?</li>
+<li><strong>Tu opinion:</strong> ¿probaste alguna vez respirar lento para calmarte antes de algo importante? ¿Te sirvio? Si no lo hiciste, ¿cuando podrias probarlo?</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandala personal</h3>
+
+<div class="proyecto">
+<h4>Proyecto: capa de patrones geometricos</h4>
+<p><strong>Hoy — Agregar geometria:</strong> Toma tu mandala de la semana pasada (con su circulo base y sus secciones simetricas). Ahora vas a agregar una <strong>capa de patrones geometricos</strong> usando las figuras que estas estudiando: <strong>cuadrados y triangulos</strong>. Dibuja pequeños cuadrados o triangulos que se repitan alrededor del centro. Recuerda la regla de oro del mandala: lo que dibujes en una seccion, repitelo igual en todas las demas para mantener la simetria radial. No busques la perfeccion, busca el ritmo y la repeticion.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MARTES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — El area del triangulo</h3>
+
+<div class="mate">
+<h4>El triangulo: la mitad de un rectangulo</h4>
+
+<p>Ayer calculaste el area de cuadrados y rectangulos multiplicando lado por lado. Hoy toca el <strong>triangulo</strong>, y hay un pequeño truco muy bonito para entenderlo.</p>
+
+<p>Imagina un rectangulo de tela. Ahora cortalo en diagonal, de una esquina a la otra. ¿Que obtienes? <strong>Dos triangulos iguales.</strong> Es decir, un triangulo es exactamente la <strong>mitad</strong> de un rectangulo. Por eso su formula lleva un "÷ 2" al final:</p>
+
+<p style="text-align:center"><strong>Area del triangulo = base × altura ÷ 2</strong></p>
+
+<h4>¿Que son la base y la altura?</h4>
+<ul>
+<li>La <strong>base</strong> es el lado de abajo del triangulo (el que lo apoya, como si estuviera parado).</li>
+<li>La <strong>altura</strong> es lo alto que llega el triangulo, medido en linea recta desde la base hasta la punta de arriba (formando un angulo recto con la base).</li>
+</ul>
+
+<p>Piensa en un pañuelo triangular colgado del cuello, o en la punta triangular de una solapa: la base es el borde ancho de arriba y la altura es cuanto "baja" la punta.</p>
+
+<h4>Los pasos, sin miedo</h4>
+<p>Para no confundirte, hazlo siempre en dos pasos:</p>
+<ol>
+<li>Primero multiplica: base × altura.</li>
+<li>Despues divide ese resultado entre 2.</li>
+</ol>
+<p>Ejemplo: un triangulo con base 6 cm y altura 4 cm → 6 × 4 = 24, y luego 24 ÷ 2 = 12 cm².</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: un pañuelo triangular de diseño</h4>
+
+<p><strong>Problema:</strong> Estas diseñando un pañuelo triangular. La base (el borde de arriba) mide 50 cm y la altura (cuanto baja la punta) mide 30 cm. ¿Cuanta tela (area) necesitas?</p>
+
+<p><strong>Paso 1 —</strong> Uso la formula: Area = base × altura ÷ 2.</p>
+<p><strong>Paso 2 —</strong> Multiplico base por altura: 50 × 30 = 1,500.</p>
+<p><strong>Paso 3 —</strong> Divido entre 2: 1,500 ÷ 2 = <strong>750 cm²</strong>.</p>
+<p>Necesitas 750 centimetros cuadrados de tela para el pañuelo.</p>
+<p><em>Dato de diseño: fijate que un triangulo con la misma base y altura que un rectangulo usa justo la mitad de tela. Por eso los detalles triangulares (solapas, picos, aplicaciones) son una forma economica y elegante de decorar una prenda.</em></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Area del triangulo</h4>
+<ol>
+<li>Un triangulo tiene base 8 cm y altura 5 cm. ¿Cual es su area? (Recuerda: multiplica y luego divide entre 2.)</li>
+<li>Un triangulo tiene base 10 cm y altura 6 cm. ¿Cual es su area?</li>
+<li>Un detalle triangular de un vestido tiene base 12 cm y altura 4 cm. ¿Cuanta tela ocupa?</li>
+<li>Un pañuelo triangular tiene base 40 cm y altura 20 cm. ¿Cual es su area?</li>
+<li>Un triangulo tiene base 7 cm y altura 8 cm. Calcula su area.</li>
+<li>Compara: un rectangulo de 10 cm × 6 cm y un triangulo de base 10 cm y altura 6 cm. ¿Cuanta area tiene cada uno? ¿Es cierto que el triangulo es la mitad del rectangulo?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: ARQUITECTURA</h4>
+<p><strong>La arquitectura es la disciplina que diseña y construye edificios y espacios</strong> donde vive, trabaja y se reune la gente: casas, templos, puentes, museos, ciudades enteras. Combina arte, matematicas, ingenieria y creatividad para que los espacios sean utiles, seguros y hermosos.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> La moda y la arquitectura son "primas hermanas": las dos trabajan con formas, estructuras, volumenes y proporciones. Muchos diseñadores famosos se inspiran en edificios. <em>¿Que edificio famoso te inspiraria para diseñar una prenda?</em> (Por ejemplo: la Torre Eiffel, la Sagrada Familia, el Taj Mahal, un rascacielos de vidrio, una piramide.) Elige uno, observa sus lineas y su forma, y describe o dibuja una prenda inspirada en el.</p>
+</div>
+
+<h3>Bloque 3: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("Meditacion y atencion plena: entrenar la mente").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que es, en pocas palabras, la meditacion? ¿En que culturas aparece?</li>
+<li>Nombra 2 cosas que la ciencia SI ha comprobado sobre la meditacion.</li>
+<li>Segun el texto, ¿que parte de la meditacion sigue siendo creencia y todavia no se comprueba?</li>
+<li>El texto explica una forma sencilla de empezar a meditar. Describela con tus palabras.</li>
+<li><strong>Tu opinion:</strong> ¿crees que "entrenar la mente" se parece a entrenar un instrumento como el violin? ¿En que se parecen?</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandala personal</h3>
+
+<div class="proyecto">
+<h4>Proyecto: triangulos y simetria radial</h4>
+<p><strong>Hoy — Incorporar triangulos:</strong> Suma a tu mandala una nueva capa hecha con <strong>triangulos y formas que se repiten</strong>. La idea de hoy es reforzar la <strong>simetria radial</strong>: coloca los triangulos apuntando todos hacia afuera (o todos hacia el centro) y repartelos de forma pareja alrededor del circulo, como los rayos de una estrella o los petalos de una flor. Cuenta tus secciones y asegurate de poner la misma cantidad de triangulos en cada una. Esa repeticion exacta es lo que le da al mandala su sensacion de equilibrio.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — MIERCOLES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — El circulo: circunferencia y area</h3>
+
+<div class="mate">
+<h4>Volvemos al circulo (la figura de tu mandala)</h4>
+
+<p>Ya conoces las partes del circulo: el <strong>centro</strong>, el <strong>radio</strong> (del centro al borde) y el <strong>diametro</strong> (el doble del radio). Hoy vamos a medir dos cosas del circulo: su contorno y su superficie.</p>
+
+<h4>La circunferencia (el contorno)</h4>
+<p>La <strong>circunferencia</strong> es el borde del circulo, la linea curva que le da la vuelta completa. Es el "perimetro" del circulo: seria la cinta que le pondrias alrededor de un boton redondo.</p>
+
+<h4>Un numero magico: pi (π)</h4>
+<p>Aqui aparece un numero muy especial que se llama <strong>pi</strong> y se escribe con la letra griega <strong>π</strong>. Vale aproximadamente <strong>3.14</strong>. No hace falta que entiendas de donde sale; solo tienes que saber que <strong>pi es un numero fijo</strong> que siempre usamos cuando trabajamos con circulos. Es como un ingrediente que nunca cambia en la receta de los circulos.</p>
+
+<h4>El area del circulo</h4>
+<p>El <strong>area del circulo</strong> es toda la superficie de adentro (cuanta tela necesitarias para cubrir un parche redondo). La formula es:</p>
+<p style="text-align:center"><strong>Area del circulo = pi × radio × radio</strong></p>
+<p>O sea: multiplicas 3.14 por el radio, y despues otra vez por el radio.</p>
+
+<p><strong>Los pasos, con calma:</strong></p>
+<ol>
+<li>Multiplica el radio por si mismo (radio × radio).</li>
+<li>Multiplica ese resultado por 3.14.</li>
+</ol>
+<p>Ejemplo: un circulo de radio 2 cm → 2 × 2 = 4, y luego 4 × 3.14 = 12.56 cm².</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: un parche circular</h4>
+
+<p><strong>Problema:</strong> Quieres hacer un parche redondo (como los que se cosen en una chaqueta) con un radio de 5 cm. ¿Cuanta tela (area) necesitas para el parche?</p>
+
+<p><strong>Paso 1 —</strong> Uso la formula: Area = pi × radio × radio.</p>
+<p><strong>Paso 2 —</strong> Multiplico el radio por si mismo: 5 × 5 = 25.</p>
+<p><strong>Paso 3 —</strong> Multiplico por pi (3.14): 25 × 3.14 = <strong>78.5 cm²</strong>.</p>
+<p>Necesitas 78.5 centimetros cuadrados de tela para el parche.</p>
+<p><em>Dato de diseño: los botones, parches, ojales y lunares de un estampado son todos circulos. Saber calcular su area te sirve para saber cuanta tela, hilo o material vas a gastar.</em></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — El circulo</h4>
+<ol>
+<li>Un boton tiene radio 1 cm. ¿Cual es su area? (Pista: 1 × 1 × 3.14.)</li>
+<li>Un parche circular tiene radio 3 cm. ¿Cual es su area?</li>
+<li>Un circulo tiene radio 4 cm. Calcula su area.</li>
+<li>Un lunar grande de un estampado tiene radio 2 cm. ¿Cual es su area?</li>
+<li>Un circulo tiene radio 10 cm. ¿Cual es su area?</li>
+<li>Con tus palabras: ¿que diferencia hay entre la circunferencia (contorno) y el area de un circulo? ¿Cual usarias para saber cuanta cinta le pones al borde y cual para saber cuanta tela lo cubre?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: MUSICOLOGIA</h4>
+<p><strong>La musicologia es la ciencia que estudia la musica:</strong> su historia, su teoria, como esta construida (ritmo, melodia, armonia), como suena en las distintas culturas del mundo y como ha cambiado a lo largo del tiempo. Es estudiar la musica no solo para tocarla, sino para entenderla por dentro.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> La musica y la moda van siempre de la mano: cada genero musical tiene su propio estilo de vestir (el rock, el jazz, la musica clasica, el pop, el flamenco...). Como tu tocas violin, piensa en esto: <em>¿como vestirias a un musico segun el estilo de musica que toca?</em> Elige 2 o 3 generos musicales distintos y diseña (o describe) un vestuario para un musico de cada uno.</p>
+</div>
+
+<h3>Bloque 3: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("El sol: la fuente de casi toda la energia").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Por que dice el texto que casi toda la energia de la Tierra viene del sol? Da 2 ejemplos de la cadena que explica.</li>
+<li>¿Que es la fotosintesis y por que es tan importante?</li>
+<li>Menciona 2 culturas antiguas que veneraban al sol y como lo llamaban.</li>
+<li>¿Que es la energia solar moderna y como aprovecha la luz del sol?</li>
+<li><strong>Tu opinion:</strong> ¿te parece logico que tantas culturas antiguas hayan considerado al sol tan importante o incluso sagrado? ¿Por que crees que lo hicieron?</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandala personal</h3>
+
+<div class="proyecto">
+<h4>Proyecto: circulos concentricos</h4>
+<p><strong>Hoy — Agregar circulos:</strong> Usa lo que aprendiste hoy del circulo para sumar una capa de <strong>circulos concentricos</strong> a tu mandala. "Concentricos" significa que comparten el mismo centro, uno dentro de otro, como las ondas que se forman al tirar una piedra al agua. Con el compas (o calcando objetos redondos de distintos tamaños), traza dos o tres circulos alrededor de tu centro. Estos anillos te sirven de guia para organizar las capas de patrones y hacen que el mandala se sienta mas ordenado y elegante.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 4 — VIERNES</h2>
+<p class="fecha-real">✍️ Fecha en que lo realice: __________________________</p>
+
+<h3>Bloque 1: Matematicas — Repaso: perimetro vs area</h3>
+
+<div class="mate">
+<h4>La gran diferencia: contorno vs superficie</h4>
+
+<p>Esta semana trabajaste el area y la semana pasada el perimetro. Hoy los ponemos lado a lado para que nunca mas los confundas, porque en diseño los vas a usar todo el tiempo.</p>
+
+<ul>
+<li><strong>Perimetro = el CONTORNO.</strong> Es el borde, la vuelta completa a la figura. Sirve para saber cuanta <em>cinta, encaje o ribete</em> le pones alrededor. Se calcula <strong>sumando</strong> los lados. Se mide en cm, m.</li>
+<li><strong>Area = la SUPERFICIE.</strong> Es todo lo de adentro. Sirve para saber cuanta <em>tela</em> necesitas para cubrir la figura. Se calcula <strong>multiplicando</strong>. Se mide en cm², m².</li>
+</ul>
+
+<p><strong>La imagen que lo aclara todo:</strong> imagina una falda. El <em>ruedo</em> (el borde de abajo donde pones el encaje) es el perimetro. La <em>tela</em> que forma toda la falda es el area. Dos cosas distintas de la misma prenda.</p>
+
+<h4>Formulas juntas para repasar</h4>
+<ul>
+<li><strong>Cuadrado:</strong> perimetro = lado × 4 &nbsp;|&nbsp; area = lado × lado</li>
+<li><strong>Rectangulo:</strong> perimetro = (largo + ancho) × 2 &nbsp;|&nbsp; area = largo × ancho</li>
+<li><strong>Triangulo:</strong> perimetro = suma de los 3 lados &nbsp;|&nbsp; area = base × altura ÷ 2</li>
+<li><strong>Circulo:</strong> area = pi × radio × radio (con pi ≈ 3.14)</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: un problema de diseño con las dos cosas</h4>
+
+<p><strong>Problema:</strong> Diseñas un cojin cuadrado de 20 cm de lado. Quieres: (a) forrar una cara con tela y (b) ponerle una cinta decorativa alrededor del borde. ¿Cuanta tela (area) y cuanta cinta (perimetro) necesitas?</p>
+
+<p><strong>Tela (area) —</strong> Area = lado × lado = 20 × 20 = <strong>400 cm²</strong> de tela.</p>
+<p><strong>Cinta (perimetro) —</strong> Perimetro = lado × 4 = 20 × 4 = <strong>80 cm</strong> de cinta.</p>
+<p>Fijate: la MISMA figura te da dos respuestas distintas segun lo que necesites. La tela usa el area (multiplicando), la cinta usa el perimetro (sumando los lados).</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Perimetro vs area (problemas mixtos de diseño)</h4>
+<ol>
+<li>Un pañuelo cuadrado mide 30 cm de lado. Calcula su perimetro (para el ribete) Y su area (para la tela).</li>
+<li>Un mantel rectangular mide 100 cm de largo por 60 cm de ancho. ¿Cuanta cinta necesitas para bordearlo (perimetro) y cuanta tela lo forma (area)?</li>
+<li>Un parche triangular tiene base 10 cm y altura 8 cm. ¿Cual es su area?</li>
+<li>Un boton circular tiene radio 2 cm. ¿Cual es su area?</li>
+<li>Para el borde de una falda necesitas encaje. El ruedo mide 90 cm de contorno. ¿Eso es perimetro o area? ¿Cuanto encaje necesitas?</li>
+<li>Decide en cada caso si usarias PERIMETRO o AREA: (a) cuanta pintura para cubrir una pared, (b) cuanto marco de madera para un cuadro, (c) cuanta tela para una bandera, (d) cuanto cordon para el borde de una almohada.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: CROMATOLOGIA (teoria del color)</h4>
+<p><strong>La cromatologia es el estudio del color:</strong> como se forman los colores, como se mezclan, como los percibe nuestro ojo y como nos afectan. La <strong>teoria del color</strong> es una herramienta fundamental para cualquier diseñador, artista o creativo, porque los colores no solo se ven: tambien transmiten emociones.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Los colores comunican sentimientos: el rojo suele asociarse con la pasion y la energia, el azul con la calma, el amarillo con la alegria, el verde con la naturaleza, el negro con la elegancia. <em>Elige una emocion (alegria, calma, misterio, energia, ternura...) y diseña una paleta de colores para ella:</em> elige 3 o 4 colores que la representen, ponles nombre y explica por que los elegiste. Puedes dibujarla o describirla.</p>
+<p><em>Con esta ya tienes las ciencias de la semana para tu Enciclopedia: zoologia, arquitectura, musicologia y cromatologia.</em></p>
+</div>
+
+<h3>Bloque 3: Lectura y cierre</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Repasa los 3 textos de esta semana (respiracion, meditacion y el sol) y responde:</p>
+<ol>
+<li>De los tres temas de esta semana, ¿cual te intereso mas y por que?</li>
+<li>Los tres textos hablan de "energia" de formas distintas (el aire que respiras, la mente que se calma, el sol que da vida). ¿Que tienen en comun estas tres ideas?</li>
+<li>¿Que practica de esta semana (respirar lento, meditar un poco, prestar atencion al sol y la naturaleza) te gustaria probar en tu vida diaria?</li>
+<li><strong>Dato favorito:</strong> de todo lo que leiste esta semana, ¿que te sorprendio mas? (1-2 oraciones.)</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandala personal</h3>
+
+<div class="proyecto">
+<h4>Proyecto: terminar, colorear y presentar</h4>
+<p><strong>Parte A — Termina y colorea:</strong> Da los toques finales a tu mandala. Repasa que todas las capas mantengan la simetria (cuadrados, triangulos y circulos repetidos por igual en cada seccion). Ahora lo mas divertido: <strong>colorealo</strong>. Usa lo que sabes de teoria del color (del bloque de hoy) para elegir una paleta que transmita la energia o emocion que quieras.</p>
+<p><strong>Parte B — Preparalo para tu Enciclopedia:</strong> Piensa como vas a presentar tu mandala terminado dentro de tu "Enciclopedia de las Ciencias". Puedes acompañarlo con una pequeña explicacion: que figuras geometricas usaste (cuadrados, triangulos, circulos), por que elegiste esos colores y que energia quisiste representar. Asi unes la geometria, el arte y la ciencia en un solo proyecto tuyo.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+
+<div class="lectura">
+<h2>Texto 1 — La respiracion: el puente entre el cuerpo y la energia</h2>
+
+<p>Respiras unas 20,000 veces al dia sin darte cuenta de casi ninguna de ellas. Ahora mismo, mientras lees, tu cuerpo esta tomando aire y soltandolo una y otra vez sin que tengas que ordenarlo. Es el gesto mas repetido de tu vida: empezaste a hacerlo en el segundo que naciste y no vas a parar hasta el ultimo. Y sin embargo, aunque sea tan automatico, la respiracion es tambien una de las poquisimas funciones del cuerpo que puedes controlar a voluntad cuando quieres: puedes respirar mas rapido, mas lento, retener el aire, soltarlo de a poco. Esa doble naturaleza — automatica pero controlable — la convierte en algo unico y en un verdadero puente entre el cuerpo y lo que sentimos. Por eso, sin ponernos de acuerdo, casi todas las culturas del mundo pusieron la respiracion en el centro de sus practicas de bienestar. Vamos a entender por que.</p>
+
+<h3>Que pasa por dentro cuando respiras</h3>
+
+<p>Empecemos por la ciencia, que es fascinante. Cuando inhalas (tomas aire), entra por tu nariz o tu boca, baja por la traquea y llega a los <strong>pulmones</strong>, dos organos esponjosos que se llenan como globos. Pero los pulmones no se inflan solos: debajo de ellos hay un musculo grande, con forma de cupula, llamado <strong>diafragma</strong>. Cuando el diafragma se contrae, baja y se aplana, y eso hace mas espacio en el pecho, de modo que los pulmones se expanden y el aire entra. Cuando el diafragma se relaja, sube de nuevo, empuja los pulmones y el aire sale. Es decir: el diafragma es la "bomba" invisible que hace entrar y salir el aire, subiendo y bajando sin descanso.</p>
+
+<p>¿Y para que sirve todo ese aire? Aqui esta lo importante. El aire que respiras contiene <strong>oxigeno</strong>, un gas que tus celulas necesitan para funcionar. Dentro de los pulmones, el oxigeno pasa a la sangre, y la sangre lo reparte por todo el cuerpo, celula por celula. Las celulas usan ese oxigeno para "quemar" el alimento y sacar de ahi la energia que te mantiene viva y en movimiento (¿te acuerdas de la energia quimica de la que hablamos en semanas pasadas? Aqui esta en accion). En ese proceso las celulas producen un gas de desecho, el <strong>dioxido de carbono</strong> (CO2), que la sangre lleva de vuelta a los pulmones para que lo expulses al exhalar. Por eso el trato es siempre el mismo: <strong>al inhalar entra oxigeno, al exhalar sale dioxido de carbono</strong>. Es un intercambio perfecto que se repite miles de veces al dia y que literalmente te mantiene con vida.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Aunque sientas que respirar es cosa de los pulmones, el verdadero motor es el diafragma. Los cantantes de opera, los actores y los musicos de instrumentos de viento entrenan durante años este musculo para controlar el aire con precision. Un buen manejo del diafragma es lo que permite sostener una nota larga sin quedarse sin aire.
+</div>
+
+<h3>Por que casi todas las tradiciones hablan de la respiracion</h3>
+
+<p>Mucho antes de que se supiera nada sobre el oxigeno o el CO2, las grandes tradiciones de casi todo el mundo notaron algo que cualquiera puede comprobar: la forma en que respiras esta ligada a como te sientes. Cuando te asustas o te enojas, tu respiracion se vuelve rapida y corta. Cuando estas en paz o a punto de dormirte, se vuelve lenta y profunda. Y aqui esta el descubrimiento que hicieron esas culturas: la relacion tambien funciona al reves. Si respiras a proposito de forma lenta y profunda, empiezas a sentirte mas calmado, aunque estuvieras nervioso. La respiracion no solo refleja tu estado interior: tambien lo puede cambiar.</p>
+
+<p>En la <strong>India</strong>, esa idea dio origen al <em>pranayama</em>, todo un arte de tecnicas de respiracion controlada que forma parte del yoga. En la tradicion <strong>Zen</strong> de Japon y en el budismo en general, la atencion a la respiracion es la puerta de entrada a la meditacion: los practicantes se sientan y simplemente observan como el aire entra y sale, una y otra vez. En muchas <strong>artes marciales</strong> se enseña a coordinar el movimiento y el golpe con la exhalacion. Incluso en el <strong>canto</strong> y la musica de casi todas las culturas, aprender a respirar bien es la primera leccion. Culturas que no se conocian entre si llegaron todas a la misma conclusion: quien domina su respiracion, domina en buena parte su estado interior.</p>
+
+<h3>Lo que la ciencia moderna confirmo</h3>
+
+<p>Durante mucho tiempo, esto quedaba en el terreno de la sabiduria tradicional. Pero en las ultimas decadas la ciencia lo estudio con instrumentos y confirmo que es completamente real, y ademas explico por que funciona. La clave esta en tu <strong>sistema nervioso</strong>, que tiene dos "modos" principales de operar:</p>
+<ul>
+<li>El <strong>modo de alerta</strong> (llamado sistema nervioso simpatico): es el que se enciende cuando hay peligro, estres o emocion fuerte. Acelera el corazon, tensa los musculos, apura la respiracion. Es el modo "acelerador", pensado para reaccionar rapido.</li>
+<li>El <strong>modo de calma</strong> (llamado sistema nervioso parasimpatico): es el que se enciende cuando estas seguro y relajado. Baja el ritmo del corazon, afloja los musculos, hace mas lenta la respiracion y ayuda a la digestion y al descanso. Es el modo "freno", pensado para recuperarse.</li>
+</ul>
+
+<p>Lo asombroso es esto: <strong>la respiracion lenta y profunda activa directamente el modo de calma</strong>. Cuando alargas tus exhalaciones y respiras despacio, le mandas a tu cerebro una señal clara de "todo esta bien, puedes relajarte", y el cuerpo baja las revoluciones: el corazon se aquieta, la presion baja un poco, la tension muscular cede. No es magia ni imaginacion: es un mecanismo fisico medible. Aquello que las tradiciones intuyeron durante siglos, la ciencia lo comprobo y hasta le puso nombre. Por eso hoy la respiracion lenta se usa en hospitales, en terapias contra la ansiedad, en preparacion de deportistas y hasta en programas escolares.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Una tecnica muy sencilla y estudiada es la "respiracion en cuadrado": inhalas contando hasta 4, retienes el aire contando hasta 4, exhalas contando hasta 4 y esperas contando hasta 4 antes de volver a empezar. Repetido unas cuantas veces, este ejercicio ayuda a calmar los nervios en minutos. Lo usan pilotos, deportistas y hasta soldados antes de situaciones de mucha presion.
+</div>
+
+<h3>Tecnicas practicas que puedes probar</h3>
+
+<p>Lo mejor de la respiracion es que no necesitas nada: ni ropa especial, ni equipo, ni un lugar particular. Aqui van algunas tecnicas sencillas:</p>
+<ul>
+<li><strong>Respiracion profunda con el vientre:</strong> pon una mano en tu barriga. Inhala despacio por la nariz y siente como se infla la barriga (no el pecho). Exhala lento por la boca y siente como baja. Eso es usar bien el diafragma.</li>
+<li><strong>Exhalacion larga:</strong> haz que tu exhalacion dure mas que tu inhalacion (por ejemplo, inhala en 4 tiempos y exhala en 6). Alargar la salida del aire es lo que mas activa el modo de calma.</li>
+<li><strong>Tres respiraciones antes de algo importante:</strong> antes de un examen, una presentacion o un concierto, detente y haz tres respiraciones lentas y conscientes. Es un truco simple y efectivo para bajar los nervios.</li>
+</ul>
+
+<h3>La respiracion en la musica, el canto y el deporte</h3>
+
+<p>Como tocas violin, seguramente ya sabes algo de esto sin haberlo pensado: la respiracion tiene un papel enorme en la musica. Un cantante que no controla su aire no puede sostener una frase larga ni afinar bien; por eso lo primero que se enseña en canto es a respirar desde el diafragma. Los que tocan instrumentos de viento (flauta, saxofon, trompeta) dependen por completo del control del aire. Y aunque el violin no se toca con el aliento, los buenos interpretes respiran con la musica: toman aire en las pausas, sueltan la tension al exhalar y usan la respiracion para marcar el fraseo, casi como si el instrumento respirara con ellos.</p>
+
+<p>En el deporte pasa lo mismo. Los corredores regulan su respiracion para aguantar mas; los que hacen pesas exhalan en el momento del esfuerzo; los nadadores organizan toda su tecnica alrededor de cuando y como respirar. Y en cualquier situacion de nervios — un penal, un saque decisivo, el instante antes de salir al escenario — una respiracion profunda es la herramienta mas rapida y confiable para recuperar la calma y el control.</p>
+
+<p>Al final, la respiracion es exactamente eso: un puente. Une lo automatico con lo voluntario, el cuerpo con las emociones, la ciencia con las tradiciones. Es gratis, la llevas siempre contigo y esta disponible en cualquier momento. Aprender a usarla bien es una de las herramientas mas simples y poderosas que puedes tener para el resto de tu vida.</p>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — Meditacion y atencion plena: entrenar la mente</h2>
+
+<p>Imagina que pudieras entrenar tu mente igual que entrenas un musculo o practicas el violin: con ejercicios repetidos, poco a poco, hasta que se vuelva mas fuerte, mas estable y mas obediente. Suena raro, porque estamos acostumbrados a pensar que la mente "es como es" y que no se puede cambiar. Pero resulta que si se puede, y la practica que se usa para eso tiene miles de años de historia y hoy es estudiada seriamente por la ciencia. Se llama <strong>meditacion</strong>, y su version mas conocida en el mundo moderno se llama <strong>atencion plena</strong> o <em>mindfulness</em>. Vamos a entender que es, que parte de todo esto esta comprobado y que parte sigue siendo creencia, porque distinguir esas dos cosas es justo lo que te vuelve una persona que piensa con claridad.</p>
+
+<h3>Que es la meditacion</h3>
+
+<p>En pocas palabras, meditar es <strong>entrenar la atencion</strong>. En lugar de dejar que la mente salte de un pensamiento a otro sin control (que es lo que hace casi todo el tiempo), eliges algo en que concentrarte — normalmente la respiracion — y practicas volver a ello una y otra vez cada vez que te distraes. Eso es, en esencia, casi toda la meditacion: notar que te fuiste con un pensamiento, y volver con suavidad a lo que estabas observando. Parece simple, y lo es, pero no es facil: la mente se escapa constantemente. Por eso se le llama "practica".</p>
+
+<p>La meditacion aparece en muchisimas culturas, cada una a su manera:</p>
+<ul>
+<li>En el <strong>budismo</strong> (nacido en la India y extendido por toda Asia) la meditacion es central; hay tradiciones enteras, como el Zen japones, dedicadas casi por completo a sentarse a meditar.</li>
+<li>En el <strong>hinduismo</strong> la meditacion se practica desde hace milenios, muchas veces junto con el yoga, repitiendo sonidos o palabras (mantras) o concentrandose en la respiracion.</li>
+<li>En muchas tradiciones <strong>cristianas, judias y musulmanas</strong> existen formas de oracion contemplativa y silenciosa que se parecen mucho a la meditacion.</li>
+<li>En el mundo <strong>moderno y laico</strong> (es decir, sin religion), la atencion plena o <em>mindfulness</em> tomo el corazon de estas practicas — concentrarse en el presente sin juzgar — y lo separo de lo religioso para usarlo como una herramienta de salud mental. Hoy se enseña en hospitales, empresas, equipos deportivos y escuelas de todo el mundo.</li>
+</ul>
+
+<div class="dato">
+<strong>Dato:</strong> La palabra <em>mindfulness</em> se traduce como "atencion plena" o "conciencia plena": estar plenamente presente en lo que haces ahora, sin que la mente se escape al pasado (recuerdos, arrepentimientos) ni al futuro (preocupaciones, planes). Suena obvio, pero pasamos gran parte del dia con la mente en cualquier lado menos en lo que estamos haciendo.
+</div>
+
+<h3>Lo que la ciencia SI ha comprobado</h3>
+
+<p>Aqui es donde la cosa se pone interesante de verdad, porque la meditacion es una de esas practicas tradicionales que la ciencia moderna decidio estudiar con seriedad, usando escaneos del cerebro y experimentos controlados. Y encontro efectos reales y medibles. Estos son algunos de los mejor confirmados:</p>
+<ul>
+<li><strong>Reduce el estres y la ansiedad.</strong> Es el efecto mas estudiado. Las personas que meditan con regularidad muestran niveles mas bajos de las hormonas del estres y dicen sentirse mas tranquilas. Esto se mide, no solo se cree.</li>
+<li><strong>Mejora la atencion y la concentracion.</strong> Tiene todo el sentido: si pasas tiempo practicando volver la atencion a un punto, tu capacidad de concentrarte mejora, igual que un musculo que ejercitas.</li>
+<li><strong>Cambia el cerebro.</strong> Este es quiza el hallazgo mas asombroso. Con aparatos que fotografian el cerebro, los cientificos vieron que en las personas que meditan durante mucho tiempo cambian fisicamente algunas zonas del cerebro: se refuerzan las areas ligadas a la atencion y la calma. El cerebro es "moldeable" (los cientificos lo llaman plasticidad), y la meditacion lo moldea, tal como el ejercicio moldea el cuerpo.</li>
+<li><strong>Ayuda a manejar las emociones.</strong> Quienes meditan suelen reaccionar de forma menos impulsiva y recuperan la calma mas rapido despues de un disgusto.</li>
+</ul>
+
+<p>Todo esto esta comprobado con evidencia solida. No es opinion ni moda: es ciencia.</p>
+
+<div class="dato">
+<strong>Dato:</strong> En estudios con monjes budistas que llevaban decenas de miles de horas de meditacion, los cientificos encontraron patrones de actividad cerebral muy poco comunes, especialmente relacionados con la calma y la compasion. Esto sugiere que la mente, entrenada durante años, puede alcanzar estados que en la mayoria de las personas casi no aparecen.
+</div>
+
+<h3>Lo que sigue siendo creencia (y no hecho comprobado)</h3>
+
+<p>Ahora viene la parte donde hay que ser honestos, porque no todo lo que se dice sobre la meditacion esta demostrado. Alrededor de estas practicas hay tambien <strong>afirmaciones espirituales</strong> que la ciencia no ha comprobado y probablemente no pueda comprobar. Por ejemplo: que meditando se accede a "otros planos de conciencia", que se conecta con una energia universal, que se puede alcanzar la "iluminacion", o que la mente puede afectar el mundo fisico a distancia. Estas ideas pertenecen al terreno de las creencias religiosas o filosoficas de cada tradicion. Pueden ser valiosas o inspiradoras para quien las adopta, pero <strong>no son hechos demostrados</strong>, y es importante no confundirlas con los beneficios medibles.</p>
+
+<p>La distincion es sencilla y muy util: <em>"la meditacion reduce el estres"</em> es un hecho comprobado, se puede medir en un laboratorio. <em>"La meditacion conecta tu alma con el universo"</em> es una creencia espiritual, que cada quien puede sostener o no, pero que no se puede probar ni medir. Las dos cosas pueden coexistir sin problema; lo unico que no hay que hacer es presentarlas como si tuvieran el mismo tipo de respaldo. Una persona que piensa bien puede aprovechar perfectamente los beneficios comprobados de la meditacion sin necesidad de creer en la parte espiritual, y otra persona puede vivir la parte espiritual con total respeto sabiendo que es su creencia. Lo importante es tener claro que es que.</p>
+
+<h3>Como empezar, de forma simple</h3>
+
+<p>Lo bueno es que no necesitas creer en nada ni pertenecer a ninguna tradicion para probar los beneficios reales. Empezar es facilisimo:</p>
+<ol>
+<li>Sientate comodo, con la espalda derecha pero sin tension. Puedes cerrar los ojos o dejarlos entreabiertos.</li>
+<li>Lleva tu atencion a la respiracion. No la cambies, solo observala: siente como el aire entra y como sale.</li>
+<li>En algun momento (muy pronto) tu mente se ira a otro lado: un recuerdo, una idea, una preocupacion. Eso es normal y le pasa a todo el mundo, siempre.</li>
+<li>Cuando te des cuenta de que te distrajiste, no te enojes contigo. Simplemente vuelve, con suavidad, a la respiracion. Ese "darte cuenta y volver" es el ejercicio completo.</li>
+<li>Empieza con poco: uno o dos minutos al dia ya es suficiente al principio. Como con el violin, lo que importa es la constancia, no la cantidad.</li>
+</ol>
+
+<p>Notaras que meditar se parece muchisimo a practicar un instrumento. Al principio cuesta, te frustras, sientes que no avanzas. Pero con la practica constante la mente se va volviendo mas estable, igual que los dedos se vuelven mas agiles con el violin. En ambos casos no se trata de "lograrlo perfecto", sino de entrenar dia a dia. Y en ambos casos, el esfuerzo repetido termina cambiando de verdad lo que eres capaz de hacer.</p>
+
+<h3>La atencion plena en las cosas de todos los dias</h3>
+
+<p>Un error muy comun es pensar que la atencion plena solo sirve mientras estas sentada con los ojos cerrados. En realidad, la parte mas util llega cuando llevas esa forma de prestar atencion a las actividades normales del dia. Puedes comer con atencion plena, saboreando de verdad la comida en lugar de tragarla mirando una pantalla. Puedes caminar prestando atencion a tus pasos y a lo que te rodea, en vez de ir con la cabeza perdida en preocupaciones. Y puedes, sobre todo, tocar el violin con atencion plena: escuchando cada nota, sintiendo el arco y las cuerdas, presente por completo en la musica en lugar de pensar en el error que cometiste hace un minuto o en la parte dificil que viene despues. Los grandes musicos, los deportistas de elite y los artistas describen muchas veces un estado especial al que llaman "estar en la zona" o "fluir": momentos en los que la mente esta totalmente concentrada en lo que hace y el tiempo parece desaparecer. Ese estado se parece mucho a la atencion plena, y se puede cultivar.</p>
+
+<p>Por eso cada vez mas escuelas, orquestas y equipos deportivos enseñan pequeños ejercicios de atencion plena a niños y jovenes: unos minutos de respiracion consciente antes de un examen, de un concierto o de un partido ayudan a calmar los nervios y a concentrarse mejor. No es una creencia magica; es un entrenamiento practico de una habilidad que sirve para toda la vida. Aprender a dirigir tu propia atencion — a elegir en que te concentras y a volver cuando te distraes — es, quiza, uno de los aprendizajes mas utiles que existen, porque esa mente entrenada te acompaña en absolutamente todo lo demas que haces.</p>
+</div>
+
+<div class="lectura">
+<h2>Texto 3 — El sol: la fuente de casi toda la energia</h2>
+
+<p>Sal un dia despejado, cierra los ojos y siente el sol en la cara. Ese calor que notas viajo 150 millones de kilometros por el espacio vacio para llegar hasta tu piel, y tardo un poco mas de ocho minutos en el camino. Es una idea que da vertigo: la luz que te calienta ahora salio del sol hace ocho minutos. Pero lo mas asombroso no es la distancia ni la velocidad. Lo verdaderamente asombroso es esto: <strong>casi toda la energia que existe y se usa en la Tierra viene, de una forma u otra, de esa estrella</strong>. Tu desayuno, el viento, la gasolina de los autos, la electricidad de tu casa, el crecimiento de las plantas, tu propio cuerpo en movimiento... casi todo se remonta al sol. Vamos a seguir esa pista, porque es una de las historias mas hermosas que cuenta la ciencia.</p>
+
+<h3>El sol como origen de casi todo</h3>
+
+<p>El sol es una gigantesca esfera de gas ardiente que produce cantidades inimaginables de energia en su nucleo. Esa energia sale al espacio en forma de luz y calor, y una pequeñisima parte llega a la Tierra. Pero esa pequeña parte alcanza para poner en marcha casi todo lo que ocurre en nuestro planeta. Sigamos la cadena paso a paso:</p>
+
+<p><strong>Todo empieza con las plantas.</strong> Las plantas hacen algo que ningun animal sabe hacer: capturan la luz del sol y la transforman en alimento. Ese proceso se llama <strong>fotosintesis</strong>, y es, sin exagerar, uno de los procesos mas importantes del planeta. Con la energia de la luz, agua y el dioxido de carbono del aire, las plantas fabrican su propio alimento (azucares) y, de paso, liberan el oxigeno que todos los animales respiramos. Es decir: las plantas convierten la luz del sol en energia quimica guardada en forma de comida. Son como pequeñas fabricas que funcionan con energia solar.</p>
+
+<p><strong>Despues viene la cadena alimentaria.</strong> Los animales que comen plantas (una vaca, un conejo, tu cuando comes una ensalada) obtienen esa energia solar guardada en los vegetales. Y los animales que comen a otros animales obtienen esa misma energia de segunda mano. Asi que cuando corres, saltas o tocas el violin, estas usando energia que originalmente vino del sol, paso a una planta por fotosintesis, y llego hasta ti a traves de lo que comes. Eres, literalmente, energia solar en movimiento.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La fotosintesis es tan importante que, sin ella, no existiria practicamente ninguna forma de vida animal en la Tierra: ni el oxigeno que respiramos ni la comida de la que dependemos. Cada bocado que comes y cada respiro que tomas es, en el fondo, un regalo del trabajo silencioso de las plantas convirtiendo luz en vida.
+</div>
+
+<p><strong>Y sigue: hasta los combustibles vienen del sol.</strong> El petroleo, el carbon y el gas natural (los llamados combustibles fosiles que mueven autos, aviones y fabricas) son los restos, transformados durante millones de años, de plantas y animales antiguos. Y esas plantas y animales, cuando vivian, obtenian su energia... del sol, otra vez. Asi que cuando un auto quema gasolina, esta liberando energia solar que quedo guardada hace millones de años. Incluso el <strong>viento</strong> nace del sol: el sol calienta el aire de forma despareja en distintas partes del planeta, el aire caliente sube, el frio ocupa su lugar, y ese movimiento del aire es el viento (que hoy usamos para generar electricidad con molinos). Y el <strong>agua de los rios</strong>, que mueve las represas, subio como vapor a las nubes gracias al calor del sol. Mires donde mires, el rastro lleva a la misma estrella.</p>
+
+<h3>Por que tantas culturas veneraron al sol</h3>
+
+<p>Si la ciencia moderna acaba de descubrir hasta que punto dependemos del sol, no sorprende que las culturas antiguas, que dependian de el todavia mas directamente para sus cosechas, lo consideraran algo enorme, poderoso y muchas veces sagrado. Sin instrumentos ni telescopios, pero con mucha observacion, se dieron cuenta de que sin sol no habia cosechas, no habia luz, no habia calor, no habia vida. Y le rindieron homenaje a su manera. Es importante entender que lo que sigue son <strong>creencias y mitologias de cada cultura</strong>, no verdades cientificas; las contamos para conocer como pensaba la humanidad, no como hechos comprobados:</p>
+<ul>
+<li>En el <strong>antiguo Egipto</strong>, uno de los dioses mas importantes era <strong>Ra</strong>, el dios del sol, que segun sus creencias cruzaba el cielo cada dia en una barca y viajaba por el inframundo cada noche. Para los egipcios, el sol era fuente de vida y de orden.</li>
+<li>Los <strong>incas</strong>, en Sudamerica, veneraban a <strong>Inti</strong>, el dios sol, considerado antepasado de sus gobernantes. Le dedicaban templos y grandes festivales, como el Inti Raymi, que aun hoy se recuerda.</li>
+<li>Muchas otras culturas tuvieron dioses solares: los aztecas, los griegos (con Helios y luego Apolo), los japoneses (con la diosa Amaterasu), y numerosos pueblos originarios de todo el mundo. En casi todos los rincones del planeta, el sol ocupo un lugar central en la forma de entender la vida.</li>
+</ul>
+
+<p>Que tantas culturas distintas, sin conocerse, hayan puesto al sol en el centro de sus creencias no es casualidad: todas dependian de el para vivir, y todas lo veian salir cada mañana trayendo la luz y el calor. Hoy sabemos, gracias a la ciencia, que aquella intuicion de que el sol era la fuente de la vida era, en el fondo, bastante acertada, aunque las explicaciones que dieron fueran mitos y no ciencia.</p>
+
+<p>Esa mezcla de asombro y agradecimiento por el sol dejo huellas por todas partes que todavia puedes ver hoy. Muchas construcciones antiguas fueron levantadas mirando al sol: hay templos y monumentos alineados con exactitud para que la luz entre en un punto justo el dia mas largo o mas corto del año. Los calendarios de casi todos los pueblos se armaron observando el recorrido del sol, que marca los dias, las estaciones y los tiempos de sembrar y cosechar. Y hasta el arte y los simbolos de innumerables culturas — desde figuras doradas hasta soles pintados en banderas, escudos y vestidos — muestran hasta que punto esa estrella marco la imaginacion humana. Para una diseñadora, ademas, el sol es una fuente inagotable de inspiracion visual: sus rayos, sus colores al amanecer y al atardecer, el oro, el naranja y el rojo encendido han vestido a la humanidad en su arte durante milenios.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La energia que el sol envia a la Tierra en una sola hora seria suficiente, en teoria, para cubrir el consumo de energia de toda la humanidad durante un año entero. El problema nunca fue la falta de energia solar; el desafio ha sido aprender a capturarla y guardarla de forma eficiente.
+</div>
+
+<h3>La energia solar moderna</h3>
+
+<p>Hoy, en lugar de venerar al sol, aprendemos a aprovecharlo directamente con tecnologia. La <strong>energia solar</strong> moderna convierte la luz del sol en electricidad usando <strong>paneles solares</strong>: placas hechas de materiales especiales que, al recibir la luz, generan corriente electrica. Ya los ves en los techos de muchas casas, en calculadoras, en satelites del espacio y en enormes "granjas solares" que abastecen ciudades enteras.</p>
+
+<p>Lo mejor de la energia solar es que es <strong>renovable</strong> (el sol seguira saliendo durante miles de millones de años, no se agota como el petroleo) y <strong>limpia</strong> (no contamina el aire mientras genera electricidad). Por eso es una de las grandes esperanzas para el futuro del planeta: en lugar de quemar combustibles fosiles, que contaminan y se acaban, podriamos usar cada vez mas esta fuente inagotable que nos regala el cielo todos los dias. En cierto modo, la humanidad esta cerrando un circulo: despues de milenios de mirar al sol con asombro y darle nombre de dios, ahora aprendemos a recoger su energia directamente, con ciencia en lugar de mitos.</p>
+
+<p>Asi que la proxima vez que sientas el sol en la cara, recuerda todo lo que sostiene: tu comida, el aire que respiras, el viento, la lluvia, la electricidad del futuro y, en el fondo, tu propia energia para vivir y crear. Es la misma estrella que hizo crecer las plantas, que inspiro a los egipcios y a los incas, y que hoy carga los paneles solares. Todo, absolutamente casi todo, empieza en el sol.</p>
+</div>
+
+<footer>
+<p>Semana 8 de 20 | Gio</p>
+<p><em>"El diseño es geometria hecha belleza: cada forma, cada medida, cada color cuenta una historia."</em></p>
+</footer>
+
+</body>
+</html>
