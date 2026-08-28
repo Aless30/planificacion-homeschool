@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gio — Semana 7</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#553c9a;border-bottom:3px solid #9f7aea;padding-bottom:6px;margin-bottom:10px}
+h2{color:#553c9a;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #e9d8fd;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#faf5ff;border-left:4px solid #9f7aea;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.cultura{background:#fef3f8;border-left:4px solid #d53f8c;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}.mate,.escribe,.ejercicio,.proyecto,.cultura,.resuelto,.lectura{padding:8px 12px;margin:6px 0}.dato{padding:6px 10px;margin:5px 0}hr{margin:12px 0}}
+</style>
+</head>
+<body>
+
+<h1>Gio — Semana 7</h1>
+<p><em>4 dias | Empezamos geometria y un nuevo proyecto: mandalas.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Geometria: puntos, lineas y angulos</h3>
+
+<div class="mate">
+<h4>La geometria esta en todo lo que diseñas</h4>
+
+<p>La geometria es la parte de las matematicas que estudia las formas, los tamaños y el espacio. Y para alguien que quiere diseñar, es oro puro: cada prenda, cada estampado, cada patron de costura es geometria pura.</p>
+
+<p>Empecemos por lo mas basico, los "ingredientes" de toda figura:</p>
+
+<h4>El punto</h4>
+<p>Un <strong>punto</strong> es una posicion en el espacio. No tiene tamaño, solo indica "aqui". Se marca con un puntito y se nombra con una letra mayuscula: punto A, punto B.</p>
+
+<h4>La linea y el segmento</h4>
+<ul>
+<li>Una <strong>recta</strong> es una linea que sigue infinitamente en ambas direcciones (no tiene principio ni fin).</li>
+<li>Un <strong>segmento</strong> es un pedazo de recta con principio y fin — como el borde de una regla. Esto es lo que mas usaras al dibujar patrones.</li>
+</ul>
+
+<h4>El angulo</h4>
+<p>Un <strong>angulo</strong> se forma cuando dos lineas se juntan en un punto. Mide "cuanto se abren" esas lineas. Se mide en <strong>grados</strong> (°) con un transportador.</p>
+
+<p>Piensa en las agujas de un reloj: cuando marcan las 3:00, forman un angulo de 90° (un cuarto de vuelta). Cuando marcan las 6:00, forman 180° (media vuelta, una linea recta).</p>
+
+<h4>Tipos de angulos (los que necesitas conocer)</h4>
+<ul>
+<li><strong>Angulo recto:</strong> mide exactamente 90°. Es la esquina de una hoja, de una mesa, de un cuadro. Se marca con un cuadradito.</li>
+<li><strong>Angulo agudo:</strong> mide menos de 90°. Es "puntiagudo", cerrado. Como la punta de un lapiz.</li>
+<li><strong>Angulo obtuso:</strong> mide mas de 90° pero menos de 180°. Es "abierto".</li>
+<li><strong>Angulo llano:</strong> mide exactamente 180°. Es una linea recta.</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: identificar y medir angulos</h4>
+
+<p><strong>Problema:</strong> En el diseño de un cuello de camisa, la solapa forma un angulo. Si sabes que un angulo recto son 90° y el de la solapa es la mitad, ¿cuanto mide? ¿Que tipo de angulo es?</p>
+
+<p><strong>Paso 1 —</strong> La mitad de 90° es: 90 ÷ 2 = 45°</p>
+<p><strong>Paso 2 —</strong> Como 45° es menor que 90°, es un <strong>angulo agudo</strong>.</p>
+<p><em>Dato de diseño: los angulos de 45° aparecen muchisimo en costura, sobre todo al cortar tela "al bies" (en diagonal), que hace que la tela caiga con mas fluidez.</em></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Angulos</h4>
+<ol>
+<li>Un angulo mide 30°. ¿Es agudo, recto u obtuso?</li>
+<li>Un angulo mide 120°. ¿Que tipo es?</li>
+<li>Las agujas del reloj a las 3:00 forman un angulo. ¿Cuantos grados?</li>
+<li>Si un angulo recto se divide en 3 partes iguales, ¿cuanto mide cada parte?</li>
+<li>Dos angulos juntos forman una linea recta (180°). Si uno mide 110°, ¿cuanto mide el otro?</li>
+<li>Dibuja (a mano) un angulo agudo, uno recto y uno obtuso. Marca cual es cual.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general — Una ciencia por dia</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: GEOLOGIA</h4>
+<p><strong>La geologia es la ciencia que estudia la Tierra:</strong> las rocas, los minerales, las montañas, los volcanes, los terremotos y toda la historia de nuestro planeta guardada en las capas de piedra.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Los minerales tienen colores y texturas increibles (el amatista es violeta, la malaquita verde, el opalo tiene reflejos de arcoiris). <em>¿Como usarias los colores y texturas de las rocas y minerales para inspirar un diseño de moda o un estampado?</em> Elige 2 o 3 minerales, busca como se ven, y describe (o dibuja) una prenda inspirada en ellos.</p>
+<p><em>Guarda tu respuesta — al final del bloque armaras tu "Enciclopedia de las Ciencias" con el formato que mas te guste (video, cuadernillo, dibujos, collage...).</em></p>
+</div>
+
+<h3>Bloque 3: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final ("¿Que es la energia? Dos formas de mirar lo mismo").</p>
+<p>Responde:</p>
+<ol>
+<li>Segun el texto, ¿que dice la ciencia sobre la energia? Escribe la idea principal.</li>
+<li>¿Que han descrito muchas culturas antiguas sobre una "energia vital"?</li>
+<li>El texto dice que estas dos miradas "no necesariamente se contradicen". ¿Por que?</li>
+<li>Da un ejemplo cotidiano donde tu sientas que tienes "mas energia" o "menos energia".</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandalas (nuevo)</h3>
+
+<div class="proyecto">
+<h4>Nuevo proyecto: Tu mandala personal</h4>
+<p>Durante las proximas semanas vas a crear un <strong>mandala personal</strong> — un diseño geometrico circular que represente tu energia. Los mandalas existen en muchas culturas (India, Tibet, pueblos originarios de America) y siempre se construyen con geometria: circulos, simetria, patrones que se repiten.</p>
+<p><strong>Hoy — Explorar:</strong> Busca imagenes de mandalas (en libros, revistas o internet con supervision). Observa: ¿que figuras geometricas ves? ¿como se repiten? ¿tienen un centro? Dibuja un boceto rapido de las ideas que te gusten. No tiene que ser perfecto — es exploracion.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MARTES</h2>
+
+<h3>Bloque 1: Matematicas — Figuras planas y sus lados</h3>
+
+<div class="mate">
+<h4>Las figuras que forman todo</h4>
+
+<p>Cuando unes segmentos (lineas con principio y fin), formas <strong>figuras planas</strong> (o poligonos). Son las piezas basicas de cualquier diseño.</p>
+
+<h4>Poligonos segun sus lados</h4>
+<ul>
+<li><strong>Triangulo:</strong> 3 lados. Es la figura mas rigida y estable (por eso se usa en estructuras).</li>
+<li><strong>Cuadrilatero:</strong> 4 lados. Aqui entran el cuadrado, el rectangulo, el rombo.</li>
+<li><strong>Pentagono:</strong> 5 lados.</li>
+<li><strong>Hexagono:</strong> 6 lados (como las celdas de un panal de abejas).</li>
+</ul>
+
+<h4>Tipos de triangulos (importantes para diseño)</h4>
+<ul>
+<li><strong>Equilatero:</strong> los 3 lados iguales, los 3 angulos iguales (60° cada uno).</li>
+<li><strong>Isosceles:</strong> 2 lados iguales.</li>
+<li><strong>Escaleno:</strong> los 3 lados diferentes.</li>
+</ul>
+
+<h4>Tipos de cuadrilateros</h4>
+<ul>
+<li><strong>Cuadrado:</strong> 4 lados iguales y 4 angulos rectos.</li>
+<li><strong>Rectangulo:</strong> lados iguales de a pares, 4 angulos rectos.</li>
+<li><strong>Rombo:</strong> 4 lados iguales pero angulos no rectos (como un diamante).</li>
+</ul>
+
+<p><strong>Dato clave:</strong> los angulos de cualquier triangulo SIEMPRE suman 180°. Los de cualquier cuadrilatero SIEMPRE suman 360°. Esto es una ley de la geometria que nunca falla.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: encontrar un angulo que falta</h4>
+
+<p><strong>Problema:</strong> Un triangulo tiene dos angulos que miden 50° y 60°. ¿Cuanto mide el tercero?</p>
+
+<p><strong>Paso 1 —</strong> Los tres angulos de un triangulo suman 180°.</p>
+<p><strong>Paso 2 —</strong> Sumo los dos que conozco: 50 + 60 = 110°</p>
+<p><strong>Paso 3 —</strong> Resto del total: 180 - 110 = <strong>70°</strong></p>
+<p>El tercer angulo mide 70°.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Figuras planas</h4>
+<ol>
+<li>Un triangulo tiene angulos de 40° y 80°. ¿Cuanto mide el tercero?</li>
+<li>Un triangulo equilatero, ¿cuanto mide cada uno de sus angulos? (Pista: los 3 son iguales y suman 180°.)</li>
+<li>¿Que figura tiene 6 lados? ¿En que animal/insecto de la naturaleza aparece esta forma?</li>
+<li>¿Cual es la diferencia entre un cuadrado y un rombo?</li>
+<li>Un cuadrilatero tiene 3 angulos que miden 90°, 90° y 100°. ¿Cuanto mide el cuarto? (Recuerda: suman 360°.)</li>
+<li>Dibuja un triangulo, un cuadrado y un hexagono. Cuenta los lados de cada uno para verificar.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: ASTRONOMIA</h4>
+<p><strong>La astronomia es la ciencia que estudia los astros y el universo:</strong> las estrellas, los planetas, las galaxias, los agujeros negros y todos los fenomenos que ocurren mas alla de la Tierra.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Las galaxias, las nebulosas y las auroras tienen colores y formas espectaculares. <em>Si diseñaras una coleccion inspirada en el universo, ¿que colores, brillos y texturas usarias? ¿Como se llamaria tu coleccion "cosmica"?</em> Describela o dibujala.</p>
+</div>
+
+<h3>Bloque 3: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("El Qi, el Prana y el Ki: la energia vital en las culturas de Oriente").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que es el "Qi" en la cultura china y con que practicas se relaciona?</li>
+<li>¿Que es el "Prana" en la India y como se conecta con la respiracion?</li>
+<li>¿Que tienen en comun estas tres ideas (Qi, Prana, Ki) de culturas diferentes?</li>
+<li>El texto no dice que esto sea "verdad cientifica comprobada". ¿Por que crees que muchas culturas, sin conocerse entre si, llegaron a ideas parecidas?</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandalas</h3>
+
+<div class="proyecto">
+<h4>Proyecto: La geometria de los mandalas</h4>
+<p><strong>Hoy — El circulo base:</strong> Todo mandala empieza con un circulo. Con un compas (o calcando un objeto redondo como un vaso o plato), dibuja un circulo grande. Luego traza dos lineas que crucen el centro: una vertical y una horizontal (formando una cruz). Ya tienes 4 secciones iguales. Esta es la "estructura" sobre la que despues construiras tu diseño. La simetria (que los 4 lados sean iguales) es lo que hace que un mandala se sienta equilibrado.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — El circulo y la simetria</h3>
+
+<div class="mate">
+<h4>El circulo: la figura perfecta</h4>
+
+<p>El circulo es especial: no tiene lados ni esquinas, es una curva perfecta donde todos los puntos estan a la misma distancia del centro. Es la base de los mandalas y aparece en toda la naturaleza (el sol, la luna, las flores, los ojos).</p>
+
+<h4>Las partes del circulo</h4>
+<ul>
+<li><strong>Centro:</strong> el punto del medio.</li>
+<li><strong>Radio:</strong> la distancia del centro al borde. Es como el "brazo" que gira para dibujar el circulo.</li>
+<li><strong>Diametro:</strong> la linea que cruza el circulo por el centro, de un lado al otro. Siempre mide el doble del radio.</li>
+<li><strong>Circunferencia:</strong> el borde del circulo (la linea curva completa).</li>
+</ul>
+
+<p><strong>Relacion clave:</strong> Diametro = 2 × radio. Si el radio es 5 cm, el diametro es 10 cm.</p>
+
+<h4>La simetria: el corazon del diseño bonito</h4>
+<p>Algo tiene <strong>simetria</strong> cuando una mitad es el reflejo de la otra, como en un espejo. Hay dos tipos que usaras mucho:</p>
+<ul>
+<li><strong>Simetria axial (de espejo):</strong> si doblas la figura por una linea (el "eje"), las dos mitades coinciden. Una mariposa tiene simetria axial. Tu cara (casi) tambien.</li>
+<li><strong>Simetria radial (de giro):</strong> la figura se repite girando alrededor de un centro. Una flor, una estrella de mar, un mandala. Esta es la que usaras en tu proyecto.</li>
+</ul>
+
+<p><strong>Por que importa en diseño:</strong> la simetria genera sensacion de orden, equilibrio y belleza. Casi toda la moda, la arquitectura y el arte usan simetria (o la rompen a proposito para llamar la atencion).</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: radio y diametro</h4>
+
+<p><strong>Problema:</strong> Quieres dibujar un mandala en una hoja. Decides que el diametro sea 18 cm para que quede grande. ¿Que radio debes usar en el compas?</p>
+
+<p><strong>Paso 1 —</strong> Se que diametro = 2 × radio. Entonces radio = diametro ÷ 2.</p>
+<p><strong>Paso 2 —</strong> radio = 18 ÷ 2 = <strong>9 cm</strong></p>
+<p>Abres el compas a 9 cm y dibujas. El circulo mide 18 cm de lado a lado.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Circulo y simetria</h4>
+<ol>
+<li>Si el radio de un circulo es 7 cm, ¿cuanto mide el diametro?</li>
+<li>Si el diametro es 24 cm, ¿cuanto mide el radio?</li>
+<li>Nombra 3 cosas de la naturaleza que tengan forma de circulo.</li>
+<li>¿Una mariposa tiene simetria axial o radial? ¿Y una flor de margarita?</li>
+<li>Dibuja una figura simple (un corazon, una estrella) y traza su eje de simetria.</li>
+<li>Menciona una prenda o accesorio de moda que use simetria. ¿Como se veria si le quitaras la simetria?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: FILOLOGIA</h4>
+<p><strong>La filologia es la ciencia que estudia las lenguas y los textos escritos:</strong> de donde vienen las palabras, como cambian con el tiempo, y como los idiomas cuentan la historia de los pueblos que los hablan.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Muchas palabras de la moda vienen de otros idiomas (por ejemplo, "atelier" es frances, "denim" viene de la ciudad de Nimes en Francia — "de Nimes"). <em>Investiga el origen de 3 palabras del mundo de la moda o el diseño. ¿De donde vienen? ¿Que significan literalmente?</em></p>
+</div>
+
+<h3>Bloque 3: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("La energia de la humanidad: ideas sobre lo colectivo").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que quiere decir la idea de que las emociones "se contagian" en un grupo? Da un ejemplo (un estadio, un concierto, un aula).</li>
+<li>Segun el texto, ¿que se ha podido observar y que todavia no se puede comprobar cientificamente?</li>
+<li>¿Alguna vez sentiste que el "ambiente" de un lugar te cambio el animo? Describe la situacion.</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandalas</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Geometria sagrada e inspiracion</h4>
+<p><strong>Hoy — Explorar la geometria sagrada:</strong> A lo largo de la historia, muchas culturas encontraron patrones geometricos que consideraban especiales o "sagrados": la <strong>flor de la vida</strong> (circulos que se superponen formando un patron de flores), la <strong>espiral</strong> (que aparece en caracoles, girasoles y galaxias), y los patrones de repeticion de los mandalas. No es magia — es geometria que se repite tanto en la naturaleza que a los humanos siempre nos parecio hermosa y misteriosa.</p>
+<p><strong>Actividad:</strong> Sobre tu circulo con la cruz (del martes), empieza a agregar circulos mas pequeños o patrones que se repitan en las 4 secciones por igual. Recuerda: lo que dibujes en una seccion, repitelo en las otras 3 para mantener la simetria radial.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 4 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Perimetro: medir el contorno</h3>
+
+<div class="mate">
+<h4>¿Que es el perimetro?</h4>
+
+<p>El <strong>perimetro</strong> es la distancia alrededor de una figura — la suma de todos sus lados. Piensa en caminar bordeando una cancha: lo que caminas en total es el perimetro.</p>
+
+<p><strong>En diseño de moda esto es utilisimo:</strong> cuando pones un ribete, un encaje o una cinta en el borde de una prenda, necesitas saber el perimetro para saber cuanta cinta comprar.</p>
+
+<h4>Como se calcula</h4>
+<ul>
+<li><strong>Cualquier figura:</strong> suma todos sus lados.</li>
+<li><strong>Cuadrado:</strong> como los 4 lados son iguales → perimetro = lado × 4</li>
+<li><strong>Rectangulo:</strong> perimetro = (largo + ancho) × 2</li>
+<li><strong>Triangulo:</strong> suma sus 3 lados.</li>
+</ul>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: cuanta cinta necesito</h4>
+
+<p><strong>Problema:</strong> Quieres ponerle una cinta decorativa al borde de un pañuelo cuadrado que mide 40 cm de lado. ¿Cuanta cinta necesitas?</p>
+
+<p><strong>Paso 1 —</strong> Es un cuadrado, los 4 lados miden 40 cm.</p>
+<p><strong>Paso 2 —</strong> Perimetro = lado × 4 = 40 × 4 = <strong>160 cm</strong> (o 1.6 metros)</p>
+<p><em>Consejo real: al comprar cinta, siempre agrega un poco extra (5-10 cm) para las esquinas y el cierre. Comprarias 1.7 m para estar segura.</em></p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Perimetro</h4>
+<ol>
+<li>Un pañuelo cuadrado mide 25 cm de lado. ¿Cuanto mide su perimetro?</li>
+<li>Un mantel rectangular mide 120 cm de largo y 80 cm de ancho. ¿Cuanta cinta necesitas para bordearlo todo?</li>
+<li>Un triangulo tiene lados de 8 cm, 10 cm y 12 cm. ¿Cual es su perimetro?</li>
+<li>Quieres ponerle encaje al borde de una falda cuya base mide 90 cm de contorno. Si el encaje cuesta $15 el metro, ¿cuanto gastas? (Pista: 90 cm = 0.9 m)</li>
+<li>Un mandala cuadrado que dibujaste mide 20 cm de lado. Si quieres enmarcarlo con washi tape (cinta decorativa), ¿cuanta necesitas?</li>
+<li>Compara: ¿que tiene mayor perimetro, un cuadrado de 10 cm de lado o un rectangulo de 15 cm × 6 cm? Calcula ambos.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: BOTANICA</h4>
+<p><strong>La botanica es la ciencia que estudia las plantas:</strong> como crecen, como se reproducen, sus tipos, sus flores, sus usos y su importancia para la vida en la Tierra.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Los estampados florales son un clasico eterno de la moda. <em>Elige una flor o planta que te guste, obsérvala bien (forma de los petalos, colores, como se abre) y diseña un estampado inspirado en ella.</em> Dibujalo o describe como seria.</p>
+</div>
+
+<h3>Bloque 3: Lectura y cierre</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Repasa los 3 textos de esta semana y responde:</p>
+<ol>
+<li>¿Cual de las ideas sobre la energia (la cientifica o la de las tradiciones) te resulto mas interesante? ¿Por que?</li>
+<li>Todas las culturas que vimos hablan de "cuidar" o "equilibrar" la energia. ¿Que cosas crees que te dan energia y que cosas te la quitan en tu dia a dia?</li>
+<li><strong>Dato favorito:</strong> de todo lo que leiste esta semana, ¿que te sorprendio mas? (1-2 oraciones)</li>
+</ol>
+</div>
+
+<h3>Bloque 4: Proyecto — Mandalas</h3>
+
+<div class="proyecto">
+<h4>Proyecto: Avanza tu mandala + planea tu Enciclopedia</h4>
+<p><strong>Parte A — Mandala:</strong> Sigue completando tu mandala agregando mas capas de patrones simetricos. Puedes empezar a agregar color. Recuerda: cada capa se repite igual en todas las secciones.</p>
+<p><strong>Parte B — Enciclopedia de las Ciencias:</strong> Ya tienes 4 ciencias con sus preguntas (geologia, astronomia, filologia, botanica). Piensa: ¿en que formato quieres presentar tu enciclopedia final? Puede ser un cuadernillo ilustrado, un video corto, un collage, una serie de dibujos... Elige el que mas te divierta y empieza a planearlo.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+<div class="lectura">
+<h2>Texto 1 — ¿Que es la energia? Dos formas de mirar lo mismo</h2>
+
+<p>Usamos la palabra "energia" todo el tiempo. Decimos "hoy no tengo energia", "esa persona tiene una energia increible", "este lugar tiene mala energia". Pero, ¿que es exactamente la energia? Resulta que hay al menos dos grandes formas de responder esa pregunta, y aunque parecen muy distintas, quiza no se contradicen tanto como parece.</p>
+
+<h3>La mirada de la ciencia</h3>
+
+<p>Para la fisica, la <strong>energia es la capacidad de producir cambios o movimiento</strong>. Todo lo que se mueve, calienta, ilumina o transforma algo, esta usando energia. La comida que comes tiene energia quimica que tu cuerpo convierte en energia para moverte. El sol emite energia luminosa que las plantas capturan. Un rayo es energia electrica.</p>
+
+<p>La ciencia descubrio algo asombroso: <strong>la energia no se crea ni se destruye, solo se transforma</strong>. La energia que usaste hoy para caminar vino de tu desayuno, que vino de una planta, que la capturo del sol, que la genera con reacciones nucleares. Todo esta conectado en una gran cadena de transformaciones de energia que nunca se detiene. Ademas, Albert Einstein demostro con su famosa formula E=mc² que la materia y la energia son, en el fondo, dos formas de la misma cosa. Es decir: todo lo que existe, incluido tu cuerpo, es en cierto sentido "energia condensada".</p>
+
+<h3>La mirada de las tradiciones</h3>
+
+<p>Mucho antes de que existiera la fisica moderna, culturas de todo el mundo — sin conocerse entre si — describieron algo que llamaron "energia vital" o "fuerza de vida". No hablaban de joules ni de electricidad, sino de una especie de energia que fluye dentro de los seres vivos y que se relaciona con la salud, el animo y la vitalidad.</p>
+
+<p>Estas tradiciones observaron algo que cualquiera puede notar: hay dias en que te sientes "lleno de energia" y dias en que te sientes "apagado", sin que necesariamente hayas comido mas o menos. Notaron que las emociones, la respiracion, el descanso, la naturaleza y hasta la compañia de otras personas parecen afectar esa "energia interior". A partir de esas observaciones, desarrollaron practicas para cuidarla: la respiracion consciente, el movimiento, la meditacion, ciertas posturas del cuerpo.</p>
+
+<h3>¿Se contradicen estas dos miradas?</h3>
+
+<p>No necesariamente. La ciencia estudia la energia que se puede medir con instrumentos: calor, movimiento, electricidad. Las tradiciones hablan de una experiencia mas subjetiva: como te sientes por dentro, tu vitalidad, tu animo. Son como dos mapas diferentes de un territorio enorme.</p>
+
+<p>Hay cosas de las tradiciones que la ciencia ha podido confirmar: por ejemplo, que la respiracion profunda realmente calma el sistema nervioso (lo viste en las lecturas de emociones), que el ejercicio genera bienestar, que estar en la naturaleza reduce el estres. Otras ideas todavia no se han podido medir ni comprobar cientificamente, y quedan en el terreno de la creencia personal o cultural.</p>
+
+<p>Lo importante no es decidir cual mirada es "la verdadera". Es entender que el ser humano ha buscado, desde siempre y de muchas maneras, comprender esa fuerza misteriosa que nos mantiene vivos y en movimiento. Tu puedes conocer ambas miradas, respetarlas, y con el tiempo formar tu propia manera de entenderlo.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cuerpo, ahora mismo en reposo, genera aproximadamente la misma cantidad de calor que una bombilla de 100 watts. Toda esa energia viene de la comida transformandose dentro de tus celulas. Literalmente eres una fuente de energia que brilla (en calor).
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — El Qi, el Prana y el Ki: la energia vital en las culturas de Oriente</h2>
+
+<p>Una de las cosas mas fascinantes de estudiar culturas diferentes es descubrir que, muchas veces, llegaron a ideas parecidas sin haberse conocido nunca. La idea de una "energia vital" que fluye por el cuerpo aparece en China, India, Japon y muchos otros lugares, cada uno con su propio nombre y sus propias practicas. Veamos las tres mas conocidas.</p>
+
+<h3>El Qi (o Chi) — China</h3>
+
+<p>En la cultura china, desde hace mas de 3,000 años, se habla del <strong>Qi</strong> (se pronuncia "chi"): una energia vital que, segun esta tradicion, fluye por el cuerpo a traves de canales llamados "meridianos". Cuando el Qi fluye bien, la persona esta sana y equilibrada; cuando se "bloquea", aparecerian problemas.</p>
+
+<p>De esta idea nacieron practicas que millones de personas siguen usando hoy:</p>
+<ul>
+<li><strong>El Tai Chi:</strong> una serie de movimientos lentos y suaves, casi como una danza en camara lenta, para "hacer fluir el Qi". Si alguna vez viste en un parque a personas mayores moviendose muy despacio y coordinado, eso es Tai Chi.</li>
+<li><strong>El Chi Kung (Qigong):</strong> ejercicios de respiracion y movimiento.</li>
+<li><strong>La acupuntura:</strong> la practica de colocar agujas finisimas en puntos especificos del cuerpo para "desbloquear" el Qi.</li>
+</ul>
+
+<h3>El Prana — India</h3>
+
+<p>En la India, la tradicion habla del <strong>Prana</strong>: la energia vital que, segun esta vision, entra al cuerpo principalmente a traves de la <strong>respiracion</strong>. La palabra prana significa algo asi como "aliento de vida". Por eso, en esta tradicion, aprender a respirar bien es aprender a manejar tu energia.</p>
+
+<p>De aqui vienen:</p>
+<ul>
+<li><strong>El Pranayama:</strong> tecnicas de respiracion controlada (respirar lento, retener el aire, exhalar de cierta forma). Curiosamente, la ciencia SI ha comprobado que la respiracion lenta calma el sistema nervioso.</li>
+<li><strong>El Yoga:</strong> las posturas del yoga (asanas) buscan, entre otras cosas, que la energia fluya libremente por el cuerpo.</li>
+<li><strong>Los chakras:</strong> segun esta tradicion, existen 7 centros de energia a lo largo de la columna, cada uno asociado a un color y a aspectos de la vida (la seguridad, las emociones, la creatividad, el amor, la comunicacion, la intuicion, la conexion espiritual).</li>
+</ul>
+
+<h3>El Ki — Japon</h3>
+
+<p>En Japon, la misma idea aparece con el nombre de <strong>Ki</strong>. Esta presente hasta en el idioma cotidiano: la palabra japonesa para "salud" (genki) y muchas otras contienen la raiz "ki". De aqui vienen:</p>
+<ul>
+<li><strong>El Reiki:</strong> una practica donde se busca canalizar energia a traves de las manos para promover la relajacion.</li>
+<li><strong>Las artes marciales:</strong> en el aikido, el karate y otras, se habla de concentrar el Ki para tener mas fuerza y control. El famoso "grito" de los artistas marciales (el kiai) esta relacionado con esta idea de liberar energia.</li>
+</ul>
+
+<h3>¿Que tienen en comun?</h3>
+
+<p>Tres culturas distintas, en tres lugares distintos, separadas por miles de kilometros, describieron una energia vital que fluye por el cuerpo, que se relaciona con la respiracion, el movimiento y las emociones, y que se puede cultivar con practicas. ¿Coincidencia? ¿O quiza todas estaban observando algo real de la experiencia humana, aunque lo explicaran de formas diferentes?</p>
+
+<p>Es importante ser honestos: la ciencia moderna no ha podido medir directamente el "Qi", el "Prana" ni el "Ki" con instrumentos. Sin embargo, muchas de las <em>practicas</em> que nacieron de estas ideas (respiracion, meditacion, movimiento suave, ejercicio) SI han demostrado beneficios reales para la salud fisica y mental. Puedes tomar lo que te sirva de estas tradiciones, con curiosidad y respeto, sin necesidad de aceptar todo como verdad absoluta ni de rechazarlo todo. La mente abierta y critica a la vez es la mejor herramienta.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La palabra "espiritu" en muchos idiomas antiguos significaba originalmente "aliento" o "respiracion". En latin, "spiritus" venia de "respirar". En hebreo y griego pasaba algo parecido. Para muchas culturas antiguas, la vida, el aliento y la energia espiritual eran practicamente la misma cosa.
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 3 — La energia de la humanidad: ideas sobre lo colectivo</h2>
+
+<p>Hasta ahora hablamos de la energia dentro de una persona. Pero muchas tradiciones — y algunas ideas modernas — van mas alla y hablan de la "energia" de los grupos, de las multitudes, e incluso de la humanidad entera. ¿Que hay de cierto en esto? Exploremoslo con curiosidad y con pensamiento critico.</p>
+
+<h3>Las emociones se contagian</h3>
+
+<p>Esto no es misticismo — es algo que cualquiera ha experimentado y que la ciencia SI ha estudiado. Cuando estas en un estadio y tu equipo anota, sientes la euforia colectiva. Cuando entras a un lugar donde acaban de discutir, sientes la tension "en el aire". Cuando alguien bosteza, te dan ganas de bostezar. Cuando una persona se rie con ganas, es dificil no sonreir.</p>
+
+<p>Los cientificos llaman a esto <strong>"contagio emocional"</strong>. Tenemos unas neuronas llamadas <strong>neuronas espejo</strong> que hacen que, al ver la emocion de otro, nuestro cerebro la "reproduzca" un poco. Por eso las emociones se propagan por un grupo como una ola. Un lider entusiasta contagia entusiasmo; una persona ansiosa puede poner nervioso a todo un salon. En cierto sentido, los grupos humanos SI tienen una "energia colectiva" — un estado de animo compartido que surge de la suma de todos.</p>
+
+<h3>Ideas que van mas alla (y que aun no se comprueban)</h3>
+
+<p>Algunas corrientes de pensamiento van mucho mas lejos. Proponen ideas como:</p>
+<ul>
+<li>Que existe una "conciencia colectiva" de la humanidad, una especie de mente compartida.</li>
+<li>Que los pensamientos y emociones de mucha gente a la vez podrian tener algun efecto en el mundo.</li>
+<li>Que estamos todos "conectados" energeticamente de formas que aun no entendemos.</li>
+</ul>
+
+<p>Estas ideas son fascinantes y aparecen en muchas filosofias, religiones y hasta en algunas hipotesis modernas. Pero es importante ser claro: <strong>estas ideas NO estan comprobadas cientificamente</strong>. Son creencias, filosofias o hipotesis que cada persona puede explorar y valorar segun su propia reflexion. No son hechos demostrados como lo es, por ejemplo, que el agua hierve a 100°C.</p>
+
+<h3>Lo que si sabemos</h3>
+
+<p>Lo que si esta demostrado es que los seres humanos somos profundamente sociales y que nos influimos muchisimo unos a otros:</p>
+<ul>
+<li>El animo de las personas con las que pasas tiempo afecta tu propio animo (por eso importa con quien te rodeas).</li>
+<li>Las multitudes pueden comportarse de formas muy distintas a como se comportaria cada persona sola (para bien y para mal).</li>
+<li>Los movimientos sociales muestran que cuando muchas personas comparten una emocion o una idea, pueden cambiar el mundo (las grandes transformaciones de la historia empezaron asi).</li>
+</ul>
+
+<h3>Como pensar sobre esto</h3>
+
+<p>Frente a ideas que no se pueden comprobar, la mejor actitud no es creer todo ciegamente ni rechazar todo con desprecio. Es mantener lo que se llama una "mente abierta pero critica": estar dispuesto a considerar ideas nuevas, pero tambien a preguntar "¿que evidencia hay de esto?". Puedes encontrar belleza, inspiracion o consuelo en ciertas ideas sobre la conexion humana, y al mismo tiempo reconocer cuando algo es una creencia y no un hecho comprobado. Esas dos cosas pueden convivir en una misma persona inteligente.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Las neuronas espejo fueron descubiertas por accidente en los años 90, estudiando monos. Los cientificos notaron que ciertas neuronas del cerebro del mono se activaban tanto cuando el mono agarraba algo como cuando SOLO VEIA a otro agarrarlo. Ese descubrimiento ayudo a explicar la empatia, la imitacion y por que las emociones se contagian.
+</div>
+</div>
+
+<footer>
+<p>Semana 7 de 20 | Gio</p>
+<p><em>"La geometria es el lenguaje con el que la naturaleza dibuja su belleza."</em></p>
+</footer>
+
+</body>
+</html>

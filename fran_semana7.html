@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran — Semana 7</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:0 auto;padding:30px;color:#2d3748;line-height:1.6;font-size:15px}
+h1{color:#2a4365;border-bottom:3px solid #4299e1;padding-bottom:6px;margin-bottom:10px}
+h2{color:#2a4365;margin-top:25px;margin-bottom:8px;border-bottom:2px solid #bee3f8;padding-bottom:5px}
+h3{color:#2c5282;margin-top:15px;margin-bottom:5px}
+h4{color:#ed8936;margin-top:12px;margin-bottom:4px}
+p{margin:5px 0}
+ul,ol{margin:5px 0 5px 20px}
+li{margin:3px 0}
+.mate{background:#f0f4f8;border-left:4px solid #2c5282;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ciencia{background:#f0f9ff;border-left:4px solid #0891b2;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.escribe{background:#ebf8ff;border-left:4px solid #4299e1;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.ejercicio{background:#fffbeb;border-left:4px solid #ed8936;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.resuelto{background:#f0fff4;border-left:4px solid #38a169;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.proyecto{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.cultura{background:#f5f3ff;border-left:4px solid #7c3aed;padding:12px 16px;margin:10px 0;border-radius:0 6px 6px 0}
+.lectura{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px 22px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.dato{background:#ebf8ff;border-left:4px solid #4299e1;padding:8px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:.9em}
+hr{border:none;height:1px;background:#e2e8f0;margin:20px 0}
+.page-break{page-break-before:always;break-before:page;margin-top:20px}
+footer{text-align:center;color:#a0aec0;margin-top:30px;font-size:.8em;border-top:1px solid #e2e8f0;padding-top:10px}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9em}
+th,td{padding:5px 8px;border:1px solid #e2e8f0;text-align:center}
+th{background:#2c5282;color:#fff}
+tr:nth-child(even){background:#f8fafc}
+@media print{body{padding:10px;font-size:13px;line-height:1.4}h1{font-size:1.4em;margin-top:0}h2{font-size:1.2em;margin-top:15px}.mate,.ciencia,.escribe,.ejercicio,.resuelto,.proyecto,.cultura,.lectura{padding:8px 12px;margin:6px 0}.dato{padding:6px 10px;margin:5px 0}hr{margin:12px 0}table{font-size:.8em}th,td{padding:3px 5px}}
+</style>
+</head>
+<body>
+
+<h1>Fran — Semana 7</h1>
+<p><em>4 dias | Nuevo: bloque de Ciencias separado. La fisica de la energia.</em></p>
+
+<hr>
+
+<h2>DIA 1 — LUNES</h2>
+
+<h3>Bloque 1: Matematicas — Repaso general + introduccion a funciones</h3>
+
+<div class="mate">
+<h4>Cierre de probabilidad + una idea nueva y potente</h4>
+
+<p>La semana pasada terminaste probabilidad y combinatoria: ya sabes calcular las chances de que algo pase y contar combinaciones. Repaso rapido: la probabilidad de un evento es <strong>casos favorables / casos totales</strong>, y una combinacion cuenta grupos donde el orden no importa. Con eso cerrado, hoy empezamos algo que vas a usar en TODO de aqui en adelante: las <strong>funciones</strong>.</p>
+
+<h4>Una funcion es una "maquina"</h4>
+<p>Piensa en una funcion como una <strong>maquina</strong>: le metes un numero (la <strong>entrada</strong>), la maquina hace una operacion, y sale otro numero (la <strong>salida</strong>). Cada entrada produce exactamente una salida.</p>
+<p>Ejemplo: la maquina "multiplica por 2". Si entra 3, sale 6. Si entra 5, sale 10.</p>
+
+<h4>La notacion f(x)</h4>
+<p>En vez de dibujar una maquina, los matematicos escriben: <strong>f(x)</strong>. Se lee "f de x". La <strong>x</strong> es la entrada, y <strong>f(x)</strong> es la salida.</p>
+<p>Si la maquina "multiplica por 2", se escribe: <strong>f(x) = 2x</strong>. Entonces f(3) = 2·3 = 6.</p>
+<p>Para <strong>evaluar</strong> una funcion solo reemplazas la x por el numero que entra y calculas.</p>
+
+<div class="dato">
+Como un videojuego: si cada enemigo te da 50 puntos, la funcion "puntos" es f(x) = 50x, donde x = enemigos derrotados. Metes enemigos, salen puntos.
+</div>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: evaluar una funcion</h4>
+<p><strong>Problema:</strong> En un juego, tu puntaje es f(x) = 30x + 100, donde x son las monedas que recoges (los 100 son un bono fijo por empezar). ¿Cuanto puntaje tienes si recoges 4 monedas?</p>
+<p><strong>Paso 1 —</strong> Identifico la entrada: x = 4.</p>
+<p><strong>Paso 2 —</strong> Reemplazo la x por 4: f(4) = 30·4 + 100.</p>
+<p><strong>Paso 3 —</strong> Calculo: 30·4 = 120, y 120 + 100 = <strong>220</strong>.</p>
+<p>Con 4 monedas tienes 220 puntos. Escrito corto: f(4) = 220.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Funciones (evaluar)</h4>
+<ol>
+<li>Si f(x) = 2x, calcula f(7) y f(10).</li>
+<li>En basquet, cada canasta de 3 puntos suma... 3. La funcion es f(x) = 3x (x = triples encestados). ¿Cuantos puntos con 6 triples?</li>
+<li>Si f(x) = x + 5, calcula f(0), f(8) y f(20).</li>
+<li>Tu puntaje en un juego es f(x) = 25x + 50. ¿Cuanto sacas con x = 10 enemigos?</li>
+<li>Si g(x) = 4x - 3, calcula g(2) y g(5).</li>
+<li>Una funcion cuesta "vidas": f(x) = 100 - 20x (empiezas con 100 de vida y pierdes 20 por golpe). ¿Cuanta vida te queda tras 3 golpes? ¿Y tras 5?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — ¿Que es la energia en fisica? (nivel avanzado)</h3>
+
+<div class="ciencia">
+<h4>Energia: la capacidad de hacer que algo pase</h4>
+<p>Ya conoces la idea basica: la energia es lo que hace que las cosas se muevan, calienten o cambien. Ahora subimos el nivel con una definicion mas precisa de la fisica: <strong>la energia es la capacidad de realizar trabajo</strong>.</p>
+
+<h4>¿Que es "trabajo" en fisica?</h4>
+<p>En fisica, <strong>trabajo</strong> no es ir a la oficina. Es lo que ocurre cuando aplicas una <strong>fuerza</strong> a un objeto y lo <strong>mueves</strong> una cierta distancia. La formula es:</p>
+<p style="text-align:center"><strong>W = F × d</strong></p>
+<p>Donde W = trabajo, F = fuerza (en newtons, N) y d = distancia (en metros, m). El resultado se mide en <strong>Joules (J)</strong>, la unidad de energia y de trabajo. 1 Joule = 1 newton empujando 1 metro.</p>
+<p>Ejemplo con numeros: si empujas un carrito con una fuerza de 20 N a lo largo de 3 m, el trabajo es W = 20 × 3 = 60 J.</p>
+
+<h4>Energia cinetica: la energia del movimiento</h4>
+<p>Todo lo que se mueve tiene <strong>energia cinetica</strong>. Depende de la masa y, sobre todo, de la velocidad (que va al cuadrado, asi que pesa muchisimo). La formula es:</p>
+<p style="text-align:center"><strong>Ec = (1/2) · m · v²</strong></p>
+<p>Donde m = masa (kg) y v = velocidad (m/s). El resultado tambien esta en Joules.</p>
+<p>Por eso un balon de basquet lanzado rapido "pega" mucho mas fuerte que uno lento: al elevar la velocidad al cuadrado, la energia crece rapidisimo.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: energia cinetica de un balon</h4>
+<p><strong>Problema:</strong> Lanzas un balon de basquet de masa 0.6 kg a una velocidad de 10 m/s. ¿Cual es su energia cinetica?</p>
+<p><strong>Paso 1 —</strong> Escribo la formula: Ec = (1/2) · m · v².</p>
+<p><strong>Paso 2 —</strong> Reemplazo: m = 0.6 kg, v = 10 m/s. Primero v² = 10² = 100.</p>
+<p><strong>Paso 3 —</strong> Ec = (1/2) · 0.6 · 100 = 0.5 · 0.6 · 100.</p>
+<p><strong>Paso 4 —</strong> 0.5 · 0.6 = 0.3, y 0.3 · 100 = <strong>30 J</strong>.</p>
+<p>El balon lleva 30 Joules de energia cinetica. Si lo lanzaras al doble de rapido (20 m/s), la energia seria 4 veces mayor (120 J), porque la velocidad va al cuadrado.</p>
+</div>
+
+<div class="ciencia">
+<h4>Ejercicios — Trabajo y energia cinetica</h4>
+<ol>
+<li>Empujas una caja con una fuerza de 15 N a lo largo de 4 m. ¿Cuanto trabajo realizas? (W = F × d)</li>
+<li>Un jugador aplica 50 N para mover un banco de pesas 2 m. ¿Cuantos Joules de trabajo hace?</li>
+<li>Calcula la energia cinetica de una pelota de 0.4 kg que va a 5 m/s. (Ec = ½·m·v²)</li>
+<li>Un skater de 50 kg se mueve a 4 m/s. ¿Cual es su energia cinetica?</li>
+<li>Un balon va a 6 m/s con Ec = 9 J. Si ahora va a 12 m/s (el doble), ¿su energia se duplica o se cuadruplica? Explica por que (pista: el v va al cuadrado).</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: GEOLOGIA</h4>
+<p><strong>La geologia es la ciencia que estudia la Tierra:</strong> las rocas, minerales, volcanes, terremotos, y la historia del planeta.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> <em>Si tuvieras que explicar por que ocurre un terremoto usando lo que sabes de energia (energia acumulada que se libera de golpe), ¿como lo harias? Investiga un poco y explicalo con tus palabras.</em></p>
+<p><em>Guarda tu respuesta — al final del bloque armaras tu "Enciclopedia de las Ciencias" con el formato que mas te guste (video, cuadernillo, diagramas, presentacion...).</em></p>
+</div>
+
+<h3>Bloque 4: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 1</strong> al final ("¿Que es la energia? Dos formas de mirar lo mismo").</p>
+<p>Responde:</p>
+<ol>
+<li>Segun el texto, ¿que dice la ciencia sobre la energia? Escribe la idea principal.</li>
+<li>¿Que describieron muchas culturas antiguas sobre una "energia vital"?</li>
+<li>El texto dice que estas dos miradas "no necesariamente se contradicen". ¿Por que?</li>
+<li>Da un ejemplo cotidiano donde tu sientas que tienes "mas energia" o "menos energia". ¿En que crees que se relaciona con la fisica que estudiaste hoy (comida, movimiento)?</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 1 — Elige tu maquina</h4>
+<p>Durante esta semana vas a diseñar una <strong>maquina que transforme un tipo de energia en otro</strong>. <strong>Hoy:</strong> piensa en varias ideas (un molino, un panel solar que mueve algo, una consola con dinamo, un auto de juguete a resorte...), <strong>elige una</strong>, ponle un <strong>nombre</strong> y haz un <strong>boceto rapido</strong> de la idea basica. Todavia no importan los detalles — solo la idea general.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 2 — MARTES</h2>
+
+<h3>Bloque 1: Matematicas — Funciones lineales</h3>
+
+<div class="mate">
+<h4>La funcion mas usada del mundo: la lineal</h4>
+<p>Una <strong>funcion lineal</strong> es la que, al graficarla, da una <strong>linea recta</strong>. Su formula es:</p>
+<p style="text-align:center"><strong>y = m·x + b</strong></p>
+<ul>
+<li><strong>m</strong> es la <strong>pendiente</strong> (la inclinacion): cuanto sube (o baja) la linea por cada paso que avanza. Si m es grande, la linea sube empinada; si m es negativa, baja.</li>
+<li><strong>b</strong> es la <strong>ordenada al origen</strong>: el valor de y cuando x = 0 (donde la linea corta el eje vertical). Es como el "punto de partida".</li>
+</ul>
+<h4>Graficar paso a paso</h4>
+<ol>
+<li>Marca el punto de partida b sobre el eje vertical.</li>
+<li>Desde ahi, usa la pendiente: por cada 1 que avanzas a la derecha, sube m.</li>
+<li>Une los puntos con una recta.</li>
+</ol>
+<div class="dato">
+En basquet, si empiezas con 5 puntos de ventaja (b=5) y anotas 2 por posesion (m=2), tu puntaje es y = 2x + 5. Es una funcion lineal: crece de forma pareja.
+</div>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: acumular puntaje</h4>
+<p><strong>Problema:</strong> Tu equipo empieza con 8 puntos de ventaja y anota 2 puntos por cada canasta. La funcion es y = 2x + 8 (x = canastas). ¿Cuanta ventaja tras 6 canastas? Ademas, di cual es la pendiente y el punto de partida.</p>
+<p><strong>Paso 1 —</strong> Identifico: pendiente m = 2 (sube 2 por canasta), punto de partida b = 8.</p>
+<p><strong>Paso 2 —</strong> Reemplazo x = 6: y = 2·6 + 8.</p>
+<p><strong>Paso 3 —</strong> Calculo: 2·6 = 12, y 12 + 8 = <strong>20</strong>.</p>
+<p>Tras 6 canastas tu ventaja es 20 puntos. La recta arranca en 8 y sube 2 por cada canasta.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Funciones lineales</h4>
+<ol>
+<li>En y = 3x + 4, ¿cual es la pendiente y cual el punto de partida (b)?</li>
+<li>Calcula y en y = 3x + 4 para x = 0, x = 2 y x = 5.</li>
+<li>Un personaje corre a velocidad constante: distancia y = 6x (x = segundos, m/s). ¿Que distancia recorre en 10 segundos?</li>
+<li>Tu vida en un juego baja de forma lineal: y = 100 - 10x (x = trampas pisadas). ¿Cuanta vida tras 4 trampas? ¿Cual es la pendiente y que significa que sea negativa?</li>
+<li>Haz una tabla de y = 2x + 1 para x = 0, 1, 2, 3 y grafica los 4 puntos en papel cuadriculado. Unelos: ¿forman una recta?</li>
+<li>Dos rectas: y = x + 2 y y = 3x. ¿Cual sube mas rapido? ¿Como lo sabes solo mirando la pendiente?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Energia potencial y conservacion</h3>
+
+<div class="ciencia">
+<h4>La energia "guardada": energia potencial</h4>
+<p>Ademas de la energia del movimiento (cinetica), existe la <strong>energia potencial</strong>: energia <em>almacenada</em> lista para liberarse. La mas comun es la <strong>energia potencial gravitatoria</strong>: la que tiene un objeto por estar a cierta altura. Cuanto mas alto y mas pesado, mas energia guardada. Su formula es:</p>
+<p style="text-align:center"><strong>Ep = m · g · h</strong></p>
+<p>Donde m = masa (kg), <strong>g = gravedad ≈ 9.8 m/s²</strong> (la aceleracion con que la Tierra atrae las cosas) y h = altura (m). El resultado esta en Joules.</p>
+
+<h4>Conservacion de la energia mecanica</h4>
+<p>Aqui viene lo elegante: en un sistema sin rozamiento, la suma de energia cinetica y potencial <strong>se mantiene constante</strong>:</p>
+<p style="text-align:center"><strong>Ec + Ep = constante</strong></p>
+<p>Cuando dejas caer un balon, arriba tiene toda su energia como potencial (esta quieto, alto). Al caer, la altura baja y la velocidad sube: la energia potencial se va convirtiendo en cinetica. Justo antes de tocar el suelo, casi toda es cinetica. ¡La energia no se pierde, solo cambia de forma!</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: un balon dejado caer</h4>
+<p><strong>Problema:</strong> Sostienes un balon de 0.5 kg a una altura de 2 m y lo sueltas. (a) ¿Cual es su energia potencial arriba? (b) Por conservacion, ¿cuanta energia cinetica tendra justo antes de tocar el suelo? Usa g = 9.8 m/s².</p>
+<p><strong>Paso 1 —</strong> Formula de energia potencial: Ep = m · g · h.</p>
+<p><strong>Paso 2 —</strong> Reemplazo: Ep = 0.5 · 9.8 · 2.</p>
+<p><strong>Paso 3 —</strong> Calculo: 0.5 · 9.8 = 4.9, y 4.9 · 2 = <strong>9.8 J</strong> de energia potencial arriba.</p>
+<p><strong>Paso 4 —</strong> Por conservacion (Ec + Ep constante), como abajo la altura es 0 (Ep = 0), toda esa energia se convirtio en cinetica: <strong>Ec ≈ 9.8 J</strong> justo antes de tocar el suelo.</p>
+<p>La energia total nunca cambio: solo paso de "guardada" (potencial) a "de movimiento" (cinetica).</p>
+</div>
+
+<div class="ciencia">
+<h4>Ejercicios — Energia potencial y conservacion</h4>
+<ol>
+<li>Calcula la energia potencial de una mochila de 4 kg colocada en un estante a 2 m de altura (g = 9.8 m/s²).</li>
+<li>Un balon de 0.6 kg esta a 5 m de altura en las gradas. ¿Cuanta energia potencial tiene?</li>
+<li>Si subes el mismo objeto al DOBLE de altura, ¿su energia potencial se duplica, se mantiene o se cuadruplica? Explica.</li>
+<li>Una piedra de 1 kg cae desde 10 m. ¿Cuanta energia cinetica tendra (aprox.) justo antes de tocar el suelo? (Pista: usa conservacion, calcula la Ep de arriba.)</li>
+<li>Con tus palabras: cuando un balon sube y baja, ¿en que momento tiene MAS energia cinetica y en que momento MAS potencial?</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: ASTRONOMIA</h4>
+<p><strong>La astronomia es la ciencia que estudia los astros y el universo:</strong> estrellas, planetas, galaxias y todo lo que ocurre mas alla de la Tierra.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> <em>El Sol produce energia por fusion nuclear. Investiga MUY basicamente que es la fusion nuclear y por que el Sol es como una "central de energia" gigante. Explicalo en pocas lineas.</em></p>
+</div>
+
+<h3>Bloque 4: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 2</strong> al final ("El Qi, el Prana y el Ki: la energia vital en las culturas de Oriente").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que es el "Qi" en la cultura china y con que practicas se relaciona?</li>
+<li>¿Que es el "Prana" en la India y como se conecta con la respiracion?</li>
+<li>¿Que tienen en comun estas tres ideas (Qi, Prana, Ki) de culturas diferentes?</li>
+<li>El texto dice que la ciencia no ha medido el Qi/Prana/Ki, pero que muchas practicas SI tienen beneficios comprobados. En tu opinion, ¿como conviene tomar estas ideas? Explica brevemente.</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 2 — La cadena de transformacion</h4>
+<p><strong>Hoy:</strong> detalla la <strong>cadena de transformacion de energia</strong> de tu maquina. Escribe cada paso con flechas, por ejemplo: solar → electrica → cinetica, o quimica → electrica → luminosa. <strong>Etiqueta cada etapa</strong> diciendo que tipo de energia es y donde ocurre el cambio dentro de tu maquina.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 3 — MIERCOLES</h2>
+
+<h3>Bloque 1: Matematicas — Funciones cuadraticas (repaso/profundizacion)</h3>
+
+<div class="mate">
+<h4>Cuando la funcion se curva: la parabola</h4>
+<p>Ya viste las parabolas antes. Ahora las conectamos con las funciones. Una <strong>funcion cuadratica</strong> tiene la x al cuadrado:</p>
+<p style="text-align:center"><strong>y = a·x² + b·x + c</strong></p>
+<p>Al graficarla NO da una recta, sino una curva en forma de U (o de U invertida ∩ si a es negativo). Esa curva se llama <strong>parabola</strong>.</p>
+
+<h4>Basquet puro: el tiro es una parabola</h4>
+<p>Cuando lanzas un balon al aro, su trayectoria en el aire es <strong>exactamente</strong> una parabola. Sube, alcanza un punto mas alto, y baja. Esa es una funcion cuadratica en accion.</p>
+
+<h4>El vertice: el punto clave</h4>
+<p>El <strong>vertice</strong> es el punto donde la parabola cambia de direccion. Si abre hacia abajo (∩), el vertice es el <strong>punto mas alto</strong> — la altura maxima de tu tiro. Si abre hacia arriba (U), el vertice es el punto mas bajo. Los jugadores buenos, sin saber matematicas, ajustan el vertice de su tiro para que el balon caiga justo en el aro.</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: altura de un tiro</h4>
+<p><strong>Problema:</strong> La altura de un balon (en metros) despues de x segundos es h(x) = -5x² + 10x. ¿Que altura tiene a los 1 segundo? ¿Y a los 2 segundos?</p>
+<p><strong>Paso 1 —</strong> Para x = 1: h(1) = -5·(1)² + 10·1 = -5·1 + 10 = -5 + 10 = <strong>5 m</strong>.</p>
+<p><strong>Paso 2 —</strong> Para x = 2: h(2) = -5·(2)² + 10·2 = -5·4 + 20 = -20 + 20 = <strong>0 m</strong>.</p>
+<p><strong>Paso 3 —</strong> Interpreto: a 1 segundo esta a 5 m (cerca de lo mas alto), y a 2 segundos volvio al suelo (0 m). Como el a es negativo (-5), la parabola abre hacia abajo: sube y luego cae, como un tiro real.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Funciones cuadraticas</h4>
+<ol>
+<li>Si f(x) = x², calcula f(0), f(3) y f(5).</li>
+<li>Si f(x) = x² + 1, calcula f(2) y f(4).</li>
+<li>La altura de un salto es h(x) = -5x² + 15x. Calcula h(1) y h(3). ¿En cual de los dos esta mas alto?</li>
+<li>¿Que forma tiene la grafica de una funcion cuadratica? ¿Y la de una lineal?</li>
+<li>En un tiro parabolico, ¿que representa el vertice cuando la parabola abre hacia abajo?</li>
+<li>Haz una tabla de y = x² para x = -2, -1, 0, 1, 2 y grafica los puntos. ¿Se ve la forma de U?</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Termodinamica y calor</h3>
+
+<div class="ciencia">
+<h4>El calor, la temperatura y las leyes que mandan</h4>
+<p>La <strong>termodinamica</strong> es la parte de la fisica que estudia el calor y como la energia se transforma. Primero, dos ideas que se confunden:</p>
+<ul>
+<li><strong>Temperatura:</strong> mide que tan "caliente" o "frio" esta algo (que tan rapido se agitan sus particulas). Se mide en grados.</li>
+<li><strong>Calor:</strong> es la <strong>energia que se transfiere</strong> de un cuerpo caliente a uno frio. El calor es energia en movimiento; la temperatura es un estado.</li>
+</ul>
+
+<h4>Las dos primeras leyes de la termodinamica</h4>
+<ul>
+<li><strong>1a ley (conservacion):</strong> la energia no se crea ni se destruye, solo se transforma. En una maquina, la energia que entra es igual a la que sale (sumando el calor que se escapa).</li>
+<li><strong>2a ley:</strong> el calor fluye <strong>siempre de lo caliente a lo frio</strong> (nunca al reves por si solo). Ademas, en cada transformacion el <strong>desorden (entropia) siempre aumenta</strong>: siempre se pierde algo de energia util como calor disperso.</li>
+</ul>
+
+<h4>Eficiencia: ninguna maquina es perfecta</h4>
+<p>Por la 2a ley, <strong>ninguna maquina es 100% eficiente</strong>: siempre parte de la energia se "escapa" como calor inutil. La <strong>eficiencia</strong> es cuanta energia util aprovechas de la que metiste, en porcentaje:</p>
+<p style="text-align:center"><strong>Eficiencia = (energia util / energia total) × 100</strong></p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: eficiencia de una consola</h4>
+<p><strong>Problema:</strong> Una consola consume 200 J de energia electrica, pero solo 150 J se usan en procesar el juego; el resto se pierde como calor (por eso se calienta). ¿Cual es su eficiencia?</p>
+<p><strong>Paso 1 —</strong> Energia util = 150 J. Energia total = 200 J.</p>
+<p><strong>Paso 2 —</strong> Eficiencia = (150 / 200) × 100.</p>
+<p><strong>Paso 3 —</strong> 150 / 200 = 0.75, y 0.75 × 100 = <strong>75%</strong>.</p>
+<p><strong>Paso 4 —</strong> Los otros 50 J (el 25%) se disiparon como calor. Eso es la 2a ley en accion: siempre se pierde algo. Por eso los aparatos tienen ventiladores.</p>
+</div>
+
+<div class="ciencia">
+<h4>Ejercicios — Termodinamica</h4>
+<ol>
+<li>Explica con tus palabras la diferencia entre calor y temperatura.</li>
+<li>Si dejas una lata fria sobre la mesa, ¿en que direccion fluye el calor: del aire a la lata o de la lata al aire? ¿Por que (2a ley)?</li>
+<li>Un motor recibe 500 J y aprovecha 300 J como movimiento util. ¿Cual es su eficiencia? ¿Cuanta energia se perdio como calor?</li>
+<li>Una lampara LED usa 10 J y produce 8 J de luz util. ¿Cual es su eficiencia?</li>
+<li>Segun la 2a ley, ¿por que es imposible construir una maquina 100% eficiente? Responde en 1-2 lineas.</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: FILOLOGIA</h4>
+<p><strong>La filologia es la ciencia que estudia las lenguas y textos escritos:</strong> de donde vienen las palabras y como cambian con el tiempo.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Muchos terminos cientificos vienen del griego y latin (ej: "energia" viene del griego "energeia" = actividad/fuerza en accion). <em>Investiga el origen de 3 palabras cientificas que uses. ¿De donde vienen?</em></p>
+</div>
+
+<h3>Bloque 4: Lectura</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Lee el <strong>Texto 3</strong> al final ("La energia de la humanidad: ideas sobre lo colectivo").</p>
+<p>Responde:</p>
+<ol>
+<li>¿Que quiere decir la idea de que las emociones "se contagian" en un grupo? Da un ejemplo (un estadio, un partido, una sala de juego).</li>
+<li>Segun el texto, ¿que se ha podido observar cientificamente y que todavia no se puede comprobar?</li>
+<li><strong>Dato favorito:</strong> ¿que parte del texto te parecio mas interesante y por que? (1-2 oraciones)</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 3 — La fisica de tu maquina</h4>
+<p><strong>Hoy:</strong> agrega la <strong>fisica</strong> a tu diseño. ¿Que formulas o conceptos aplican en tu maquina? (¿Hay energia cinetica, potencial, trabajo W = F × d?) Y muy importante segun la <strong>2a ley</strong>: ¿en que parte tu maquina <strong>pierde energia como calor</strong>? Ninguna es perfecta — señala donde se escapa.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DIA 4 — VIERNES</h2>
+
+<h3>Bloque 1: Matematicas — Repaso integrador de funciones</h3>
+
+<div class="mate">
+<h4>Juntamos todo: lineales y cuadraticas</h4>
+<p>Esta semana viste tres cosas: <strong>evaluar</strong> funciones con f(x), <strong>funciones lineales</strong> (rectas, y = mx + b) y <strong>funciones cuadraticas</strong> (parabolas, con x²). Hoy las mezclamos.</p>
+<p>Truco para distinguirlas al mirar la formula:</p>
+<ul>
+<li>Si la x esta "sola" (sin exponente) → es <strong>lineal</strong> → grafica una <strong>recta</strong>.</li>
+<li>Si aparece x² → es <strong>cuadratica</strong> → grafica una <strong>parabola</strong>.</li>
+</ul>
+<p>Evaluar es siempre lo mismo: reemplazas la x por el numero y calculas, respetando el orden (primero potencias, luego multiplicaciones, luego sumas).</p>
+</div>
+
+<div class="resuelto">
+<h4>Ejemplo resuelto: comparar dos funciones</h4>
+<p><strong>Problema:</strong> Tienes dos funciones: f(x) = 4x + 2 (lineal) y g(x) = x² (cuadratica). Calcula ambas para x = 3 y di cual dio mayor.</p>
+<p><strong>Paso 1 —</strong> f(3) = 4·3 + 2 = 12 + 2 = <strong>14</strong>.</p>
+<p><strong>Paso 2 —</strong> g(3) = 3² = <strong>9</strong>.</p>
+<p><strong>Paso 3 —</strong> Comparo: 14 > 9, asi que f dio mayor en x = 3.</p>
+<p><strong>Paso 4 —</strong> Dato interesante: si probaras x = 5, f(5) = 22 y g(5) = 25. La cuadratica termina superando a la lineal porque el x² crece cada vez mas rapido.</p>
+</div>
+
+<div class="ejercicio">
+<h4>Ejercicios — Repaso de funciones</h4>
+<ol>
+<li>Di si cada funcion es lineal o cuadratica: (a) y = 5x, (b) y = x² + 3, (c) y = 2x - 1, (d) y = -x².</li>
+<li>Si f(x) = 3x + 1, calcula f(2) y f(6).</li>
+<li>Si g(x) = x² - 4, calcula g(3) y g(5).</li>
+<li>Con f(x) = 2x y g(x) = x², calcula ambas para x = 4. ¿Cual dio mayor?</li>
+<li>Tu puntaje base sube lineal: y = 10x + 20. Un bono sube cuadratico: b = x². Para x = 5, ¿cuanto da cada uno?</li>
+<li>Explica con tus palabras la diferencia entre la grafica de una funcion lineal y una cuadratica.</li>
+</ol>
+</div>
+
+<h3>Bloque 2: Ciencias — Energias renovables y el futuro (nivel avanzado)</h3>
+
+<div class="ciencia">
+<h4>La energia que mueve el futuro</h4>
+<p>Toda la fisica de la semana (energia que se transforma, se conserva y se degrada como calor) sirve para entender como generamos electricidad hoy y como lo haremos mañana.</p>
+<ul>
+<li><strong>Paneles solares (efecto fotovoltaico):</strong> la luz del Sol golpea un material especial (silicio) y arranca electrones, generando corriente electrica. Es luz → electricidad, directo, sin partes moviles.</li>
+<li><strong>Turbinas eolicas:</strong> el viento (energia cinetica del aire) empuja las aspas, que giran y mueven un generador. Es cinetica → electrica.</li>
+<li><strong>Energia nuclear:</strong> aprovecha la energia guardada en el nucleo de los atomos. La <strong>fision</strong> parte nucleos pesados (uranio) y libera muchisima energia; se usa hoy en las centrales nucleares. La <strong>fusion</strong> une nucleos ligeros (como el hidrogeno) — es lo que hace el Sol — y libera aun mas energia, pero todavia no la dominamos en la Tierra.</li>
+<li><strong>El futuro:</strong> el <strong>hidrogeno</strong> como combustible limpio (al usarlo solo produce agua) y los <strong>reactores de fusion</strong>, que buscan copiar al Sol para tener energia casi ilimitada y limpia.</li>
+</ul>
+<h4>La idea de E=mc²</h4>
+<p>La energia nuclear es tan brutal por la famosa formula de Einstein <strong>E = m·c²</strong>: una pizca de masa (m) equivale a una cantidad ENORME de energia (E), porque se multiplica por la velocidad de la luz al cuadrado (c², un numero gigantesco). Materia y energia son, en el fondo, la misma cosa.</p>
+</div>
+
+<div class="ciencia">
+<h4>Preguntas para responder — Energias del futuro</h4>
+<ol>
+<li>Explica con tus palabras como un panel solar convierte luz en electricidad.</li>
+<li>Una turbina eolica transforma un tipo de energia en otro. ¿Cuales? (Escribe la cadena con flechas.)</li>
+<li>¿Cual es la diferencia entre fision y fusion nuclear? ¿Cual usa el Sol?</li>
+<li>¿Por que se dice que el hidrogeno es un combustible "limpio"?</li>
+<li>La formula E = mc² dice que una masa pequeña da mucha energia. ¿Por que? (Pista: piensa en el tamaño de c², la velocidad de la luz.)</li>
+</ol>
+</div>
+
+<h3>Bloque 3: Cultura general</h3>
+
+<div class="cultura">
+<h4>Ciencia de hoy: BOTANICA</h4>
+<p><strong>La botanica es la ciencia que estudia las plantas:</strong> como crecen, se reproducen y su importancia para la vida.</p>
+<p><strong>Tu pregunta para desarrollar:</strong> Las plantas hacen fotosintesis: capturan energia del Sol y la transforman en energia quimica (azucar). <em>Explica esta transformacion de energia con lo que sabes. ¿Por que se dice que casi toda la energia de la Tierra viene originalmente del Sol?</em></p>
+</div>
+
+<h3>Bloque 4: Lectura y cierre</h3>
+
+<div class="escribe">
+<h4>Instrucciones:</h4>
+<p>Repasa los 3 textos de esta semana y responde:</p>
+<ol>
+<li>De todo lo que leiste sobre la energia (la mirada cientifica y la de las tradiciones), ¿cual te resulto mas interesante y por que?</li>
+<li><strong>Dato favorito:</strong> ¿que dato o idea de los textos te sorprendio mas? (1-2 oraciones)</li>
+<li><strong>Enciclopedia de las Ciencias:</strong> ya tienes 4 ciencias con sus preguntas (geologia, astronomia, filologia, botanica). ¿En que formato quieres presentar tu enciclopedia final? (video, cuadernillo ilustrado, presentacion con diagramas, infografia...) Elige y anota tu plan.</li>
+</ol>
+</div>
+
+<h3>Proyecto — Maquina de energia</h3>
+
+<div class="proyecto">
+<h4>Dia 4 — Version final</h4>
+<p><strong>Hoy cierras el proyecto:</strong> arma la <strong>version final</strong> de tu Maquina de energia — un <strong>diagrama claro</strong> con la cadena de transformacion etiquetada + una <strong>explicacion</strong> de como funciona (que energia entra, en que se convierte, y donde se pierde algo como calor). Presentalo en el formato que mas te guste (dibujo, diagrama digital, maqueta, video corto explicandolo).</p>
+</div>
+
+<div class="page-break"></div>
+
+<h1>LECTURAS DE LA SEMANA</h1>
+
+<div class="lectura">
+<h2>Texto 1 — ¿Que es la energia? Dos formas de mirar lo mismo</h2>
+
+<p>Usamos la palabra "energia" todo el tiempo. Decimos "hoy no tengo energia", "esa persona tiene una energia increible", "este lugar tiene mala energia". Pero, ¿que es exactamente la energia? Resulta que hay al menos dos grandes formas de responder esa pregunta, y aunque parecen muy distintas, quiza no se contradicen tanto como parece.</p>
+
+<h3>La mirada de la ciencia</h3>
+
+<p>Para la fisica, la <strong>energia es la capacidad de producir cambios o movimiento</strong>. Todo lo que se mueve, calienta, ilumina o transforma algo, esta usando energia. La comida que comes tiene energia quimica que tu cuerpo convierte en energia para moverte. El sol emite energia luminosa que las plantas capturan. Un rayo es energia electrica.</p>
+
+<p>La ciencia descubrio algo asombroso: <strong>la energia no se crea ni se destruye, solo se transforma</strong>. La energia que usaste hoy para caminar vino de tu desayuno, que vino de una planta, que la capturo del sol, que la genera con reacciones nucleares. Todo esta conectado en una gran cadena de transformaciones de energia que nunca se detiene. Ademas, Albert Einstein demostro con su famosa formula E=mc² que la materia y la energia son, en el fondo, dos formas de la misma cosa. Es decir: todo lo que existe, incluido tu cuerpo, es en cierto sentido "energia condensada".</p>
+
+<h3>La mirada de las tradiciones</h3>
+
+<p>Mucho antes de que existiera la fisica moderna, culturas de todo el mundo — sin conocerse entre si — describieron algo que llamaron "energia vital" o "fuerza de vida". No hablaban de joules ni de electricidad, sino de una especie de energia que fluye dentro de los seres vivos y que se relaciona con la salud, el animo y la vitalidad.</p>
+
+<p>Estas tradiciones observaron algo que cualquiera puede notar: hay dias en que te sientes "lleno de energia" y dias en que te sientes "apagado", sin que necesariamente hayas comido mas o menos. Notaron que las emociones, la respiracion, el descanso, la naturaleza y hasta la compañia de otras personas parecen afectar esa "energia interior". A partir de esas observaciones, desarrollaron practicas para cuidarla: la respiracion consciente, el movimiento, la meditacion, ciertas posturas del cuerpo.</p>
+
+<h3>¿Se contradicen estas dos miradas?</h3>
+
+<p>No necesariamente. La ciencia estudia la energia que se puede medir con instrumentos: calor, movimiento, electricidad. Las tradiciones hablan de una experiencia mas subjetiva: como te sientes por dentro, tu vitalidad, tu animo. Son como dos mapas diferentes de un territorio enorme.</p>
+
+<p>Hay cosas de las tradiciones que la ciencia ha podido confirmar: por ejemplo, que la respiracion profunda realmente calma el sistema nervioso (lo viste en las lecturas de emociones), que el ejercicio genera bienestar, que estar en la naturaleza reduce el estres. Otras ideas todavia no se han podido medir ni comprobar cientificamente, y quedan en el terreno de la creencia personal o cultural.</p>
+
+<p>Lo importante no es decidir cual mirada es "la verdadera". Es entender que el ser humano ha buscado, desde siempre y de muchas maneras, comprender esa fuerza misteriosa que nos mantiene vivos y en movimiento. Tu puedes conocer ambas miradas, respetarlas, y con el tiempo formar tu propia manera de entenderlo.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Tu cuerpo, ahora mismo en reposo, genera aproximadamente la misma cantidad de calor que una bombilla de 100 watts. Toda esa energia viene de la comida transformandose dentro de tus celulas. Literalmente eres una fuente de energia que brilla (en calor).
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 2 — El Qi, el Prana y el Ki: la energia vital en las culturas de Oriente</h2>
+
+<p>Una de las cosas mas fascinantes de estudiar culturas diferentes es descubrir que, muchas veces, llegaron a ideas parecidas sin haberse conocido nunca. La idea de una "energia vital" que fluye por el cuerpo aparece en China, India, Japon y muchos otros lugares, cada uno con su propio nombre y sus propias practicas. Veamos las tres mas conocidas.</p>
+
+<h3>El Qi (o Chi) — China</h3>
+
+<p>En la cultura china, desde hace mas de 3,000 años, se habla del <strong>Qi</strong> (se pronuncia "chi"): una energia vital que, segun esta tradicion, fluye por el cuerpo a traves de canales llamados "meridianos". Cuando el Qi fluye bien, la persona esta sana y equilibrada; cuando se "bloquea", aparecerian problemas.</p>
+
+<p>De esta idea nacieron practicas que millones de personas siguen usando hoy:</p>
+<ul>
+<li><strong>El Tai Chi:</strong> una serie de movimientos lentos y suaves, casi como una danza en camara lenta, para "hacer fluir el Qi". Si alguna vez viste en un parque a personas mayores moviendose muy despacio y coordinado, eso es Tai Chi.</li>
+<li><strong>El Chi Kung (Qigong):</strong> ejercicios de respiracion y movimiento.</li>
+<li><strong>La acupuntura:</strong> la practica de colocar agujas finisimas en puntos especificos del cuerpo para "desbloquear" el Qi.</li>
+</ul>
+
+<h3>El Prana — India</h3>
+
+<p>En la India, la tradicion habla del <strong>Prana</strong>: la energia vital que, segun esta vision, entra al cuerpo principalmente a traves de la <strong>respiracion</strong>. La palabra prana significa algo asi como "aliento de vida". Por eso, en esta tradicion, aprender a respirar bien es aprender a manejar tu energia.</p>
+
+<p>De aqui vienen:</p>
+<ul>
+<li><strong>El Pranayama:</strong> tecnicas de respiracion controlada (respirar lento, retener el aire, exhalar de cierta forma). Curiosamente, la ciencia SI ha comprobado que la respiracion lenta calma el sistema nervioso.</li>
+<li><strong>El Yoga:</strong> las posturas del yoga (asanas) buscan, entre otras cosas, que la energia fluya libremente por el cuerpo.</li>
+<li><strong>Los chakras:</strong> segun esta tradicion, existen 7 centros de energia a lo largo de la columna, cada uno asociado a un color y a aspectos de la vida (la seguridad, las emociones, la creatividad, el amor, la comunicacion, la intuicion, la conexion espiritual).</li>
+</ul>
+
+<h3>El Ki — Japon</h3>
+
+<p>En Japon, la misma idea aparece con el nombre de <strong>Ki</strong>. Esta presente hasta en el idioma cotidiano: la palabra japonesa para "salud" (genki) y muchas otras contienen la raiz "ki". De aqui vienen:</p>
+<ul>
+<li><strong>El Reiki:</strong> una practica donde se busca canalizar energia a traves de las manos para promover la relajacion.</li>
+<li><strong>Las artes marciales:</strong> en el aikido, el karate y otras, se habla de concentrar el Ki para tener mas fuerza y control. El famoso "grito" de los artistas marciales (el kiai) esta relacionado con esta idea de liberar energia.</li>
+</ul>
+
+<h3>¿Que tienen en comun?</h3>
+
+<p>Tres culturas distintas, en tres lugares distintos, separadas por miles de kilometros, describieron una energia vital que fluye por el cuerpo, que se relaciona con la respiracion, el movimiento y las emociones, y que se puede cultivar con practicas. ¿Coincidencia? ¿O quiza todas estaban observando algo real de la experiencia humana, aunque lo explicaran de formas diferentes?</p>
+
+<p>Es importante ser honestos: la ciencia moderna no ha podido medir directamente el "Qi", el "Prana" ni el "Ki" con instrumentos. Sin embargo, muchas de las <em>practicas</em> que nacieron de estas ideas (respiracion, meditacion, movimiento suave, ejercicio) SI han demostrado beneficios reales para la salud fisica y mental. Puedes tomar lo que te sirva de estas tradiciones, con curiosidad y respeto, sin necesidad de aceptar todo como verdad absoluta ni de rechazarlo todo. La mente abierta y critica a la vez es la mejor herramienta.</p>
+
+<div class="dato">
+<strong>Dato:</strong> La palabra "espiritu" en muchos idiomas antiguos significaba originalmente "aliento" o "respiracion". En latin, "spiritus" venia de "respirar". En hebreo y griego pasaba algo parecido. Para muchas culturas antiguas, la vida, el aliento y la energia espiritual eran practicamente la misma cosa.
+</div>
+</div>
+
+<div class="lectura">
+<h2>Texto 3 — La energia de la humanidad: ideas sobre lo colectivo</h2>
+
+<p>Hasta ahora hablamos de la energia dentro de una persona. Pero muchas tradiciones — y algunas ideas modernas — van mas alla y hablan de la "energia" de los grupos, de las multitudes, e incluso de la humanidad entera. ¿Que hay de cierto en esto? Exploremoslo con curiosidad y con pensamiento critico.</p>
+
+<h3>Las emociones se contagian</h3>
+
+<p>Esto no es misticismo — es algo que cualquiera ha experimentado y que la ciencia SI ha estudiado. Cuando estas en un estadio y tu equipo anota, sientes la euforia colectiva. Cuando entras a un lugar donde acaban de discutir, sientes la tension "en el aire". Cuando alguien bosteza, te dan ganas de bostezar. Cuando una persona se rie con ganas, es dificil no sonreir.</p>
+
+<p>Los cientificos llaman a esto <strong>"contagio emocional"</strong>. Tenemos unas neuronas llamadas <strong>neuronas espejo</strong> que hacen que, al ver la emocion de otro, nuestro cerebro la "reproduzca" un poco. Por eso las emociones se propagan por un grupo como una ola. Un lider entusiasta contagia entusiasmo; una persona ansiosa puede poner nervioso a todo un salon. En cierto sentido, los grupos humanos SI tienen una "energia colectiva" — un estado de animo compartido que surge de la suma de todos.</p>
+
+<h3>Ideas que van mas alla (y que aun no se comprueban)</h3>
+
+<p>Algunas corrientes de pensamiento van mucho mas lejos. Proponen ideas como:</p>
+<ul>
+<li>Que existe una "conciencia colectiva" de la humanidad, una especie de mente compartida.</li>
+<li>Que los pensamientos y emociones de mucha gente a la vez podrian tener algun efecto en el mundo.</li>
+<li>Que estamos todos "conectados" energeticamente de formas que aun no entendemos.</li>
+</ul>
+
+<p>Estas ideas son fascinantes y aparecen en muchas filosofias, religiones y hasta en algunas hipotesis modernas. Pero es importante ser claro: <strong>estas ideas NO estan comprobadas cientificamente</strong>. Son creencias, filosofias o hipotesis que cada persona puede explorar y valorar segun su propia reflexion. No son hechos demostrados como lo es, por ejemplo, que el agua hierve a 100°C.</p>
+
+<h3>Lo que si sabemos</h3>
+
+<p>Lo que si esta demostrado es que los seres humanos somos profundamente sociales y que nos influimos muchisimo unos a otros:</p>
+<ul>
+<li>El animo de las personas con las que pasas tiempo afecta tu propio animo (por eso importa con quien te rodeas).</li>
+<li>Las multitudes pueden comportarse de formas muy distintas a como se comportaria cada persona sola (para bien y para mal).</li>
+<li>Los movimientos sociales muestran que cuando muchas personas comparten una emocion o una idea, pueden cambiar el mundo (las grandes transformaciones de la historia empezaron asi).</li>
+</ul>
+
+<h3>Como pensar sobre esto</h3>
+
+<p>Frente a ideas que no se pueden comprobar, la mejor actitud no es creer todo ciegamente ni rechazar todo con desprecio. Es mantener lo que se llama una "mente abierta pero critica": estar dispuesto a considerar ideas nuevas, pero tambien a preguntar "¿que evidencia hay de esto?". Puedes encontrar belleza, inspiracion o consuelo en ciertas ideas sobre la conexion humana, y al mismo tiempo reconocer cuando algo es una creencia y no un hecho comprobado. Esas dos cosas pueden convivir en una misma persona inteligente.</p>
+
+<div class="dato">
+<strong>Dato:</strong> Las neuronas espejo fueron descubiertas por accidente en los años 90, estudiando monos. Los cientificos notaron que ciertas neuronas del cerebro del mono se activaban tanto cuando el mono agarraba algo como cuando SOLO VEIA a otro agarrarlo. Ese descubrimiento ayudo a explicar la empatia, la imitacion y por que las emociones se contagian.
+</div>
+</div>
+
+<footer>
+<p>Semana 7 de 20 | Fran</p>
+<p><em>"Nada se pierde, todo se transforma — la energia solo cambia de forma."</em></p>
+</footer>
+
+</body>
+</html>
